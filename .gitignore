@@ -1,1 +1,3 @@
 src/f1tenth_gym_ros/log
+src/f1tenth_gym_ros/build/f1tenth_gym_ros/colcon_command_prefix_setup_py.sh.env
+src/f1tenth_gym_ros/build/f1tenth_gym_ros/prefix_override/__pycache__/sitecustomize.cpython-38.pyc
