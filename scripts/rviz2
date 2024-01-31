@@ -1,4 +1,0 @@
-#!/bin/bash
-
-/bin/bash -c "cd /home/$USER/GalacticRacing/src/f1tenth_gym_ros && colcon build"
-cd /home/$USER/GalacticRacing/src/f1tenth_gym_ros && docker compose up
