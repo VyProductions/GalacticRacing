@@ -1,0 +1,115 @@
+[0.000000] (-) TimerEvent: {}
+[0.000249] (f1tenth_gym_ros) JobQueued: {'identifier': 'f1tenth_gym_ros', 'dependencies': OrderedDict()}
+[0.000279] (ros_msg_pkg) JobQueued: {'identifier': 'ros_msg_pkg', 'dependencies': OrderedDict()}
+[0.000313] (f1tenth_gym_ros) JobStarted: {'identifier': 'f1tenth_gym_ros'}
+[0.095020] (-) TimerEvent: {}
+[0.201130] (-) TimerEvent: {}
+[0.308525] (-) TimerEvent: {}
+[0.416012] (-) TimerEvent: {}
+[0.523988] (-) TimerEvent: {}
+[0.630645] (-) TimerEvent: {}
+[0.737574] (-) TimerEvent: {}
+[0.800992] (f1tenth_gym_ros) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../build/f1tenth_gym_ros', 'build', '--build-base', '/home/vy/sim_ws/src/build/f1tenth_gym_ros/build', 'install', '--record', '/home/vy/sim_ws/src/build/f1tenth_gym_ros/install.log', '--install-scripts', '$base/lib/f1tenth_gym_ros', '--single-version-externally-managed'], 'cwd': '/home/vy/sim_ws/src/f1tenth_gym_ros', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'USER': 'vy', 'SSH_AGENT_PID': '1593', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/vy', 'OLDPWD': '/home/vy/f1tenth_gym', 'LESS': '-R', 'DESKTOP_SESSION': 'ubuntu', 'ZSH': '/home/vy/.oh-my-zsh', 'LSCOLORS': 'Gxfxcxdxbxegedabagacad', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PAGER': 'less', 'ROS_PYTHON_VERSION': '3', 'MANAGERPID': '1401', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'vy', '_': '/usr/bin/colcon', 'JOURNAL_STREAM': '8:35642', 'XDG_SESSION_CLASS': 'user', 'ROS_VERSION': '2', 'USERNAME': 'vy', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/vy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/AutonomousRacing:@/tmp/.ICE-unix/1628,unix/AutonomousRacing:/tmp/.ICE-unix/1628', 'INVOCATION_ID': '914c7219ea23470c886304b1d35004cb', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/614336b0_c94d_4cb2_9ace_6338be09cbf1', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LANG': 'en_US.UTF-8', 'XDG_SESSION_DESKTOP': 'ubuntu', 'GNOME_TERMINAL_SERVICE': ':1.74', 'XMODIFIERS': '@im=ibus', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'SHELL': '/usr/bin/zsh', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'LC_ALL': 'en_US.UTF-8', 'PWD': '/home/vy/sim_ws/src/build/f1tenth_gym_ros', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/vy/sim_ws/src/build/f1tenth_gym_ros/prefix_override:/home/vy/sim_ws/src/install/f1tenth_gym_ros/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003'}, 'shell': False}
+[0.844376] (-) TimerEvent: {}
+[0.952052] (-) TimerEvent: {}
+[0.988353] (f1tenth_gym_ros) StdoutLine: {'line': b'running egg_info\n'}
+[0.989046] (f1tenth_gym_ros) StdoutLine: {'line': b'creating ../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info\n'}
+[0.989286] (f1tenth_gym_ros) StdoutLine: {'line': b'writing ../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/PKG-INFO\n'}
+[0.989611] (f1tenth_gym_ros) StdoutLine: {'line': b'writing dependency_links to ../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/dependency_links.txt\n'}
+[0.989994] (f1tenth_gym_ros) StdoutLine: {'line': b'writing entry points to ../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/entry_points.txt\n'}
+[0.990195] (f1tenth_gym_ros) StdoutLine: {'line': b'writing requirements to ../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/requires.txt\n'}
+[0.990355] (f1tenth_gym_ros) StdoutLine: {'line': b'writing top-level names to ../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/top_level.txt\n'}
+[0.991297] (f1tenth_gym_ros) StdoutLine: {'line': b"writing manifest file '../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'\n"}
+[1.023717] (f1tenth_gym_ros) StdoutLine: {'line': b"reading manifest file '../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'\n"}
+[1.024532] (f1tenth_gym_ros) StdoutLine: {'line': b"writing manifest file '../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'\n"}
+[1.026105] (f1tenth_gym_ros) StdoutLine: {'line': b'running build\n'}
+[1.026239] (f1tenth_gym_ros) StdoutLine: {'line': b'running build_py\n'}
+[1.026468] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/sim_ws/src/build/f1tenth_gym_ros/build\n'}
+[1.026621] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/sim_ws/src/build/f1tenth_gym_ros/build/lib\n'}
+[1.026756] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/sim_ws/src/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros\n'}
+[1.026924] (f1tenth_gym_ros) StdoutLine: {'line': b'copying f1tenth_gym_ros/__init__.py -> /home/vy/sim_ws/src/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros\n'}
+[1.028416] (f1tenth_gym_ros) StdoutLine: {'line': b'copying f1tenth_gym_ros/gym_bridge.py -> /home/vy/sim_ws/src/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros\n'}
+[1.028696] (f1tenth_gym_ros) StdoutLine: {'line': b'running install\n'}
+[1.029590] (f1tenth_gym_ros) StdoutLine: {'line': b'running install_lib\n'}
+[1.030415] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/sim_ws/src/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros\n'}
+[1.030598] (f1tenth_gym_ros) StdoutLine: {'line': b'copying /home/vy/sim_ws/src/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros/__init__.py -> /home/vy/sim_ws/src/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros\n'}
+[1.030797] (f1tenth_gym_ros) StdoutLine: {'line': b'copying /home/vy/sim_ws/src/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros/gym_bridge.py -> /home/vy/sim_ws/src/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros\n'}
+[1.031301] (f1tenth_gym_ros) StdoutLine: {'line': b'byte-compiling /home/vy/sim_ws/src/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros/__init__.py to __init__.cpython-38.pyc\n'}
+[1.032420] (f1tenth_gym_ros) StdoutLine: {'line': b'byte-compiling /home/vy/sim_ws/src/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros/gym_bridge.py to gym_bridge.cpython-38.pyc\n'}
+[1.034639] (f1tenth_gym_ros) StdoutLine: {'line': b'running install_data\n'}
+[1.035171] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/sim_ws/src/install/f1tenth_gym_ros/share/ament_index\n'}
+[1.035323] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/sim_ws/src/install/f1tenth_gym_ros/share/ament_index/resource_index\n'}
+[1.035458] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/sim_ws/src/install/f1tenth_gym_ros/share/ament_index/resource_index/packages\n'}
+[1.035669] (f1tenth_gym_ros) StdoutLine: {'line': b'copying resource/f1tenth_gym_ros -> /home/vy/sim_ws/src/install/f1tenth_gym_ros/share/ament_index/resource_index/packages\n'}
+[1.035911] (f1tenth_gym_ros) StdoutLine: {'line': b'copying package.xml -> /home/vy/sim_ws/src/install/f1tenth_gym_ros/share/f1tenth_gym_ros\n'}
+[1.036110] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/sim_ws/src/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch\n'}
+[1.036268] (f1tenth_gym_ros) StdoutLine: {'line': b'copying launch/gym_bridge_launch.py -> /home/vy/sim_ws/src/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch\n'}
+[1.036461] (f1tenth_gym_ros) StdoutLine: {'line': b'copying launch/opp_racecar.xacro -> /home/vy/sim_ws/src/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch\n'}
+[1.036646] (f1tenth_gym_ros) StdoutLine: {'line': b'copying launch/ego_racecar.xacro -> /home/vy/sim_ws/src/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch\n'}
+[1.037117] (f1tenth_gym_ros) StdoutLine: {'line': b'copying launch/gym_bridge.rviz -> /home/vy/sim_ws/src/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch\n'}
+[1.037330] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/sim_ws/src/install/f1tenth_gym_ros/share/f1tenth_gym_ros/config\n'}
+[1.037493] (f1tenth_gym_ros) StdoutLine: {'line': b'copying config/sim.yaml -> /home/vy/sim_ws/src/install/f1tenth_gym_ros/share/f1tenth_gym_ros/config\n'}
+[1.037653] (f1tenth_gym_ros) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.039038] (f1tenth_gym_ros) StdoutLine: {'line': b'Copying ../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info to /home/vy/sim_ws/src/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros-0.0.0-py3.8.egg-info\n'}
+[1.039928] (f1tenth_gym_ros) StdoutLine: {'line': b'running install_scripts\n'}
+[1.055220] (f1tenth_gym_ros) StdoutLine: {'line': b'Installing gym_bridge script to /home/vy/sim_ws/src/install/f1tenth_gym_ros/lib/f1tenth_gym_ros\n'}
+[1.055392] (-) TimerEvent: {}
+[1.055937] (f1tenth_gym_ros) StdoutLine: {'line': b"writing list of installed files to '/home/vy/sim_ws/src/build/f1tenth_gym_ros/install.log'\n"}
+[1.080201] (f1tenth_gym_ros) CommandEnded: {'returncode': 0}
+[1.156109] (-) TimerEvent: {}
+[1.186537] (f1tenth_gym_ros) JobEnded: {'identifier': 'f1tenth_gym_ros', 'rc': 0}
+[1.188675] (ros_msg_pkg) JobStarted: {'identifier': 'ros_msg_pkg'}
+[1.264060] (-) TimerEvent: {}
+[1.372022] (-) TimerEvent: {}
+[1.478214] (-) TimerEvent: {}
+[1.585910] (-) TimerEvent: {}
+[1.692508] (-) TimerEvent: {}
+[1.800134] (-) TimerEvent: {}
+[1.907945] (-) TimerEvent: {}
+[2.015975] (-) TimerEvent: {}
+[2.018456] (ros_msg_pkg) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../build/ros_msg_pkg', 'build', '--build-base', '/home/vy/sim_ws/src/build/ros_msg_pkg/build', 'install', '--record', '/home/vy/sim_ws/src/build/ros_msg_pkg/install.log', '--install-scripts', '$base/lib/ros_msg_pkg', '--single-version-externally-managed'], 'cwd': '/home/vy/sim_ws/src/ros_msg_pkg', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'USER': 'vy', 'SSH_AGENT_PID': '1593', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/vy', 'OLDPWD': '/home/vy/f1tenth_gym', 'LESS': '-R', 'DESKTOP_SESSION': 'ubuntu', 'ZSH': '/home/vy/.oh-my-zsh', 'LSCOLORS': 'Gxfxcxdxbxegedabagacad', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PAGER': 'less', 'ROS_PYTHON_VERSION': '3', 'MANAGERPID': '1401', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'vy', '_': '/usr/bin/colcon', 'JOURNAL_STREAM': '8:35642', 'XDG_SESSION_CLASS': 'user', 'ROS_VERSION': '2', 'USERNAME': 'vy', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/vy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/AutonomousRacing:@/tmp/.ICE-unix/1628,unix/AutonomousRacing:/tmp/.ICE-unix/1628', 'INVOCATION_ID': '914c7219ea23470c886304b1d35004cb', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/614336b0_c94d_4cb2_9ace_6338be09cbf1', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LANG': 'en_US.UTF-8', 'XDG_SESSION_DESKTOP': 'ubuntu', 'GNOME_TERMINAL_SERVICE': ':1.74', 'XMODIFIERS': '@im=ibus', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'SHELL': '/usr/bin/zsh', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'LC_ALL': 'en_US.UTF-8', 'PWD': '/home/vy/sim_ws/src/build/ros_msg_pkg', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/vy/sim_ws/src/build/ros_msg_pkg/prefix_override:/home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003'}, 'shell': False}
+[2.121591] (-) TimerEvent: {}
+[2.210335] (ros_msg_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[2.211084] (ros_msg_pkg) StdoutLine: {'line': b'creating ../build/ros_msg_pkg/ros_msg_pkg.egg-info\n'}
+[2.211329] (ros_msg_pkg) StdoutLine: {'line': b'writing ../build/ros_msg_pkg/ros_msg_pkg.egg-info/PKG-INFO\n'}
+[2.211625] (ros_msg_pkg) StdoutLine: {'line': b'writing dependency_links to ../build/ros_msg_pkg/ros_msg_pkg.egg-info/dependency_links.txt\n'}
+[2.211840] (ros_msg_pkg) StdoutLine: {'line': b'writing entry points to ../build/ros_msg_pkg/ros_msg_pkg.egg-info/entry_points.txt\n'}
+[2.212031] (ros_msg_pkg) StdoutLine: {'line': b'writing requirements to ../build/ros_msg_pkg/ros_msg_pkg.egg-info/requires.txt\n'}
+[2.212188] (ros_msg_pkg) StdoutLine: {'line': b'writing top-level names to ../build/ros_msg_pkg/ros_msg_pkg.egg-info/top_level.txt\n'}
+[2.213265] (ros_msg_pkg) StdoutLine: {'line': b"writing manifest file '../build/ros_msg_pkg/ros_msg_pkg.egg-info/SOURCES.txt'\n"}
+[2.228159] (-) TimerEvent: {}
+[2.241302] (ros_msg_pkg) StdoutLine: {'line': b"reading manifest file '../build/ros_msg_pkg/ros_msg_pkg.egg-info/SOURCES.txt'\n"}
+[2.242036] (ros_msg_pkg) StdoutLine: {'line': b"writing manifest file '../build/ros_msg_pkg/ros_msg_pkg.egg-info/SOURCES.txt'\n"}
+[2.244126] (ros_msg_pkg) StdoutLine: {'line': b'running build\n'}
+[2.244255] (ros_msg_pkg) StdoutLine: {'line': b'running build_py\n'}
+[2.244519] (ros_msg_pkg) StdoutLine: {'line': b'creating /home/vy/sim_ws/src/build/ros_msg_pkg/build\n'}
+[2.244673] (ros_msg_pkg) StdoutLine: {'line': b'creating /home/vy/sim_ws/src/build/ros_msg_pkg/build/lib\n'}
+[2.244811] (ros_msg_pkg) StdoutLine: {'line': b'creating /home/vy/sim_ws/src/build/ros_msg_pkg/build/lib/ros_msg_pkg\n'}
+[2.244968] (ros_msg_pkg) StdoutLine: {'line': b'copying ros_msg_pkg/talker_node.py -> /home/vy/sim_ws/src/build/ros_msg_pkg/build/lib/ros_msg_pkg\n'}
+[2.245182] (ros_msg_pkg) StdoutLine: {'line': b'copying ros_msg_pkg/__init__.py -> /home/vy/sim_ws/src/build/ros_msg_pkg/build/lib/ros_msg_pkg\n'}
+[2.245406] (ros_msg_pkg) StdoutLine: {'line': b'copying ros_msg_pkg/relay_node.py -> /home/vy/sim_ws/src/build/ros_msg_pkg/build/lib/ros_msg_pkg\n'}
+[2.245654] (ros_msg_pkg) StdoutLine: {'line': b'running install\n'}
+[2.246355] (ros_msg_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[2.247087] (ros_msg_pkg) StdoutLine: {'line': b'creating /home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg\n'}
+[2.247292] (ros_msg_pkg) StdoutLine: {'line': b'copying /home/vy/sim_ws/src/build/ros_msg_pkg/build/lib/ros_msg_pkg/talker_node.py -> /home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg\n'}
+[2.247509] (ros_msg_pkg) StdoutLine: {'line': b'copying /home/vy/sim_ws/src/build/ros_msg_pkg/build/lib/ros_msg_pkg/__init__.py -> /home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg\n'}
+[2.247689] (ros_msg_pkg) StdoutLine: {'line': b'copying /home/vy/sim_ws/src/build/ros_msg_pkg/build/lib/ros_msg_pkg/relay_node.py -> /home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg\n'}
+[2.248135] (ros_msg_pkg) StdoutLine: {'line': b'byte-compiling /home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg/talker_node.py to talker_node.cpython-38.pyc\n'}
+[2.249685] (ros_msg_pkg) StdoutLine: {'line': b'byte-compiling /home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg/__init__.py to __init__.cpython-38.pyc\n'}
+[2.249946] (ros_msg_pkg) StdoutLine: {'line': b'byte-compiling /home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg/relay_node.py to relay_node.cpython-38.pyc\n'}
+[2.250378] (ros_msg_pkg) StdoutLine: {'line': b'running install_data\n'}
+[2.250848] (ros_msg_pkg) StdoutLine: {'line': b'creating /home/vy/sim_ws/src/install/ros_msg_pkg/share/ament_index\n'}
+[2.250994] (ros_msg_pkg) StdoutLine: {'line': b'creating /home/vy/sim_ws/src/install/ros_msg_pkg/share/ament_index/resource_index\n'}
+[2.251128] (ros_msg_pkg) StdoutLine: {'line': b'creating /home/vy/sim_ws/src/install/ros_msg_pkg/share/ament_index/resource_index/packages\n'}
+[2.251324] (ros_msg_pkg) StdoutLine: {'line': b'copying resource/ros_msg_pkg -> /home/vy/sim_ws/src/install/ros_msg_pkg/share/ament_index/resource_index/packages\n'}
+[2.251522] (ros_msg_pkg) StdoutLine: {'line': b'copying package.xml -> /home/vy/sim_ws/src/install/ros_msg_pkg/share/ros_msg_pkg\n'}
+[2.251681] (ros_msg_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.252912] (ros_msg_pkg) StdoutLine: {'line': b'Copying ../build/ros_msg_pkg/ros_msg_pkg.egg-info to /home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg-0.0.0-py3.8.egg-info\n'}
+[2.253691] (ros_msg_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[2.268365] (ros_msg_pkg) StdoutLine: {'line': b'Installing relay_node script to /home/vy/sim_ws/src/install/ros_msg_pkg/lib/ros_msg_pkg\n'}
+[2.268833] (ros_msg_pkg) StdoutLine: {'line': b'Installing talker_node script to /home/vy/sim_ws/src/install/ros_msg_pkg/lib/ros_msg_pkg\n'}
+[2.269391] (ros_msg_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/vy/sim_ws/src/build/ros_msg_pkg/install.log'\n"}
+[2.304149] (ros_msg_pkg) CommandEnded: {'returncode': 0}
+[2.336212] (-) TimerEvent: {}
+[2.429029] (ros_msg_pkg) JobEnded: {'identifier': 'ros_msg_pkg', 'rc': 0}
+[2.429778] (-) EventReactorShutdown: {}

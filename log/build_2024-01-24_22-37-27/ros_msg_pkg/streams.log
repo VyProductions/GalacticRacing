@@ -1,0 +1,41 @@
+[0.831s] Invoking command in '/home/vy/sim_ws/src/ros_msg_pkg': PYTHONPATH=/home/vy/sim_ws/src/build/ros_msg_pkg/prefix_override:/home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/ros_msg_pkg build --build-base /home/vy/sim_ws/src/build/ros_msg_pkg/build install --record /home/vy/sim_ws/src/build/ros_msg_pkg/install.log --install-scripts $base/lib/ros_msg_pkg --single-version-externally-managed
+[1.022s] running egg_info
+[1.022s] creating ../build/ros_msg_pkg/ros_msg_pkg.egg-info
+[1.023s] writing ../build/ros_msg_pkg/ros_msg_pkg.egg-info/PKG-INFO
+[1.023s] writing dependency_links to ../build/ros_msg_pkg/ros_msg_pkg.egg-info/dependency_links.txt
+[1.023s] writing entry points to ../build/ros_msg_pkg/ros_msg_pkg.egg-info/entry_points.txt
+[1.023s] writing requirements to ../build/ros_msg_pkg/ros_msg_pkg.egg-info/requires.txt
+[1.024s] writing top-level names to ../build/ros_msg_pkg/ros_msg_pkg.egg-info/top_level.txt
+[1.025s] writing manifest file '../build/ros_msg_pkg/ros_msg_pkg.egg-info/SOURCES.txt'
+[1.053s] reading manifest file '../build/ros_msg_pkg/ros_msg_pkg.egg-info/SOURCES.txt'
+[1.053s] writing manifest file '../build/ros_msg_pkg/ros_msg_pkg.egg-info/SOURCES.txt'
+[1.055s] running build
+[1.056s] running build_py
+[1.056s] creating /home/vy/sim_ws/src/build/ros_msg_pkg/build
+[1.056s] creating /home/vy/sim_ws/src/build/ros_msg_pkg/build/lib
+[1.056s] creating /home/vy/sim_ws/src/build/ros_msg_pkg/build/lib/ros_msg_pkg
+[1.056s] copying ros_msg_pkg/talker_node.py -> /home/vy/sim_ws/src/build/ros_msg_pkg/build/lib/ros_msg_pkg
+[1.057s] copying ros_msg_pkg/__init__.py -> /home/vy/sim_ws/src/build/ros_msg_pkg/build/lib/ros_msg_pkg
+[1.057s] copying ros_msg_pkg/relay_node.py -> /home/vy/sim_ws/src/build/ros_msg_pkg/build/lib/ros_msg_pkg
+[1.057s] running install
+[1.058s] running install_lib
+[1.058s] creating /home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg
+[1.059s] copying /home/vy/sim_ws/src/build/ros_msg_pkg/build/lib/ros_msg_pkg/talker_node.py -> /home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg
+[1.059s] copying /home/vy/sim_ws/src/build/ros_msg_pkg/build/lib/ros_msg_pkg/__init__.py -> /home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg
+[1.059s] copying /home/vy/sim_ws/src/build/ros_msg_pkg/build/lib/ros_msg_pkg/relay_node.py -> /home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg
+[1.059s] byte-compiling /home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg/talker_node.py to talker_node.cpython-38.pyc
+[1.061s] byte-compiling /home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg/__init__.py to __init__.cpython-38.pyc
+[1.061s] byte-compiling /home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg/relay_node.py to relay_node.cpython-38.pyc
+[1.062s] running install_data
+[1.062s] creating /home/vy/sim_ws/src/install/ros_msg_pkg/share/ament_index
+[1.062s] creating /home/vy/sim_ws/src/install/ros_msg_pkg/share/ament_index/resource_index
+[1.063s] creating /home/vy/sim_ws/src/install/ros_msg_pkg/share/ament_index/resource_index/packages
+[1.063s] copying resource/ros_msg_pkg -> /home/vy/sim_ws/src/install/ros_msg_pkg/share/ament_index/resource_index/packages
+[1.063s] copying package.xml -> /home/vy/sim_ws/src/install/ros_msg_pkg/share/ros_msg_pkg
+[1.063s] running install_egg_info
+[1.064s] Copying ../build/ros_msg_pkg/ros_msg_pkg.egg-info to /home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg-0.0.0-py3.8.egg-info
+[1.065s] running install_scripts
+[1.080s] Installing relay_node script to /home/vy/sim_ws/src/install/ros_msg_pkg/lib/ros_msg_pkg
+[1.080s] Installing talker_node script to /home/vy/sim_ws/src/install/ros_msg_pkg/lib/ros_msg_pkg
+[1.081s] writing list of installed files to '/home/vy/sim_ws/src/build/ros_msg_pkg/install.log'
+[1.116s] Invoked command in '/home/vy/sim_ws/src/ros_msg_pkg' returned '0': PYTHONPATH=/home/vy/sim_ws/src/build/ros_msg_pkg/prefix_override:/home/vy/sim_ws/src/install/ros_msg_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/ros_msg_pkg build --build-base /home/vy/sim_ws/src/build/ros_msg_pkg/build install --record /home/vy/sim_ws/src/build/ros_msg_pkg/install.log --install-scripts $base/lib/ros_msg_pkg --single-version-externally-managed
