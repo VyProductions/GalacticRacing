@@ -1,0 +1,88 @@
+[1.350s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.351s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ffa6ef26c40>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=6, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ffa6ef26c40>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ffa6ef26e50>)
+[1.418s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.419s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.419s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.419s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.419s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.420s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.420s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/vy/AutonomousRacing/src/f1tenth_gym_ros'
+[1.421s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.421s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.422s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.422s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.422s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.423s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.438s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_python' and name 'f1tenth_gym_ros'
+[1.438s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.438s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.438s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.439s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.439s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.562s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.562s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.585s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.637s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'cmake_args' from command line to 'None'
+[1.638s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'cmake_target' from command line to 'None'
+[1.638s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.638s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[1.638s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'cmake_clean_first' from command line to 'False'
+[1.638s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'cmake_force_configure' from command line to 'False'
+[1.639s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'ament_cmake_args' from command line to 'None'
+[1.639s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[1.639s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.639s] DEBUG:colcon.colcon_core.verb:Building package 'f1tenth_gym_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/build/f1tenth_gym_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros', 'merge_install': False, 'path': '/home/vy/AutonomousRacing/src/f1tenth_gym_ros', 'symlink_install': False, 'test_result_base': None}
+[1.661s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.684s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.685s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/vy/AutonomousRacing/src/f1tenth_gym_ros' with build type 'ament_python'
+[1.686s] Level 1:colcon.colcon_core.shell:create_environment_hook('f1tenth_gym_ros', 'ament_prefix_path')
+[1.710s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.710s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/share/f1tenth_gym_ros/hook/ament_prefix_path.ps1'
+[1.724s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/share/f1tenth_gym_ros/hook/ament_prefix_path.dsv'
+[1.734s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/share/f1tenth_gym_ros/hook/ament_prefix_path.sh'
+[1.766s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.766s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.050s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/vy/AutonomousRacing/src/f1tenth_gym_ros'
+[2.077s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.078s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.345s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vy/AutonomousRacing/src/f1tenth_gym_ros': PYTHONPATH=/home/vy/AutonomousRacing/src/f1tenth_gym_ros/build/f1tenth_gym_ros/prefix_override:/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/lib/python3.8/site-packages: /usr/bin/python3 setup.py egg_info --egg-base build/f1tenth_gym_ros build --build-base /home/vy/AutonomousRacing/src/f1tenth_gym_ros/build/f1tenth_gym_ros/build install --record /home/vy/AutonomousRacing/src/f1tenth_gym_ros/build/f1tenth_gym_ros/install.log --install-scripts $base/lib/f1tenth_gym_ros --single-version-externally-managed
+[4.749s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vy/AutonomousRacing/src/f1tenth_gym_ros' returned '0': PYTHONPATH=/home/vy/AutonomousRacing/src/f1tenth_gym_ros/build/f1tenth_gym_ros/prefix_override:/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/lib/python3.8/site-packages: /usr/bin/python3 setup.py egg_info --egg-base build/f1tenth_gym_ros build --build-base /home/vy/AutonomousRacing/src/f1tenth_gym_ros/build/f1tenth_gym_ros/build install --record /home/vy/AutonomousRacing/src/f1tenth_gym_ros/build/f1tenth_gym_ros/install.log --install-scripts $base/lib/f1tenth_gym_ros --single-version-externally-managed
+[4.776s] Level 1:colcon.colcon_core.environment:checking '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros' for CMake module files
+[4.819s] Level 1:colcon.colcon_core.environment:checking '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros' for CMake config files
+[4.882s] Level 1:colcon.colcon_core.environment:checking '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/lib'
+[4.885s] Level 1:colcon.colcon_core.environment:checking '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/bin'
+[4.887s] Level 1:colcon.colcon_core.environment:checking '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/lib/pkgconfig/f1tenth_gym_ros.pc'
+[4.888s] Level 1:colcon.colcon_core.environment:checking '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/lib/python3.8/site-packages'
+[4.890s] Level 1:colcon.colcon_core.shell:create_environment_hook('f1tenth_gym_ros', 'pythonpath')
+[4.913s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/share/f1tenth_gym_ros/hook/pythonpath.ps1'
+[4.923s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/share/f1tenth_gym_ros/hook/pythonpath.dsv'
+[4.932s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/share/f1tenth_gym_ros/hook/pythonpath.sh'
+[4.941s] Level 1:colcon.colcon_core.environment:checking '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/bin'
+[4.942s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(f1tenth_gym_ros)
+[4.967s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/share/f1tenth_gym_ros/package.ps1'
+[4.976s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/share/f1tenth_gym_ros/package.dsv'
+[4.985s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/share/f1tenth_gym_ros/package.sh'
+[4.993s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/share/f1tenth_gym_ros/package.bash'
+[5.002s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/share/f1tenth_gym_ros/package.zsh'
+[5.010s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/f1tenth_gym_ros/share/colcon-core/packages/f1tenth_gym_ros)
+[5.017s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.018s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.018s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.018s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.056s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.057s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.057s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.085s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.108s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/local_setup.ps1'
+[5.118s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/_local_setup_util_ps1.py'
+[5.129s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/setup.ps1'
+[5.167s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/local_setup.sh'
+[5.178s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/_local_setup_util_sh.py'
+[5.195s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/setup.sh'
+[5.225s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/local_setup.bash'
+[5.240s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/setup.bash'
+[5.271s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/local_setup.zsh'
+[5.281s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vy/AutonomousRacing/src/f1tenth_gym_ros/install/setup.zsh'
