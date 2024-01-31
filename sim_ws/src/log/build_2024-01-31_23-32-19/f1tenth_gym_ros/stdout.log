@@ -1,0 +1,19 @@
+running egg_info
+writing ../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/PKG-INFO
+writing dependency_links to ../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/dependency_links.txt
+writing entry points to ../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/entry_points.txt
+writing requirements to ../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/requires.txt
+writing top-level names to ../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/top_level.txt
+reading manifest file '../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'
+writing manifest file '../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/sim_ws/src/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info to /sim_ws/src/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros-0.0.0-py3.8.egg-info
+running install_scripts
+Installing gym_bridge script to /sim_ws/src/install/f1tenth_gym_ros/lib/f1tenth_gym_ros
+writing list of installed files to '/sim_ws/src/build/f1tenth_gym_ros/install.log'
