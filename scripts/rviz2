@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd /home/vy/GalacticRacing/sim_ws/src/f1tenth_gym_ros && colcon build
-cd /home/vy/GalacticRacing/sim_ws/src/f1tenth_gym_ros
+cd /home/$USER/GalacticRacing/sim_ws/src/f1tenth_gym_ros && colcon build
+cd /home/$USER/GalacticRacing/sim_ws/src/f1tenth_gym_ros
 docker compose up
