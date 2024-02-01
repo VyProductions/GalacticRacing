@@ -28,6 +28,7 @@ services:
     volumes: 
       - .:/sim_ws/src/f1tenth_gym_ros
       - ../install:/sim_ws/install
+      - ../safety_node/:/sim_ws/src/safety_node
     environment:
       - DISPLAY=novnc:0.0
     networks:
