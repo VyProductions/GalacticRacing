@@ -1,5 +1,7 @@
 #!/bin/bash
 
-cd /home/$USER/GalacticRacing/sim_ws/src/f1tenth_gym_ros && colcon build
-cd /home/$USER/GalacticRacing/sim_ws/src/f1tenth_gym_ros
+user=$(echo $USER)
+
+cd /home/$user/GalacticRacing/sim_ws/src/f1tenth_gym_ros && colcon build
+cd /home/$user/GalacticRacing/sim_ws/src/f1tenth_gym_ros
 docker compose up
