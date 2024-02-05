@@ -88,15 +88,13 @@ class SafetyNode(Node):
         # TTC values
         ttc : float32 = 0.0  # time (seconds) until collision with an obstacle
 
-        for i in range(1080 // INDEX_STEP
+        for i in range(1080 // INDEX_STEP):
             index : int = i * INDEX_STEP                         # sample indice in scan ranges array
             scan_dist : float32 = ranges[index]                  # distance acquired at given index
             angle_rad : float32 = index * angle_inc + angle_min  # computed theta angle relative to forward (locally x-oriented) direction
 
-            # publish the command to brake if driving too close to obstacle
-            if scan_dist > range_min and scan_dist < DST_THRESH and self.speed != 0.0:
-                self.drive_pub.publish(BRAKE)
-            elif scan_dist > range_min and scan_dist < range_max:
+            # verify that scanned distance is a valid sample
+            if scan_dist > range_min and scan_dist < range_max:
                 try:
                     # compute time to collision
                     ttc = INF if self.speed == 0.0 else scan_dist / (self.speed * np.cos(angle_rad))
