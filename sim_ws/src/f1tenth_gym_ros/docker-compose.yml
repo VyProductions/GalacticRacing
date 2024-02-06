@@ -29,6 +29,7 @@ services:
       - .:/sim_ws/src/f1tenth_gym_ros
       - ../install:/sim_ws/install
       - ../safety_node/:/sim_ws/src/safety_node
+      - ../wall_follow/:/sim_ws/src/wall_follow
       - type: bind
         source: ./.bashrc
         target: /root/.bashrc
