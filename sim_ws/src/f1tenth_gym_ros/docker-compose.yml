@@ -29,6 +29,9 @@ services:
       - .:/sim_ws/src/f1tenth_gym_ros
       - ../install:/sim_ws/install
       - ../safety_node/:/sim_ws/src/safety_node
+      - type: bind
+        source: ./.bashrc
+        target: /root/.bashrc
     environment:
       - DISPLAY=novnc:0.0
     networks:
