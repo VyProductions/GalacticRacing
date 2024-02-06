@@ -1,9 +1,20 @@
+#!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
 
 import numpy as np
 from sensor_msgs.msg import LaserScan
 from ackermann_msgs.msg import AckermannDriveStamped
+
+float32 = np.float32
+
+ANGLE_MIN : float32 = -135.0
+ANGLE_MAX : float32 =  135.0
+
+def clamp(value : float32, min : float32, max : float32) -> float32:
+    if (min == max):
+        raise ValueError("Clamp: Min and Max in range must be unique.")
+    return (value - min) / (max - min)
 
 class WallFollow(Node):
     """ 
@@ -14,6 +25,8 @@ class WallFollow(Node):
 
         lidarscan_topic = '/scan'
         drive_topic = '/drive'
+
+        print("Wall Follow Initializing...")
 
         # TODO: create subscribers and publishers
 
@@ -42,8 +55,9 @@ class WallFollow(Node):
 
         """
 
-        #TODO: implement
-        return 0.0
+        lidar_index : int = int(clamp(angle, ANGLE_MIN, ANGLE_MAX) * 1079)
+        print(lidar_index)
+        return range_data[lidar_index]
 
     def get_error(self, range_data, dist):
         """

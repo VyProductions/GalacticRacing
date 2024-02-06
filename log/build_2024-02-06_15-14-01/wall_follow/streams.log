@@ -1,0 +1,35 @@
+[0.052s] Invoking command in '/home/vy/GalacticRacing/build/wall_follow': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/wall_follow -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/install/wall_follow
+[0.298s] -- The C compiler identification is GNU 9.4.0
+[0.474s] -- The CXX compiler identification is GNU 9.4.0
+[0.487s] -- Check for working C compiler: /usr/bin/cc
+[0.554s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.557s] -- Detecting C compiler ABI info
+[0.622s] -- Detecting C compiler ABI info - done
+[0.633s] -- Detecting C compile features
+[0.635s] -- Detecting C compile features - done
+[0.640s] -- Check for working CXX compiler: /usr/bin/c++
+[0.713s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.713s] -- Detecting CXX compiler ABI info
+[0.794s] -- Detecting CXX compiler ABI info - done
+[0.802s] -- Detecting CXX compile features
+[0.802s] -- Detecting CXX compile features - done
+[0.812s] CMake Error at CMakeLists.txt:25 (find_package):
+[0.812s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[0.812s]   has asked CMake to find a package configuration file provided by
+[0.812s]   "ament_cmake", but CMake did not find one.
+[0.813s] 
+[0.813s]   Could not find a package configuration file provided by "ament_cmake" with
+[0.813s]   any of the following names:
+[0.813s] 
+[0.813s]     ament_cmakeConfig.cmake
+[0.813s]     ament_cmake-config.cmake
+[0.813s] 
+[0.813s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[0.813s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[0.813s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[0.813s]   has been installed.
+[0.813s] 
+[0.813s] 
+[0.813s] -- Configuring incomplete, errors occurred!
+[0.813s] See also "/home/vy/GalacticRacing/build/wall_follow/CMakeFiles/CMakeOutput.log".
+[0.816s] Invoked command in '/home/vy/GalacticRacing/build/wall_follow' returned '1': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/wall_follow -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/install/wall_follow

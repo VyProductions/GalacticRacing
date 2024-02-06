@@ -1,0 +1,112 @@
+[0.126s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/wall_follow': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/wall_follow -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/wall_follow
+[0.142s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.174s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.174s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.367s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.431s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.443s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.523s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.550s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.633s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.715s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.720s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.724s] -- Looking for pthread.h
+[0.810s] -- Looking for pthread.h - found
+[0.811s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.887s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[0.888s] -- Looking for pthread_create in pthreads
+[0.954s] -- Looking for pthread_create in pthreads - not found
+[0.954s] -- Looking for pthread_create in pthread
+[1.019s] -- Looking for pthread_create in pthread - found
+[1.020s] -- Found Threads: TRUE  
+[1.184s] -- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+[1.186s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.225s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[1.293s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)
+[1.331s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.419s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.501s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.502s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.502s] -- Configured cppcheck include dirs: /home/vy/GalacticRacing/sim_ws/src/wall_follow/include
+[1.502s] -- Configured cppcheck exclude dirs and/or files: 
+[1.503s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.503s] -- Configured cpplint exclude dirs and/or files: 
+[1.504s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.505s] -- Added test 'lint_cmake' to check CMake code style
+[1.506s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[1.507s] -- Added test 'uncrustify' to check C / C++ code style
+[1.507s] -- Configured uncrustify additional arguments: 
+[1.508s] -- Added test 'xmllint' to check XML markup files
+[1.512s] -- Configuring done
+[1.520s] -- Generating done
+[1.521s] -- Build files have been written to: /home/vy/GalacticRacing/sim_ws/src/build/wall_follow
+[1.527s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/wall_follow' returned '0': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/wall_follow -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/wall_follow
+[1.531s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/wall_follow': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/src/build/wall_follow -- -j6 -l6
+[1.569s] [35m[1mScanning dependencies of target wall_follow_node[0m
+[1.793s] [ 50%] [32mBuilding CXX object CMakeFiles/wall_follow_node.dir/src/wall_follow_node.cpp.o[0m
+[2.930s] [01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:[m[K In member function ‘[01m[Kdouble WallFollow::get_range(float*, double)[m[K’:
+[2.942s] [01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:30:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krange_data[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.943s]    30 |     double get_range([01;35m[Kfloat* range_data[m[K, double angle)
+[2.943s]       |                      [01;35m[K~~~~~~~^~~~~~~~~~[m[K
+[2.943s] [01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:30:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kangle[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.943s]    30 |     double get_range(float* range_data, [01;35m[Kdouble angle[m[K)
+[2.943s]       |                                         [01;35m[K~~~~~~~^~~~~[m[K
+[2.943s] [01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:[m[K In member function ‘[01m[Kdouble WallFollow::get_error(float*, double)[m[K’:
+[2.943s] [01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:47:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krange_data[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.943s]    47 |     double get_error([01;35m[Kfloat* range_data[m[K, double dist)
+[2.943s]       |                      [01;35m[K~~~~~~~^~~~~~~~~~[m[K
+[2.943s] [01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:47:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdist[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.943s]    47 |     double get_error(float* range_data, [01;35m[Kdouble dist[m[K)
+[2.943s]       |                                         [01;35m[K~~~~~~~^~~~[m[K
+[2.943s] [01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:[m[K In member function ‘[01m[Kvoid WallFollow::pid_control(double, double)[m[K’:
+[2.943s] [01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:76:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kangle[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.943s]    76 |         double [01;35m[Kangle[m[K = 0.0;
+[2.944s]       |                [01;35m[K^~~~~[m[K
+[2.944s] [01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:64:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.944s]    64 |     void pid_control([01;35m[Kdouble error[m[K, double velocity)
+[2.944s]       |                      [01;35m[K~~~~~~~^~~~~[m[K
+[2.944s] [01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:64:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvelocity[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.944s]    64 |     void pid_control(double error, [01;35m[Kdouble velocity[m[K)
+[2.944s]       |                                    [01;35m[K~~~~~~~^~~~~~~~[m[K
+[2.944s] [01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:[m[K In member function ‘[01m[Kvoid WallFollow::scan_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[2.944s] [01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:93:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.944s]    93 |         double [01;35m[Kerror[m[K = 0.0; // TODO: replace with error calculated by get_error()
+[2.945s]       |                [01;35m[K^~~~~[m[K
+[2.945s] [01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:94:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvelocity[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.945s]    94 |         double [01;35m[Kvelocity[m[K = 0.0; // TODO: calculate desired car velocity based on error
+[2.945s]       |                [01;35m[K^~~~~~~~[m[K
+[2.945s] [01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:82:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscan_msg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.945s]    82 |     void scan_callback([01;35m[Kconst sensor_msgs::msg::LaserScan::ConstSharedPtr scan_msg[m[K)
+[2.945s]       |                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[3.333s] [100%] [32m[1mLinking CXX executable wall_follow_node[0m
+[3.531s] [100%] Built target wall_follow_node
+[3.545s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/wall_follow' returned '0': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/src/build/wall_follow -- -j6 -l6
+[3.589s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/wall_follow': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/src/build/wall_follow
+[3.597s] -- Install configuration: ""
+[3.597s] CMake Error at cmake_install.cmake:47 (file):
+[3.597s]   file INSTALL cannot copy file
+[3.598s]   "/home/vy/GalacticRacing/sim_ws/src/build/wall_follow/wall_follow_node" to
+[3.598s]   "/home/vy/GalacticRacing/sim_ws/src/install/wall_follow/lib/wall_follow/wall_follow_node":
+[3.598s]   Permission denied.
+[3.598s] 
+[3.598s] 
+[3.598s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/lib/wall_follow/wall_follow_node
+[3.601s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/wall_follow' returned '1': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/src/build/wall_follow
+[3.794s] Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__
+    rc = await self.task(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__
+    return await task_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_cmake/build.py", line 84, in build
+    create_environment_scripts(
+  File "/usr/lib/python3/dist-packages/colcon_core/environment/__init__.py", line 89, in create_environment_scripts
+    create_file_with_runtime_dependencies(prefix_path, pkg))
+  File "/usr/lib/python3/dist-packages/colcon_core/environment/__init__.py", line 172, in create_file_with_runtime_dependencies
+    path.write_text(
+  File "/usr/lib/python3.8/pathlib.py", line 1255, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors) as f:
+  File "/usr/lib/python3.8/pathlib.py", line 1222, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/usr/lib/python3.8/pathlib.py", line 1078, in _opener
+    return self._accessor.open(self, flags, mode)
+PermissionError: [Errno 13] Permission denied: '/home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/colcon-core/packages/wall_follow'
