@@ -1,15 +1,11 @@
 sim_ws/src/f1tenth_gym_ros/log
 sim_ws/src/f1tenth_gym_ros/build/f1tenth_gym_ros/colcon_command_prefix_setup_py.sh.env
-sim_ws/src/f1tenth_gym_ros/build/f1tenth_gym_ros/colcon_command_prefix_setup_py.sh.env
 sim_ws/src/f1tenth_gym_ros/build/f1tenth_gym_ros/prefix_override/__pycache__/sitecustomize.cpython-38.pyc
 sim_ws/src/f1tenth_gym_ros/build/f1tenth_gym_ros/install.log
-sim_ws/src/f1tenth_gym_ros/build/f1tenth_gym_ros/prefix_override/__pycache__/sitecustomize.cpython-38.pyc
 sim_ws/src/f1tenth_gym_ros/log/latest_build
 sim_ws/src/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros/__pycache__/__init__.cpython-38.pyc
 sim_ws/src/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros/__pycache__/gym_bridge.cpython-38.pyc
 sim_ws/src/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch/__pycache__/gym_bridge_launch.cpython-38.pyc
 sim_ws/src/install/safety_node/lib/python3.8/site-packages/safety_node/__pycache__/__init__.cpython-38.pyc
 sim_ws/src/install/safety_node/share/ament_index/resource_index/parent_prefix_path/safety_node
-sim_ws/src/f1tenth_gym_ros/build/f1tenth_gym_ros/prefix_override/__pycache__/sitecustomize.cpython-38.pyc
-sim_ws/src/f1tenth_gym_ros/log/latest_build
 sim_ws/src/install/wall_follow/lib/wall_follow/wall_follow_node.py
