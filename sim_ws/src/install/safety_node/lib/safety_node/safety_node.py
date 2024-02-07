@@ -54,8 +54,6 @@ class SafetyNode(Node):
 
         # vehicle properties
         self.speed = 0.0
-        self.brake_i = 0
-        self.braking_coeffs : list = [0.0, 0.33, 0.5, 1.0]
 
         # topic publishers
         self.drive_pub = self.create_publisher(  # drive topic publisher
