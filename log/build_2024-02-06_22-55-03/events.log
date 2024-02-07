@@ -1,0 +1,84 @@
+[0.000000] (-) TimerEvent: {}
+[0.000804] (f1tenth_gym_ros) JobQueued: {'identifier': 'f1tenth_gym_ros', 'dependencies': OrderedDict()}
+[0.000847] (ros_msg_pkg) JobQueued: {'identifier': 'ros_msg_pkg', 'dependencies': OrderedDict()}
+[0.000868] (safety_node) JobQueued: {'identifier': 'safety_node', 'dependencies': OrderedDict()}
+[0.001431] (wall_follow) JobQueued: {'identifier': 'wall_follow', 'dependencies': OrderedDict()}
+[0.001460] (f1tenth_gym_ros) JobStarted: {'identifier': 'f1tenth_gym_ros'}
+[0.085309] (ros_msg_pkg) JobStarted: {'identifier': 'ros_msg_pkg'}
+[0.104433] (-) TimerEvent: {}
+[0.169376] (safety_node) JobStarted: {'identifier': 'safety_node'}
+[0.206176] (-) TimerEvent: {}
+[0.236061] (wall_follow) JobStarted: {'identifier': 'wall_follow'}
+[0.309098] (-) TimerEvent: {}
+[0.411163] (-) TimerEvent: {}
+[0.514183] (-) TimerEvent: {}
+[0.617651] (-) TimerEvent: {}
+[0.724330] (-) TimerEvent: {}
+[0.744544] (safety_node) JobProgress: {'identifier': 'safety_node', 'progress': 'cmake'}
+[0.745561] (safety_node) Command: {'cmd': ['/usr/bin/cmake', '/home/vy/GalacticRacing/sim_ws/src/safety_node', '-DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/install/safety_node'], 'cwd': '/home/vy/GalacticRacing/build/safety_node', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('USER', 'vy'), ('SSH_AGENT_PID', '1196'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('HOME', '/home/vy'), ('OLDPWD', '/home/vy'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu'), ('ZSH', '/home/vy/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('MANAGERPID', '891'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('LOGNAME', 'vy'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:30460'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/AutonomousRacing:@/tmp/.ICE-unix/1359,unix/AutonomousRacing:/tmp/.ICE-unix/1359'), ('INVOCATION_ID', '7591c95cdd634e68b94d0ecf5e7350cd'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2c533482_fe04_444a_bc1a_69ce9292e829'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LANG', 'en_US.UTF-8'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.80'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vy/GalacticRacing/build/safety_node'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('COLCON', '1'), ('VTE_VERSION', '6003')]), 'shell': False}
+[0.765632] (wall_follow) JobProgress: {'identifier': 'wall_follow', 'progress': 'cmake'}
+[0.769949] (wall_follow) Command: {'cmd': ['/usr/bin/cmake', '/home/vy/GalacticRacing/sim_ws/src/wall_follow', '-DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/install/wall_follow'], 'cwd': '/home/vy/GalacticRacing/build/wall_follow', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('USER', 'vy'), ('SSH_AGENT_PID', '1196'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('HOME', '/home/vy'), ('OLDPWD', '/home/vy'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu'), ('ZSH', '/home/vy/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('MANAGERPID', '891'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('LOGNAME', 'vy'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:30460'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/AutonomousRacing:@/tmp/.ICE-unix/1359,unix/AutonomousRacing:/tmp/.ICE-unix/1359'), ('INVOCATION_ID', '7591c95cdd634e68b94d0ecf5e7350cd'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2c533482_fe04_444a_bc1a_69ce9292e829'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LANG', 'en_US.UTF-8'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.80'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vy/GalacticRacing/build/wall_follow'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('COLCON', '1'), ('VTE_VERSION', '6003')]), 'shell': False}
+[0.794316] (wall_follow) StderrLine: {'line': b'CMake Error at CMakeLists.txt:25 (find_package):\n'}
+[0.795323] (wall_follow) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[0.795389] (wall_follow) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[0.795438] (wall_follow) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[0.795485] (wall_follow) StderrLine: {'line': b'\n'}
+[0.795531] (wall_follow) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[0.795577] (wall_follow) StderrLine: {'line': b'  any of the following names:\n'}
+[0.796632] (wall_follow) StderrLine: {'line': b'\n'}
+[0.796749] (wall_follow) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[0.796823] (wall_follow) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[0.796889] (wall_follow) StderrLine: {'line': b'\n'}
+[0.796956] (wall_follow) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[0.797018] (wall_follow) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[0.797105] (wall_follow) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[0.797214] (wall_follow) StderrLine: {'line': b'  has been installed.\n'}
+[0.797285] (wall_follow) StderrLine: {'line': b'\n'}
+[0.797350] (wall_follow) StderrLine: {'line': b'\n'}
+[0.797417] (wall_follow) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.797518] (wall_follow) StdoutLine: {'line': b'See also "/home/vy/GalacticRacing/build/wall_follow/CMakeFiles/CMakeOutput.log".\n'}
+[0.800282] (wall_follow) CommandEnded: {'returncode': 1}
+[0.824746] (-) TimerEvent: {}
+[0.861819] (safety_node) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.901241] (safety_node) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.901717] (safety_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.906867] (wall_follow) JobEnded: {'identifier': 'wall_follow', 'rc': 1}
+[0.925302] (-) TimerEvent: {}
+[0.986888] (safety_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.987876] (safety_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.026277] (-) TimerEvent: {}
+[1.074655] (safety_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.088094] (safety_node) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.088615] (safety_node) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.093001] (safety_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[1.128145] (-) TimerEvent: {}
+[1.161378] (f1tenth_gym_ros) JobEnded: {'identifier': 'f1tenth_gym_ros', 'rc': 'SIGINT'}
+[1.175159] (ros_msg_pkg) JobEnded: {'identifier': 'ros_msg_pkg', 'rc': 'SIGINT'}
+[1.192829] (safety_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[1.197012] (safety_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.234438] (-) TimerEvent: {}
+[1.302029] (safety_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.312956] (safety_node) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.313378] (safety_node) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.323597] (safety_node) StderrLine: {'line': b'CMake Error at CMakeLists.txt:24 (find_package):\n'}
+[1.323761] (safety_node) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[1.324048] (safety_node) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[1.324113] (safety_node) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[1.324161] (safety_node) StderrLine: {'line': b'\n'}
+[1.324211] (safety_node) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[1.324259] (safety_node) StderrLine: {'line': b'  any of the following names:\n'}
+[1.324304] (safety_node) StderrLine: {'line': b'\n'}
+[1.324348] (safety_node) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[1.324393] (safety_node) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[1.324439] (safety_node) StderrLine: {'line': b'\n'}
+[1.324483] (safety_node) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[1.324529] (safety_node) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[1.324574] (safety_node) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[1.324620] (safety_node) StderrLine: {'line': b'  has been installed.\n'}
+[1.324665] (safety_node) StderrLine: {'line': b'\n'}
+[1.324710] (safety_node) StderrLine: {'line': b'\n'}
+[1.324756] (safety_node) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.324810] (safety_node) StdoutLine: {'line': b'See also "/home/vy/GalacticRacing/build/safety_node/CMakeFiles/CMakeOutput.log".\n'}
+[1.329116] (safety_node) JobEnded: {'identifier': 'safety_node', 'rc': 'SIGINT'}
+[1.335189] (-) TimerEvent: {}
+[1.343379] (-) EventReactorShutdown: {}

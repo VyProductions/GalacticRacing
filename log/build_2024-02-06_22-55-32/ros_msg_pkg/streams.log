@@ -1,0 +1,41 @@
+[1.795s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/ros_msg_pkg': PYTHONPATH=/home/vy/GalacticRacing/build/ros_msg_pkg/prefix_override:/home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/ros_msg_pkg build --build-base /home/vy/GalacticRacing/build/ros_msg_pkg/build install --record /home/vy/GalacticRacing/build/ros_msg_pkg/install.log --install-scripts $base/lib/ros_msg_pkg --single-version-externally-managed
+[2.086s] running egg_info
+[2.089s] creating ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info
+[2.089s] writing ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/PKG-INFO
+[2.089s] writing dependency_links to ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/dependency_links.txt
+[2.089s] writing entry points to ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/entry_points.txt
+[2.090s] writing requirements to ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/requires.txt
+[2.090s] writing top-level names to ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/top_level.txt
+[2.090s] writing manifest file '../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/SOURCES.txt'
+[2.106s] reading manifest file '../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/SOURCES.txt'
+[2.107s] writing manifest file '../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/SOURCES.txt'
+[2.107s] running build
+[2.109s] running build_py
+[2.109s] creating /home/vy/GalacticRacing/build/ros_msg_pkg/build
+[2.110s] creating /home/vy/GalacticRacing/build/ros_msg_pkg/build/lib
+[2.110s] creating /home/vy/GalacticRacing/build/ros_msg_pkg/build/lib/ros_msg_pkg
+[2.110s] copying ros_msg_pkg/relay_node.py -> /home/vy/GalacticRacing/build/ros_msg_pkg/build/lib/ros_msg_pkg
+[2.110s] copying ros_msg_pkg/__init__.py -> /home/vy/GalacticRacing/build/ros_msg_pkg/build/lib/ros_msg_pkg
+[2.110s] copying ros_msg_pkg/talker_node.py -> /home/vy/GalacticRacing/build/ros_msg_pkg/build/lib/ros_msg_pkg
+[2.110s] running install
+[2.110s] running install_lib
+[2.112s] creating /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg
+[2.112s] copying /home/vy/GalacticRacing/build/ros_msg_pkg/build/lib/ros_msg_pkg/relay_node.py -> /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg
+[2.112s] copying /home/vy/GalacticRacing/build/ros_msg_pkg/build/lib/ros_msg_pkg/__init__.py -> /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg
+[2.112s] copying /home/vy/GalacticRacing/build/ros_msg_pkg/build/lib/ros_msg_pkg/talker_node.py -> /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg
+[2.113s] byte-compiling /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg/relay_node.py to relay_node.cpython-38.pyc
+[2.115s] byte-compiling /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg/__init__.py to __init__.cpython-38.pyc
+[2.115s] byte-compiling /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg/talker_node.py to talker_node.cpython-38.pyc
+[2.116s] running install_data
+[2.116s] creating /home/vy/GalacticRacing/install/ros_msg_pkg/share/ament_index
+[2.116s] creating /home/vy/GalacticRacing/install/ros_msg_pkg/share/ament_index/resource_index
+[2.117s] creating /home/vy/GalacticRacing/install/ros_msg_pkg/share/ament_index/resource_index/packages
+[2.117s] copying resource/ros_msg_pkg -> /home/vy/GalacticRacing/install/ros_msg_pkg/share/ament_index/resource_index/packages
+[2.120s] copying package.xml -> /home/vy/GalacticRacing/install/ros_msg_pkg/share/ros_msg_pkg
+[2.120s] running install_egg_info
+[2.123s] Copying ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info to /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg-0.0.0-py3.8.egg-info
+[2.127s] running install_scripts
+[2.143s] Installing relay_node script to /home/vy/GalacticRacing/install/ros_msg_pkg/lib/ros_msg_pkg
+[2.143s] Installing talker_node script to /home/vy/GalacticRacing/install/ros_msg_pkg/lib/ros_msg_pkg
+[2.143s] writing list of installed files to '/home/vy/GalacticRacing/build/ros_msg_pkg/install.log'
+[2.166s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/ros_msg_pkg' returned '0': PYTHONPATH=/home/vy/GalacticRacing/build/ros_msg_pkg/prefix_override:/home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/ros_msg_pkg build --build-base /home/vy/GalacticRacing/build/ros_msg_pkg/build install --record /home/vy/GalacticRacing/build/ros_msg_pkg/install.log --install-scripts $base/lib/ros_msg_pkg --single-version-externally-managed
