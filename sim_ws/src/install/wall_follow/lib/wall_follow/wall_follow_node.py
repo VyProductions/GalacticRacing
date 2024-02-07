@@ -6,42 +6,17 @@ import numpy as np
 from sensor_msgs.msg import LaserScan
 from ackermann_msgs.msg import AckermannDriveStamped
 
-float32 = np.float32
-
-# known scan constants
-ANGLE_MIN : float32 = -135.0
-ANGLE_MAX : float32 =  135.0
-
-# publisher/subscription constants
-DRIVE_REFRESH : int = 10  # queries per second (hZ)
-SCAN_REFRESH  : int = 10  # queries per second (hZ)
-
-# topic constants
-DRIVE_TOPIC : str = "/drive"
-SCAN_TOPIC  : str = "/scan"
-
-def clamp(value : float32, min : float32, max : float32) -> float32:
-    if (min == max):
-        raise ValueError("Clamp: Min and Max in range must be unique.")
-    return (value - min) / (max - min)
-
 class WallFollow(Node):
     """ 
     Implement Wall Following on the car
     """
     def __init__(self):
         super().__init__('wall_follow_node')
-        # TODO: create subscribers and publishers
-        
-        # publishers
-        self.drive_pub = self.create_publisher(
-            AckermannDriveStamped, DRIVE_TOPIC, DRIVE_REFRESH
-        )
 
-        # subscribers
-        self.scan_sub = self.create_subscription(
-            LaserScan, SCAN_TOPIC, self.scan_callback, SCAN_REFRESH
-        )
+        lidarscan_topic = '/scan'
+        drive_topic = '/drive'
+
+        # TODO: create subscribers and publishers
 
         # TODO: set PID gains
         # self.kp = 
@@ -68,9 +43,8 @@ class WallFollow(Node):
 
         """
 
-        lidar_index : int = int(clamp(angle, ANGLE_MIN, ANGLE_MAX) * 1079)
-        print(lidar_index)
-        return range_data[lidar_index]
+        #TODO: implement
+        return 0.0
 
     def get_error(self, range_data, dist):
         """
@@ -116,12 +90,11 @@ class WallFollow(Node):
         error = 0.0 # TODO: replace with error calculated by get_error()
         velocity = 0.0 # TODO: calculate desired car velocity based on error
         self.pid_control(error, velocity) # TODO: actuate the car with PID
-        self.get_range(msg.ranges, 0)
 
 
 def main(args=None):
     rclpy.init(args=args)
-    print("Wall Follow Initialized")
+    print("WallFollow Initialized")
     wall_follow_node = WallFollow()
     rclpy.spin(wall_follow_node)
 
