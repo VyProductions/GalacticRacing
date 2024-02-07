@@ -1,4 +1,0 @@
-[console_scripts]
-relay_node = ros_msg_pkg.relay_node:main
-talker_node = ros_msg_pkg.talker_node:main
-
