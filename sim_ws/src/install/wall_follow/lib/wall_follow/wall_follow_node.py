@@ -6,11 +6,19 @@ import numpy as np
 from sensor_msgs.msg import LaserScan
 from ackermann_msgs.msg import AckermannDriveStamped
 
+import time
+
 float32 = np.float32
 
+def deg_to_rad(deg : float32) -> float32:
+    return (deg * np.pi) / 180.0
+
+def rad_to_deg(rad : float32) -> float32:
+    return (rad * 180.0) / np.pi
+
 # known scan constants
-ANGLE_MIN : float32 = -135.0
-ANGLE_MAX : float32 =  135.0
+ANGLE_MIN : float32 = deg_to_rad(-135.0)
+ANGLE_MAX : float32 = deg_to_rad(135.0)
 
 # publisher/subscription constants
 DRIVE_REFRESH : int = 10  # queries per second (hZ)
@@ -19,17 +27,6 @@ SCAN_REFRESH  : int = 10  # queries per second (hZ)
 # topic constants
 DRIVE_TOPIC : str = "/drive"
 SCAN_TOPIC  : str = "/scan"
-
-def clamp(value : float32, min : float32, max : float32) -> float32:
-    if (min == max):
-        raise ValueError("Clamp: Min and Max in range must be unique.")
-    return (value - min) / (max - min)
-
-def deg_to_rad(deg : float32) -> float32:
-    return (deg * np.pi) / 180.0
-
-def rad_to_deg(rad : float32) -> float32:
-    return (rad * 180.0) / np.pi
 
 class WallFollow(Node):
     """ 
@@ -50,14 +47,33 @@ class WallFollow(Node):
         )
 
         # TODO: set PID gains
-        self.kp = 14
-        self.kd = 0
-        self.ki = 0.09
+        self.kp = 1.0
+        # self.ki = 0.0
+        self.kd = 0.01
+
+        # TODO: set velocity values
+        self.max_speed = 4.0
+        self.turn_speed = 1.25
+
+        # TODO: error computation values
+        self.left_rads = deg_to_rad(90)
+        self.forwardleft_rads = deg_to_rad(34.5)
+        self.forwardright_rads = -self.forwardleft_rads
+        self.frontleft_rads = deg_to_rad(5)
+        self.frontright_rads = -self.frontleft_rads
+        self.projected = 1.3
+        self.distance = 0.9
 
         # TODO: store history
         self.integral = 0.0
         self.prev_error = 0.0
         self.error = 0.0
+        self.last_time = time.process_time()
+
+        # TODO: store current stats
+        self.speed = 0.0
+        self.dt = 0.0
+        self.steering_angle = 0.0
 
         # TODO: store any necessary values you think you'll need
 
@@ -74,9 +90,9 @@ class WallFollow(Node):
 
         """
 
-        lidar_index : int = int(clamp(angle, ANGLE_MIN, ANGLE_MAX) * 1079)
-        print(lidar_index)
-        return range_data[lidar_index]
+        lidar_index : int = int(np.round((angle + deg_to_rad(135.0)) * (1080/deg_to_rad(270.0))))
+        range = range_data[lidar_index]
+        return range if range >= 0.0 and range <= 30.0 else 30.0
 
     def get_error(self, range_data, dist):
         """
@@ -89,18 +105,36 @@ class WallFollow(Node):
         Returns:
             error: calculated error
         """
+        # TODO: implement
+        diff_rad : float32 = self.left_rads - self.forwardleft_rads
 
-        #TODO:implement
-        left : float32 = self.get_range(range_data, 90.0)
-        forward : float32 = self.get_range(range_data, 10.0)
+        left : float32 = self.get_range(range_data, self.left_rads)
+        forwardL : float32 = self.get_range(range_data, self.forwardleft_rads)
+        forwardR : float32 = self.get_range(range_data, self.forwardright_rads)
+        frontL : float32 = self.get_range(range_data, self.frontleft_rads)
+        frontR : float32 = self.get_range(range_data, self.frontright_rads)
 
-        theta : float32 = np.arctan((forward * np.cos(80.0) - left) / (forward * np.sin(80.0)))
-        y : float32 = left * np.cos(theta) - dist
-        
+        theta : float = -np.arctan((forwardL * np.cos(diff_rad) - left) / (forwardL * np.sin(diff_rad)))
+        act_dist : float = left * np.cos(theta)
+        proj_dist : float = act_dist - self.projected * np.sin(theta)
 
-        return 0.0
+        self.dt = time.process_time() - self.last_time
+        self.last_time = time.process_time()
+
+        error = proj_dist - dist
+
+        # if going to crash
+        if frontL < 2.0 and forwardL < 2.2 and forwardL < forwardR:
+            # dont
+            error -= 0.2 # forcefully turn right
+        elif frontR < 2.0 and forwardR < 2.2 and forwardL > forwardR:
+            # also dont
+            error += 0.2 # forcefully turn left
+
+        return error
 
     def pid_control(self, error, velocity):
+        print(f"Error: {error}")
         """
         Based on the calculated error, publish vehicle control
 
@@ -111,10 +145,29 @@ class WallFollow(Node):
         Returns:
             None
         """
-        angle = 0.0
         # TODO: Use kp, ki & kd to implement a PID controller
-        drive_msg = AckermannDriveStamped()
+        U : float = (
+            self.kp * error +
+            # self.ki * self.integral +
+            self.kd * (self.error - self.prev_error)
+        )
+        self.prev_error = error
+
+        print(f"U (rad): {np.round(U, 2)}, min (rad): {np.round(deg_to_rad(-20.0), 2)}, max (rad): {np.round(deg_to_rad(20.0), 2)}")
+        
+        if U < deg_to_rad(-20.0):
+            self.steering_angle = deg_to_rad(-20.0)
+        elif U > deg_to_rad(20.0):
+            self.steering_angle = deg_to_rad(20.0)
+        else:
+            self.steering_angle = U
+
         # TODO: fill in drive message and publish
+        drive_msg = AckermannDriveStamped()
+        drive_msg.drive.steering_angle = self.steering_angle
+        drive_msg.drive.speed = velocity
+        self.speed = 0.0
+        self.drive_pub.publish(drive_msg)
 
     def scan_callback(self, msg):
         """
@@ -126,10 +179,9 @@ class WallFollow(Node):
         Returns:
             None
         """
-        error = 0.0 # TODO: replace with error calculated by get_error()
-        velocity = 0.0 # TODO: calculate desired car velocity based on error
+        error = self.get_error(msg.ranges, self.distance) # TODO: replace with error calculated by get_error()
+        velocity = self.max_speed if abs(self.steering_angle) >= 0.0 and abs(self.steering_angle) < deg_to_rad(10.0) else self.turn_speed
         self.pid_control(error, velocity) # TODO: actuate the car with PID
-        self.get_range(msg.ranges, 0)
 
 
 def main(args=None):

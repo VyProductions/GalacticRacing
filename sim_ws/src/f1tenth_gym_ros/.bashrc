@@ -98,8 +98,8 @@ fi
 #    . /etc/bash_completion
 #fi
 
+alias launch="ros2 launch f1tenth_gym_ros gym_bridge_launch.py"
+
 source /opt/ros/foxy/setup.bash
 source /sim_ws/install/local_setup.bash
 colcon build
-ros2 launch f1tenth_gym_ros gym_bridge_launch.py
-echo Finished...
