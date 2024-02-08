@@ -47,19 +47,22 @@ class WallFollow(Node):
         )
 
         # TODO: set PID gains
-        self.kp = 2.0
-        self.ki = 0.0
-        self.kd = 0.0
+        self.kp = 1.0
+        # self.ki = 0.0
+        self.kd = 0.01
 
         # TODO: set velocity values
-        self.max_speed = 2.0
-        self.turn_speed = 0.5
+        self.max_speed = 4.0
+        self.turn_speed = 1.25
 
         # TODO: error computation values
         self.left_rads = deg_to_rad(90)
-        self.forward_rads = deg_to_rad(5)
-        self.projected = self.max_speed / DRIVE_REFRESH
-        self.distance = 0.5
+        self.forwardleft_rads = deg_to_rad(34.5)
+        self.forwardright_rads = -self.forwardleft_rads
+        self.frontleft_rads = deg_to_rad(5)
+        self.frontright_rads = -self.frontleft_rads
+        self.projected = 1.3
+        self.distance = 0.9
 
         # TODO: store history
         self.integral = 0.0
@@ -102,21 +105,33 @@ class WallFollow(Node):
         Returns:
             error: calculated error
         """
-
-        #TODO:implement
-        diff_rad : float32 = self.left_rads - self.forward_rads
+        # TODO: implement
+        diff_rad : float32 = self.left_rads - self.forwardleft_rads
 
         left : float32 = self.get_range(range_data, self.left_rads)
-        forward : float32 = self.get_range(range_data, self.forward_rads)
+        forwardL : float32 = self.get_range(range_data, self.forwardleft_rads)
+        forwardR : float32 = self.get_range(range_data, self.forwardright_rads)
+        frontL : float32 = self.get_range(range_data, self.frontleft_rads)
+        frontR : float32 = self.get_range(range_data, self.frontright_rads)
 
-        theta : float = -np.arctan((forward * np.cos(diff_rad) - left) / (forward * np.sin(diff_rad)))
+        theta : float = -np.arctan((forwardL * np.cos(diff_rad) - left) / (forwardL * np.sin(diff_rad)))
         act_dist : float = left * np.cos(theta)
         proj_dist : float = act_dist - self.projected * np.sin(theta)
 
         self.dt = time.process_time() - self.last_time
         self.last_time = time.process_time()
 
-        return proj_dist - dist
+        error = proj_dist - dist
+
+        # if going to crash
+        if frontL < 2.0 and forwardL < 2.2 and forwardL < forwardR:
+            # dont
+            error -= 0.2 # forcefully turn right
+        elif frontR < 2.0 and forwardR < 2.2 and forwardL > forwardR:
+            # also dont
+            error += 0.2 # forcefully turn left
+
+        return error
 
     def pid_control(self, error, velocity):
         print(f"Error: {error}")
@@ -133,10 +148,9 @@ class WallFollow(Node):
         # TODO: Use kp, ki & kd to implement a PID controller
         U : float = (
             self.kp * error +
-            self.ki * self.integral +
-            self.kd * (self.prev_error - self.error) / self.dt
+            # self.ki * self.integral +
+            self.kd * (self.error - self.prev_error)
         )
-        self.integral += error
         self.prev_error = error
 
         print(f"U (rad): {np.round(U, 2)}, min (rad): {np.round(deg_to_rad(-20.0), 2)}, max (rad): {np.round(deg_to_rad(20.0), 2)}")
