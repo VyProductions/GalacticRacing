@@ -6,7 +6,7 @@ import numpy as np
 from sensor_msgs.msg import LaserScan
 from ackermann_msgs.msg import AckermannDriveStamped
 
-import time
+# import time # time.process_time() for dt computations
 
 float32 = np.float32
 
@@ -15,10 +15,6 @@ def deg_to_rad(deg : float32) -> float32:
 
 def rad_to_deg(rad : float32) -> float32:
     return (rad * 180.0) / np.pi
-
-# known scan constants
-ANGLE_MIN : float32 = deg_to_rad(-135.0)
-ANGLE_MAX : float32 = deg_to_rad(135.0)
 
 # publisher/subscription constants
 DRIVE_REFRESH : int = 10  # queries per second (hZ)
@@ -34,7 +30,6 @@ class WallFollow(Node):
     """
     def __init__(self):
         super().__init__('wall_follow_node')
-        # TODO: create subscribers and publishers
         
         # publishers
         self.drive_pub = self.create_publisher(
@@ -46,16 +41,20 @@ class WallFollow(Node):
             LaserScan, SCAN_TOPIC, self.scan_callback, SCAN_REFRESH
         )
 
-        # TODO: set PID gains
+        # set PID gains
         self.kp = 1.0
         # self.ki = 0.0
-        self.kd = 0.01
+        # self.kd = 0.0
 
-        # TODO: set velocity values
+        # set velocity values
         self.max_speed = 4.0
         self.turn_speed = 1.25
 
-        # TODO: error computation values
+        # scan values
+        self.MIN_RANGE = 0.0
+        self.MAX_RANGE = 30.0
+
+        # error computation values
         self.left_rads = deg_to_rad(90)
         self.forwardleft_rads = deg_to_rad(34.5)
         self.forwardright_rads = -self.forwardleft_rads
@@ -64,18 +63,16 @@ class WallFollow(Node):
         self.projected = 1.3
         self.distance = 0.9
 
-        # TODO: store history
-        self.integral = 0.0
-        self.prev_error = 0.0
-        self.error = 0.0
-        self.last_time = time.process_time()
+        # store history
+        # self.integral = 0.0
+        # self.prev_error = 0.0
+        # self.error = 0.0
+        # self.last_time = time.process_time()
 
-        # TODO: store current stats
+        # store current details
         self.speed = 0.0
-        self.dt = 0.0
         self.steering_angle = 0.0
-
-        # TODO: store any necessary values you think you'll need
+        # self.dt = 0.0
 
     def get_range(self, range_data, angle):
         """
@@ -92,7 +89,7 @@ class WallFollow(Node):
 
         lidar_index : int = int(np.round((angle + deg_to_rad(135.0)) * (1080/deg_to_rad(270.0))))
         range = range_data[lidar_index]
-        return range if range >= 0.0 and range <= 30.0 else 30.0
+        return range if range > self.MIN_RANGE and range < self.MAX_RANGE else float("inf")
 
     def get_error(self, range_data, dist):
         """
@@ -105,22 +102,25 @@ class WallFollow(Node):
         Returns:
             error: calculated error
         """
-        # TODO: implement
+        # angular distance between perpendicular left and main forward left sample
         diff_rad : float32 = self.left_rads - self.forwardleft_rads
 
+        # distances along select rays to obstacles
         left : float32 = self.get_range(range_data, self.left_rads)
         forwardL : float32 = self.get_range(range_data, self.forwardleft_rads)
         forwardR : float32 = self.get_range(range_data, self.forwardright_rads)
         frontL : float32 = self.get_range(range_data, self.frontleft_rads)
         frontR : float32 = self.get_range(range_data, self.frontright_rads)
 
+        # estimate distance to the left wall
         theta : float = -np.arctan((forwardL * np.cos(diff_rad) - left) / (forwardL * np.sin(diff_rad)))
         act_dist : float = left * np.cos(theta)
         proj_dist : float = act_dist - self.projected * np.sin(theta)
 
-        self.dt = time.process_time() - self.last_time
-        self.last_time = time.process_time()
+        # self.dt = time.process_time() - self.last_time
+        # self.last_time = time.process_time()
 
+        # compute error to turn from
         error = proj_dist - dist
 
         # if going to crash
@@ -147,13 +147,11 @@ class WallFollow(Node):
         """
         # TODO: Use kp, ki & kd to implement a PID controller
         U : float = (
-            self.kp * error +
+            self.kp * error # +
             # self.ki * self.integral +
-            self.kd * (self.error - self.prev_error)
+            # self.kd * (self.error - self.prev_error)
         )
-        self.prev_error = error
-
-        print(f"U (rad): {np.round(U, 2)}, min (rad): {np.round(deg_to_rad(-20.0), 2)}, max (rad): {np.round(deg_to_rad(20.0), 2)}")
+        # self.prev_error = error
         
         if U < deg_to_rad(-20.0):
             self.steering_angle = deg_to_rad(-20.0)
@@ -162,7 +160,7 @@ class WallFollow(Node):
         else:
             self.steering_angle = U
 
-        # TODO: fill in drive message and publish
+        # fill in drive message and publish
         drive_msg = AckermannDriveStamped()
         drive_msg.drive.steering_angle = self.steering_angle
         drive_msg.drive.speed = velocity
@@ -179,9 +177,19 @@ class WallFollow(Node):
         Returns:
             None
         """
-        error = self.get_error(msg.ranges, self.distance) # TODO: replace with error calculated by get_error()
-        velocity = self.max_speed if abs(self.steering_angle) >= 0.0 and abs(self.steering_angle) < deg_to_rad(10.0) else self.turn_speed
-        self.pid_control(error, velocity) # TODO: actuate the car with PID
+        # get max/min range of laser scan for distance verification
+        self.MIN_RANGE = msg.range_min
+        self.MAX_RANGE = msg.range_max
+
+        # get error for steering
+        error = self.get_error(msg.ranges, self.distance)
+
+        # adjust speed according to steering angle
+        velocity = self.max_speed if abs(self.steering_angle) >= 0.0 and \
+            abs(self.steering_angle) < deg_to_rad(10.0) else self.turn_speed
+        
+        # actuate the car with PID
+        self.pid_control(error, velocity)
 
 
 def main(args=None):
