@@ -30,6 +30,7 @@ services:
       - ../install:/sim_ws/install
       - ../safety_node/:/sim_ws/src/safety_node
       - ../wall_follow/:/sim_ws/src/wall_follow
+      - ../gap_follow/:/sim_ws/src/gap_follow
       - type: bind
         source: ./.bashrc
         target: /root/.bashrc
