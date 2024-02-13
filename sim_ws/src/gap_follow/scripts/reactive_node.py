@@ -52,20 +52,17 @@ class ReactiveFollowGap(Node):
             1.Setting each value to the mean over some window
             2.Rejecting high values (eg. > 3m)
         """
-        proc_ranges = ranges.copy()
+        proc_ranges = [None] * RANGE_SIZE
 
         wind_rad  : int = WIND_SIZE // 2
         proc_size : int = RANGE_SIZE - 2 * wind_rad
 
         for i in range(proc_size):
             sum : float32 = 0.0
-            # elems = []
 
             for j in range(WIND_SIZE):
                 sum += ranges[i + j]
-                # elems.append(ranges[i + j])
 
-            # print(f"{i}: {elems} | {sum} :: {sum / float(WIND_SIZE)}")
             sum = np.round(sum / float(WIND_SIZE), 3)
 
             if sum > DIST_THRESH:
