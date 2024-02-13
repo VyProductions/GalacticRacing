@@ -5,6 +5,27 @@ import numpy as np
 from sensor_msgs.msg import LaserScan
 from ackermann_msgs.msg import AckermannDriveStamped, AckermannDrive
 
+float32 = np.float32
+
+# car dimensions
+CAR_WIDTH  : float32 = 0.29 # meters
+CAR_LENGTH : float32 = 0.45 # meters
+
+# topics
+SCAN_TOPIC  : str = "/scan"
+DRIVE_TOPIC : str = "/drive"
+
+# refresh frequencies
+SCAN_REFRESH = 10
+DRIVE_REFRESH = 10
+
+# preprocessing range constants
+RANGE_SIZE : int = 1080
+WIND_SIZE  : int = 5
+
+# distance processing
+DIST_THRESH : float32 = 3.0
+
 class ReactiveFollowGap(Node):
     """ 
     Implement Wall Following on the car
@@ -16,8 +37,15 @@ class ReactiveFollowGap(Node):
         lidarscan_topic = '/scan'
         drive_topic = '/drive'
 
-        # TODO: Subscribe to LIDAR
-        # TODO: Publish to drive
+        # subscribers
+        self.laser_sub = self.create_subscription(
+            LaserScan, SCAN_TOPIC, self.lidar_callback, SCAN_REFRESH
+        )
+
+        # publishers
+        self.drive_pub = self.create_publisher(
+            AckermannDriveStamped, DRIVE_TOPIC, DRIVE_REFRESH
+        )
 
     def preprocess_lidar(self, ranges):
         """ Preprocess the LiDAR scan array. Expert implementation includes:
@@ -25,6 +53,28 @@ class ReactiveFollowGap(Node):
             2.Rejecting high values (eg. > 3m)
         """
         proc_ranges = ranges
+
+        wind_rad  : int = WIND_SIZE // 2
+        proc_size : int = RANGE_SIZE - 2 * wind_rad
+
+        for i in range(proc_size):
+            sum : float32 = 0.0
+
+            for j in range(WIND_SIZE):
+                sum += ranges[i + j]
+
+            sum /= float(WIND_SIZE)
+
+            if sum > DIST_THRESH:
+                sum = 0.0  # invalidate distance
+            
+            proc_ranges[i + wind_rad] = sum
+
+        # duplicate average values into edge of ranges array
+        for i in range(wind_rad):
+            proc_ranges[i] = proc_ranges[wind_rad]
+            proc_ranges[RANGE_SIZE - i - 1] = proc_ranges[RANGE_SIZE - wind_rad]
+
         return proc_ranges
 
     def find_max_gap(self, free_space_ranges):
