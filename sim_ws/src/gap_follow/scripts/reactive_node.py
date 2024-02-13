@@ -52,18 +52,21 @@ class ReactiveFollowGap(Node):
             1.Setting each value to the mean over some window
             2.Rejecting high values (eg. > 3m)
         """
-        proc_ranges = ranges
+        proc_ranges = ranges.copy()
 
         wind_rad  : int = WIND_SIZE // 2
         proc_size : int = RANGE_SIZE - 2 * wind_rad
 
         for i in range(proc_size):
             sum : float32 = 0.0
+            # elems = []
 
             for j in range(WIND_SIZE):
                 sum += ranges[i + j]
+                # elems.append(ranges[i + j])
 
-            sum /= float(WIND_SIZE)
+            # print(f"{i}: {elems} | {sum} :: {sum / float(WIND_SIZE)}")
+            sum = np.round(sum / float(WIND_SIZE), 3)
 
             if sum > DIST_THRESH:
                 sum = 0.0  # invalidate distance
@@ -73,7 +76,7 @@ class ReactiveFollowGap(Node):
         # duplicate average values into edge of ranges array
         for i in range(wind_rad):
             proc_ranges[i] = proc_ranges[wind_rad]
-            proc_ranges[RANGE_SIZE - i - 1] = proc_ranges[RANGE_SIZE - wind_rad]
+            proc_ranges[RANGE_SIZE - i - 1] = proc_ranges[RANGE_SIZE - wind_rad - 1]
 
         return proc_ranges
 
