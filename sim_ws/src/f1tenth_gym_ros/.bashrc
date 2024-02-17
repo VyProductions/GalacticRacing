@@ -99,6 +99,7 @@ fi
 #fi
 
 alias launch="ros2 launch f1tenth_gym_ros gym_bridge_launch.py"
+alias run="colcon build && clear && ros2 run"
 
 source /opt/ros/foxy/setup.bash
 source /sim_ws/install/local_setup.bash
