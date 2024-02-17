@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
 
@@ -7,29 +9,41 @@ from ackermann_msgs.msg import AckermannDriveStamped, AckermannDrive
 
 float32 = np.float32
 
-# car dimensions
-CAR_WIDTH  : float32 = 0.29 # meters
-CAR_LENGTH : float32 = 0.45 # meters
+def deg_to_rad(deg : float32) -> float32:
+    return (deg * np.pi) / 180.0
 
-# topics
-SCAN_TOPIC  : str = "/scan"
-DRIVE_TOPIC : str = "/drive"
+def rad_to_deg(rad : float32) -> float32:
+    return (rad * 180.0) / np.pi
+
+# car dimensions
+CAR_WIDTH  : float32 = 0.30 # meters
+CAR_LENGTH : float32 = 0.45 # meters
 
 # refresh frequencies
 SCAN_REFRESH = 10
 DRIVE_REFRESH = 10
 
-# preprocessing range constants
+# scan preprocessing constants
 RANGE_SIZE : int = 1080
 WIND_SIZE  : int = 5
+FOV : float = deg_to_rad(270.0)
 
 # distance processing
-DIST_THRESH : float32 = 3.0
+DIST_THRESH  : float32 = 3.00 # meters
+DISP_EPSILON : float32 = 0.40 # meters
+
+def idx_to_rad(idx : int) -> float32:
+    return idx * FOV / (RANGE_SIZE - 1) - FOV / 2.0
+
+def rad_to_idx(rad : float32) -> int:
+    return int(np.round((rad + FOV / 2.0) * (RANGE_SIZE / FOV)))
+
+LEFT : int = rad_to_idx(deg_to_rad(90.0))
+RIGHT : int = rad_to_idx(deg_to_rad(-90.0))
 
 class ReactiveFollowGap(Node):
     """ 
-    Implement Wall Following on the car
-    This is just a template, you are free to implement your own node!
+    Implement Follow the Gap on the car
     """
     def __init__(self):
         super().__init__('reactive_node')
@@ -39,14 +53,18 @@ class ReactiveFollowGap(Node):
 
         # subscribers
         self.laser_sub = self.create_subscription(
-            LaserScan, SCAN_TOPIC, self.lidar_callback, SCAN_REFRESH
+            LaserScan, lidarscan_topic, self.lidar_callback, SCAN_REFRESH
         )
 
         # publishers
         self.drive_pub = self.create_publisher(
-            AckermannDriveStamped, DRIVE_TOPIC, DRIVE_REFRESH
+            AckermannDriveStamped, drive_topic, DRIVE_REFRESH
         )
 
+        self.max_speed  = 1.0 # m/s
+        self.turn_speed = 0.5 # m/s
+        self.steering_angle = 0.0 # rads relative to forward (left: > 0.0, right: < 0.0)
+    
     def preprocess_lidar(self, ranges):
         """ Preprocess the LiDAR scan array. Expert implementation includes:
             1.Setting each value to the mean over some window
@@ -61,12 +79,15 @@ class ReactiveFollowGap(Node):
             sum : float32 = 0.0
 
             for j in range(WIND_SIZE):
+                if ranges[i + j] < 0.0:
+                    ranges[i + j] = 0.0
+
                 sum += ranges[i + j]
 
-            sum = np.round(sum / float(WIND_SIZE), 3)
+            sum = np.round(sum / float(WIND_SIZE), 2)
 
             if sum > DIST_THRESH:
-                sum = 0.0  # invalidate distance
+                sum = float("inf")  # too far away; make it infinity
             
             proc_ranges[i + wind_rad] = sum
 
@@ -77,39 +98,58 @@ class ReactiveFollowGap(Node):
 
         return proc_ranges
 
-    def find_max_gap(self, free_space_ranges):
-        """ Return the start index & end index of the max gap in free_space_ranges
-        """
-        return None
-    
-    def find_best_point(self, start_i, end_i, ranges):
-        """Start_i & end_i are start and end indicies of max-gap range, respectively
-        Return index of best point in ranges
-	    Naive: Choose the furthest point within ranges and go there
-        """
-        return None
+    def disparity_extender(self, proc_ranges):
+        # step 2: find all disparity pairs
+        disparity_idxs = []
+
+        for i in range(RIGHT, LEFT):
+            if abs(proc_ranges[i] - proc_ranges[i + 1]) > DISP_EPSILON:
+                disparity_idxs.append({
+                    'lo': proc_ranges[i] if proc_ranges[i] < proc_ranges[i + 1] else proc_ranges[i + 1],
+                    'hi': proc_ranges[i] if proc_ranges[i] > proc_ranges[i + 1] else proc_ranges[i + 1]
+                })
+
+        return rad_to_idx(deg_to_rad(0.0))
 
     def lidar_callback(self, data):
-        """ Process each LiDAR scan as per the Follow Gap algorithm & publish an AckermannDriveStamped Message
+        """
+        Process each LiDAR scan as per the Follow Gap algorithm & publish an AckermannDriveStamped Message
         """
         ranges = data.ranges
+
+        # preprocess range data
         proc_ranges = self.preprocess_lidar(ranges)
-        
-        # TODO:
-        #Find closest point to LiDAR
 
-        #Eliminate all points inside 'bubble' (set them to zero) 
+        # Get next index using disparity extender algorithm
+        best_idx = self.disparity_extender(proc_ranges)
 
-        #Find max length gap 
+        # Determine steering angle from best point
+        angle = idx_to_rad(best_idx)
 
-        #Find the best point in the gap 
+        # Clamp angle between min and max steering angle
+        if angle < deg_to_rad(-20.0):
+            angle = deg_to_rad(-20.0)
+        elif angle > deg_to_rad(20.0):
+            angle = deg_to_rad(20.0)
+
+        print(f"Steering to angle: {rad_to_deg(angle)}")
+        self.steering_angle = angle
+
+        # Limit velocity for turning
+        velocity = self.max_speed if abs(self.steering_angle) >= 0.0 and \
+            abs(self.steering_angle) < deg_to_rad(10.0) else self.turn_speed
+        # velocity = 0.0
 
         #Publish Drive message
+        msg = AckermannDriveStamped()
+        msg.drive.speed = velocity
+        msg.drive.steering_angle = self.steering_angle
+        self.drive_pub.publish(msg)
 
 
 def main(args=None):
     rclpy.init(args=args)
-    print("WallFollow Initialized")
+    print("Gap Follow Initialized")
     reactive_node = ReactiveFollowGap()
     rclpy.spin(reactive_node)
 
