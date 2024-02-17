@@ -1,0 +1,22 @@
+[1.502s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/ros_msg_pkg': PYTHONPATH=/home/vy/GalacticRacing/build/ros_msg_pkg/prefix_override:/home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/ros_msg_pkg build --build-base /home/vy/GalacticRacing/build/ros_msg_pkg/build install --record /home/vy/GalacticRacing/build/ros_msg_pkg/install.log --install-scripts $base/lib/ros_msg_pkg --single-version-externally-managed
+[1.693s] running egg_info
+[1.694s] writing ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/PKG-INFO
+[1.694s] writing dependency_links to ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/dependency_links.txt
+[1.695s] writing entry points to ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/entry_points.txt
+[1.697s] writing requirements to ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/requires.txt
+[1.699s] writing top-level names to ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/top_level.txt
+[1.737s] reading manifest file '../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/SOURCES.txt'
+[1.738s] writing manifest file '../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/SOURCES.txt'
+[1.740s] running build
+[1.740s] running build_py
+[1.741s] running install
+[1.742s] running install_lib
+[1.744s] running install_data
+[1.745s] running install_egg_info
+[1.747s] removing '/home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg-0.0.0-py3.8.egg-info' (and everything under it)
+[1.748s] Copying ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info to /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg-0.0.0-py3.8.egg-info
+[1.749s] running install_scripts
+[1.772s] Installing relay_node script to /home/vy/GalacticRacing/install/ros_msg_pkg/lib/ros_msg_pkg
+[1.772s] Installing talker_node script to /home/vy/GalacticRacing/install/ros_msg_pkg/lib/ros_msg_pkg
+[1.772s] writing list of installed files to '/home/vy/GalacticRacing/build/ros_msg_pkg/install.log'
+[1.790s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/ros_msg_pkg' returned '0': PYTHONPATH=/home/vy/GalacticRacing/build/ros_msg_pkg/prefix_override:/home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/ros_msg_pkg build --build-base /home/vy/GalacticRacing/build/ros_msg_pkg/build install --record /home/vy/GalacticRacing/build/ros_msg_pkg/install.log --install-scripts $base/lib/ros_msg_pkg --single-version-externally-managed

@@ -113,3 +113,6 @@ def area_of_collision(close_idx, proc_ranges):
         proc_ranges[i] = 0.0
 
 print(9 * FOV / (RANGE_SIZE - 1) - FOV / 2.0)
+
+for i in range(10, 2, -1):
+    print(i)

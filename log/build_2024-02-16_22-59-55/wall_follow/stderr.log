@@ -1,0 +1,35 @@
+[01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:[m[K In member function ‘[01m[Kdouble WallFollow::get_range(float*, double)[m[K’:
+[01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:30:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krange_data[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   30 |     double get_range([01;35m[Kfloat* range_data[m[K, double angle)
+      |                      [01;35m[K~~~~~~~^~~~~~~~~~[m[K
+[01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:30:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kangle[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   30 |     double get_range(float* range_data, [01;35m[Kdouble angle[m[K)
+      |                                         [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:[m[K In member function ‘[01m[Kdouble WallFollow::get_error(float*, double)[m[K’:
+[01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:47:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krange_data[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   47 |     double get_error([01;35m[Kfloat* range_data[m[K, double dist)
+      |                      [01;35m[K~~~~~~~^~~~~~~~~~[m[K
+[01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:47:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdist[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   47 |     double get_error(float* range_data, [01;35m[Kdouble dist[m[K)
+      |                                         [01;35m[K~~~~~~~^~~~[m[K
+[01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:[m[K In member function ‘[01m[Kvoid WallFollow::pid_control(double, double)[m[K’:
+[01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:76:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kangle[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   76 |         double [01;35m[Kangle[m[K = 0.0;
+      |                [01;35m[K^~~~~[m[K
+[01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:64:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   64 |     void pid_control([01;35m[Kdouble error[m[K, double velocity)
+      |                      [01;35m[K~~~~~~~^~~~~[m[K
+[01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:64:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kvelocity[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   64 |     void pid_control(double error, [01;35m[Kdouble velocity[m[K)
+      |                                    [01;35m[K~~~~~~~^~~~~~~~[m[K
+[01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:[m[K In member function ‘[01m[Kvoid WallFollow::scan_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:93:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   93 |         double [01;35m[Kerror[m[K = 0.0; // TODO: replace with error calculated by get_error()
+      |                [01;35m[K^~~~~[m[K
+[01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:94:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvelocity[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   94 |         double [01;35m[Kvelocity[m[K = 0.0; // TODO: calculate desired car velocity based on error
+      |                [01;35m[K^~~~~~~~[m[K
+[01m[K/home/vy/GalacticRacing/sim_ws/src/wall_follow/src/wall_follow_node.cpp:82:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscan_msg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   82 | void scan_callback([01;35m[Kconst sensor_msgs::msg::LaserScan::ConstSharedPtr scan_msg[m[K)
+      |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+

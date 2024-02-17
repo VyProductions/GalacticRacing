@@ -1,0 +1,232 @@
+[0.000000] (-) TimerEvent: {}
+[0.001377] (f1tenth_gym_ros) JobQueued: {'identifier': 'f1tenth_gym_ros', 'dependencies': OrderedDict()}
+[0.001407] (gap_follow) JobQueued: {'identifier': 'gap_follow', 'dependencies': OrderedDict()}
+[0.001422] (ros_msg_pkg) JobQueued: {'identifier': 'ros_msg_pkg', 'dependencies': OrderedDict()}
+[0.001435] (safety_node) JobQueued: {'identifier': 'safety_node', 'dependencies': OrderedDict()}
+[0.001447] (wall_follow) JobQueued: {'identifier': 'wall_follow', 'dependencies': OrderedDict()}
+[0.001465] (f1tenth_gym_ros) JobStarted: {'identifier': 'f1tenth_gym_ros'}
+[0.083029] (gap_follow) JobStarted: {'identifier': 'gap_follow'}
+[0.120755] (-) TimerEvent: {}
+[0.151984] (ros_msg_pkg) JobStarted: {'identifier': 'ros_msg_pkg'}
+[0.249876] (-) TimerEvent: {}
+[0.257606] (safety_node) JobStarted: {'identifier': 'safety_node'}
+[0.332925] (wall_follow) JobStarted: {'identifier': 'wall_follow'}
+[0.370971] (-) TimerEvent: {}
+[0.472286] (-) TimerEvent: {}
+[0.572969] (-) TimerEvent: {}
+[0.685918] (-) TimerEvent: {}
+[0.700154] (gap_follow) JobProgress: {'identifier': 'gap_follow', 'progress': 'cmake'}
+[0.701668] (gap_follow) Command: {'cmd': ['/usr/bin/cmake', '/home/vy/GalacticRacing/sim_ws/src/gap_follow', '-DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/install/gap_follow'], 'cwd': '/home/vy/GalacticRacing/build/gap_follow', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('USER', 'vy'), ('SSH_AGENT_PID', '1186'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('HOME', '/home/vy'), ('OLDPWD', '/home/vy'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu'), ('ZSH', '/home/vy/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('MANAGERPID', '891'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('LOGNAME', 'vy'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:26576'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/AutonomousRacing:@/tmp/.ICE-unix/1416,unix/AutonomousRacing:/tmp/.ICE-unix/1416'), ('INVOCATION_ID', '3a7c3c9e933e45a29cbdab80fa3f8dce'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c35cea7c_c599_4894_8154_328a5d79b7ee'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LANG', 'en_US.UTF-8'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.80'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vy/GalacticRacing/build/gap_follow'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('COLCON', '1'), ('VTE_VERSION', '6003')]), 'shell': False}
+[0.786779] (-) TimerEvent: {}
+[0.891285] (-) TimerEvent: {}
+[1.022331] (-) TimerEvent: {}
+[1.063884] (safety_node) JobProgress: {'identifier': 'safety_node', 'progress': 'cmake'}
+[1.064062] (safety_node) Command: {'cmd': ['/usr/bin/cmake', '/home/vy/GalacticRacing/sim_ws/src/safety_node', '-DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/install/safety_node'], 'cwd': '/home/vy/GalacticRacing/build/safety_node', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('USER', 'vy'), ('SSH_AGENT_PID', '1186'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('HOME', '/home/vy'), ('OLDPWD', '/home/vy'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu'), ('ZSH', '/home/vy/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('MANAGERPID', '891'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('LOGNAME', 'vy'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:26576'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/AutonomousRacing:@/tmp/.ICE-unix/1416,unix/AutonomousRacing:/tmp/.ICE-unix/1416'), ('INVOCATION_ID', '3a7c3c9e933e45a29cbdab80fa3f8dce'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c35cea7c_c599_4894_8154_328a5d79b7ee'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LANG', 'en_US.UTF-8'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.80'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vy/GalacticRacing/build/safety_node'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('COLCON', '1'), ('VTE_VERSION', '6003')]), 'shell': False}
+[1.071189] (wall_follow) JobProgress: {'identifier': 'wall_follow', 'progress': 'cmake'}
+[1.071415] (wall_follow) Command: {'cmd': ['/usr/bin/cmake', '/home/vy/GalacticRacing/sim_ws/src/wall_follow', '-DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/install/wall_follow'], 'cwd': '/home/vy/GalacticRacing/build/wall_follow', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('USER', 'vy'), ('SSH_AGENT_PID', '1186'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('HOME', '/home/vy'), ('OLDPWD', '/home/vy'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu'), ('ZSH', '/home/vy/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('MANAGERPID', '891'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('LOGNAME', 'vy'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:26576'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/AutonomousRacing:@/tmp/.ICE-unix/1416,unix/AutonomousRacing:/tmp/.ICE-unix/1416'), ('INVOCATION_ID', '3a7c3c9e933e45a29cbdab80fa3f8dce'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c35cea7c_c599_4894_8154_328a5d79b7ee'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LANG', 'en_US.UTF-8'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.80'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vy/GalacticRacing/build/wall_follow'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('COLCON', '1'), ('VTE_VERSION', '6003')]), 'shell': False}
+[1.122844] (-) TimerEvent: {}
+[1.223401] (-) TimerEvent: {}
+[1.288456] (safety_node) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[1.289583] (wall_follow) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[1.294726] (gap_follow) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[1.323996] (-) TimerEvent: {}
+[1.425373] (-) TimerEvent: {}
+[1.513283] (f1tenth_gym_ros) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../../build/f1tenth_gym_ros', 'build', '--build-base', '/home/vy/GalacticRacing/build/f1tenth_gym_ros/build', 'install', '--record', '/home/vy/GalacticRacing/build/f1tenth_gym_ros/install.log', '--install-scripts', '$base/lib/f1tenth_gym_ros', '--single-version-externally-managed'], 'cwd': '/home/vy/GalacticRacing/sim_ws/src/f1tenth_gym_ros', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'USER': 'vy', 'SSH_AGENT_PID': '1186', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'HOME': '/home/vy', 'OLDPWD': '/home/vy', 'LESS': '-R', 'DESKTOP_SESSION': 'ubuntu', 'ZSH': '/home/vy/.oh-my-zsh', 'LSCOLORS': 'Gxfxcxdxbxegedabagacad', 'GTK_MODULES': 'gail:atk-bridge', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'PAGER': 'less', 'MANAGERPID': '891', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'LOGNAME': 'vy', '_': '/usr/bin/colcon', 'JOURNAL_STREAM': '8:26576', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'vy', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/AutonomousRacing:@/tmp/.ICE-unix/1416,unix/AutonomousRacing:/tmp/.ICE-unix/1416', 'INVOCATION_ID': '3a7c3c9e933e45a29cbdab80fa3f8dce', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c35cea7c_c599_4894_8154_328a5d79b7ee', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LANG': 'en_US.UTF-8', 'XDG_SESSION_DESKTOP': 'ubuntu', 'GNOME_TERMINAL_SERVICE': ':1.80', 'XMODIFIERS': '@im=ibus', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/usr/bin/zsh', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/vy/GalacticRacing/build/f1tenth_gym_ros', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'COLCON': '1', 'VTE_VERSION': '6003', 'PYTHONPATH': '/home/vy/GalacticRacing/build/f1tenth_gym_ros/prefix_override:/home/vy/GalacticRacing/install/f1tenth_gym_ros/lib/python3.8/site-packages:'}, 'shell': False}
+[1.528862] (ros_msg_pkg) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../../build/ros_msg_pkg', 'build', '--build-base', '/home/vy/GalacticRacing/build/ros_msg_pkg/build', 'install', '--record', '/home/vy/GalacticRacing/build/ros_msg_pkg/install.log', '--install-scripts', '$base/lib/ros_msg_pkg', '--single-version-externally-managed'], 'cwd': '/home/vy/GalacticRacing/sim_ws/src/ros_msg_pkg', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'USER': 'vy', 'SSH_AGENT_PID': '1186', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'HOME': '/home/vy', 'OLDPWD': '/home/vy', 'LESS': '-R', 'DESKTOP_SESSION': 'ubuntu', 'ZSH': '/home/vy/.oh-my-zsh', 'LSCOLORS': 'Gxfxcxdxbxegedabagacad', 'GTK_MODULES': 'gail:atk-bridge', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'PAGER': 'less', 'MANAGERPID': '891', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'LOGNAME': 'vy', '_': '/usr/bin/colcon', 'JOURNAL_STREAM': '8:26576', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'vy', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/AutonomousRacing:@/tmp/.ICE-unix/1416,unix/AutonomousRacing:/tmp/.ICE-unix/1416', 'INVOCATION_ID': '3a7c3c9e933e45a29cbdab80fa3f8dce', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c35cea7c_c599_4894_8154_328a5d79b7ee', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LANG': 'en_US.UTF-8', 'XDG_SESSION_DESKTOP': 'ubuntu', 'GNOME_TERMINAL_SERVICE': ':1.80', 'XMODIFIERS': '@im=ibus', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/usr/bin/zsh', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/vy/GalacticRacing/build/ros_msg_pkg', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'COLCON': '1', 'VTE_VERSION': '6003', 'PYTHONPATH': '/home/vy/GalacticRacing/build/ros_msg_pkg/prefix_override:/home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages:'}, 'shell': False}
+[1.530697] (-) TimerEvent: {}
+[1.632106] (-) TimerEvent: {}
+[1.712096] (f1tenth_gym_ros) StdoutLine: {'line': b'running egg_info\n'}
+[1.712489] (f1tenth_gym_ros) StdoutLine: {'line': b'creating ../../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info\n'}
+[1.712933] (f1tenth_gym_ros) StdoutLine: {'line': b'writing ../../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/PKG-INFO\n'}
+[1.715873] (f1tenth_gym_ros) StdoutLine: {'line': b'writing dependency_links to ../../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/dependency_links.txt\n'}
+[1.716442] (f1tenth_gym_ros) StdoutLine: {'line': b'writing entry points to ../../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/entry_points.txt\n'}
+[1.716872] (f1tenth_gym_ros) StdoutLine: {'line': b'writing requirements to ../../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/requires.txt\n'}
+[1.717344] (f1tenth_gym_ros) StdoutLine: {'line': b'writing top-level names to ../../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/top_level.txt\n'}
+[1.719198] (f1tenth_gym_ros) StdoutLine: {'line': b"writing manifest file '../../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'\n"}
+[1.722428] (ros_msg_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[1.722901] (ros_msg_pkg) StdoutLine: {'line': b'creating ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info\n'}
+[1.725097] (ros_msg_pkg) StdoutLine: {'line': b'writing ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/PKG-INFO\n'}
+[1.725490] (ros_msg_pkg) StdoutLine: {'line': b'writing dependency_links to ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/dependency_links.txt\n'}
+[1.725802] (ros_msg_pkg) StdoutLine: {'line': b'writing entry points to ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/entry_points.txt\n'}
+[1.726001] (ros_msg_pkg) StdoutLine: {'line': b'writing requirements to ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/requires.txt\n'}
+[1.727777] (ros_msg_pkg) StdoutLine: {'line': b'writing top-level names to ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/top_level.txt\n'}
+[1.729256] (ros_msg_pkg) StdoutLine: {'line': b"writing manifest file '../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/SOURCES.txt'\n"}
+[1.730463] (gap_follow) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[1.730606] (wall_follow) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[1.732657] (-) TimerEvent: {}
+[1.736196] (safety_node) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[1.755859] (safety_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[1.756026] (wall_follow) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[1.756090] (gap_follow) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[1.757283] (f1tenth_gym_ros) StdoutLine: {'line': b"reading manifest file '../../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'\n"}
+[1.758213] (f1tenth_gym_ros) StdoutLine: {'line': b"writing manifest file '../../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'\n"}
+[1.758969] (f1tenth_gym_ros) StdoutLine: {'line': b'running build\n'}
+[1.759201] (f1tenth_gym_ros) StdoutLine: {'line': b'running build_py\n'}
+[1.759291] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/GalacticRacing/build/f1tenth_gym_ros/build\n'}
+[1.759350] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/GalacticRacing/build/f1tenth_gym_ros/build/lib\n'}
+[1.759403] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/GalacticRacing/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros\n'}
+[1.759470] (f1tenth_gym_ros) StdoutLine: {'line': b'copying f1tenth_gym_ros/__init__.py -> /home/vy/GalacticRacing/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros\n'}
+[1.759520] (f1tenth_gym_ros) StdoutLine: {'line': b'copying f1tenth_gym_ros/gym_bridge.py -> /home/vy/GalacticRacing/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros\n'}
+[1.759578] (f1tenth_gym_ros) StdoutLine: {'line': b'running install\n'}
+[1.762663] (f1tenth_gym_ros) StdoutLine: {'line': b'running install_lib\n'}
+[1.762788] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/GalacticRacing/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros\n'}
+[1.762844] (f1tenth_gym_ros) StdoutLine: {'line': b'copying /home/vy/GalacticRacing/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros/__init__.py -> /home/vy/GalacticRacing/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros\n'}
+[1.762900] (f1tenth_gym_ros) StdoutLine: {'line': b'copying /home/vy/GalacticRacing/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros/gym_bridge.py -> /home/vy/GalacticRacing/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros\n'}
+[1.768734] (ros_msg_pkg) StdoutLine: {'line': b"reading manifest file '../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/SOURCES.txt'\n"}
+[1.768886] (ros_msg_pkg) StdoutLine: {'line': b"writing manifest file '../../../build/ros_msg_pkg/ros_msg_pkg.egg-info/SOURCES.txt'\n"}
+[1.768943] (ros_msg_pkg) StdoutLine: {'line': b'running build\n'}
+[1.768993] (ros_msg_pkg) StdoutLine: {'line': b'running build_py\n'}
+[1.769074] (ros_msg_pkg) StdoutLine: {'line': b'creating /home/vy/GalacticRacing/build/ros_msg_pkg/build\n'}
+[1.769130] (ros_msg_pkg) StdoutLine: {'line': b'creating /home/vy/GalacticRacing/build/ros_msg_pkg/build/lib\n'}
+[1.769180] (ros_msg_pkg) StdoutLine: {'line': b'creating /home/vy/GalacticRacing/build/ros_msg_pkg/build/lib/ros_msg_pkg\n'}
+[1.769228] (ros_msg_pkg) StdoutLine: {'line': b'copying ros_msg_pkg/relay_node.py -> /home/vy/GalacticRacing/build/ros_msg_pkg/build/lib/ros_msg_pkg\n'}
+[1.769276] (ros_msg_pkg) StdoutLine: {'line': b'copying ros_msg_pkg/__init__.py -> /home/vy/GalacticRacing/build/ros_msg_pkg/build/lib/ros_msg_pkg\n'}
+[1.769324] (ros_msg_pkg) StdoutLine: {'line': b'copying ros_msg_pkg/talker_node.py -> /home/vy/GalacticRacing/build/ros_msg_pkg/build/lib/ros_msg_pkg\n'}
+[1.769372] (ros_msg_pkg) StdoutLine: {'line': b'running install\n'}
+[1.769420] (f1tenth_gym_ros) StdoutLine: {'line': b'byte-compiling /home/vy/GalacticRacing/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros/__init__.py to __init__.cpython-38.pyc\n'}
+[1.769475] (f1tenth_gym_ros) StdoutLine: {'line': b'byte-compiling /home/vy/GalacticRacing/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros/gym_bridge.py to gym_bridge.cpython-38.pyc\n'}
+[1.772366] (f1tenth_gym_ros) StdoutLine: {'line': b'running install_data\n'}
+[1.772705] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/GalacticRacing/install/f1tenth_gym_ros/share/ament_index\n'}
+[1.772762] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/GalacticRacing/install/f1tenth_gym_ros/share/ament_index/resource_index\n'}
+[1.772845] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/GalacticRacing/install/f1tenth_gym_ros/share/ament_index/resource_index/packages\n'}
+[1.777945] (f1tenth_gym_ros) StdoutLine: {'line': b'copying resource/f1tenth_gym_ros -> /home/vy/GalacticRacing/install/f1tenth_gym_ros/share/ament_index/resource_index/packages\n'}
+[1.778147] (f1tenth_gym_ros) StdoutLine: {'line': b'copying package.xml -> /home/vy/GalacticRacing/install/f1tenth_gym_ros/share/f1tenth_gym_ros\n'}
+[1.778202] (ros_msg_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[1.778258] (ros_msg_pkg) StdoutLine: {'line': b'creating /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg\n'}
+[1.778307] (ros_msg_pkg) StdoutLine: {'line': b'copying /home/vy/GalacticRacing/build/ros_msg_pkg/build/lib/ros_msg_pkg/relay_node.py -> /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg\n'}
+[1.778354] (ros_msg_pkg) StdoutLine: {'line': b'copying /home/vy/GalacticRacing/build/ros_msg_pkg/build/lib/ros_msg_pkg/__init__.py -> /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg\n'}
+[1.778409] (ros_msg_pkg) StdoutLine: {'line': b'copying /home/vy/GalacticRacing/build/ros_msg_pkg/build/lib/ros_msg_pkg/talker_node.py -> /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg\n'}
+[1.778456] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/GalacticRacing/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch\n'}
+[1.778503] (ros_msg_pkg) StdoutLine: {'line': b'byte-compiling /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg/relay_node.py to relay_node.cpython-38.pyc\n'}
+[1.778550] (f1tenth_gym_ros) StdoutLine: {'line': b'copying launch/gym_bridge_launch.py -> /home/vy/GalacticRacing/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch\n'}
+[1.779036] (f1tenth_gym_ros) StdoutLine: {'line': b'copying launch/opp_racecar.xacro -> /home/vy/GalacticRacing/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch\n'}
+[1.779432] (f1tenth_gym_ros) StdoutLine: {'line': b'copying launch/ego_racecar.xacro -> /home/vy/GalacticRacing/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch\n'}
+[1.779515] (f1tenth_gym_ros) StdoutLine: {'line': b'copying launch/gym_bridge.rviz -> /home/vy/GalacticRacing/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch\n'}
+[1.779586] (f1tenth_gym_ros) StdoutLine: {'line': b'creating /home/vy/GalacticRacing/install/f1tenth_gym_ros/share/f1tenth_gym_ros/config\n'}
+[1.779657] (f1tenth_gym_ros) StdoutLine: {'line': b'copying config/sim.yaml -> /home/vy/GalacticRacing/install/f1tenth_gym_ros/share/f1tenth_gym_ros/config\n'}
+[1.779736] (f1tenth_gym_ros) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.779857] (f1tenth_gym_ros) StdoutLine: {'line': b'Copying ../../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info to /home/vy/GalacticRacing/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros-0.0.0-py3.8.egg-info\n'}
+[1.779935] (f1tenth_gym_ros) StdoutLine: {'line': b'running install_scripts\n'}
+[1.780465] (ros_msg_pkg) StdoutLine: {'line': b'byte-compiling /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg/__init__.py to __init__.cpython-38.pyc\n'}
+[1.780552] (ros_msg_pkg) StdoutLine: {'line': b'byte-compiling /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg/talker_node.py to talker_node.cpython-38.pyc\n'}
+[1.780624] (ros_msg_pkg) StdoutLine: {'line': b'running install_data\n'}
+[1.780693] (ros_msg_pkg) StdoutLine: {'line': b'creating /home/vy/GalacticRacing/install/ros_msg_pkg/share/ament_index\n'}
+[1.780823] (ros_msg_pkg) StdoutLine: {'line': b'creating /home/vy/GalacticRacing/install/ros_msg_pkg/share/ament_index/resource_index\n'}
+[1.780901] (ros_msg_pkg) StdoutLine: {'line': b'creating /home/vy/GalacticRacing/install/ros_msg_pkg/share/ament_index/resource_index/packages\n'}
+[1.780972] (ros_msg_pkg) StdoutLine: {'line': b'copying resource/ros_msg_pkg -> /home/vy/GalacticRacing/install/ros_msg_pkg/share/ament_index/resource_index/packages\n'}
+[1.781042] (ros_msg_pkg) StdoutLine: {'line': b'copying package.xml -> /home/vy/GalacticRacing/install/ros_msg_pkg/share/ros_msg_pkg\n'}
+[1.781550] (ros_msg_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.781627] (ros_msg_pkg) StdoutLine: {'line': b'Copying ../../../build/ros_msg_pkg/ros_msg_pkg.egg-info to /home/vy/GalacticRacing/install/ros_msg_pkg/lib/python3.8/site-packages/ros_msg_pkg-0.0.0-py3.8.egg-info\n'}
+[1.781761] (ros_msg_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[1.795873] (ros_msg_pkg) StdoutLine: {'line': b'Installing relay_node script to /home/vy/GalacticRacing/install/ros_msg_pkg/lib/ros_msg_pkg\n'}
+[1.796314] (ros_msg_pkg) StdoutLine: {'line': b'Installing talker_node script to /home/vy/GalacticRacing/install/ros_msg_pkg/lib/ros_msg_pkg\n'}
+[1.797061] (ros_msg_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/vy/GalacticRacing/build/ros_msg_pkg/install.log'\n"}
+[1.799953] (f1tenth_gym_ros) StdoutLine: {'line': b'Installing gym_bridge script to /home/vy/GalacticRacing/install/f1tenth_gym_ros/lib/f1tenth_gym_ros\n'}
+[1.800156] (f1tenth_gym_ros) StdoutLine: {'line': b"writing list of installed files to '/home/vy/GalacticRacing/build/f1tenth_gym_ros/install.log'\n"}
+[1.828856] (ros_msg_pkg) CommandEnded: {'returncode': 0}
+[1.834598] (-) TimerEvent: {}
+[1.864432] (gap_follow) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[1.864750] (gap_follow) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.871884] (safety_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[1.872100] (safety_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.872171] (wall_follow) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[1.872229] (wall_follow) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.935645] (-) TimerEvent: {}
+[1.939690] (ros_msg_pkg) JobEnded: {'identifier': 'ros_msg_pkg', 'rc': 0}
+[1.943939] (f1tenth_gym_ros) CommandEnded: {'returncode': 0}
+[2.004271] (safety_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.012714] (safety_node) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.013025] (safety_node) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.013353] (safety_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[2.018270] (gap_follow) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.018388] (gap_follow) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.018470] (gap_follow) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.018547] (gap_follow) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[2.018622] (wall_follow) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.021213] (wall_follow) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.023105] (wall_follow) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.024275] (wall_follow) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[2.036663] (-) TimerEvent: {}
+[2.056633] (f1tenth_gym_ros) JobEnded: {'identifier': 'f1tenth_gym_ros', 'rc': 0}
+[2.081536] (safety_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[2.082644] (safety_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.097879] (gap_follow) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[2.100387] (gap_follow) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.137323] (-) TimerEvent: {}
+[2.149492] (wall_follow) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[2.149679] (wall_follow) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.238555] (-) TimerEvent: {}
+[2.258238] (safety_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.259754] (gap_follow) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.276298] (safety_node) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.276855] (safety_node) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.280146] (gap_follow) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.284211] (gap_follow) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.296519] (wall_follow) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.299546] (safety_node) StderrLine: {'line': b'CMake Error at CMakeLists.txt:24 (find_package):\n'}
+[2.300031] (safety_node) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[2.300316] (safety_node) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[2.300645] (safety_node) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[2.300992] (safety_node) StderrLine: {'line': b'\n'}
+[2.301054] (safety_node) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[2.301113] (safety_node) StderrLine: {'line': b'  any of the following names:\n'}
+[2.301160] (safety_node) StderrLine: {'line': b'\n'}
+[2.301206] (safety_node) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[2.301252] (safety_node) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[2.301298] (safety_node) StderrLine: {'line': b'\n'}
+[2.301343] (safety_node) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[2.301389] (safety_node) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[2.301438] (safety_node) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[2.301484] (safety_node) StderrLine: {'line': b'  has been installed.\n'}
+[2.301529] (safety_node) StderrLine: {'line': b'\n'}
+[2.301574] (safety_node) StderrLine: {'line': b'\n'}
+[2.301619] (gap_follow) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[2.304821] (gap_follow) StdoutLine: {'line': b'See also "/home/vy/GalacticRacing/build/gap_follow/CMakeFiles/CMakeOutput.log".\n'}
+[2.307242] (safety_node) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[2.308299] (safety_node) StdoutLine: {'line': b'See also "/home/vy/GalacticRacing/build/safety_node/CMakeFiles/CMakeOutput.log".\n'}
+[2.313277] (gap_follow) StderrLine: {'line': b'CMake Error at CMakeLists.txt:25 (find_package):\n'}
+[2.313375] (gap_follow) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[2.313437] (gap_follow) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[2.317168] (gap_follow) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[2.317244] (gap_follow) StderrLine: {'line': b'\n'}
+[2.317294] (gap_follow) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[2.317342] (gap_follow) StderrLine: {'line': b'  any of the following names:\n'}
+[2.317422] (gap_follow) StderrLine: {'line': b'\n'}
+[2.317842] (gap_follow) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[2.318368] (gap_follow) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[2.322196] (gap_follow) StderrLine: {'line': b'\n'}
+[2.322737] (gap_follow) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[2.322800] (gap_follow) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[2.322944] (gap_follow) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[2.323138] (gap_follow) StderrLine: {'line': b'  has been installed.\n'}
+[2.323295] (gap_follow) StderrLine: {'line': b'\n'}
+[2.323490] (gap_follow) StderrLine: {'line': b'\n'}
+[2.323635] (wall_follow) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.323863] (wall_follow) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.324063] (safety_node) CommandEnded: {'returncode': 1}
+[2.326828] (wall_follow) StderrLine: {'line': b'CMake Error at CMakeLists.txt:25 (find_package):\n'}
+[2.327293] (wall_follow) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[2.327485] (wall_follow) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[2.327628] (wall_follow) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[2.327821] (wall_follow) StderrLine: {'line': b'\n'}
+[2.327961] (wall_follow) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[2.329197] (wall_follow) StderrLine: {'line': b'  any of the following names:\n'}
+[2.335129] (wall_follow) StderrLine: {'line': b'\n'}
+[2.335915] (wall_follow) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[2.336057] (wall_follow) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[2.336192] (wall_follow) StderrLine: {'line': b'\n'}
+[2.336484] (wall_follow) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[2.336626] (wall_follow) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[2.336831] (wall_follow) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[2.337072] (wall_follow) StderrLine: {'line': b'  has been installed.\n'}
+[2.337272] (wall_follow) StderrLine: {'line': b'\n'}
+[2.337910] (wall_follow) StderrLine: {'line': b'\n'}
+[2.337983] (wall_follow) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[2.340581] (-) TimerEvent: {}
+[2.347531] (wall_follow) StdoutLine: {'line': b'See also "/home/vy/GalacticRacing/build/wall_follow/CMakeFiles/CMakeOutput.log".\n'}
+[2.348555] (gap_follow) CommandEnded: {'returncode': 1}
+[2.348971] (wall_follow) CommandEnded: {'returncode': 1}
+[2.414707] (safety_node) JobEnded: {'identifier': 'safety_node', 'rc': 1}
+[2.415151] (wall_follow) JobEnded: {'identifier': 'wall_follow', 'rc': 'SIGINT'}
+[2.415657] (gap_follow) JobEnded: {'identifier': 'gap_follow', 'rc': 'SIGINT'}
+[2.428296] (-) EventReactorShutdown: {}

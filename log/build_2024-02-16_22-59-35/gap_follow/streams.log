@@ -1,0 +1,35 @@
+[0.625s] Invoking command in '/home/vy/GalacticRacing/build/gap_follow': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/gap_follow -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/install/gap_follow
+[1.212s] -- The C compiler identification is GNU 9.4.0
+[1.647s] -- The CXX compiler identification is GNU 9.4.0
+[1.673s] -- Check for working C compiler: /usr/bin/cc
+[1.781s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.789s] -- Detecting C compiler ABI info
+[1.935s] -- Detecting C compiler ABI info - done
+[1.935s] -- Detecting C compile features
+[1.935s] -- Detecting C compile features - done
+[1.936s] -- Check for working CXX compiler: /usr/bin/c++
+[2.017s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[2.017s] -- Detecting CXX compiler ABI info
+[2.177s] -- Detecting CXX compiler ABI info - done
+[2.197s] -- Detecting CXX compile features
+[2.201s] -- Detecting CXX compile features - done
+[2.220s] -- Configuring incomplete, errors occurred!
+[2.224s] See also "/home/vy/GalacticRacing/build/gap_follow/CMakeFiles/CMakeOutput.log".
+[2.230s] CMake Error at CMakeLists.txt:25 (find_package):
+[2.230s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[2.234s]   has asked CMake to find a package configuration file provided by
+[2.234s]   "ament_cmake", but CMake did not find one.
+[2.234s] 
+[2.234s]   Could not find a package configuration file provided by "ament_cmake" with
+[2.234s]   any of the following names:
+[2.235s] 
+[2.235s]     ament_cmakeConfig.cmake
+[2.239s]     ament_cmake-config.cmake
+[2.240s] 
+[2.240s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[2.240s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[2.240s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[2.240s]   has been installed.
+[2.240s] 
+[2.241s] 
+[2.266s] Invoked command in '/home/vy/GalacticRacing/build/gap_follow' returned '1': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/gap_follow -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/install/gap_follow
