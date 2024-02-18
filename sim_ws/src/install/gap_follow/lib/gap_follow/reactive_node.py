@@ -15,10 +15,6 @@ def deg_to_rad(deg : float32) -> float32:
 def rad_to_deg(rad : float32) -> float32:
     return (rad * 180.0) / np.pi
 
-# car dimensions
-CAR_WIDTH  : float32 = 0.30 # meters
-CAR_LENGTH : float32 = 0.45 # meters
-
 # refresh frequencies
 SCAN_REFRESH = 10
 DRIVE_REFRESH = 10
@@ -29,8 +25,12 @@ WIND_SIZE  : int = 5
 FOV : float = deg_to_rad(270.0)
 
 # distance processing
-DIST_THRESH  : float32 = 3.00 # meters
-DISP_EPSILON : float32 = 0.40 # meters
+DIST_THRESH  : float32 = 2.40 # meters
+DISP_EPSILON : float32 = 0.20 # meters
+
+# car dimensions
+CAR_WIDTH  : float32 = 0.45 # meters
+CAR_LENGTH : float32 = 0.45 # meters
 
 def idx_to_rad(idx : int) -> float32:
     return idx * FOV / (RANGE_SIZE - 1) - FOV / 2.0
@@ -61,9 +61,9 @@ class ReactiveFollowGap(Node):
             AckermannDriveStamped, drive_topic, DRIVE_REFRESH
         )
 
-        self.max_speed  = 1.0 # m/s
-        self.turn_speed = 0.5 # m/s
         self.steering_angle = 0.0 # rads relative to forward (left: > 0.0, right: < 0.0)
+
+        self.kp = 1.0
     
     def preprocess_lidar(self, ranges):
         """ Preprocess the LiDAR scan array. Expert implementation includes:
@@ -100,7 +100,8 @@ class ReactiveFollowGap(Node):
 
     def disparity_extender(self, proc_ranges):
         # step 2: find all disparities
-        for i in range(RIGHT, LEFT):
+        i : int = RIGHT
+        while i <= LEFT:
             diff :float32 = proc_ranges[i] - proc_ranges[i + 1]
             # step 3: extend disparities
             if abs(diff) > DISP_EPSILON:
@@ -112,23 +113,72 @@ class ReactiveFollowGap(Node):
                     for j in range(i + 1, targ_idx + 1):
                         if proc_ranges[j] > proc_ranges[i]:
                             proc_ranges[j] = proc_ranges[i]
+                    
+                    i = targ_idx + 1
                 else: # right point is farther away
                     theta : float32 = np.arcsin(CAR_WIDTH / (2 * proc_ranges[i + 1]))
                     targ_idx : int = rad_to_idx(idx_to_rad(i + 1) - theta)
 
                     # extend disparities right
-                    for j in range(i, targ_idx - 1, -1):
+                    for j in range(targ_idx, i + 1):
                         if proc_ranges[j] > proc_ranges[i + 1]:
                             proc_ranges[j] = proc_ranges[i + 1]
+                    i += 1
+            else:
+                i += 1
         
-        # step 4: find largest distance in ranges after extending disparities
-        largest_idx : int = RIGHT
+        return proc_ranges
 
-        for i in range(RIGHT + 1, LEFT + 1):
-            if proc_ranges[i] > proc_ranges[largest_idx]:
-                largest_idx = i
+    def max_gap(self, disp_ranges):
+        """
+        Return the best index as the midpoint of the largest gap in disp_ranges
+        """
+        thresh = DIST_THRESH
 
-        return largest_idx
+        f_idx  : int = -1
+        l_idx  : int = -1
+        first  : int = -1
+        last   : int = -1
+        in_gap : bool = False
+
+        for index in range(RIGHT, LEFT + 1):
+            # start of non-zero distance gap detected
+            if not in_gap and disp_ranges[index] > thresh:
+                in_gap = True
+                f_idx = index
+            
+            # end of non-zero distance gap detected
+            elif in_gap and disp_ranges[index] <= thresh:
+                in_gap = False
+                l_idx = index
+
+                # update max gap boundaries if applicable
+                if l_idx - f_idx > last - first:
+                    first = f_idx
+                    last = l_idx
+
+        if first == -1 and in_gap:
+            first = RIGHT
+            last = LEFT + 1
+        elif first == -1:
+            print("Could not find a gap.")
+    
+        PROP : float32 = 0.5
+
+        if abs(540 - first) < abs(540 - last):
+            return first + np.round(PROP * (last - first))
+        else:
+            return last - np.round(PROP * (last - first))
+
+        # return (first + last) // 2
+
+        # longest_idx : int = last
+
+        # for i in range(last - 1, first - 1):
+        #     if disp_ranges[i] > disp_ranges[longest_idx]:
+        #         longest_idx = i
+
+        # return longest_idx
 
     def lidar_callback(self, data):
         """
@@ -137,13 +187,21 @@ class ReactiveFollowGap(Node):
         ranges = data.ranges
 
         # preprocess range data
-        proc_ranges = self.preprocess_lidar(ranges)
+        # proc_ranges = self.preprocess_lidar(ranges)
 
-        # Get next index using disparity extender algorithm
-        best_idx = self.disparity_extender(proc_ranges)
+        # filter range data using disparity extender algorithm
+        disp_ranges = self.disparity_extender(ranges)
 
-        # Determine steering angle from best point
-        angle = idx_to_rad(best_idx)
+        # get best index by finding the largest gap and aiming towards its center
+        best_idx = self.max_gap(disp_ranges)
+
+        # Determine steering angle from best point, if valid
+        angle : float32
+
+        if best_idx != -1:
+            angle = idx_to_rad(best_idx)
+        else:
+            angle = 0.0
 
         # Clamp angle between min and max steering angle
         if angle < deg_to_rad(-20.0):
@@ -151,13 +209,16 @@ class ReactiveFollowGap(Node):
         elif angle > deg_to_rad(20.0):
             angle = deg_to_rad(20.0)
 
-        print(f"Steering to angle: {rad_to_deg(angle)}")
-        self.steering_angle = angle
+        # print(f"Steering to angle: {rad_to_deg(angle)}")
+        self.steering_angle = self.steering_angle + 0.9 * (angle - self.steering_angle)
+        # self.steering_angle = 0.0
 
-        # Limit velocity for turning
-        velocity = self.max_speed if abs(self.steering_angle) >= 0.0 and \
-            abs(self.steering_angle) < deg_to_rad(10.0) else self.turn_speed
-        # velocity = 0.0
+        # Adjust velocity based on distance
+        velocity : float32
+        if ranges[540] < 0.75:
+            velocity = 0.0
+        else:
+            velocity = ranges[540] * 0.8
 
         #Publish Drive message
         msg = AckermannDriveStamped()
