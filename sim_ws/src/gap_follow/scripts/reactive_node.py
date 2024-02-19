@@ -7,6 +7,10 @@ import numpy as np
 from sensor_msgs.msg import LaserScan
 from ackermann_msgs.msg import AckermannDriveStamped, AckermannDrive
 
+from typing import (
+    List, Tuple, Dict
+)
+
 float32 = np.float32
 
 def deg_to_rad(deg : float32) -> float32:
@@ -25,12 +29,12 @@ WIND_SIZE  : int = 5
 FOV : float = deg_to_rad(270.0)
 
 # distance processing
-DIST_THRESH  : float32 = 2.40 # meters
-DISP_EPSILON : float32 = 0.20 # meters
+DIST_THRESH  : float32 = 3.00 # meters
+DISP_EPSILON : float32 = 0.60 # meters
+CORN_EPSILON : float32 = 0.02 # meters
 
 # car dimensions
 CAR_WIDTH  : float32 = 0.45 # meters
-CAR_LENGTH : float32 = 0.45 # meters
 
 def idx_to_rad(idx : int) -> float32:
     return idx * FOV / (RANGE_SIZE - 1) - FOV / 2.0
@@ -50,6 +54,7 @@ class ReactiveFollowGap(Node):
         # Topics & Subs, Pubs
         lidarscan_topic = '/scan'
         drive_topic = '/drive'
+        scan_mod_topic = '/mod_scan'
 
         # subscribers
         self.laser_sub = self.create_subscription(
@@ -61,6 +66,10 @@ class ReactiveFollowGap(Node):
             AckermannDriveStamped, drive_topic, DRIVE_REFRESH
         )
 
+        self.laser_pub = self.create_publisher(
+            LaserScan, scan_mod_topic, SCAN_REFRESH
+        )
+
         self.steering_angle = 0.0 # rads relative to forward (left: > 0.0, right: < 0.0)
 
         self.kp = 1.0
@@ -70,130 +79,84 @@ class ReactiveFollowGap(Node):
             1.Setting each value to the mean over some window
             2.Rejecting high values (eg. > 3m)
         """
-        proc_ranges = [None] * RANGE_SIZE
 
-        wind_rad  : int = WIND_SIZE // 2
-        proc_size : int = RANGE_SIZE - 2 * wind_rad
+        for i in range(RIGHT, LEFT + 1):
+            if ranges[i] > DIST_THRESH:
+                ranges[i] = DIST_THRESH # too far away; make it "infinity"
+            elif ranges[i] == float("nan"):
+                ranges[i] = 0.0
 
-        for i in range(proc_size):
-            sum : float32 = 0.0
+    def disparity_extender(self, ranges):
+        disp_ranges = list(ranges)
 
-            for j in range(WIND_SIZE):
-                if ranges[i + j] < 0.0:
-                    ranges[i + j] = 0.0
+        for i in range(RIGHT, LEFT):
+            idx      : int = i      # query
+            next_idx : int = i + 1  # left of query
 
-                sum += ranges[i + j]
+            left_diff : float32 = ranges[idx] - ranges[next_idx]
 
-            sum = np.round(sum / float(WIND_SIZE), 2)
+            if abs(left_diff) > DISP_EPSILON:
+                if left_diff < 0:  # object leaving scope
+                    theta : float32 = 0.0
 
-            if sum > DIST_THRESH:
-                sum = float("inf")  # too far away; make it infinity
-            
-            proc_ranges[i + wind_rad] = sum
+                    if abs(CAR_WIDTH / (2 * ranges[i])) < 1:
+                        theta : float32 = np.arcsin(CAR_WIDTH / (2 * ranges[i]))
 
-        # duplicate average values into edge of ranges array
-        for i in range(wind_rad):
-            proc_ranges[i] = proc_ranges[wind_rad]
-            proc_ranges[RANGE_SIZE - i - 1] = proc_ranges[RANGE_SIZE - wind_rad - 1]
-
-        return proc_ranges
-
-    def disparity_extender(self, proc_ranges):
-        # step 2: find all disparities
-        i : int = RIGHT
-        while i <= LEFT:
-            diff :float32 = proc_ranges[i] - proc_ranges[i + 1]
-            # step 3: extend disparities
-            if abs(diff) > DISP_EPSILON:
-                if diff < 0: # left point is farther away
-                    theta : float32 = np.arcsin(CAR_WIDTH / (2 * proc_ranges[i]))
                     targ_idx : int = rad_to_idx(idx_to_rad(i) + theta)
+                    targ_offs = targ_idx - i
 
-                    # extend disparities left
-                    for j in range(i + 1, targ_idx + 1):
-                        if proc_ranges[j] > proc_ranges[i]:
-                            proc_ranges[j] = proc_ranges[i]
-                    
-                    i = targ_idx + 1
-                else: # right point is farther away
-                    theta : float32 = np.arcsin(CAR_WIDTH / (2 * proc_ranges[i + 1]))
+                    for j in range(targ_offs):
+                        if ranges[i + j] > ranges[i]:
+                            disp_ranges[i + j] = ranges[i]
+                else:                  # object entering scope
+                    theta : float32 = 0.0
+
+                    if abs(CAR_WIDTH / (2 * ranges[i + 1])) < 1:
+                        theta : float32 = np.arcsin(CAR_WIDTH / (2 * ranges[i + 1]))
+
                     targ_idx : int = rad_to_idx(idx_to_rad(i + 1) - theta)
+                    targ_offs = i + 1 - targ_idx
 
-                    # extend disparities right
-                    for j in range(targ_idx, i + 1):
-                        if proc_ranges[j] > proc_ranges[i + 1]:
-                            proc_ranges[j] = proc_ranges[i + 1]
-                    i += 1
-            else:
-                i += 1
+                    for j in range(targ_offs):
+                        if disp_ranges[i - j] > disp_ranges[i + 1]:
+                            disp_ranges[i - j] = ranges[i + 1]
+
+        return disp_ranges
+
+    def furthest_idx(self, ranges):
+        max_right : int = RIGHT
+        max_left  : int = LEFT
+
+        for i in range(RIGHT + 1, LEFT + 1):
+            if ranges[i] > ranges[max_right]:
+                max_right = i
         
-        return proc_ranges
-
-    def max_gap(self, disp_ranges):
-        """
-        Return the best index as the midpoint of the largest gap in disp_ranges
-        """
-        thresh = DIST_THRESH
-
-        f_idx  : int = -1
-        l_idx  : int = -1
-        first  : int = -1
-        last   : int = -1
-        in_gap : bool = False
-
-        for index in range(RIGHT, LEFT + 1):
-            # start of non-zero distance gap detected
-            if not in_gap and disp_ranges[index] > thresh:
-                in_gap = True
-                f_idx = index
-            
-            # end of non-zero distance gap detected
-            elif in_gap and disp_ranges[index] <= thresh:
-                in_gap = False
-                l_idx = index
-
-                # update max gap boundaries if applicable
-                if l_idx - f_idx > last - first:
-                    first = f_idx
-                    last = l_idx
-
-        if first == -1 and in_gap:
-            first = RIGHT
-            last = LEFT + 1
-        elif first == -1:
-            print("Could not find a gap.")
-    
-        PROP : float32 = 0.5
-
-        if abs(540 - first) < abs(540 - last):
-            return first + np.round(PROP * (last - first))
-        else:
-            return last - np.round(PROP * (last - first))
-
-        # return (first + last) // 2
-
-        # longest_idx : int = last
-
-        # for i in range(last - 1, first - 1):
-        #     if disp_ranges[i] > disp_ranges[longest_idx]:
-        #         longest_idx = i
-
-        # return longest_idx
+        for i in range(LEFT, RIGHT - 1, -1):
+            if ranges[i] > ranges[max_left]:
+                max_left = i
+        
+        return (max_left + max_right) // 2
 
     def lidar_callback(self, data):
         """
         Process each LiDAR scan as per the Follow Gap algorithm & publish an AckermannDriveStamped Message
         """
-        ranges = data.ranges
-
+        ranges = list(data.ranges)
+        new_scan : LaserScan = data
+        
         # preprocess range data
-        # proc_ranges = self.preprocess_lidar(ranges)
+        self.preprocess_lidar(new_scan.ranges)
 
         # filter range data using disparity extender algorithm
-        disp_ranges = self.disparity_extender(ranges)
+        new_scan.ranges = self.disparity_extender(new_scan.ranges)
 
         # get best index by finding the largest gap and aiming towards its center
-        best_idx = self.max_gap(disp_ranges)
+        # best_idx = self.max_gap(new_scan.ranges)
+
+        self.laser_pub.publish(new_scan)
+
+        # get best index by finding longest distance in range and aiming there
+        best_idx = self.furthest_idx(new_scan.ranges)
 
         # Determine steering angle from best point, if valid
         angle : float32
@@ -210,18 +173,19 @@ class ReactiveFollowGap(Node):
             angle = deg_to_rad(20.0)
 
         # print(f"Steering to angle: {rad_to_deg(angle)}")
-        self.steering_angle = self.steering_angle + 0.9 * (angle - self.steering_angle)
+        self.steering_angle = angle
         # self.steering_angle = 0.0
 
         # Adjust velocity based on distance
         velocity : float32
-        if ranges[540] < 0.75:
+        if new_scan.ranges[540] < 0.75:
             velocity = 0.0
         else:
             velocity = ranges[540] * 0.8
 
         #Publish Drive message
         msg = AckermannDriveStamped()
+        # msg.drive.speed = 0.5
         msg.drive.speed = velocity
         msg.drive.steering_angle = self.steering_angle
         self.drive_pub.publish(msg)
