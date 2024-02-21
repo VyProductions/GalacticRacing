@@ -182,7 +182,7 @@ Visualization Manager:
         ego_racecar/laser:
           Value: true
         ego_racecar/laser_model:
-          Value: true
+          Value: false
         map:
           Value: false
       Marker Scale: 1
@@ -261,7 +261,7 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 96.46293640136719
+      Scale: 167.09938049316406
       Target Frame: ego_racecar/base_link
       Value: TopDownOrtho (rviz_default_plugins)
       X: 0

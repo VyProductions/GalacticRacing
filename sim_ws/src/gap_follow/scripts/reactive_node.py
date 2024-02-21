@@ -13,10 +13,16 @@ from typing import (
     List, Tuple, Dict
 )
 
-import helper as hp # local helper script for utility stuff
-import variables as vars # variable references for ease-of-access
+import gap_follow.helper as hp
+import gap_follow.variables as vars
 
 float32 = np.float32
+
+def idx_to_rad(idx : int) -> float32:
+    return hp.idx_to_rad(idx, vars.FOV, vars.RANGE_SIZE)
+
+def rad_to_idx(rad : float32) -> float32:
+    return hp.rad_to_idx(rad, vars.FOV, vars.RANGE_SIZE)
 
 class ReactiveFollowGap(Node):
     """ 
@@ -54,7 +60,6 @@ class ReactiveFollowGap(Node):
         for i in range(vars.RANGE_SIZE):
             if ranges[i] > vars.DIST_THRESH:
                 ranges[i] = vars.DIST_THRESH
-                # ranges[i] = DIST_THRESH
             elif ranges[i] == float("nan"):
                 ranges[i] = 0.0
             # force occlusion for gaps that are quite small
@@ -79,7 +84,7 @@ class ReactiveFollowGap(Node):
         disp_ranges = copy.deepcopy(ranges) # deep copy of ranges
         radius : float32 = vars.CAR_WIDTH / 2
 
-        for i in range(vars.RIGHT + 180, vars.LEFT - 180):
+        for i in range(vars.RIGHT, vars.LEFT):
             right_idx : int = i
             left_idx  : int = i + 1
 
@@ -93,7 +98,8 @@ class ReactiveFollowGap(Node):
                     if abs(radius / dist) < 1:
                         theta = np.arcsin(radius / dist)
                     
-                    targ_idx : int = hp.rad_to_idx(hp.idx_to_rad(left_idx) - theta)
+                    # disparity extend to the right of corner
+                    targ_idx : int = rad_to_idx(idx_to_rad(left_idx) - theta)
 
                     if targ_idx < vars.RIGHT:
                         targ_idx = vars.RIGHT
@@ -101,6 +107,7 @@ class ReactiveFollowGap(Node):
                     targ_offs : int = left_idx - targ_idx
 
                     for j in range(targ_offs):
+                        # only extend to given point if current value in disparity range array is farther away
                         if ranges[left_idx] < disp_ranges[right_idx - j]:
                             disp_ranges[right_idx - j] = ranges[left_idx]
                 elif ranges[right_idx] != 0.0:         # right side is closer than left side
@@ -109,7 +116,8 @@ class ReactiveFollowGap(Node):
                     if abs(radius / dist) < 1:
                         theta = np.arcsin(radius / dist)
                     
-                    targ_idx : int = hp.rad_to_idx(hp.idx_to_rad(right_idx) + theta)
+                    # disparity extend to the left of corner
+                    targ_idx : int = rad_to_idx(idx_to_rad(right_idx) + theta)
 
                     if targ_idx > vars.LEFT:
                         targ_idx = vars.LEFT
@@ -117,6 +125,7 @@ class ReactiveFollowGap(Node):
                     targ_offs : int = targ_idx - right_idx
 
                     for j in range(targ_offs):
+                        # only extend to given point if current value in disparity range array is farther away
                         if ranges[right_idx] < disp_ranges[left_idx + j]:
                             disp_ranges[left_idx + j] = ranges[right_idx]
 
@@ -134,8 +143,8 @@ class ReactiveFollowGap(Node):
         return min_idx
 
     def bubble(self, ranges):
-        close_idx : int = self.closest_idx(vars.RIGHT + 200, vars.LEFT - 200, ranges)
-        close_theta : float32 = hp.idx_to_rad(close_idx)
+        close_idx : int = self.closest_idx(vars.RIGHT, vars.LEFT, ranges)
+        close_theta : float32 = idx_to_rad(close_idx)
         close_dist : float32 = ranges[close_idx]
 
         if close_idx != -1 and close_dist < 1.1:
@@ -144,12 +153,12 @@ class ReactiveFollowGap(Node):
             if abs(vars.CAR_WIDTH / (2 * close_dist)) < 1.0:
                 theta : float32 = 1.2 * np.arcsin(vars.CAR_WIDTH / (2 * close_dist))
 
-            right_idx : int = hp.rad_to_idx(close_theta - theta)
+            right_idx : int = rad_to_idx(close_theta - theta)
 
             if right_idx < vars.RIGHT:
                 right_idx = vars.RIGHT
 
-            left_idx  : int = hp.rad_to_idx(close_theta + theta)
+            left_idx  : int = rad_to_idx(close_theta + theta)
 
             if left_idx > vars.LEFT:
                 left_idx = vars.LEFT
@@ -192,7 +201,7 @@ class ReactiveFollowGap(Node):
         velocity : float32
 
         if best_idx != -1 and (data.ranges[540] > 2.2 or data.ranges[max_idx] > 3.0):
-            angle = hp.idx_to_rad(best_idx)
+            angle = idx_to_rad(best_idx)
 
             if new_scan.ranges[max_idx] > 3.0 and new_scan.ranges[540] > 2.5:
                 velocity = 4.0 # m/s
@@ -203,7 +212,7 @@ class ReactiveFollowGap(Node):
         else:
             print("Entering the danger zone... %s" % (np.random.random()))
             best_idx : int = self.farthest_idx(540, 900, new_scan.ranges)
-            angle = hp.idx_to_rad(best_idx)
+            angle = idx_to_rad(best_idx)
 
             if data.ranges[vars.LEFT - 210] < 0.8:
                 angle = hp.deg_to_rad(-12.5)
@@ -218,7 +227,7 @@ class ReactiveFollowGap(Node):
 
         #Publish Drive message
         msg = AckermannDriveStamped()
-        msg.drive.speed = 0.1
+        msg.drive.speed = 1.0
         # msg.drive.speed = velocity
         msg.drive.steering_angle = angle
         self.drive_pub.publish(msg)

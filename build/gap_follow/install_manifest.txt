@@ -2,6 +2,8 @@
 /home/vy/GalacticRacing/install/gap_follow/share/gap_follow/environment/pythonpath.sh
 /home/vy/GalacticRacing/install/gap_follow/share/gap_follow/environment/pythonpath.dsv
 /home/vy/GalacticRacing/install/gap_follow/lib/python3.8/site-packages/gap_follow/__init__.py
+/home/vy/GalacticRacing/install/gap_follow/lib/python3.8/site-packages/gap_follow/variables.py
+/home/vy/GalacticRacing/install/gap_follow/lib/python3.8/site-packages/gap_follow/helper.py
 /home/vy/GalacticRacing/install/gap_follow/lib/gap_follow/reactive_node.py
 /home/vy/GalacticRacing/install/gap_follow/share/ament_index/resource_index/package_run_dependencies/gap_follow
 /home/vy/GalacticRacing/install/gap_follow/share/ament_index/resource_index/parent_prefix_path/gap_follow
