@@ -69,8 +69,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 9.455331802368164
-        Min Value: 2.812901258468628
+        Max Value: -6.155977725982666
+        Min Value: -13.056900978088379
         Value: true
       Axis: X
       Channel Name: intensity
@@ -150,10 +150,6 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        ego_racecar/laser:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
         ego_racecar/laser_model:
           Alpha: 1
           Show Axes: false
