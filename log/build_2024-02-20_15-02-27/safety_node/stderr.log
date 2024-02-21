@@ -1,0 +1,9 @@
+[01m[K/home/vy/GalacticRacing/sim_ws/src/safety_node/src/safety_node.cpp:[m[K In member function ‘[01m[Kvoid Safety::drive_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[01m[K/home/vy/GalacticRacing/sim_ws/src/safety_node/src/safety_node.cpp:33:71:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   33 |     void drive_callback([01;35m[Kconst nav_msgs::msg::Odometry::ConstSharedPtr msg[m[K)
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/vy/GalacticRacing/sim_ws/src/safety_node/src/safety_node.cpp:[m[K In member function ‘[01m[Kvoid Safety::scan_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[01m[K/home/vy/GalacticRacing/sim_ws/src/safety_node/src/safety_node.cpp:38:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscan_msg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   38 | void scan_callback([01;35m[Kconst sensor_msgs::msg::LaserScan::ConstSharedPtr scan_msg[m[K)
+      |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+

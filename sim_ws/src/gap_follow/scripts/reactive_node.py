@@ -35,7 +35,7 @@ DIST_THRESH  : float32 = 6.00 # meters
 DISP_EPSILON : float32 = 0.20 # meters
 
 # car dimensions
-CAR_WIDTH : float32 = 0.35 # meters
+CAR_WIDTH : float32 = 0.40 # meters
 
 def idx_to_rad(idx : int) -> float32:
     return idx * FOV / (RANGE_SIZE - 1) - FOV / 2.0
@@ -175,15 +175,15 @@ class ReactiveFollowGap(Node):
         return min_idx
 
     def bubble(self, ranges):
-        close_idx : int = self.closest_idx(RIGHT + 180, LEFT - 180, ranges)
+        close_idx : int = self.closest_idx(RIGHT + 200, LEFT - 200, ranges)
         close_theta : float32 = idx_to_rad(close_idx)
         close_dist : float32 = ranges[close_idx]
 
-        if close_idx != -1 and close_dist < 0.75:
+        if close_idx != -1 and close_dist < 1.1:
             theta : float32 = 0.0
 
             if abs(CAR_WIDTH / (2 * close_dist)) < 1.0:
-                theta : float32 = 1.3 * np.arcsin(CAR_WIDTH / (2 * close_dist))
+                theta : float32 = 1.2 * np.arcsin(CAR_WIDTH / (2 * close_dist))
 
             right_idx : int = rad_to_idx(close_theta - theta)
 
@@ -295,7 +295,7 @@ class ReactiveFollowGap(Node):
             best_idx : int = self.farthest_idx(540, 900, new_scan.ranges)
             angle = idx_to_rad(best_idx)
 
-            if data.ranges[LEFT - 220] < 0.8:
+            if data.ranges[LEFT - 210] < 0.8:
                 angle = deg_to_rad(-12.5)
             
             velocity = 0.8 # m/s
@@ -308,8 +308,8 @@ class ReactiveFollowGap(Node):
 
         #Publish Drive message
         msg = AckermannDriveStamped()
-        # msg.drive.speed = 1.0
-        msg.drive.speed = velocity
+        msg.drive.speed = 0.1
+        # msg.drive.speed = velocity
         msg.drive.steering_angle = angle
         self.drive_pub.publish(msg)
 
