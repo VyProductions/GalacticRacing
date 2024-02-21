@@ -10,3 +10,11 @@ sim_ws/src/install/safety_node/lib/python3.8/site-packages/safety_node/__pycache
 sim_ws/src/install/safety_node/share/ament_index/resource_index/parent_prefix_path/safety_node
 sim_ws/src/install/wall_follow/lib/wall_follow/wall_follow_node.py
 sim_ws/src/f1tenth_gym_ros/build/f1tenth_gym_ros/colcon_command_prefix_setup_py.sh
+sim_ws/src/install/gap_follow/lib/python3.8/site-packages/gap_follow/__pycache__/__init__.cpython-38.pyc
+sim_ws/src/install/gap_follow/share/ament_index/resource_index/parent_prefix_path/gap_follow
+sim_ws/src/install/wall_follow/lib/python3.8/site-packages/wall_follow/__pycache__/__init__.cpython-38.pyc
+sim_ws/src/install/wall_follow/share/ament_index/resource_index/parent_prefix_path/wall_follow
+sim_ws/src/install/gap_follow/lib/python3.8/site-packages/gap_follow/__pycache__/
+sim_ws/src/install/gap_follow/share/ament_index/resource_index/parent_prefix_path/
+sim_ws/src/install/wall_follow/lib/python3.8/site-packages/wall_follow/__pycache__/
+sim_ws/src/install/wall_follow/share/ament_index/resource_index/parent_prefix_path/
