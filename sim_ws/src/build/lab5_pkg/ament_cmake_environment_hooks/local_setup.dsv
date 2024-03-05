@@ -1,0 +1,3 @@
+source;share/lab5_pkg/environment/ament_prefix_path.sh
+source;share/lab5_pkg/environment/path.sh
+source;share/lab5_pkg/environment/pythonpath.sh

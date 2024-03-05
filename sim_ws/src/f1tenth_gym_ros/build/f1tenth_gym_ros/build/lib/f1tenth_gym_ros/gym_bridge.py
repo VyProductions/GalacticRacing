@@ -234,7 +234,7 @@ class GymBridge(Node):
         # pub scans
         scan = LaserScan()
         scan.header.stamp = ts
-        scan.header.frame_id = self.ego_namespace + '/laser'
+        scan.header.frame_id = self.ego_namespace + '/laser_model'
         scan.angle_min = self.angle_min
         scan.angle_max = self.angle_max
         scan.angle_increment = self.angle_inc

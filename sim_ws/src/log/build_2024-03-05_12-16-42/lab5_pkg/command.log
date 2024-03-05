@@ -1,0 +1,4 @@
+Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg -- -j6 -l6
+Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg' returned '0': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg -- -j6 -l6
+Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg': /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg
+Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg' returned '0': /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg

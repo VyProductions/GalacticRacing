@@ -27,10 +27,10 @@ services:
     build: ./
     volumes: 
       - .:/sim_ws/src/f1tenth_gym_ros
-      - ../install:/sim_ws/install
-      - ../safety_node/:/sim_ws/src/safety_node
-      - ../wall_follow/:/sim_ws/src/wall_follow
-      - ../gap_follow/:/sim_ws/src/gap_follow
+      - ../safety_node:/sim_ws/src/safety_node
+      - ../wall_follow:/sim_ws/src/wall_follow
+      - ../gap_follow:/sim_ws/src/gap_follow
+      - ../lab5_pkg:/sim_ws/src/lab5_pkg
       - type: bind
         source: ./.bashrc
         target: /root/.bashrc
