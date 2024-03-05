@@ -49,7 +49,7 @@ RUN source /opt/ros/foxy/setup.bash && \
     apt-get update --fix-missing && \
     rosdep install -i --from-path src --rosdistro foxy -y && \
     colcon build
-COPY ../../../f1tenth_gym/gym_config/ego_tracker.rviz /sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch/ego_tracker.rviz
+COPY ego_tracker.rviz /sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch/ego_tracker.rviz
 
 WORKDIR '/sim_ws'
 ENTRYPOINT ["/bin/bash"]

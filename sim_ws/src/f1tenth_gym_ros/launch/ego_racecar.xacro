@@ -4,43 +4,23 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="racecar">
 
-  <xacro:property name="wheelbase" value="0.324" />
-  <xacro:property name="width" value="0.220" />
-  <xacro:property name="bumper_width" value="0.200" />
-  <xacro:property name="length" value="0.568" />
-  <xacro:property name="fbumper_length" value="0.102" />
-  <xacro:property name="fbumper_distance_from_base_link" value="0.375" />
-  <xacro:property name="rbumper_length" value="0.136" />
-  <xacro:property name="rbumper_distance_from_base_link" value="-0.051" />
+  <xacro:property name="wheelbase" value="0.3302" />
+  <xacro:property name="width" value="0.2032" />
   <xacro:property name="height" value="0.1" />
-  <xacro:property name="bumper_height" value="0.05" />
-  <xacro:property name="ground_offset" value="0.047" />
-  <xacro:property name="bumper_offset" value="0.025" />
-  <xacro:property name="wheel_radius" value="0.056" />
-  <xacro:property name="wheel_length" value="0.038" />
-  <xacro:property name="laser_distance_from_base_link" value="0.261" />
+  <xacro:property name="ground_offset" value="0.04" />
+  <xacro:property name="wheel_radius" value="0.0508" />
+  <xacro:property name="wheel_length" value="0.0381" />
+  <xacro:property name="laser_distance_from_base_link" value="0.275" />
   <xacro:property name="laser_height" value="0.05" />
   <xacro:property name="laser_radius" value="0.026" />
   <xacro:property name="car_name" value="ego_racecar" />
 
-  <material name="perry-hat">
-    <color rgba="0.4117 0.196 0.1176 1."/>
+  <material name="black">
+    <color rgba="0.2 0.2 0.2 1."/>
   </material>
 
-  <material name="perry-bill">
-    <color rgba="0.9882 0.6901 0.2039 1."/>
-  </material>
-
-  <material name="perry-body">
-    <color rgba="0. 0.6941 0.6941 1."/>
-  </material>
-
-  <material name="perry-feet">
-    <color rgba="0.8705 0.4745 0.1058 1."/>
-  </material>
-
-  <material name="perry-tail">
-    <color rgba="0.9764 0.6352 0.3686 1."/>
+  <material name="blue">
+    <color rgba="0.3 0.57 1. 1."/>
   </material>
 
   <link name="${car_name}/base_link">
@@ -49,7 +29,7 @@
       <geometry>
         <box size="${wheelbase} ${width} ${height}"/>
       </geometry>
-      <material name="perry-body"/>
+      <material name="blue"/>
     </visual>
   </link>
 
@@ -59,42 +39,12 @@
     <origin xyz="${laser_distance_from_base_link} 0 ${ground_offset+height+(laser_height/2)}"/>
   </joint>
 
-  <link name="${car_name}/front_bumper">
-    <visual>
-      <geometry>
-        <box size="${fbumper_length} ${bumper_width} ${bumper_height}"/>
-      </geometry>
-      <material name="perry-bill"/>
-    </visual>
-  </link>
-
-  <joint name="base_to_front_bumper" type="fixed">
-    <parent link="${car_name}/base_link"/>
-    <child link="${car_name}/front_bumper"/>
-    <origin xyz="${fbumper_distance_from_base_link} 0 ${ground_offset+bumper_offset+(bumper_height/2)}"/>
-  </joint>
-
-  <link name="${car_name}/rear_bumper">
-    <visual>
-      <geometry>
-        <box size="${rbumper_length} ${bumper_width} ${bumper_height}"/>
-      </geometry>
-      <material name="perry-tail"/>
-    </visual>
-  </link>
-
-  <joint name="base_to_rear_bumper" type="fixed">
-    <parent link="${car_name}/base_link"/>
-    <child link="${car_name}/rear_bumper"/>
-    <origin xyz="${rbumper_distance_from_base_link} 0 ${ground_offset+bumper_offset+(bumper_height/2)}"/>
-  </joint>
-
   <link name="${car_name}/laser_model">
     <visual>
       <geometry>
         <cylinder radius="${laser_radius}" length="${laser_height}"/>
       </geometry>
-      <material name="perry-hat"/>
+      <material name="black"/>
     </visual>
   </link>
 
@@ -109,7 +59,7 @@
       <geometry>
         <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
       </geometry>
-      <material name="perry-feet"/>
+      <material name="black"/>
       <origin rpy="${pi/2} 0 0"/>
     </visual>
   </link>
@@ -125,7 +75,7 @@
       <geometry>
         <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
       </geometry>
-      <material name="perry-feet"/>
+      <material name="black"/>
       <origin rpy="${pi/2} 0 0"/>
     </visual>
   </link>
@@ -148,7 +98,7 @@
       <geometry>
         <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
       </geometry>
-      <material name="perry-feet"/>
+      <material name="black"/>
       <origin rpy="${pi/2} 0 0"/>
     </visual>
   </link>
@@ -171,7 +121,7 @@
       <geometry>
         <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
       </geometry>
-      <material name="perry-feet"/>
+      <material name="black"/>
       <origin rpy="${pi/2} 0 0"/>
     </visual>
   </link>

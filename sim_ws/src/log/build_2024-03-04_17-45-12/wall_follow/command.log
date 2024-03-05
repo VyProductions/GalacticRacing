@@ -1,2 +1,0 @@
-Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/wall_follow': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/wall_follow -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/wall_follow
-Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/wall_follow' returned '1': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/wall_follow -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/wall_follow

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
 
@@ -16,6 +18,14 @@ class WallFollow(Node):
         drive_topic = '/drive'
 
         # TODO: create subscribers and publishers
+
+        self.scan_sub = self.create_subscription(
+            LaserScan, lidarscan_topic, self.scan_callback, 10
+        )
+
+        self.drive_pub = self.create_publisher(
+            AckermannDriveStamped, drive_topic, 10
+        )
 
         # TODO: set PID gains
         # self.kp = 
@@ -71,10 +81,13 @@ class WallFollow(Node):
         Returns:
             None
         """
-        angle = 0.0
+        angle = 0.2
         # TODO: Use kp, ki & kd to implement a PID controller
         drive_msg = AckermannDriveStamped()
         # TODO: fill in drive message and publish
+        drive_msg.drive.speed = velocity
+        drive_msg.drive.steering_angle = angle
+        self.drive_pub.publish(drive_msg)
 
     def scan_callback(self, msg):
         """
@@ -87,7 +100,7 @@ class WallFollow(Node):
             None
         """
         error = 0.0 # TODO: replace with error calculated by get_error()
-        velocity = 0.0 # TODO: calculate desired car velocity based on error
+        velocity = 1.0 # TODO: calculate desired car velocity based on error
         self.pid_control(error, velocity) # TODO: actuate the car with PID
 
 

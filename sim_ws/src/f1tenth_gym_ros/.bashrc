@@ -104,7 +104,7 @@ alias launch="ros2 launch f1tenth_gym_ros gym_bridge_launch.py"
 
 alias run="colcon build && clear && ros2 run"
 alias gap="run gap_follow reactive_node.py"
-alias wall="run wall_follow wall_follow.py"
+alias wall="run wall_follow wall_follow_node.py"
 
 source /opt/ros/foxy/setup.bash
 source /sim_ws/install/local_setup.bash
