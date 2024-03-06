@@ -1,0 +1,118 @@
+[1.067s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/lab5_pkg -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg
+[1.085s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.124s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.330s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.351s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.355s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.472s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.522s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.523s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.640s] -- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+[1.640s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.672s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[1.733s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)
+[1.765s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.845s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[1.947s] -- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+[2.394s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.502s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.503s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.517s] -- Configured cppcheck include dirs: /home/vy/GalacticRacing/sim_ws/src/lab5_pkg/include
+[2.517s] -- Configured cppcheck exclude dirs and/or files: 
+[2.519s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.519s] -- Configured cpplint exclude dirs and/or files: 
+[2.523s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.523s] -- Added test 'lint_cmake' to check CMake code style
+[2.524s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[2.524s] -- Added test 'uncrustify' to check C / C++ code style
+[2.524s] -- Configured uncrustify additional arguments: 
+[2.524s] -- Added test 'xmllint' to check XML markup files
+[2.525s] -- Configuring done
+[2.531s] -- Generating done
+[2.534s] -- Build files have been written to: /home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg
+[7.469s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/lab5_pkg -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg
+[7.470s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg -- -j8 -l8
+[8.947s] [35m[1mScanning dependencies of target scanmatch_node[0m
+[9.146s] [ 20%] [32mBuilding CXX object CMakeFiles/scanmatch_node.dir/src/scanmatch_node.cpp.o[0m
+[9.146s] [ 40%] [32mBuilding CXX object CMakeFiles/scanmatch_node.dir/src/visualization.cpp.o[0m
+[9.179s] [ 80%] [32mBuilding CXX object CMakeFiles/scanmatch_node.dir/src/transform.cpp.o[0m
+[9.195s] [ 80%] [32mBuilding CXX object CMakeFiles/scanmatch_node.dir/src/correspond.cpp.o[0m
+[10.036s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/correspond.cpp:[m[K In function ‘[01m[Kvoid getNaiveCorrespondence(std::vector<Point>&, std::vector<Point>&, std::vector<Point>&, std::vector<std::vector<int> >&, std::vector<Correspondence>&, float)[m[K’:
+[10.036s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/correspond.cpp:16:7:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Klast_best[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[10.037s]    16 |   int [01;35m[Klast_best[m[K = -1;
+[10.037s]       |       [01;35m[K^~~~~~~~~[m[K
+[10.037s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/correspond.cpp:12:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kjump_table[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[10.037s]    12 |                             [01;35m[Kvector<vector<int>> &jump_table[m[K, vector<Correspondence> &c, float prob)
+[10.037s]       |                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[10.037s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/correspond.cpp:12:95:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprob[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[10.037s]    12 |                             vector<vector<int>> &jump_table, vector<Correspondence> &c, [01;35m[Kfloat prob[m[K)
+[10.037s]       |                                                                                         [01;35m[K~~~~~~^~~~[m[K
+[10.037s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/correspond.cpp:[m[K In function ‘[01m[Kvoid getCorrespondence(std::vector<Point>&, std::vector<Point>&, std::vector<Point>&, std::vector<std::vector<int> >&, std::vector<Correspondence>&, float)[m[K’:
+[10.037s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/correspond.cpp:61:7:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Klast_best[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[10.037s]    61 |   int [01;35m[Klast_best[m[K = -1;
+[10.037s]       |       [01;35m[K^~~~~~~~~[m[K
+[10.037s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/correspond.cpp:48:45:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kjump_table[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[10.037s]    48 |                        [01;35m[Kvector<vector<int>> &jump_table[m[K, vector<Correspondence> &c, float prob)
+[10.037s]       |                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[10.037s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/correspond.cpp:48:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprob[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[10.037s]    48 |                        vector<vector<int>> &jump_table, vector<Correspondence> &c, [01;35m[Kfloat prob[m[K)
+[10.037s]       |                                                                                    [01;35m[K~~~~~~^~~~[m[K
+[10.161s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/transform.cpp:[m[K In function ‘[01m[Kvoid transformPoints(const std::vector<Point>&, Transform&, std::vector<Point>&)[m[K’:
+[10.161s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/transform.cpp:11:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<Point>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[10.161s]    11 |   for (int i = 0; [01;35m[Ki < points.size()[m[K; i++)
+[10.161s]       |                   [01;35m[K~~^~~~~~~~~~~~~~~[m[K
+[10.209s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/transform.cpp:[m[K In function ‘[01m[Kvoid updateTransform(std::vector<Correspondence>&, Transform&)[m[K’:
+[10.209s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/transform.cpp:306:25:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kc[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+[10.210s]   306 |     for (Correspondence [01;35m[Kc[m[K : corresponds)
+[10.210s]       |                         [01;35m[K^[m[K
+[10.310s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/transform.cpp:317:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KS_det[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[10.311s]   317 |     float [01;35m[KS_det[m[K = S(0, 0) * S(1, 1) - S(1, 0) * S(0, 1);
+[10.311s]       |           [01;35m[K^~~~~[m[K
+[10.676s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/transform.cpp:[m[K In function ‘[01m[Kfloat greatest_real_root(float, float, float, float, float)[m[K’:
+[10.676s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/transform.cpp:273:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K-Wreturn-type[m[K]
+[10.676s]   273 | [01;35m[K}[m[K
+[10.676s]       | [01;35m[K^[m[K
+[10.725s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/transform.cpp:[m[K In function ‘[01m[Kvoid updateTransform(std::vector<Correspondence>&, Transform&)[m[K’:
+[10.726s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/transform.cpp:326:30:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpow_0[m[K’ may be used uninitialized in this function [[01;35m[K-Wmaybe-uninitialized[m[K]
+[10.726s]   326 |     float lambda = [01;35m[Ksolve_deg4(-16, -16 * S_tr, pow_2, pow_1, pow_0)[m[K;
+[10.726s]       |                    [01;35m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[10.726s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/transform.cpp:326:30:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpow_1[m[K’ may be used uninitialized in this function [[01;35m[K-Wmaybe-uninitialized[m[K]
+[10.726s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/transform.cpp:326:30:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpow_2[m[K’ may be used uninitialized in this function [[01;35m[K-Wmaybe-uninitialized[m[K]
+[11.567s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/scanmatch_node.cpp:[m[K In member function ‘[01m[Kvoid ScanMatch::readScan(sensor_msgs::msg::LaserScan_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[11.567s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/scanmatch_node.cpp:140:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<float>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[11.567s]   140 |         for (int i = 0; [01;35m[Ki < ranges.size()[m[K; ++i)
+[11.567s]       |                         [01;35m[K~~^~~~~~~~~~~~~~~[m[K
+[13.470s] In file included from [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/src/scanmatch_node.cpp:20[m[K:
+[13.470s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/include/scan_matching_skeleton/visualization.h:[m[K At global scope:
+[13.470s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab5_pkg/include/scan_matching_skeleton/visualization.h:9:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Knum_visuals[m[K’ defined but not used [[01;35m[K-Wunused-variable[m[K]
+[13.470s]     9 | static int [01;35m[Knum_visuals[m[K = 0;
+[13.470s]       |            [01;35m[K^~~~~~~~~~~[m[K
+[15.958s] [100%] [32m[1mLinking CXX executable scanmatch_node[0m
+[16.403s] [100%] Built target scanmatch_node
+[16.871s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg -- -j8 -l8
+[17.541s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg
+[17.614s] -- Install configuration: ""
+[17.614s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/lib/lab5_pkg/scanmatch_node
+[17.616s] -- Set runtime path of "/home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/lib/lab5_pkg/scanmatch_node" to ""
+[17.616s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/environment/pythonpath.sh
+[17.617s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/environment/pythonpath.dsv
+[17.617s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg
+[17.617s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg/__init__.py
+[17.640s] Listing '/home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg'...
+[17.640s] Compiling '/home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg/__init__.py'...
+[17.644s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/ament_index/resource_index/package_run_dependencies/lab5_pkg
+[17.645s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/ament_index/resource_index/parent_prefix_path/lab5_pkg
+[17.645s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/environment/ament_prefix_path.sh
+[17.645s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/environment/ament_prefix_path.dsv
+[17.645s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/environment/path.sh
+[17.645s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/environment/path.dsv
+[17.645s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/local_setup.bash
+[17.645s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/local_setup.sh
+[17.646s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/local_setup.zsh
+[17.646s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/local_setup.dsv
+[17.646s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/package.dsv
+[17.646s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/ament_index/resource_index/packages/lab5_pkg
+[17.646s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/cmake/lab5_pkgConfig.cmake
+[17.646s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/cmake/lab5_pkgConfig-version.cmake
+[17.646s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/package.xml
+[17.649s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg

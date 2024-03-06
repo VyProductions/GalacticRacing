@@ -1,0 +1,33 @@
+[1.127s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/lab5_pkg -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg
+[1.155s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.380s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.570s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.599s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.601s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.711s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.751s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.752s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.905s] -- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+[1.905s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.936s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[2.027s] -- Configuring incomplete, errors occurred!
+[2.030s] See also "/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg/CMakeFiles/CMakeOutput.log".
+[2.034s] See also "/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg/CMakeFiles/CMakeError.log".
+[2.034s] CMake Error at CMakeLists.txt:28 (find_package):
+[2.034s]   By not providing "Findackermann_msgs.cmake" in CMAKE_MODULE_PATH this
+[2.034s]   project has asked CMake to find a package configuration file provided by
+[2.034s]   "ackermann_msgs", but CMake did not find one.
+[2.034s] 
+[2.034s]   Could not find a package configuration file provided by "ackermann_msgs"
+[2.034s]   with any of the following names:
+[2.034s] 
+[2.034s]     ackermann_msgsConfig.cmake
+[2.034s]     ackermann_msgs-config.cmake
+[2.034s] 
+[2.034s]   Add the installation prefix of "ackermann_msgs" to CMAKE_PREFIX_PATH or set
+[2.034s]   "ackermann_msgs_DIR" to a directory containing one of the above files.  If
+[2.034s]   "ackermann_msgs" provides a separate development package or SDK, be sure it
+[2.034s]   has been installed.
+[2.034s] 
+[2.034s] 
+[2.064s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/lab5_pkg -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg

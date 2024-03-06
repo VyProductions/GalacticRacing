@@ -1,0 +1,2 @@
+Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/safety_node': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/safety_node -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/safety_node
+Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/safety_node' returned '1': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/safety_node -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/safety_node
