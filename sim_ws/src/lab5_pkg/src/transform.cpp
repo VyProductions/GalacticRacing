@@ -298,6 +298,7 @@ void updateTransform(vector<Correspondence> &corresponds, Transform &curr_trans)
     // Fill in the values for the matrices
     Eigen::Matrix4f M, W;
     Eigen::MatrixXf g(1, 4);
+    
     M << 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0;
     W << 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1;
     g << 0, 0, 0, 0;
@@ -305,26 +306,61 @@ void updateTransform(vector<Correspondence> &corresponds, Transform &curr_trans)
     // Calculate M and g
     for (Correspondence c : corresponds)
     {
+      //pi_i = p_ji, p_ji is a vector of 2 floats and a corresponding point for the transform point
+      pi_i << c.pj1->getX(), c.pj1->getY();
+      M_i << 1,0,c.po->getX(),-c.po->getY(),0,1,c.po->getY(),c.po->getX();
+      C_i << c.getNormalNorm() * c.getNormalNorm().transpose();
+      //The following are derived from Censi (19)
+      //Getting summation of M = M + M_i' * C_i * M_i
+      M += M_i.transpose() * C_i * M_i;
+      // g = g - 2 * pi_i' * C_i * M_i 
+      g += -2 * pi_i.transpose() * C_i * M_i;
     }
 
     // Define sub-matrices A, B, D from M
     Eigen::Matrix2f A, B, D;
+    //submatrix with .block() Eigen: <block_size>(starting_at) where indicies start at 0
+    A = 2 * M.block<2,2>(0,0);
+    B = 2 * M.block<2,2>(0,2);
+    D = 2 * M.block<2,2>(2,2);
+    
 
     //define S and S_A matrices from the matrices A B and D
     Eigen::Matrix2f S;
     Eigen::Matrix2f S_A;
-    float S_tr = S(0, 0) + S(1, 1);
-    float S_det = S(0, 0) * S(1, 1) - S(1, 0) * S(0, 1);
+    Eigen::Matrix2f identity_mat;
+    Eigen::Matrix4f p_2, p_1, p_0;
+    // float S_tr = S(0, 0) + S(1, 1);
+    // float S_det = S(0, 0) * S(1, 1) - S(1, 0) * S(0, 1);
+    float a, b;
+    S = D - B.transpose() * A.inverse() * B;
+    S_A = S.determinant() * S.inverse();
 
     //find the coefficients of the quadratic function of lambda
     float pow_2;
     float pow_1;
     float pow_0;
 
-    // find the value of lambda by solving the equation formed. You can use the greatest real root function
-    // float lambda = greatest_real_root(-16, -16 * S_tr, pow_2, pow_1, pow_0);
-    float lambda = solve_deg4(-16, -16 * S_tr, pow_2, pow_1, pow_0);
 
+    p_2 << A.inverse() * B * B.transpose() * A.inverse().transpose(), -A.inverse() * B, -A.inverse() * B , identity_mat.Identity(); //what is I- identity matrix
+    p_1 << A.inverse() * B * S_A * B.transpose() * A.inverse().transpose(), -A.inverse() *B *S_A, -A.inverse() * B * S_A, S_A;
+    p_0 << A.inverse() * B * S_A.transpose() * S_A * B.transpose() * A.inverse().transpose(), -A.inverse() * B * S_A.transpose() * S_A, -A.inverse() * B * S_A.transpose() * S_A, S_A.transpose() * S_A;
+
+    a = -pow(S.determinant(),2);
+    b = -2 * S.determinant() * S.trace();
+    pow_2 = (g.transpose() * p_2 * g).sum() - (2 * S.determinant() + pow(S.trace(),2));
+    pow_1 = (4 * g.transpose() * p_1 * g).sum() - 2 * S.trace();
+    pow_0 = -1 + (g.transpose() * p_0 * g).sum();
+
+    // vector<float> p {pow_0, 4*pow_1, 4*pow_2};
+
+    // vector<float> p_l_sq {p^2};
+    
+     
+    // find the value of lambda by solving the equation formed. You can use the greatest real root function
+    float lambda = greatest_real_root(a, b, pow_2, pow_1, pow_0);
+    // float lambda = solve_deg4(-16, -16 * S_tr, pow_2, pow_1, pow_0);
+    std::cout << lambda <<std::endl;
     //find the value of x which is the vector for translation and rotation
     Eigen::Vector4f x = -(2 * M + 2 * lambda * W).transpose().inverse() * g.transpose();
 
