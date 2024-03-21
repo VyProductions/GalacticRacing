@@ -1,5 +1,6 @@
 #include "scan_matching_skeleton/transform.h"
 #include <cmath>
+#include <iostream>
 #include <Eigen/Geometry>
 #include <complex>
 
