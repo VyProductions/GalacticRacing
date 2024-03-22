@@ -1,0 +1,1 @@
+/usr/bin/c++  -march=native -ffast-math -fno-math-errno  -std=c++11 -O3 -O3 -DNDEBUG  -rdynamic CMakeFiles/range_lib.dir/main.cpp.o CMakeFiles/range_lib.dir/vendor/lodepng/lodepng.cpp.o  -o bin/range_lib  lib/libgflags_nothreads.a -lpthread 
