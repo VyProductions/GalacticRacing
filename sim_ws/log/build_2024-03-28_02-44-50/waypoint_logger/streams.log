@@ -1,0 +1,35 @@
+[0.648s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/waypoint_logger': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/waypoint_logger -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/waypoint_logger
+[0.829s] -- The C compiler identification is GNU 9.4.0
+[1.067s] -- The CXX compiler identification is GNU 9.4.0
+[1.067s] -- Check for working C compiler: /usr/bin/cc
+[1.157s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.157s] -- Detecting C compiler ABI info
+[1.251s] -- Detecting C compiler ABI info - done
+[1.279s] -- Detecting C compile features
+[1.279s] -- Detecting C compile features - done
+[1.279s] -- Check for working CXX compiler: /usr/bin/c++
+[1.402s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.402s] -- Detecting CXX compiler ABI info
+[1.542s] -- Detecting CXX compiler ABI info - done
+[1.560s] -- Detecting CXX compile features
+[1.560s] -- Detecting CXX compile features - done
+[1.614s] -- Configuring incomplete, errors occurred!
+[1.615s] See also "/home/vy/GalacticRacing/sim_ws/build/waypoint_logger/CMakeFiles/CMakeOutput.log".
+[1.615s] CMake Error at CMakeLists.txt:10 (find_package):
+[1.616s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[1.617s]   asked CMake to find a package configuration file provided by "catkin", but
+[1.617s]   CMake did not find one.
+[1.617s] 
+[1.617s]   Could not find a package configuration file provided by "catkin" with any
+[1.617s]   of the following names:
+[1.617s] 
+[1.617s]     catkinConfig.cmake
+[1.617s]     catkin-config.cmake
+[1.617s] 
+[1.617s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[1.617s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[1.617s]   provides a separate development package or SDK, be sure it has been
+[1.618s]   installed.
+[1.619s] 
+[1.625s] 
+[1.673s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/waypoint_logger' returned '1': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/waypoint_logger -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/waypoint_logger

@@ -1,0 +1,9 @@
+CMake Error at /opt/ros/foxy/share/ament_cmake_python/cmake/ament_python_install_package.cmake:46 (message):
+  ament_python_install_package() the Python package folder
+  '/home/vy/GalacticRacing/sim_ws/src/waypoint_logger/waypoint_logger'
+  doesn't contain an '__init__.py' file
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_python/cmake/ament_python_install_package.cmake:28 (_ament_cmake_python_install_package)
+  CMakeLists.txt:47 (ament_python_install_package)
+
+

@@ -1,0 +1,28 @@
+[2.078s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/pure_pursuit': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/pure_pursuit -- -j6 -l6
+[2.356s] [100%] Built target pure_pursuit_node
+[2.469s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/pure_pursuit' returned '0': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/pure_pursuit -- -j6 -l6
+[3.206s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/pure_pursuit': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/pure_pursuit
+[3.243s] -- Install configuration: ""
+[3.244s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/lib/pure_pursuit/pure_pursuit_node
+[3.244s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/environment/pythonpath.sh
+[3.245s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/environment/pythonpath.dsv
+[3.245s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit
+[3.245s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit/__init__.py
+[3.370s] Listing '/home/vy/GalacticRacing/sim_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit'...
+[3.375s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/lib/pure_pursuit/pure_pursuit_node.py
+[3.375s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/ament_index/resource_index/package_run_dependencies/pure_pursuit
+[3.375s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/ament_index/resource_index/parent_prefix_path/pure_pursuit
+[3.375s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/environment/ament_prefix_path.sh
+[3.375s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/environment/ament_prefix_path.dsv
+[3.375s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/environment/path.sh
+[3.375s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/environment/path.dsv
+[3.375s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/local_setup.bash
+[3.376s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/local_setup.sh
+[3.376s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/local_setup.zsh
+[3.376s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/local_setup.dsv
+[3.379s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/package.dsv
+[3.379s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/ament_index/resource_index/packages/pure_pursuit
+[3.379s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/cmake/pure_pursuitConfig.cmake
+[3.379s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/cmake/pure_pursuitConfig-version.cmake
+[3.379s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/package.xml
+[3.701s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/pure_pursuit' returned '0': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/pure_pursuit
