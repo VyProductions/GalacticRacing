@@ -1,0 +1,2 @@
+[1.395s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/safety_node': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/safety_node -- -j8 -l8
+[1.530s] [100%] Built target safety_node

@@ -1,0 +1,2 @@
+Invoking command in '/home/vy/GalacticRacing/sim_ws/build/lab5_pkg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/lab5_pkg -- -j8 -l8
+Invoked command in '/home/vy/GalacticRacing/sim_ws/build/lab5_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/lab5_pkg -- -j8 -l8

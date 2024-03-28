@@ -1,0 +1,6 @@
+Invoking command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/gap_follow -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/gap_follow
+Invoked command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/gap_follow -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/gap_follow
+Invoking command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/gap_follow -- -j8 -l8
+Invoked command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/gap_follow -- -j8 -l8
+Invoking command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/gap_follow
+Invoked command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/gap_follow

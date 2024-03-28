@@ -1,0 +1,1 @@
+Invoking command in '/home/vy/GalacticRacing/sim_ws/build/wall_follow': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/wall_follow -- -j8 -l8

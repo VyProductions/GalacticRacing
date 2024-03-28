@@ -1,0 +1,44 @@
+[3.245s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/f1tenth_gym_ros': PYTHONPATH=/home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/prefix_override:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/f1tenth_gym_ros build --build-base /home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/build install --record /home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/install.log --install-scripts $base/lib/f1tenth_gym_ros --single-version-externally-managed
+[3.458s] running egg_info
+[3.459s] creating ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info
+[3.459s] writing ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/PKG-INFO
+[3.459s] writing dependency_links to ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/dependency_links.txt
+[3.460s] writing entry points to ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/entry_points.txt
+[3.460s] writing requirements to ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/requires.txt
+[3.460s] writing top-level names to ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/top_level.txt
+[3.461s] writing manifest file '../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'
+[3.484s] reading manifest file '../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'
+[3.486s] writing manifest file '../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'
+[3.487s] running build
+[3.487s] running build_py
+[3.487s] creating /home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/build
+[3.487s] creating /home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/build/lib
+[3.487s] creating /home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros
+[3.487s] copying f1tenth_gym_ros/gym_bridge.py -> /home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros
+[3.487s] copying f1tenth_gym_ros/__init__.py -> /home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros
+[3.488s] running install
+[3.488s] running install_lib
+[3.488s] creating /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros
+[3.488s] copying /home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros/gym_bridge.py -> /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros
+[3.488s] copying /home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros/__init__.py -> /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros
+[3.488s] byte-compiling /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros/gym_bridge.py to gym_bridge.cpython-38.pyc
+[3.492s] byte-compiling /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros/__init__.py to __init__.cpython-38.pyc
+[3.492s] running install_data
+[3.492s] creating /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/ament_index
+[3.492s] creating /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/ament_index/resource_index
+[3.493s] creating /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/ament_index/resource_index/packages
+[3.493s] copying resource/f1tenth_gym_ros -> /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/ament_index/resource_index/packages
+[3.493s] copying package.xml -> /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros
+[3.493s] creating /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
+[3.494s] copying launch/gym_bridge_launch.py -> /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
+[3.496s] copying launch/ego_racecar.xacro -> /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
+[3.496s] copying launch/opp_racecar.xacro -> /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
+[3.496s] copying launch/gym_bridge.rviz -> /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
+[3.497s] creating /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/config
+[3.497s] copying config/sim.yaml -> /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/config
+[3.497s] running install_egg_info
+[3.498s] Copying ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info to /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/lib/python3.8/site-packages/f1tenth_gym_ros-0.0.0-py3.8.egg-info
+[3.499s] running install_scripts
+[3.513s] Installing gym_bridge script to /home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/lib/f1tenth_gym_ros
+[3.514s] writing list of installed files to '/home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/install.log'
+[3.534s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/f1tenth_gym_ros' returned '0': PYTHONPATH=/home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/prefix_override:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/f1tenth_gym_ros build --build-base /home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/build install --record /home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/install.log --install-scripts $base/lib/f1tenth_gym_ros --single-version-externally-managed

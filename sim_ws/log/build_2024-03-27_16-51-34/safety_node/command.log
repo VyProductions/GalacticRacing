@@ -1,0 +1,6 @@
+Invoking command in '/home/vy/GalacticRacing/sim_ws/build/safety_node': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/safety_node -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/safety_node
+Invoked command in '/home/vy/GalacticRacing/sim_ws/build/safety_node' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/safety_node -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/safety_node
+Invoking command in '/home/vy/GalacticRacing/sim_ws/build/safety_node': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/safety_node -- -j8 -l8
+Invoked command in '/home/vy/GalacticRacing/sim_ws/build/safety_node' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/safety_node -- -j8 -l8
+Invoking command in '/home/vy/GalacticRacing/sim_ws/build/safety_node': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/safety_node
+Invoked command in '/home/vy/GalacticRacing/sim_ws/build/safety_node' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/safety_node

@@ -1,0 +1,501 @@
+[3.839s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[3.839s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f06ecda66d0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=8, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f06ecda66d0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f06eca68040>)
+[4.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[4.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[4.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[4.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[4.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[4.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[4.292s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/vy/GalacticRacing/sim_ws'
+[4.292s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[4.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[4.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[4.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[4.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[4.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[4.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[4.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[4.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[4.307s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(lab5_pkg) by extensions ['ignore', 'ignore_ament_install']
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(lab5_pkg) by extension 'ignore'
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(lab5_pkg) by extension 'ignore_ament_install'
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(lab5_pkg) by extensions ['colcon_pkg']
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(lab5_pkg) by extension 'colcon_pkg'
+[4.311s] Level 1:colcon.colcon_core.package_identification:_identify(lab5_pkg) by extensions ['colcon_meta']
+[4.312s] Level 1:colcon.colcon_core.package_identification:_identify(lab5_pkg) by extension 'colcon_meta'
+[4.312s] Level 1:colcon.colcon_core.package_identification:_identify(lab5_pkg) by extensions ['ros']
+[4.312s] Level 1:colcon.colcon_core.package_identification:_identify(lab5_pkg) by extension 'ros'
+[4.317s] DEBUG:colcon.colcon_core.package_identification:Package 'lab5_pkg' with type 'ros.ament_cmake' and name 'lab5_pkg'
+[4.317s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extensions ['ignore', 'ignore_ament_install']
+[4.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extension 'ignore'
+[4.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extension 'ignore_ament_install'
+[4.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extensions ['colcon_pkg']
+[4.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extension 'colcon_pkg'
+[4.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extensions ['colcon_meta']
+[4.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extension 'colcon_meta'
+[4.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extensions ['ros']
+[4.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/f1tenth_gym_ros) by extension 'ros'
+[4.319s] DEBUG:colcon.colcon_core.package_identification:Package 'src/f1tenth_gym_ros' with type 'ros.ament_python' and name 'f1tenth_gym_ros'
+[4.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extensions ['ignore', 'ignore_ament_install']
+[4.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extension 'ignore'
+[4.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extension 'ignore_ament_install'
+[4.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extensions ['colcon_pkg']
+[4.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extension 'colcon_pkg'
+[4.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extensions ['colcon_meta']
+[4.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extension 'colcon_meta'
+[4.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extensions ['ros']
+[4.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extension 'ros'
+[4.320s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gap_follow' with type 'ros.ament_cmake' and name 'gap_follow'
+[4.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[4.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[4.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[4.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[4.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[4.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[4.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extensions ['ignore', 'ignore_ament_install']
+[4.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extension 'ignore'
+[4.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extension 'ignore_ament_install'
+[4.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extensions ['colcon_pkg']
+[4.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extension 'colcon_pkg'
+[4.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extensions ['colcon_meta']
+[4.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extension 'colcon_meta'
+[4.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extensions ['ros']
+[4.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extension 'ros'
+[4.323s] DEBUG:colcon.colcon_core.package_identification:Package 'src/particle_filter' with type 'ros.ament_python' and name 'particle_filter'
+[4.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/range_libc) by extensions ['ignore', 'ignore_ament_install']
+[4.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/range_libc) by extension 'ignore'
+[4.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/range_libc) by extension 'ignore_ament_install'
+[4.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/range_libc) by extensions ['colcon_pkg']
+[4.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/range_libc) by extension 'colcon_pkg'
+[4.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/range_libc) by extensions ['colcon_meta']
+[4.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/range_libc) by extension 'colcon_meta'
+[4.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/range_libc) by extensions ['ros']
+[4.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/range_libc) by extension 'ros'
+[4.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/range_libc) by extensions ['cmake', 'python']
+[4.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/range_libc) by extension 'cmake'
+[4.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/range_libc) by extension 'python'
+[4.332s] DEBUG:colcon.colcon_core.package_identification:Package 'src/range_libc' with type 'cmake' and name 'range_lib'
+[4.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extensions ['ignore', 'ignore_ament_install']
+[4.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extension 'ignore'
+[4.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extension 'ignore_ament_install'
+[4.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extensions ['colcon_pkg']
+[4.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extension 'colcon_pkg'
+[4.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extensions ['colcon_meta']
+[4.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extension 'colcon_meta'
+[4.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extensions ['ros']
+[4.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extension 'ros'
+[4.333s] DEBUG:colcon.colcon_core.package_identification:Package 'src/safety_node' with type 'ros.ament_cmake' and name 'safety_node'
+[4.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extensions ['ignore', 'ignore_ament_install']
+[4.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extension 'ignore'
+[4.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extension 'ignore_ament_install'
+[4.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extensions ['colcon_pkg']
+[4.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extension 'colcon_pkg'
+[4.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extensions ['colcon_meta']
+[4.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extension 'colcon_meta'
+[4.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extensions ['ros']
+[4.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extension 'ros'
+[4.335s] DEBUG:colcon.colcon_core.package_identification:Package 'src/wall_follow' with type 'ros.ament_cmake' and name 'wall_follow'
+[4.335s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[4.335s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[4.335s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[4.335s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[4.335s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[4.875s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[4.875s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[5.150s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 302 installed packages in /opt/ros/foxy
+[5.155s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[5.406s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'cmake_args' from command line to 'None'
+[5.410s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'cmake_target' from command line to 'None'
+[5.410s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[5.410s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[5.410s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'cmake_clean_first' from command line to 'False'
+[5.410s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'cmake_force_configure' from command line to 'False'
+[5.410s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'ament_cmake_args' from command line to 'None'
+[5.410s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[5.410s] Level 5:colcon.colcon_core.verb:set package 'f1tenth_gym_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[5.410s] DEBUG:colcon.colcon_core.verb:Building package 'f1tenth_gym_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros', 'merge_install': False, 'path': '/home/vy/GalacticRacing/sim_ws/src/f1tenth_gym_ros', 'symlink_install': False, 'test_result_base': None}
+[5.503s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_args' from command line to 'None'
+[5.504s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_target' from command line to 'None'
+[5.504s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[5.504s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_clean_cache' from command line to 'False'
+[5.504s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_clean_first' from command line to 'False'
+[5.504s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_force_configure' from command line to 'False'
+[5.504s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'ament_cmake_args' from command line to 'None'
+[5.504s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'catkin_cmake_args' from command line to 'None'
+[5.504s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'catkin_skip_building_tests' from command line to 'False'
+[5.504s] DEBUG:colcon.colcon_core.verb:Building package 'gap_follow' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vy/GalacticRacing/sim_ws/build/gap_follow', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vy/GalacticRacing/sim_ws/install/gap_follow', 'merge_install': False, 'path': '/home/vy/GalacticRacing/sim_ws/src/gap_follow', 'symlink_install': False, 'test_result_base': None}
+[5.607s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'cmake_args' from command line to 'None'
+[5.607s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'cmake_target' from command line to 'None'
+[5.607s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[5.607s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[5.607s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[5.607s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[5.607s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[5.607s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[5.607s] Level 5:colcon.colcon_core.verb:set package 'lab5_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[5.607s] DEBUG:colcon.colcon_core.verb:Building package 'lab5_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vy/GalacticRacing/sim_ws/build/lab5_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg', 'merge_install': False, 'path': '/home/vy/GalacticRacing/sim_ws/lab5_pkg', 'symlink_install': False, 'test_result_base': None}
+[5.691s] Level 5:colcon.colcon_core.verb:set package 'particle_filter' build argument 'cmake_args' from command line to 'None'
+[5.691s] Level 5:colcon.colcon_core.verb:set package 'particle_filter' build argument 'cmake_target' from command line to 'None'
+[5.691s] Level 5:colcon.colcon_core.verb:set package 'particle_filter' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[5.691s] Level 5:colcon.colcon_core.verb:set package 'particle_filter' build argument 'cmake_clean_cache' from command line to 'False'
+[5.691s] Level 5:colcon.colcon_core.verb:set package 'particle_filter' build argument 'cmake_clean_first' from command line to 'False'
+[5.691s] Level 5:colcon.colcon_core.verb:set package 'particle_filter' build argument 'cmake_force_configure' from command line to 'False'
+[5.691s] Level 5:colcon.colcon_core.verb:set package 'particle_filter' build argument 'ament_cmake_args' from command line to 'None'
+[5.691s] Level 5:colcon.colcon_core.verb:set package 'particle_filter' build argument 'catkin_cmake_args' from command line to 'None'
+[5.691s] Level 5:colcon.colcon_core.verb:set package 'particle_filter' build argument 'catkin_skip_building_tests' from command line to 'False'
+[5.691s] DEBUG:colcon.colcon_core.verb:Building package 'particle_filter' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vy/GalacticRacing/sim_ws/build/particle_filter', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vy/GalacticRacing/sim_ws/install/particle_filter', 'merge_install': False, 'path': '/home/vy/GalacticRacing/sim_ws/src/particle_filter', 'symlink_install': False, 'test_result_base': None}
+[5.774s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'cmake_args' from command line to 'None'
+[5.774s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'cmake_target' from command line to 'None'
+[5.774s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[5.774s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'cmake_clean_cache' from command line to 'False'
+[5.774s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'cmake_clean_first' from command line to 'False'
+[5.774s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'cmake_force_configure' from command line to 'False'
+[5.774s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'ament_cmake_args' from command line to 'None'
+[5.774s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'catkin_cmake_args' from command line to 'None'
+[5.775s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'catkin_skip_building_tests' from command line to 'False'
+[5.775s] DEBUG:colcon.colcon_core.verb:Building package 'range_lib' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vy/GalacticRacing/sim_ws/build/range_lib', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vy/GalacticRacing/sim_ws/install/range_lib', 'merge_install': False, 'path': '/home/vy/GalacticRacing/sim_ws/src/range_libc', 'symlink_install': False, 'test_result_base': None}
+[5.850s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'cmake_args' from command line to 'None'
+[5.850s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'cmake_target' from command line to 'None'
+[5.850s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[5.850s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'cmake_clean_cache' from command line to 'False'
+[5.851s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'cmake_clean_first' from command line to 'False'
+[5.851s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'cmake_force_configure' from command line to 'False'
+[5.851s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'ament_cmake_args' from command line to 'None'
+[5.851s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'catkin_cmake_args' from command line to 'None'
+[5.851s] Level 5:colcon.colcon_core.verb:set package 'safety_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[5.851s] DEBUG:colcon.colcon_core.verb:Building package 'safety_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vy/GalacticRacing/sim_ws/build/safety_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vy/GalacticRacing/sim_ws/install/safety_node', 'merge_install': False, 'path': '/home/vy/GalacticRacing/sim_ws/src/safety_node', 'symlink_install': False, 'test_result_base': None}
+[5.924s] Level 5:colcon.colcon_core.verb:set package 'wall_follow' build argument 'cmake_args' from command line to 'None'
+[5.925s] Level 5:colcon.colcon_core.verb:set package 'wall_follow' build argument 'cmake_target' from command line to 'None'
+[5.925s] Level 5:colcon.colcon_core.verb:set package 'wall_follow' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[5.925s] Level 5:colcon.colcon_core.verb:set package 'wall_follow' build argument 'cmake_clean_cache' from command line to 'False'
+[5.925s] Level 5:colcon.colcon_core.verb:set package 'wall_follow' build argument 'cmake_clean_first' from command line to 'False'
+[5.925s] Level 5:colcon.colcon_core.verb:set package 'wall_follow' build argument 'cmake_force_configure' from command line to 'False'
+[5.925s] Level 5:colcon.colcon_core.verb:set package 'wall_follow' build argument 'ament_cmake_args' from command line to 'None'
+[5.925s] Level 5:colcon.colcon_core.verb:set package 'wall_follow' build argument 'catkin_cmake_args' from command line to 'None'
+[5.925s] Level 5:colcon.colcon_core.verb:set package 'wall_follow' build argument 'catkin_skip_building_tests' from command line to 'False'
+[5.925s] DEBUG:colcon.colcon_core.verb:Building package 'wall_follow' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vy/GalacticRacing/sim_ws/build/wall_follow', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vy/GalacticRacing/sim_ws/install/wall_follow', 'merge_install': False, 'path': '/home/vy/GalacticRacing/sim_ws/src/wall_follow', 'symlink_install': False, 'test_result_base': None}
+[5.999s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[6.097s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[6.097s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/vy/GalacticRacing/sim_ws/src/f1tenth_gym_ros' with build type 'ament_python'
+[6.097s] Level 1:colcon.colcon_core.shell:create_environment_hook('f1tenth_gym_ros', 'ament_prefix_path')
+[6.208s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[6.208s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/hook/ament_prefix_path.ps1'
+[6.209s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/hook/ament_prefix_path.dsv'
+[6.210s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/hook/ament_prefix_path.sh'
+[6.300s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.300s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.499s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/vy/GalacticRacing/sim_ws/src/gap_follow' with build type 'ament_cmake'
+[6.502s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/vy/GalacticRacing/sim_ws/src/gap_follow'
+[6.689s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.689s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.921s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/vy/GalacticRacing/sim_ws/lab5_pkg' with build type 'ament_cmake'
+[6.922s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/vy/GalacticRacing/sim_ws/lab5_pkg'
+[7.014s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.014s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.240s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/vy/GalacticRacing/sim_ws/src/particle_filter' with build type 'ament_python'
+[7.246s] Level 1:colcon.colcon_core.shell:create_environment_hook('particle_filter', 'ament_prefix_path')
+[7.373s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/hook/ament_prefix_path.ps1'
+[7.374s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/hook/ament_prefix_path.dsv'
+[7.375s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/hook/ament_prefix_path.sh'
+[7.487s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.488s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.689s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/vy/GalacticRacing/sim_ws/src/range_libc'
+[7.768s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.768s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.928s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/vy/GalacticRacing/sim_ws/src/safety_node' with build type 'ament_cmake'
+[7.929s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/vy/GalacticRacing/sim_ws/src/safety_node'
+[8.016s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.017s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.170s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/vy/GalacticRacing/sim_ws/src/wall_follow' with build type 'ament_cmake'
+[8.170s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/vy/GalacticRacing/sim_ws/src/wall_follow'
+[8.258s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.258s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.609s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/vy/GalacticRacing/sim_ws/src/f1tenth_gym_ros'
+[8.712s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.715s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.920s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/gap_follow -- -j8 -l8
+[8.927s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vy/GalacticRacing/sim_ws/build/lab5_pkg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/lab5_pkg -- -j8 -l8
+[9.115s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/vy/GalacticRacing/sim_ws/src/particle_filter'
+[9.187s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.187s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.346s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vy/GalacticRacing/sim_ws/build/range_lib': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/range_libc -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/range_lib
+[9.360s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vy/GalacticRacing/sim_ws/build/safety_node': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/safety_node -- -j8 -l8
+[9.382s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vy/GalacticRacing/sim_ws/build/wall_follow': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/wall_follow -- -j8 -l8
+[9.400s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vy/GalacticRacing/sim_ws/build/lab5_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/lab5_pkg -- -j8 -l8
+[9.401s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/gap_follow -- -j8 -l8
+[9.453s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/gap_follow
+[9.473s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vy/GalacticRacing/sim_ws/build/safety_node' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/safety_node -- -j8 -l8
+[9.477s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vy/GalacticRacing/sim_ws/build/wall_follow' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/wall_follow -- -j8 -l8
+[9.493s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vy/GalacticRacing/sim_ws/build/lab5_pkg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/lab5_pkg
+[9.504s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vy/GalacticRacing/sim_ws/build/safety_node': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/safety_node
+[9.523s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gap_follow)
+[9.526s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vy/GalacticRacing/sim_ws/build/wall_follow': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/wall_follow
+[9.528s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/gap_follow
+[9.663s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/gap_follow' for CMake module files
+[9.664s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/gap_follow' for CMake config files
+[9.664s] Level 1:colcon.colcon_core.shell:create_environment_hook('gap_follow', 'cmake_prefix_path')
+[9.738s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/hook/cmake_prefix_path.ps1'
+[9.739s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/hook/cmake_prefix_path.dsv'
+[9.740s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/hook/cmake_prefix_path.sh'
+[9.742s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/gap_follow/lib'
+[9.742s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/gap_follow/bin'
+[9.742s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/gap_follow/lib/pkgconfig/gap_follow.pc'
+[9.742s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/gap_follow/lib/python3.8/site-packages'
+[9.742s] Level 1:colcon.colcon_core.shell:create_environment_hook('gap_follow', 'pythonpath')
+[9.889s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/hook/pythonpath.ps1'
+[9.893s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/hook/pythonpath.dsv'
+[9.894s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/hook/pythonpath.sh'
+[9.899s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/gap_follow/bin'
+[10.025s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/package.ps1'
+[10.030s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/package.dsv'
+[10.031s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/package.sh'
+[10.034s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/package.bash'
+[10.035s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/package.zsh'
+[10.038s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/colcon-core/packages/gap_follow)
+[10.048s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wall_follow)
+[10.049s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vy/GalacticRacing/sim_ws/build/wall_follow' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/wall_follow
+[10.128s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/wall_follow' for CMake module files
+[10.129s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/wall_follow' for CMake config files
+[10.130s] Level 1:colcon.colcon_core.shell:create_environment_hook('wall_follow', 'cmake_prefix_path')
+[10.208s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/hook/cmake_prefix_path.ps1'
+[10.209s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/hook/cmake_prefix_path.dsv'
+[10.209s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/hook/cmake_prefix_path.sh'
+[10.210s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/wall_follow/lib'
+[10.210s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/wall_follow/bin'
+[10.210s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/wall_follow/lib/pkgconfig/wall_follow.pc'
+[10.210s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/wall_follow/lib/python3.8/site-packages'
+[10.210s] Level 1:colcon.colcon_core.shell:create_environment_hook('wall_follow', 'pythonpath')
+[10.314s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/hook/pythonpath.ps1'
+[10.314s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/hook/pythonpath.dsv'
+[10.315s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/hook/pythonpath.sh'
+[10.316s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/wall_follow/bin'
+[10.398s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/package.ps1'
+[10.398s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/package.dsv'
+[10.399s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/package.sh'
+[10.399s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/package.bash'
+[10.403s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/package.zsh'
+[10.403s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/colcon-core/packages/wall_follow)
+[10.410s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab5_pkg)
+[10.411s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vy/GalacticRacing/sim_ws/build/lab5_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/lab5_pkg
+[10.493s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg' for CMake module files
+[10.493s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg' for CMake config files
+[10.494s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab5_pkg', 'cmake_prefix_path')
+[10.575s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/hook/cmake_prefix_path.ps1'
+[10.576s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/hook/cmake_prefix_path.dsv'
+[10.577s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/hook/cmake_prefix_path.sh'
+[10.577s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/lib'
+[10.577s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/bin'
+[10.577s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/lib/pkgconfig/lab5_pkg.pc'
+[10.578s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/lib/python3.8/site-packages'
+[10.578s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab5_pkg', 'pythonpath')
+[10.654s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/hook/pythonpath.ps1'
+[10.655s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/hook/pythonpath.dsv'
+[10.655s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/hook/pythonpath.sh'
+[10.655s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/bin'
+[10.728s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/package.ps1'
+[10.729s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/package.dsv'
+[10.729s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/package.sh'
+[10.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/package.bash'
+[10.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/package.zsh'
+[10.730s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/colcon-core/packages/lab5_pkg)
+[10.741s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vy/GalacticRacing/sim_ws/src/f1tenth_gym_ros': PYTHONPATH=/home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/prefix_override:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/f1tenth_gym_ros build --build-base /home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/build install --record /home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/install.log --install-scripts $base/lib/f1tenth_gym_ros --single-version-externally-managed
+[10.743s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(safety_node)
+[10.745s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vy/GalacticRacing/sim_ws/src/particle_filter': PYTHONPATH=/home/vy/GalacticRacing/sim_ws/build/particle_filter/prefix_override:/home/vy/GalacticRacing/sim_ws/install/particle_filter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/particle_filter build --build-base /home/vy/GalacticRacing/sim_ws/build/particle_filter/build install --record /home/vy/GalacticRacing/sim_ws/build/particle_filter/install.log --install-scripts $base/lib/particle_filter --single-version-externally-managed
+[10.746s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vy/GalacticRacing/sim_ws/build/safety_node' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/safety_node
+[10.835s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/safety_node' for CMake module files
+[10.835s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/safety_node' for CMake config files
+[10.835s] Level 1:colcon.colcon_core.shell:create_environment_hook('safety_node', 'cmake_prefix_path')
+[10.917s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/hook/cmake_prefix_path.ps1'
+[10.918s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/hook/cmake_prefix_path.dsv'
+[10.918s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/hook/cmake_prefix_path.sh'
+[10.919s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/safety_node/lib'
+[10.919s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/safety_node/bin'
+[10.919s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/safety_node/lib/pkgconfig/safety_node.pc'
+[10.919s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/safety_node/lib/python3.8/site-packages'
+[10.919s] Level 1:colcon.colcon_core.shell:create_environment_hook('safety_node', 'pythonpath')
+[11.005s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/hook/pythonpath.ps1'
+[11.013s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/hook/pythonpath.dsv'
+[11.018s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/hook/pythonpath.sh'
+[11.019s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/safety_node/bin'
+[11.103s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/package.ps1'
+[11.103s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/package.dsv'
+[11.104s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/package.sh'
+[11.105s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/package.bash'
+[11.105s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/package.zsh'
+[11.106s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vy/GalacticRacing/sim_ws/install/safety_node/share/colcon-core/packages/safety_node)
+[11.306s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gap_follow)
+[11.392s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/gap_follow' for CMake module files
+[11.393s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/gap_follow' for CMake config files
+[11.393s] Level 1:colcon.colcon_core.shell:create_environment_hook('gap_follow', 'cmake_prefix_path')
+[11.500s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/hook/cmake_prefix_path.ps1'
+[11.501s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/hook/cmake_prefix_path.dsv'
+[11.501s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/hook/cmake_prefix_path.sh'
+[11.502s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/gap_follow/lib'
+[11.502s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/gap_follow/bin'
+[11.502s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/gap_follow/lib/pkgconfig/gap_follow.pc'
+[11.503s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/gap_follow/lib/python3.8/site-packages'
+[11.503s] Level 1:colcon.colcon_core.shell:create_environment_hook('gap_follow', 'pythonpath')
+[11.577s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/hook/pythonpath.ps1'
+[11.578s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/hook/pythonpath.dsv'
+[11.578s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/hook/pythonpath.sh'
+[11.580s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/gap_follow/bin'
+[11.651s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/package.ps1'
+[11.651s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/package.dsv'
+[11.652s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/package.sh'
+[11.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/package.bash'
+[11.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/package.zsh'
+[11.654s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vy/GalacticRacing/sim_ws/install/gap_follow/share/colcon-core/packages/gap_follow)
+[11.726s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wall_follow)
+[11.801s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/wall_follow' for CMake module files
+[11.802s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/wall_follow' for CMake config files
+[11.802s] Level 1:colcon.colcon_core.shell:create_environment_hook('wall_follow', 'cmake_prefix_path')
+[11.872s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/hook/cmake_prefix_path.ps1'
+[11.873s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/hook/cmake_prefix_path.dsv'
+[11.874s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/hook/cmake_prefix_path.sh'
+[11.875s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/wall_follow/lib'
+[11.875s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/wall_follow/bin'
+[11.875s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/wall_follow/lib/pkgconfig/wall_follow.pc'
+[11.875s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/wall_follow/lib/python3.8/site-packages'
+[11.875s] Level 1:colcon.colcon_core.shell:create_environment_hook('wall_follow', 'pythonpath')
+[11.951s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/hook/pythonpath.ps1'
+[11.952s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/hook/pythonpath.dsv'
+[11.953s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/hook/pythonpath.sh'
+[11.954s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/wall_follow/bin'
+[12.027s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/package.ps1'
+[12.027s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/package.dsv'
+[12.028s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/package.sh'
+[12.029s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/package.bash'
+[12.030s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/package.zsh'
+[12.030s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vy/GalacticRacing/sim_ws/install/wall_follow/share/colcon-core/packages/wall_follow)
+[12.038s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vy/GalacticRacing/sim_ws/src/particle_filter' returned '0': PYTHONPATH=/home/vy/GalacticRacing/sim_ws/build/particle_filter/prefix_override:/home/vy/GalacticRacing/sim_ws/install/particle_filter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/particle_filter build --build-base /home/vy/GalacticRacing/sim_ws/build/particle_filter/build install --record /home/vy/GalacticRacing/sim_ws/build/particle_filter/install.log --install-scripts $base/lib/particle_filter --single-version-externally-managed
+[12.112s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/particle_filter' for CMake module files
+[12.112s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/particle_filter' for CMake config files
+[12.113s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/particle_filter/lib'
+[12.113s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/particle_filter/bin'
+[12.113s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/particle_filter/lib/pkgconfig/particle_filter.pc'
+[12.113s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/particle_filter/lib/python3.8/site-packages'
+[12.113s] Level 1:colcon.colcon_core.shell:create_environment_hook('particle_filter', 'pythonpath')
+[12.183s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/hook/pythonpath.ps1'
+[12.184s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/hook/pythonpath.dsv'
+[12.185s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/hook/pythonpath.sh'
+[12.186s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/particle_filter/bin'
+[12.186s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(particle_filter)
+[12.264s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/package.ps1'
+[12.265s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/package.dsv'
+[12.265s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/package.sh'
+[12.266s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/package.bash'
+[12.266s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/package.zsh'
+[12.267s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vy/GalacticRacing/sim_ws/install/particle_filter/share/colcon-core/packages/particle_filter)
+[12.269s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vy/GalacticRacing/sim_ws/src/f1tenth_gym_ros' returned '0': PYTHONPATH=/home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/prefix_override:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/f1tenth_gym_ros build --build-base /home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/build install --record /home/vy/GalacticRacing/sim_ws/build/f1tenth_gym_ros/install.log --install-scripts $base/lib/f1tenth_gym_ros --single-version-externally-managed
+[12.347s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros' for CMake module files
+[12.347s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros' for CMake config files
+[12.348s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/lib'
+[12.348s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/bin'
+[12.348s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/lib/pkgconfig/f1tenth_gym_ros.pc'
+[12.348s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/lib/python3.8/site-packages'
+[12.348s] Level 1:colcon.colcon_core.shell:create_environment_hook('f1tenth_gym_ros', 'pythonpath')
+[12.425s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/hook/pythonpath.ps1'
+[12.426s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/hook/pythonpath.dsv'
+[12.426s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/hook/pythonpath.sh'
+[12.427s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/bin'
+[12.427s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(f1tenth_gym_ros)
+[12.498s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/package.ps1'
+[12.499s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/package.dsv'
+[12.500s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/package.sh'
+[12.501s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/package.bash'
+[12.501s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/package.zsh'
+[12.501s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros/share/colcon-core/packages/f1tenth_gym_ros)
+[12.579s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab5_pkg)
+[12.653s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg' for CMake module files
+[12.653s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg' for CMake config files
+[12.654s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab5_pkg', 'cmake_prefix_path')
+[12.725s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/hook/cmake_prefix_path.ps1'
+[12.726s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/hook/cmake_prefix_path.dsv'
+[12.727s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/hook/cmake_prefix_path.sh'
+[12.727s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/lib'
+[12.727s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/bin'
+[12.728s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/lib/pkgconfig/lab5_pkg.pc'
+[12.728s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/lib/python3.8/site-packages'
+[12.728s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab5_pkg', 'pythonpath')
+[12.807s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/hook/pythonpath.ps1'
+[12.808s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/hook/pythonpath.dsv'
+[12.809s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/hook/pythonpath.sh'
+[12.810s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/bin'
+[12.883s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/package.ps1'
+[12.884s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/package.dsv'
+[12.884s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/package.sh'
+[12.885s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/package.bash'
+[12.885s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/package.zsh'
+[12.886s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/colcon-core/packages/lab5_pkg)
+[12.891s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vy/GalacticRacing/sim_ws/build/range_lib' returned '1': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/range_libc -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/range_lib
+[12.974s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(safety_node)
+[13.049s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/safety_node' for CMake module files
+[13.049s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/safety_node' for CMake config files
+[13.050s] Level 1:colcon.colcon_core.shell:create_environment_hook('safety_node', 'cmake_prefix_path')
+[13.135s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/hook/cmake_prefix_path.ps1'
+[13.136s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/hook/cmake_prefix_path.dsv'
+[13.137s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/hook/cmake_prefix_path.sh'
+[13.137s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/safety_node/lib'
+[13.138s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/safety_node/bin'
+[13.138s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/safety_node/lib/pkgconfig/safety_node.pc'
+[13.138s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/safety_node/lib/python3.8/site-packages'
+[13.138s] Level 1:colcon.colcon_core.shell:create_environment_hook('safety_node', 'pythonpath')
+[13.209s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/hook/pythonpath.ps1'
+[13.210s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/hook/pythonpath.dsv'
+[13.211s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/hook/pythonpath.sh'
+[13.212s] Level 1:colcon.colcon_core.environment:checking '/home/vy/GalacticRacing/sim_ws/install/safety_node/bin'
+[13.286s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/package.ps1'
+[13.287s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/package.dsv'
+[13.288s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/package.sh'
+[13.289s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/package.bash'
+[13.289s] INFO:colcon.colcon_core.shell:Creating package script '/home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/package.zsh'
+[13.290s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vy/GalacticRacing/sim_ws/install/safety_node/share/colcon-core/packages/safety_node)
+[13.301s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[13.302s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[13.302s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[13.302s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[13.403s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[13.404s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[13.404s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[13.429s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[13.500s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vy/GalacticRacing/sim_ws/install/local_setup.ps1'
+[13.501s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vy/GalacticRacing/sim_ws/install/_local_setup_util_ps1.py'
+[13.502s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vy/GalacticRacing/sim_ws/install/setup.ps1'
+[13.577s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vy/GalacticRacing/sim_ws/install/local_setup.sh'
+[13.578s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vy/GalacticRacing/sim_ws/install/_local_setup_util_sh.py'
+[13.578s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vy/GalacticRacing/sim_ws/install/setup.sh'
+[13.650s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vy/GalacticRacing/sim_ws/install/local_setup.bash'
+[13.651s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vy/GalacticRacing/sim_ws/install/setup.bash'
+[13.723s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vy/GalacticRacing/sim_ws/install/local_setup.zsh'
+[13.724s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vy/GalacticRacing/sim_ws/install/setup.zsh'

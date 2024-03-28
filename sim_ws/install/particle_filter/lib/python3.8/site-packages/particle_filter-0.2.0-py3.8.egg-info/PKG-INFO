@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: particle-filter
+Version: 0.2.0
+Summary: Particle Filter Localization using RangeLibc for accelerated ray casting.
+Home-page: UNKNOWN
+Maintainer: Hongrui Zheng
+Maintainer-email: billyzheng.bz@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN

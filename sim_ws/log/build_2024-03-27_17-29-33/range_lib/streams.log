@@ -1,0 +1,3 @@
+[1.096s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/range_lib': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/range_libc -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/range_lib
+[1.126s] CMake Error: The current CMakeCache.txt directory /home/vy/GalacticRacing/sim_ws/range_libc/CMakeCache.txt is different than the directory /home/vy/GalacticRacing/sim_ws/src/range_libc where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+[1.342s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/range_lib' returned '1': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/range_libc -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/range_lib

@@ -1,0 +1,28 @@
+[0.727s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/wall_follow': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/src/build/wall_follow -- -j8 -l8
+[0.799s] [100%] Built target wall_follow_node
+[0.830s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/wall_follow' returned '0': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/src/build/wall_follow -- -j8 -l8
+[1.387s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/wall_follow': /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/src/build/wall_follow
+[1.741s] -- Install configuration: ""
+[1.777s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/lib/wall_follow/wall_follow_node
+[1.777s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/wall_follow/environment/pythonpath.sh
+[1.777s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/wall_follow/environment/pythonpath.dsv
+[1.777s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/lib/python3.8/site-packages/wall_follow
+[1.777s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/lib/python3.8/site-packages/wall_follow/__init__.py
+[1.777s] Listing '/home/vy/GalacticRacing/sim_ws/src/install/wall_follow/lib/python3.8/site-packages/wall_follow'...
+[1.777s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/lib/wall_follow/wall_follow_node.py
+[1.778s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/ament_index/resource_index/package_run_dependencies/wall_follow
+[1.780s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/ament_index/resource_index/parent_prefix_path/wall_follow
+[1.780s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/wall_follow/environment/ament_prefix_path.sh
+[1.780s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/wall_follow/environment/ament_prefix_path.dsv
+[1.780s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/wall_follow/environment/path.sh
+[1.781s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/wall_follow/environment/path.dsv
+[1.783s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/wall_follow/local_setup.bash
+[1.784s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/wall_follow/local_setup.sh
+[1.784s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/wall_follow/local_setup.zsh
+[1.786s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/wall_follow/local_setup.dsv
+[1.792s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/wall_follow/package.dsv
+[1.792s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/ament_index/resource_index/packages/wall_follow
+[1.792s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/wall_follow/cmake/wall_followConfig.cmake
+[1.792s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/wall_follow/cmake/wall_followConfig-version.cmake
+[1.792s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/wall_follow/share/wall_follow/package.xml
+[2.424s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/wall_follow' returned '0': /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/src/build/wall_follow

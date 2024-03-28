@@ -1,0 +1,147 @@
+[3.990s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'range_lib']
+[3.990s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fdf16d402e0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=['range_lib'], packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=8, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fdf16d402e0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fdf16ab0a60>)
+[4.148s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[4.148s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[4.148s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[4.148s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[4.148s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[4.148s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[4.148s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/vy/GalacticRacing/sim_ws/src'
+[4.148s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[4.149s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[4.149s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[4.149s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[4.149s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[4.149s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[4.149s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[4.149s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[4.149s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[4.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[4.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[4.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[4.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[4.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[4.158s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[4.158s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[4.158s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[4.158s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym_ros) by extensions ['ignore', 'ignore_ament_install']
+[4.158s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym_ros) by extension 'ignore'
+[4.158s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym_ros) by extension 'ignore_ament_install'
+[4.158s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym_ros) by extensions ['colcon_pkg']
+[4.159s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym_ros) by extension 'colcon_pkg'
+[4.159s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym_ros) by extensions ['colcon_meta']
+[4.159s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym_ros) by extension 'colcon_meta'
+[4.159s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym_ros) by extensions ['ros']
+[4.159s] Level 1:colcon.colcon_core.package_identification:_identify(f1tenth_gym_ros) by extension 'ros'
+[4.161s] DEBUG:colcon.colcon_core.package_identification:Package 'f1tenth_gym_ros' with type 'ros.ament_python' and name 'f1tenth_gym_ros'
+[4.161s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extensions ['ignore', 'ignore_ament_install']
+[4.161s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extension 'ignore'
+[4.161s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extension 'ignore_ament_install'
+[4.161s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extensions ['colcon_pkg']
+[4.161s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extension 'colcon_pkg'
+[4.161s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extensions ['colcon_meta']
+[4.161s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extension 'colcon_meta'
+[4.161s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extensions ['ros']
+[4.161s] Level 1:colcon.colcon_core.package_identification:_identify(gap_follow) by extension 'ros'
+[4.162s] DEBUG:colcon.colcon_core.package_identification:Package 'gap_follow' with type 'ros.ament_cmake' and name 'gap_follow'
+[4.162s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[4.162s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[4.162s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[4.162s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[4.163s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[4.163s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[4.163s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extensions ['ignore', 'ignore_ament_install']
+[4.163s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extension 'ignore'
+[4.163s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extension 'ignore_ament_install'
+[4.163s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extensions ['colcon_pkg']
+[4.163s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extension 'colcon_pkg'
+[4.163s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extensions ['colcon_meta']
+[4.163s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extension 'colcon_meta'
+[4.163s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extensions ['ros']
+[4.163s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extension 'ros'
+[4.164s] DEBUG:colcon.colcon_core.package_identification:Package 'particle_filter' with type 'ros.ament_python' and name 'particle_filter'
+[4.164s] Level 1:colcon.colcon_core.package_identification:_identify(range_libc) by extensions ['ignore', 'ignore_ament_install']
+[4.164s] Level 1:colcon.colcon_core.package_identification:_identify(range_libc) by extension 'ignore'
+[4.164s] Level 1:colcon.colcon_core.package_identification:_identify(range_libc) by extension 'ignore_ament_install'
+[4.164s] Level 1:colcon.colcon_core.package_identification:_identify(range_libc) by extensions ['colcon_pkg']
+[4.164s] Level 1:colcon.colcon_core.package_identification:_identify(range_libc) by extension 'colcon_pkg'
+[4.164s] Level 1:colcon.colcon_core.package_identification:_identify(range_libc) by extensions ['colcon_meta']
+[4.164s] Level 1:colcon.colcon_core.package_identification:_identify(range_libc) by extension 'colcon_meta'
+[4.164s] Level 1:colcon.colcon_core.package_identification:_identify(range_libc) by extensions ['ros']
+[4.164s] Level 1:colcon.colcon_core.package_identification:_identify(range_libc) by extension 'ros'
+[4.164s] Level 1:colcon.colcon_core.package_identification:_identify(range_libc) by extensions ['cmake', 'python']
+[4.164s] Level 1:colcon.colcon_core.package_identification:_identify(range_libc) by extension 'cmake'
+[4.171s] Level 1:colcon.colcon_core.package_identification:_identify(range_libc) by extension 'python'
+[4.171s] DEBUG:colcon.colcon_core.package_identification:Package 'range_libc' with type 'cmake' and name 'range_lib'
+[4.172s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extensions ['ignore', 'ignore_ament_install']
+[4.172s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extension 'ignore'
+[4.173s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extension 'ignore_ament_install'
+[4.173s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extensions ['colcon_pkg']
+[4.173s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extension 'colcon_pkg'
+[4.173s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extensions ['colcon_meta']
+[4.173s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extension 'colcon_meta'
+[4.173s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extensions ['ros']
+[4.173s] Level 1:colcon.colcon_core.package_identification:_identify(safety_node) by extension 'ros'
+[4.174s] DEBUG:colcon.colcon_core.package_identification:Package 'safety_node' with type 'ros.ament_cmake' and name 'safety_node'
+[4.174s] Level 1:colcon.colcon_core.package_identification:_identify(wall_follow) by extensions ['ignore', 'ignore_ament_install']
+[4.174s] Level 1:colcon.colcon_core.package_identification:_identify(wall_follow) by extension 'ignore'
+[4.174s] Level 1:colcon.colcon_core.package_identification:_identify(wall_follow) by extension 'ignore_ament_install'
+[4.174s] Level 1:colcon.colcon_core.package_identification:_identify(wall_follow) by extensions ['colcon_pkg']
+[4.174s] Level 1:colcon.colcon_core.package_identification:_identify(wall_follow) by extension 'colcon_pkg'
+[4.174s] Level 1:colcon.colcon_core.package_identification:_identify(wall_follow) by extensions ['colcon_meta']
+[4.174s] Level 1:colcon.colcon_core.package_identification:_identify(wall_follow) by extension 'colcon_meta'
+[4.174s] Level 1:colcon.colcon_core.package_identification:_identify(wall_follow) by extensions ['ros']
+[4.174s] Level 1:colcon.colcon_core.package_identification:_identify(wall_follow) by extension 'ros'
+[4.176s] DEBUG:colcon.colcon_core.package_identification:Package 'wall_follow' with type 'ros.ament_cmake' and name 'wall_follow'
+[4.176s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[4.176s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[4.176s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[4.176s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[4.176s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[4.457s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'f1tenth_gym_ros' in 'f1tenth_gym_ros'
+[4.457s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'gap_follow' in 'gap_follow'
+[4.457s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'particle_filter' in 'particle_filter'
+[4.457s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'safety_node' in 'safety_node'
+[4.457s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'wall_follow' in 'wall_follow'
+[4.638s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[4.639s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[4.800s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/vy/GalacticRacing/sim_ws/src/install
+[4.875s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 302 installed packages in /opt/ros/foxy
+[4.876s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[5.092s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'cmake_args' from command line to 'None'
+[5.092s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'cmake_target' from command line to 'None'
+[5.093s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[5.093s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'cmake_clean_cache' from command line to 'False'
+[5.093s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'cmake_clean_first' from command line to 'False'
+[5.093s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'cmake_force_configure' from command line to 'False'
+[5.093s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'ament_cmake_args' from command line to 'None'
+[5.093s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'catkin_cmake_args' from command line to 'None'
+[5.094s] Level 5:colcon.colcon_core.verb:set package 'range_lib' build argument 'catkin_skip_building_tests' from command line to 'False'
+[5.094s] DEBUG:colcon.colcon_core.verb:Building package 'range_lib' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vy/GalacticRacing/sim_ws/src/build/range_lib', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vy/GalacticRacing/sim_ws/src/install/range_lib', 'merge_install': False, 'path': '/home/vy/GalacticRacing/sim_ws/src/range_libc', 'symlink_install': False, 'test_result_base': None}
+[5.166s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[5.245s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[5.245s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/vy/GalacticRacing/sim_ws/src/range_libc'
+[5.323s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[5.324s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.324s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.577s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/range_lib': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/range_libc -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/range_lib
+[5.611s] WARNING:colcon.colcon_cmake.task.cmake.build:Could not build CMake package 'range_lib' because the CMake cache has no 'CMAKE_PROJECT_NAME' variable
+[5.612s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/range_lib' returned '0': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/range_libc -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/range_lib
+[5.612s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.613s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.614s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.614s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.694s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.694s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.694s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.716s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.822s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vy/GalacticRacing/sim_ws/src/install/local_setup.ps1'
+[5.825s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vy/GalacticRacing/sim_ws/src/install/_local_setup_util_ps1.py'
+[5.826s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vy/GalacticRacing/sim_ws/src/install/setup.ps1'
+[5.905s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vy/GalacticRacing/sim_ws/src/install/local_setup.sh'
+[5.906s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vy/GalacticRacing/sim_ws/src/install/_local_setup_util_sh.py'
+[5.907s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vy/GalacticRacing/sim_ws/src/install/setup.sh'
+[5.987s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vy/GalacticRacing/sim_ws/src/install/local_setup.bash'
+[5.988s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vy/GalacticRacing/sim_ws/src/install/setup.bash'
+[6.065s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vy/GalacticRacing/sim_ws/src/install/local_setup.zsh'
+[6.066s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vy/GalacticRacing/sim_ws/src/install/setup.zsh'

@@ -1,0 +1,27 @@
+[0.833s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg -- -j8 -l8
+[1.139s] [100%] Built target scanmatch_node
+[1.151s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg' returned '0': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg -- -j8 -l8
+[1.216s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg': /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg
+[1.227s] -- Install configuration: ""
+[1.227s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/lib/lab5_pkg/scanmatch_node
+[1.228s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/environment/pythonpath.sh
+[1.229s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/environment/pythonpath.dsv
+[1.229s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg
+[1.230s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg/__init__.py
+[1.265s] Listing '/home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg'...
+[1.265s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/ament_index/resource_index/package_run_dependencies/lab5_pkg
+[1.265s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/ament_index/resource_index/parent_prefix_path/lab5_pkg
+[1.266s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/environment/ament_prefix_path.sh
+[1.266s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/environment/ament_prefix_path.dsv
+[1.270s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/environment/path.sh
+[1.271s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/environment/path.dsv
+[1.271s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/local_setup.bash
+[1.271s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/local_setup.sh
+[1.271s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/local_setup.zsh
+[1.272s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/local_setup.dsv
+[1.275s] -- Installing: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/package.dsv
+[1.275s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/ament_index/resource_index/packages/lab5_pkg
+[1.275s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/cmake/lab5_pkgConfig.cmake
+[1.276s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/cmake/lab5_pkgConfig-version.cmake
+[1.283s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg/share/lab5_pkg/package.xml
+[1.557s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg' returned '0': /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg

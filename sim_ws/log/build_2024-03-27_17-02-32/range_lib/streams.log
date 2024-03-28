@@ -1,0 +1,11 @@
+[1.608s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/range_lib': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/range_libc -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/range_lib
+[1.663s] CMake Error at /usr/share/cmake-3.16/Modules/FindCUDA.cmake:707 (message):
+[1.666s]   Specify CUDA_TOOLKIT_ROOT_DIR
+[1.671s] Call Stack (most recent call first):
+[1.683s]   CMakeLists.txt:61 (find_package)
+[1.685s] 
+[1.685s] 
+[1.685s] -- Configuring incomplete, errors occurred!
+[1.686s] See also "/home/vy/GalacticRacing/sim_ws/build/range_lib/CMakeFiles/CMakeOutput.log".
+[1.686s] See also "/home/vy/GalacticRacing/sim_ws/build/range_lib/CMakeFiles/CMakeError.log".
+[1.697s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/range_lib' returned '1': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/range_libc -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/range_lib

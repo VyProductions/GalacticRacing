@@ -1,0 +1,5 @@
+[1.924s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/range_lib': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/range_libc -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/range_lib
+[1.965s] -- Configuring done
+[1.968s] -- Generating done
+[1.968s] -- Build files have been written to: /home/vy/GalacticRacing/sim_ws/src/range_libc
+[1.989s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/range_lib' returned '0': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/range_libc -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/range_lib

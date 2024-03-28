@@ -1,0 +1,53 @@
+[3.275s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/particle_filter': PYTHONPATH=/home/vy/GalacticRacing/sim_ws/src/build/particle_filter/prefix_override:/home/vy/GalacticRacing/sim_ws/src/install/particle_filter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/particle_filter build --build-base /home/vy/GalacticRacing/sim_ws/src/build/particle_filter/build install --record /home/vy/GalacticRacing/sim_ws/src/build/particle_filter/install.log --install-scripts $base/lib/particle_filter --single-version-externally-managed
+[3.705s] running egg_info
+[3.705s] creating ../build/particle_filter/particle_filter.egg-info
+[3.705s] writing ../build/particle_filter/particle_filter.egg-info/PKG-INFO
+[3.705s] writing dependency_links to ../build/particle_filter/particle_filter.egg-info/dependency_links.txt
+[3.705s] writing entry points to ../build/particle_filter/particle_filter.egg-info/entry_points.txt
+[3.706s] writing requirements to ../build/particle_filter/particle_filter.egg-info/requires.txt
+[3.706s] writing top-level names to ../build/particle_filter/particle_filter.egg-info/top_level.txt
+[3.706s] writing manifest file '../build/particle_filter/particle_filter.egg-info/SOURCES.txt'
+[3.706s] reading manifest file '../build/particle_filter/particle_filter.egg-info/SOURCES.txt'
+[3.706s] writing manifest file '../build/particle_filter/particle_filter.egg-info/SOURCES.txt'
+[3.706s] running build
+[3.706s] running build_py
+[3.706s] creating /home/vy/GalacticRacing/sim_ws/src/build/particle_filter/build
+[3.706s] creating /home/vy/GalacticRacing/sim_ws/src/build/particle_filter/build/lib
+[3.706s] creating /home/vy/GalacticRacing/sim_ws/src/build/particle_filter/build/lib/particle_filter
+[3.706s] copying particle_filter/particle_filter.py -> /home/vy/GalacticRacing/sim_ws/src/build/particle_filter/build/lib/particle_filter
+[3.706s] copying particle_filter/__init__.py -> /home/vy/GalacticRacing/sim_ws/src/build/particle_filter/build/lib/particle_filter
+[3.706s] copying particle_filter/utils.py -> /home/vy/GalacticRacing/sim_ws/src/build/particle_filter/build/lib/particle_filter
+[3.706s] running install
+[3.706s] running install_lib
+[3.706s] creating /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/lib/python3.8/site-packages/particle_filter
+[3.706s] copying /home/vy/GalacticRacing/sim_ws/src/build/particle_filter/build/lib/particle_filter/particle_filter.py -> /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/lib/python3.8/site-packages/particle_filter
+[3.706s] copying /home/vy/GalacticRacing/sim_ws/src/build/particle_filter/build/lib/particle_filter/__init__.py -> /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/lib/python3.8/site-packages/particle_filter
+[3.712s] copying /home/vy/GalacticRacing/sim_ws/src/build/particle_filter/build/lib/particle_filter/utils.py -> /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/lib/python3.8/site-packages/particle_filter
+[3.712s] byte-compiling /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/lib/python3.8/site-packages/particle_filter/particle_filter.py to particle_filter.cpython-38.pyc
+[3.712s] byte-compiling /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/lib/python3.8/site-packages/particle_filter/__init__.py to __init__.cpython-38.pyc
+[3.712s] byte-compiling /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/lib/python3.8/site-packages/particle_filter/utils.py to utils.cpython-38.pyc
+[3.712s] running install_data
+[3.712s] creating /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/ament_index
+[3.712s] creating /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/ament_index/resource_index
+[3.712s] creating /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/ament_index/resource_index/packages
+[3.712s] copying resource/particle_filter -> /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/ament_index/resource_index/packages
+[3.712s] copying package.xml -> /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/particle_filter
+[3.712s] creating /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/particle_filter/maps
+[3.712s] copying maps/waffle_map.yaml -> /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/particle_filter/maps
+[3.713s] copying maps/levine.yaml -> /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/particle_filter/maps
+[3.713s] copying maps/levine.pgm -> /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/particle_filter/maps
+[3.713s] copying maps/basement_fixed.map.yaml -> /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/particle_filter/maps
+[3.713s] copying maps/this_is_the_map.pgm -> /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/particle_filter/maps
+[3.713s] copying maps/basement_fixed.png -> /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/particle_filter/maps
+[3.713s] copying maps/waffle_map.pgm -> /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/particle_filter/maps
+[3.714s] copying maps/this_is_the_map.yaml -> /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/particle_filter/maps
+[3.714s] creating /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/particle_filter/launch
+[3.714s] copying launch/localize_launch.py -> /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/particle_filter/launch
+[3.715s] creating /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/particle_filter/config
+[3.715s] copying config/localize.yaml -> /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/share/particle_filter/config
+[3.715s] running install_egg_info
+[3.715s] Copying ../build/particle_filter/particle_filter.egg-info to /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/lib/python3.8/site-packages/particle_filter-0.2.0-py3.8.egg-info
+[3.715s] running install_scripts
+[3.715s] Installing particle_filter script to /home/vy/GalacticRacing/sim_ws/src/install/particle_filter/lib/particle_filter
+[3.716s] writing list of installed files to '/home/vy/GalacticRacing/sim_ws/src/build/particle_filter/install.log'
+[4.342s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/particle_filter' returned '0': PYTHONPATH=/home/vy/GalacticRacing/sim_ws/src/build/particle_filter/prefix_override:/home/vy/GalacticRacing/sim_ws/src/install/particle_filter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/particle_filter build --build-base /home/vy/GalacticRacing/sim_ws/src/build/particle_filter/build install --record /home/vy/GalacticRacing/sim_ws/src/build/particle_filter/install.log --install-scripts $base/lib/particle_filter --single-version-externally-managed

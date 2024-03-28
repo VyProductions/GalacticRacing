@@ -1,0 +1,8 @@
+[1.750s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/range_lib': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/range_libc -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/range_lib
+[1.915s] -- Configuring done
+[1.915s] -- Generating done
+[1.915s] -- Build files have been written to: /home/vy/GalacticRacing/sim_ws/src/range_libc
+[1.940s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/range_lib' returned '0': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/range_libc -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/range_lib
+[1.943s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/range_lib': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/range_lib -- -j8 -l8
+[1.974s] make: *** No targets specified and no makefile found.  Stop.
+[1.978s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/range_lib' returned '2': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/range_lib -- -j8 -l8

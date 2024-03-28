@@ -44,12 +44,12 @@ def generate_launch_description():
         name='bridge',
         parameters=[config]
     )
-    rviz_node = Node(
-        package='rviz2',
-        executable='rviz2',
-        name='rviz',
-        arguments=['-d', os.path.join(get_package_share_directory('f1tenth_gym_ros'), 'launch', 'ego_tracker.rviz')]
-    )
+    # rviz_node = Node(
+    #     package='rviz2',
+    #     executable='rviz2',
+    #     name='rviz',
+    #     arguments=['-d', os.path.join(get_package_share_directory('f1tenth_gym_ros'), 'launch', 'localize.rviz')]
+    # )
     map_server_node = Node(
         package='nav2_map_server',
         executable='map_server',
@@ -84,7 +84,7 @@ def generate_launch_description():
     )
 
     # finalize
-    ld.add_action(rviz_node)
+    # ld.add_action(rviz_node)
     ld.add_action(bridge_node)
     ld.add_action(nav_lifecycle_node)
     ld.add_action(map_server_node)
