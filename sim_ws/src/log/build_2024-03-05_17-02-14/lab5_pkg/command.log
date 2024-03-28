@@ -1,1 +1,0 @@
-Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/lab5_pkg': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/lab5_pkg -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/lab5_pkg

@@ -1,4 +1,0 @@
-Invoking command in '/home/vy/GalacticRacing/sim_ws/build/range_lib': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/range_libc -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/range_lib
-Invoked command in '/home/vy/GalacticRacing/sim_ws/build/range_lib' returned '0': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/range_libc -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/range_lib
-Invoking command in '/home/vy/GalacticRacing/sim_ws/build/range_lib': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/range_lib -- -j8 -l8
-Invoked command in '/home/vy/GalacticRacing/sim_ws/build/range_lib' returned '2': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/range_lib -- -j8 -l8

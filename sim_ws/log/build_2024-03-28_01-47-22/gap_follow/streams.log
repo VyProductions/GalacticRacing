@@ -1,0 +1,117 @@
+[1.157s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/lab5_pkg:/home/vy/GalacticRacing/sim_ws/install/gap_follow:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/gap_follow -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/gap_follow
+[1.609s] -- The C compiler identification is GNU 9.4.0
+[1.609s] -- The CXX compiler identification is GNU 9.4.0
+[1.609s] -- Check for working C compiler: /usr/bin/cc
+[1.609s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.610s] -- Detecting C compiler ABI info
+[1.610s] -- Detecting C compiler ABI info - done
+[1.610s] -- Detecting C compile features
+[1.610s] -- Detecting C compile features - done
+[1.611s] -- Check for working CXX compiler: /usr/bin/c++
+[1.612s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.612s] -- Detecting CXX compiler ABI info
+[1.677s] -- Detecting CXX compiler ABI info - done
+[1.692s] -- Detecting CXX compile features
+[1.692s] -- Detecting CXX compile features - done
+[1.692s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.722s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.722s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.954s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[2.010s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.018s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.130s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[2.161s] -- Found FastRTPS: /opt/ros/foxy/include  
+[2.245s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.316s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[2.324s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.330s] -- Looking for pthread.h
+[2.434s] -- Looking for pthread.h - found
+[2.434s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.549s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.550s] -- Looking for pthread_create in pthreads
+[2.627s] -- Looking for pthread_create in pthreads - not found
+[2.627s] -- Looking for pthread_create in pthread
+[2.711s] -- Looking for pthread_create in pthread - found
+[2.755s] -- Found Threads: TRUE  
+[2.917s] -- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+[2.919s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[2.966s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[3.068s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)
+[3.133s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[3.253s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[3.335s] -- Added test 'copyright' to check source files copyright and LICENSE
+[3.336s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.337s] -- Configured cppcheck include dirs: /home/vy/GalacticRacing/sim_ws/src/gap_follow/include
+[3.337s] -- Configured cppcheck exclude dirs and/or files: 
+[3.338s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.338s] -- Configured cpplint exclude dirs and/or files: 
+[3.339s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.339s] -- Added test 'lint_cmake' to check CMake code style
+[3.340s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[3.341s] -- Added test 'uncrustify' to check C / C++ code style
+[3.341s] -- Configured uncrustify additional arguments: 
+[3.342s] -- Added test 'xmllint' to check XML markup files
+[3.346s] -- Configuring done
+[3.359s] -- Generating done
+[3.362s] -- Build files have been written to: /home/vy/GalacticRacing/sim_ws/build/gap_follow
+[3.371s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/lab5_pkg:/home/vy/GalacticRacing/sim_ws/install/gap_follow:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/gap_follow -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/gap_follow
+[3.379s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/lab5_pkg:/home/vy/GalacticRacing/sim_ws/install/gap_follow:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/gap_follow -- -j6 -l6
+[3.433s] [35m[1mScanning dependencies of target reactive_node[0m
+[3.477s] [ 50%] [32mBuilding CXX object CMakeFiles/reactive_node.dir/src/reactive_node.cpp.o[0m
+[4.932s] [01m[K/home/vy/GalacticRacing/sim_ws/src/gap_follow/src/reactive_node.cpp:[m[K In member function ‘[01m[Kvoid ReactiveFollowGap::preprocess_lidar(float*)[m[K’:
+[4.958s] [01m[K/home/vy/GalacticRacing/sim_ws/src/gap_follow/src/reactive_node.cpp:24:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kranges[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[4.958s]    24 |     void preprocess_lidar([01;35m[Kfloat* ranges[m[K)
+[4.959s]       |                           [01;35m[K~~~~~~~^~~~~~[m[K
+[4.959s] [01m[K/home/vy/GalacticRacing/sim_ws/src/gap_follow/src/reactive_node.cpp:[m[K In member function ‘[01m[Kvoid ReactiveFollowGap::find_max_gap(float*, int*)[m[K’:
+[4.959s] [01m[K/home/vy/GalacticRacing/sim_ws/src/gap_follow/src/reactive_node.cpp:32:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kranges[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[4.959s]    32 |     void find_max_gap([01;35m[Kfloat* ranges[m[K, int* indice)
+[4.959s]       |                       [01;35m[K~~~~~~~^~~~~~[m[K
+[4.959s] [01m[K/home/vy/GalacticRacing/sim_ws/src/gap_follow/src/reactive_node.cpp:32:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kindice[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[4.959s]    32 |     void find_max_gap(float* ranges, [01;35m[Kint* indice[m[K)
+[4.959s]       |                                      [01;35m[K~~~~~^~~~~~[m[K
+[4.959s] [01m[K/home/vy/GalacticRacing/sim_ws/src/gap_follow/src/reactive_node.cpp:[m[K In member function ‘[01m[Kvoid ReactiveFollowGap::find_best_point(float*, int*)[m[K’:
+[4.959s] [01m[K/home/vy/GalacticRacing/sim_ws/src/gap_follow/src/reactive_node.cpp:38:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kranges[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[4.959s]    38 |     void find_best_point([01;35m[Kfloat* ranges[m[K, int* indice)
+[4.959s]       |                          [01;35m[K~~~~~~~^~~~~~[m[K
+[4.960s] [01m[K/home/vy/GalacticRacing/sim_ws/src/gap_follow/src/reactive_node.cpp:38:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kindice[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[4.960s]    38 |     void find_best_point(float* ranges, [01;35m[Kint* indice[m[K)
+[4.961s]       |                                         [01;35m[K~~~~~^~~~~~[m[K
+[4.969s] [01m[K/home/vy/GalacticRacing/sim_ws/src/gap_follow/src/reactive_node.cpp:[m[K In member function ‘[01m[Kvoid ReactiveFollowGap::lidar_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[4.970s] [01m[K/home/vy/GalacticRacing/sim_ws/src/gap_follow/src/reactive_node.cpp:47:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscan_msg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[4.970s]    47 | oid lidar_callback([01;35m[Kconst sensor_msgs::msg::LaserScan::ConstSharedPtr scan_msg[m[K)
+[4.970s]       |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[4.970s] 
+[6.247s] [100%] [32m[1mLinking CXX executable reactive_node[0m
+[6.587s] [100%] Built target reactive_node
+[6.599s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/lab5_pkg:/home/vy/GalacticRacing/sim_ws/install/gap_follow:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/gap_follow -- -j6 -l6
+[7.301s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/lab5_pkg:/home/vy/GalacticRacing/sim_ws/install/gap_follow:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/gap_follow
+[7.321s] -- Install configuration: ""
+[7.324s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/lib/gap_follow/reactive_node
+[7.348s] -- Set runtime path of "/home/vy/GalacticRacing/sim_ws/install/gap_follow/lib/gap_follow/reactive_node" to ""
+[7.348s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/environment/pythonpath.sh
+[7.348s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/environment/pythonpath.dsv
+[7.348s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/lib/python3.8/site-packages/gap_follow
+[7.354s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/lib/python3.8/site-packages/gap_follow/__init__.py
+[7.354s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/lib/python3.8/site-packages/gap_follow/variables.py
+[7.354s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/lib/python3.8/site-packages/gap_follow/helper.py
+[7.381s] Listing '/home/vy/GalacticRacing/sim_ws/install/gap_follow/lib/python3.8/site-packages/gap_follow'...
+[7.382s] Compiling '/home/vy/GalacticRacing/sim_ws/install/gap_follow/lib/python3.8/site-packages/gap_follow/__init__.py'...
+[7.382s] Compiling '/home/vy/GalacticRacing/sim_ws/install/gap_follow/lib/python3.8/site-packages/gap_follow/helper.py'...
+[7.382s] Compiling '/home/vy/GalacticRacing/sim_ws/install/gap_follow/lib/python3.8/site-packages/gap_follow/variables.py'...
+[7.384s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/lib/gap_follow/reactive_node.py
+[7.385s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/ament_index/resource_index/package_run_dependencies/gap_follow
+[7.386s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/ament_index/resource_index/parent_prefix_path/gap_follow
+[7.386s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/environment/ament_prefix_path.sh
+[7.387s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/environment/ament_prefix_path.dsv
+[7.387s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/environment/path.sh
+[7.393s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/environment/path.dsv
+[7.393s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/local_setup.bash
+[7.399s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/local_setup.sh
+[7.399s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/local_setup.zsh
+[7.399s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/local_setup.dsv
+[7.399s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/package.dsv
+[7.399s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/ament_index/resource_index/packages/gap_follow
+[7.399s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/cmake/gap_followConfig.cmake
+[7.399s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/cmake/gap_followConfig-version.cmake
+[7.399s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/gap_follow/share/gap_follow/package.xml
+[7.402s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/lab5_pkg:/home/vy/GalacticRacing/sim_ws/install/gap_follow:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/gap_follow

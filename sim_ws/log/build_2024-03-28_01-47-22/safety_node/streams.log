@@ -1,0 +1,98 @@
+[0.189s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/safety_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/lab5_pkg:/home/vy/GalacticRacing/sim_ws/install/gap_follow:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/safety_node -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/safety_node
+[0.278s] -- The C compiler identification is GNU 9.4.0
+[0.348s] -- The CXX compiler identification is GNU 9.4.0
+[0.355s] -- Check for working C compiler: /usr/bin/cc
+[0.475s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.476s] -- Detecting C compiler ABI info
+[0.558s] -- Detecting C compiler ABI info - done
+[0.572s] -- Detecting C compile features
+[0.572s] -- Detecting C compile features - done
+[0.576s] -- Check for working CXX compiler: /usr/bin/c++
+[0.727s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.728s] -- Detecting CXX compiler ABI info
+[0.866s] -- Detecting CXX compiler ABI info - done
+[0.886s] -- Detecting CXX compile features
+[0.886s] -- Detecting CXX compile features - done
+[0.887s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.931s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.931s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.159s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.207s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.217s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.296s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.327s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.469s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.529s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.533s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.534s] -- Looking for pthread.h
+[1.648s] -- Looking for pthread.h - found
+[1.649s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.743s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.744s] -- Looking for pthread_create in pthreads
+[1.813s] -- Looking for pthread_create in pthreads - not found
+[1.813s] -- Looking for pthread_create in pthread
+[1.903s] -- Looking for pthread_create in pthread - found
+[1.905s] -- Found Threads: TRUE  
+[2.078s] -- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+[2.079s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[2.202s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)
+[2.238s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[2.414s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.491s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.492s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.492s] -- Configured cppcheck include dirs: /home/vy/GalacticRacing/sim_ws/src/safety_node/include
+[2.492s] -- Configured cppcheck exclude dirs and/or files: 
+[2.493s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.493s] -- Configured cpplint exclude dirs and/or files: 
+[2.494s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.494s] -- Added test 'lint_cmake' to check CMake code style
+[2.495s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[2.495s] -- Added test 'uncrustify' to check C / C++ code style
+[2.495s] -- Configured uncrustify additional arguments: 
+[2.496s] -- Added test 'xmllint' to check XML markup files
+[2.499s] -- Configuring done
+[2.508s] -- Generating done
+[2.510s] -- Build files have been written to: /home/vy/GalacticRacing/sim_ws/build/safety_node
+[2.519s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/safety_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/lab5_pkg:/home/vy/GalacticRacing/sim_ws/install/gap_follow:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/safety_node -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/safety_node
+[2.520s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/safety_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/lab5_pkg:/home/vy/GalacticRacing/sim_ws/install/gap_follow:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/safety_node -- -j6 -l6
+[2.599s] [35m[1mScanning dependencies of target safety_node[0m
+[2.672s] [ 50%] [32mBuilding CXX object CMakeFiles/safety_node.dir/src/safety_node.cpp.o[0m
+[4.474s] [01m[K/home/vy/GalacticRacing/sim_ws/src/safety_node/src/safety_node.cpp:[m[K In member function ‘[01m[Kvoid Safety::drive_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[4.475s] [01m[K/home/vy/GalacticRacing/sim_ws/src/safety_node/src/safety_node.cpp:33:71:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[4.475s]    33 |     void drive_callback([01;35m[Kconst nav_msgs::msg::Odometry::ConstSharedPtr msg[m[K)
+[4.475s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[4.478s] [01m[K/home/vy/GalacticRacing/sim_ws/src/safety_node/src/safety_node.cpp:[m[K In member function ‘[01m[Kvoid Safety::scan_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[4.478s] [01m[K/home/vy/GalacticRacing/sim_ws/src/safety_node/src/safety_node.cpp:38:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscan_msg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[4.478s]    38 | void scan_callback([01;35m[Kconst sensor_msgs::msg::LaserScan::ConstSharedPtr scan_msg[m[K)
+[4.478s]       |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[4.478s] 
+[5.041s] [100%] [32m[1mLinking CXX executable safety_node[0m
+[5.174s] [100%] Built target safety_node
+[5.188s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/safety_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/lab5_pkg:/home/vy/GalacticRacing/sim_ws/install/gap_follow:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/safety_node -- -j6 -l6
+[5.239s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/safety_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/lab5_pkg:/home/vy/GalacticRacing/sim_ws/install/gap_follow:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/safety_node
+[5.253s] -- Install configuration: ""
+[5.254s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/lib/safety_node/safety_node
+[5.254s] -- Set runtime path of "/home/vy/GalacticRacing/sim_ws/install/safety_node/lib/safety_node/safety_node" to ""
+[5.254s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/environment/pythonpath.sh
+[5.254s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/environment/pythonpath.dsv
+[5.255s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/lib/python3.8/site-packages/safety_node
+[5.255s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/lib/python3.8/site-packages/safety_node/__init__.py
+[5.288s] Listing '/home/vy/GalacticRacing/sim_ws/install/safety_node/lib/python3.8/site-packages/safety_node'...
+[5.288s] Compiling '/home/vy/GalacticRacing/sim_ws/install/safety_node/lib/python3.8/site-packages/safety_node/__init__.py'...
+[5.291s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/lib/safety_node/safety_node.py
+[5.291s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/ament_index/resource_index/package_run_dependencies/safety_node
+[5.292s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/ament_index/resource_index/parent_prefix_path/safety_node
+[5.292s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/environment/ament_prefix_path.sh
+[5.293s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/environment/ament_prefix_path.dsv
+[5.294s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/environment/path.sh
+[5.294s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/environment/path.dsv
+[5.294s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/local_setup.bash
+[5.294s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/local_setup.sh
+[5.294s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/local_setup.zsh
+[5.294s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/local_setup.dsv
+[5.294s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/package.dsv
+[5.294s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/ament_index/resource_index/packages/safety_node
+[5.294s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/cmake/safety_nodeConfig.cmake
+[5.294s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/cmake/safety_nodeConfig-version.cmake
+[5.294s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/package.xml
+[5.398s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/safety_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/lab5_pkg:/home/vy/GalacticRacing/sim_ws/install/gap_follow:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/safety_node

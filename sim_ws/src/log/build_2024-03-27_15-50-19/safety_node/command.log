@@ -1,4 +1,0 @@
-Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/safety_node': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/src/build/safety_node -- -j8 -l8
-Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/safety_node' returned '0': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/src/build/safety_node -- -j8 -l8
-Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/safety_node': /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/src/build/safety_node
-Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/safety_node' returned '0': /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/src/build/safety_node

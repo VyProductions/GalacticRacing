@@ -1,9 +1,0 @@
-CMake Error at /usr/share/cmake-3.16/Modules/FindCUDA.cmake:707 (message):
-  Specify CUDA_TOOLKIT_ROOT_DIR
-Call Stack (most recent call first):
-  CMakeLists.txt:61 (find_package)
-
-
--- Configuring incomplete, errors occurred!
-See also "/home/vy/GalacticRacing/sim_ws/build/range_lib/CMakeFiles/CMakeOutput.log".
-See also "/home/vy/GalacticRacing/sim_ws/build/range_lib/CMakeFiles/CMakeError.log".

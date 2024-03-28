@@ -1,3 +1,0 @@
-[1.122s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/lab5_pkg': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/lab5_pkg -- -j8 -l8
-[1.479s] [100%] Built target scanmatch_node
-[1.682s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/lab5_pkg' returned '0': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/lab5_pkg -- -j8 -l8

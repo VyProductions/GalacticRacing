@@ -1,2 +1,0 @@
-Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/gap_follow': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/gap_follow -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/gap_follow
-Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/gap_follow' returned '1': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/gap_follow -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/src/install/gap_follow

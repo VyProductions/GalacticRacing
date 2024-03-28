@@ -1,2 +1,0 @@
-[1.196s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/wall_follow': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/wall_follow -- -j8 -l8
-[1.333s] [100%] Built target wall_follow_node

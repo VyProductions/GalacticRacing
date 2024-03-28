@@ -1,8 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.000605] (-) JobUnselected: {'identifier': 'f1tenth_gym_ros'}
-[0.000706] (-) JobUnselected: {'identifier': 'gap_follow'}
-[0.000729] (-) JobUnselected: {'identifier': 'particle_filter'}
-[0.000742] (-) JobUnselected: {'identifier': 'range_lib'}
-[0.000754] (-) JobUnselected: {'identifier': 'safety_node'}
-[0.000789] (-) JobUnselected: {'identifier': 'wall_follow'}
-[0.000806] (-) EventReactorShutdown: {}

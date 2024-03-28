@@ -1,4 +1,0 @@
-Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/wall_follow': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/src/build/wall_follow -- -j8 -l8
-Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/wall_follow' returned '0': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/src/build/wall_follow -- -j8 -l8
-Invoking command in '/home/vy/GalacticRacing/sim_ws/src/build/wall_follow': /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/src/build/wall_follow
-Invoked command in '/home/vy/GalacticRacing/sim_ws/src/build/wall_follow' returned '0': /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/src/build/wall_follow
