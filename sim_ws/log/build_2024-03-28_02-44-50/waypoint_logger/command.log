@@ -1,2 +1,0 @@
-Invoking command in '/home/vy/GalacticRacing/sim_ws/build/waypoint_logger': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/waypoint_logger -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/waypoint_logger
-Invoked command in '/home/vy/GalacticRacing/sim_ws/build/waypoint_logger' returned '1': /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/waypoint_logger -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/waypoint_logger
