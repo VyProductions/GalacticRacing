@@ -42,15 +42,15 @@ bridge:
     scan_beams: 1080
 
     # map parameters
-    map_path: '/home/vy/GalacticRacing/sim_ws/src/f1tenth_gym_ros/maps/waffle_map'
-    map_img_ext: '.pgm'
+    map_path: '/home/vy/GalacticRacing/sim_ws/src/f1tenth_gym_ros/maps/levine_blocked'
+    map_img_ext: '.png'
 
     # opponent parameters
     num_agent: 1
 
     # ego starting pose on map
-    sx: 0.0
-    sy: 0.0
+    sx: -12.5
+    sy: -0.15
     stheta: 0.0
 
     # opp starting pose on map

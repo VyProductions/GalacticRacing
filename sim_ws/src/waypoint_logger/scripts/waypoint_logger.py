@@ -41,10 +41,11 @@ class WaypointLogger(Node):
         if data.twist.twist.linear.x>0.:
             print(data.twist.twist.linear.x)
 
-        self.file.write('%f, %f, %f, %f\n' % (data.pose.pose.position.x,
-                                        data.pose.pose.position.y,
-                                        euler[2],
-                                        speed))
+        self.file.write('%f, %f, %f, %f, %f, %f, %f, %f\n' % (
+            data.pose.pose.position.x, data.pose.pose.position.y,
+            data.pose.pose.orientation.x, data.pose.pose.orientation.y, data.pose.pose.orientation.z, data.pose.pose.orientation.w,
+            euler[2], speed
+        ))
     
     def shutdown(self):
         self.file.close()

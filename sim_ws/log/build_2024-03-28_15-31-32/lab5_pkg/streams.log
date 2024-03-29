@@ -1,0 +1,27 @@
+[2.462s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/lab5_pkg': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/lab5_pkg -- -j8 -l8
+[3.099s] [100%] Built target scanmatch_node
+[3.126s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/lab5_pkg' returned '0': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/lab5_pkg -- -j8 -l8
+[3.601s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/lab5_pkg': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/lab5_pkg
+[3.696s] -- Install configuration: ""
+[3.697s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/lib/lab5_pkg/scanmatch_node
+[3.697s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/pythonpath.sh
+[3.698s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/pythonpath.dsv
+[3.699s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg
+[3.700s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg/__init__.py
+[3.700s] Listing '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg'...
+[3.701s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/ament_index/resource_index/package_run_dependencies/lab5_pkg
+[3.702s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/ament_index/resource_index/parent_prefix_path/lab5_pkg
+[3.702s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/ament_prefix_path.sh
+[3.702s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/ament_prefix_path.dsv
+[3.703s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/path.sh
+[3.704s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/path.dsv
+[3.704s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/local_setup.bash
+[3.705s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/local_setup.sh
+[3.707s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/local_setup.zsh
+[3.707s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/local_setup.dsv
+[3.719s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/package.dsv
+[3.738s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/ament_index/resource_index/packages/lab5_pkg
+[3.738s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/cmake/lab5_pkgConfig.cmake
+[3.739s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/cmake/lab5_pkgConfig-version.cmake
+[3.739s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/package.xml
+[4.250s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/lab5_pkg' returned '0': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/lab5_pkg

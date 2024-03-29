@@ -1,0 +1,28 @@
+[3.015s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/safety_node': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/safety_node -- -j8 -l8
+[3.254s] [100%] Built target safety_node
+[4.145s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/safety_node' returned '0': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/safety_node -- -j8 -l8
+[7.284s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/safety_node': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/safety_node
+[9.652s] -- Install configuration: ""
+[9.652s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/lib/safety_node/safety_node
+[9.652s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/environment/pythonpath.sh
+[9.652s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/environment/pythonpath.dsv
+[9.652s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/lib/python3.8/site-packages/safety_node
+[9.652s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/lib/python3.8/site-packages/safety_node/__init__.py
+[9.653s] Listing '/home/vy/GalacticRacing/sim_ws/install/safety_node/lib/python3.8/site-packages/safety_node'...
+[9.653s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/lib/safety_node/safety_node.py
+[9.653s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/ament_index/resource_index/package_run_dependencies/safety_node
+[9.653s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/ament_index/resource_index/parent_prefix_path/safety_node
+[9.653s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/environment/ament_prefix_path.sh
+[9.653s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/environment/ament_prefix_path.dsv
+[9.653s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/environment/path.sh
+[9.653s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/environment/path.dsv
+[9.653s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/local_setup.bash
+[9.653s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/local_setup.sh
+[9.653s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/local_setup.zsh
+[9.653s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/local_setup.dsv
+[9.653s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/package.dsv
+[9.653s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/ament_index/resource_index/packages/safety_node
+[9.653s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/cmake/safety_nodeConfig.cmake
+[9.653s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/cmake/safety_nodeConfig-version.cmake
+[9.653s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/safety_node/share/safety_node/package.xml
+[11.643s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/safety_node' returned '0': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/safety_node

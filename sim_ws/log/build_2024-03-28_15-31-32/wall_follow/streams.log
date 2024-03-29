@@ -1,0 +1,28 @@
+[1.489s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/wall_follow': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/wall_follow -- -j8 -l8
+[1.579s] [100%] Built target wall_follow_node
+[1.932s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/wall_follow' returned '0': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/wall_follow -- -j8 -l8
+[2.582s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/wall_follow': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/wall_follow
+[2.670s] -- Install configuration: ""
+[2.678s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/lib/wall_follow/wall_follow_node
+[2.679s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/environment/pythonpath.sh
+[2.679s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/environment/pythonpath.dsv
+[2.681s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/lib/python3.8/site-packages/wall_follow
+[2.681s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/lib/python3.8/site-packages/wall_follow/__init__.py
+[2.681s] Listing '/home/vy/GalacticRacing/sim_ws/install/wall_follow/lib/python3.8/site-packages/wall_follow'...
+[2.682s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/lib/wall_follow/wall_follow_node.py
+[2.683s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/ament_index/resource_index/package_run_dependencies/wall_follow
+[2.685s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/ament_index/resource_index/parent_prefix_path/wall_follow
+[2.685s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/environment/ament_prefix_path.sh
+[2.688s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/environment/ament_prefix_path.dsv
+[2.691s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/environment/path.sh
+[2.693s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/environment/path.dsv
+[2.693s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/local_setup.bash
+[2.693s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/local_setup.sh
+[2.699s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/local_setup.zsh
+[2.699s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/local_setup.dsv
+[2.699s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/package.dsv
+[2.699s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/ament_index/resource_index/packages/wall_follow
+[2.699s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/cmake/wall_followConfig.cmake
+[2.700s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/cmake/wall_followConfig-version.cmake
+[2.705s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/wall_follow/share/wall_follow/package.xml
+[4.688s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/wall_follow' returned '0': CMAKE_PREFIX_PATH=/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/wall_follow

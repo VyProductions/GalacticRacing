@@ -1,0 +1,21 @@
+[10.427s] Invoking command in '/home/vy/GalacticRacing/sim_ws/src/particle_filter': PYTHONPATH=/home/vy/GalacticRacing/sim_ws/build/particle_filter/prefix_override:/home/vy/GalacticRacing/sim_ws/install/particle_filter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/particle_filter build --build-base /home/vy/GalacticRacing/sim_ws/build/particle_filter/build install --record /home/vy/GalacticRacing/sim_ws/build/particle_filter/install.log --install-scripts $base/lib/particle_filter --single-version-externally-managed
+[10.995s] running egg_info
+[11.012s] writing ../../build/particle_filter/particle_filter.egg-info/PKG-INFO
+[11.019s] writing dependency_links to ../../build/particle_filter/particle_filter.egg-info/dependency_links.txt
+[11.020s] writing entry points to ../../build/particle_filter/particle_filter.egg-info/entry_points.txt
+[11.020s] writing requirements to ../../build/particle_filter/particle_filter.egg-info/requires.txt
+[11.020s] writing top-level names to ../../build/particle_filter/particle_filter.egg-info/top_level.txt
+[11.039s] reading manifest file '../../build/particle_filter/particle_filter.egg-info/SOURCES.txt'
+[11.060s] writing manifest file '../../build/particle_filter/particle_filter.egg-info/SOURCES.txt'
+[11.061s] running build
+[11.061s] running build_py
+[11.070s] running install
+[11.071s] running install_lib
+[11.087s] running install_data
+[11.124s] running install_egg_info
+[11.127s] removing '/home/vy/GalacticRacing/sim_ws/install/particle_filter/lib/python3.8/site-packages/particle_filter-0.2.0-py3.8.egg-info' (and everything under it)
+[11.164s] Copying ../../build/particle_filter/particle_filter.egg-info to /home/vy/GalacticRacing/sim_ws/install/particle_filter/lib/python3.8/site-packages/particle_filter-0.2.0-py3.8.egg-info
+[11.218s] running install_scripts
+[11.265s] Installing particle_filter script to /home/vy/GalacticRacing/sim_ws/install/particle_filter/lib/particle_filter
+[11.278s] writing list of installed files to '/home/vy/GalacticRacing/sim_ws/build/particle_filter/install.log'
+[16.505s] Invoked command in '/home/vy/GalacticRacing/sim_ws/src/particle_filter' returned '0': PYTHONPATH=/home/vy/GalacticRacing/sim_ws/build/particle_filter/prefix_override:/home/vy/GalacticRacing/sim_ws/install/particle_filter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/particle_filter build --build-base /home/vy/GalacticRacing/sim_ws/build/particle_filter/build install --record /home/vy/GalacticRacing/sim_ws/build/particle_filter/install.log --install-scripts $base/lib/particle_filter --single-version-externally-managed
