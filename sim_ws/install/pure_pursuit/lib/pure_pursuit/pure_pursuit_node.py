@@ -27,6 +27,10 @@ class PurePursuit(Node):
         super().__init__('pure_pursuit_node')
 
         # Define subscribers
+        self.scan_sub = self.create_subscription(
+            LaserScan, "/scan", self.scan_callback, 10
+        )
+
         self.pose_sub = self.create_subscription(
             PoseStamped, "/pf/viz/inferred_pose", self.pose_callback, 10
         )
@@ -51,6 +55,16 @@ class PurePursuit(Node):
         self.sample_radius = 1.0
         self.markers = []
         self.path = []
+
+    def scan_callback(self, scan_msg):
+        # render 360 degree circle around car to visualize sample radius
+        new_scan : LaserScan = scan_msg
+        new_scan.angle_min = math.radians(-180.0)
+        new_scan.angle_max = math.radians(179.0)
+        new_scan.angle_increment = math.radians(1.0)
+        new_scan.ranges = [self.sample_radius] * 360
+
+        self.range_pub.publish(new_scan)
 
     def pose_callback(self, pose_msg):
         # find closest point to car
@@ -77,15 +91,12 @@ class PurePursuit(Node):
 
         idx = min_idx + 1
 
-        print("Locating target.")
-
         while idx != min_idx:
             point = self.path[idx]
 
             dist = ((point['x'] - pose_msg.pose.position.x)**2 + (point['y'] - pose_msg.pose.position.y)**2)**0.5
 
             if dist < self.sample_radius and dist > max_dist:
-                print("  New target located.")
                 max_pt = point
                 max_dist = dist
             elif dist > self.sample_radius:
@@ -142,7 +153,7 @@ class PurePursuit(Node):
         # get steering angle to transformed point
         heading_error = np.arctan2(trans_pt['x'] - pose_msg.pose.position.x, trans_pt['y'] - pose_msg.pose.position.y) - travel_angle
         heading_error = np.arctan2(np.sin(heading_error), np.cos(heading_error))
-        angle = np.arctan((0.648 * np.sin(heading_error)) / self.sample_radius)
+        angle = -np.arctan((0.648 * np.sin(heading_error)) / self.sample_radius)
 
         # clamp steering angle to valid range
         if angle < math.radians(-20.0):
@@ -152,10 +163,9 @@ class PurePursuit(Node):
 
         # jesus take the wheel
         drive_msg = AckermannDriveStamped()
+        # drive_msg.drive.speed = 0.0
         drive_msg.drive.speed = max_pt['speed']
         drive_msg.drive.steering_angle = angle
-
-        print(f"Steering to angle: {math.degrees(angle)}")
 
         self.drive_pub.publish(drive_msg)
     
@@ -234,9 +244,9 @@ class PurePursuit(Node):
 
         t = np.linspace(0, 1, 300)
 
+        self.path = []
         markers = MarkerArray()
 
-        i = 0.0
         j = 0
 
         for _, i in enumerate(t):
@@ -268,9 +278,16 @@ class PurePursuit(Node):
             marker.color.b = 0.0
             marker.color.a = 1.0
 
+            self.path.append({
+                'x': float(x_interp(i)),
+                'y': float(y_interp(i)),
+                'theta': 0.0, # placeholder; compute angle to next path point
+                'speed': 0.5, # placeholder; compute best speed at each point
+                'lookahead': 1.0 # placeholder; dynamic lookahead for each node in the path to account for turns/straight track sections
+            })
+
             markers.markers.append(marker)
 
-            i += 0.1
             j += 1
 
         self.markers_pub.publish(markers)
