@@ -1,0 +1,51 @@
+[0.283s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/waypoint_logger': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/waypoint_logger -- -j6 -l6
+[0.762s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.762s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.762s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.763s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.763s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.871s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.925s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.927s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.124s] -- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+[1.124s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.171s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[1.258s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)
+[1.301s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.401s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[1.498s] -- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+[1.951s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.060s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.063s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.071s] -- Added test 'lint_cmake' to check CMake code style
+[2.071s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[2.073s] -- Added test 'xmllint' to check XML markup files
+[2.076s] -- Configuring done
+[2.083s] -- Generating done
+[2.087s] -- Build files have been written to: /home/vy/GalacticRacing/sim_ws/build/waypoint_logger
+[2.190s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/waypoint_logger' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/waypoint_logger -- -j6 -l6
+[5.403s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/waypoint_logger': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/waypoint_logger
+[5.442s] -- Install configuration: ""
+[5.443s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/pythonpath.sh
+[5.443s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/pythonpath.dsv
+[5.465s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger
+[5.465s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger/__init__.py
+[5.515s] Listing '/home/vy/GalacticRacing/sim_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger'...
+[5.515s] Compiling '/home/vy/GalacticRacing/sim_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger/__init__.py'...
+[5.520s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/lib/waypoint_logger/waypoint_logger.py
+[5.520s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/ament_index/resource_index/package_run_dependencies/waypoint_logger
+[5.520s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/ament_index/resource_index/parent_prefix_path/waypoint_logger
+[5.520s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/ament_prefix_path.sh
+[5.520s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/ament_prefix_path.dsv
+[5.520s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/path.sh
+[5.520s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/path.dsv
+[5.520s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/local_setup.bash
+[5.521s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/local_setup.sh
+[5.521s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/local_setup.zsh
+[5.521s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/local_setup.dsv
+[5.521s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/package.dsv
+[5.521s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/ament_index/resource_index/packages/waypoint_logger
+[5.521s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/cmake/waypoint_loggerConfig.cmake
+[5.521s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/cmake/waypoint_loggerConfig-version.cmake
+[5.521s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/package.xml
+[5.735s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/waypoint_logger' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/waypoint_logger

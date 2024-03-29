@@ -138,22 +138,7 @@ class PurePursuit(Node):
         quaternion = (pose_msg.pose.orientation.x, pose_msg.pose.orientation.y, pose_msg.pose.orientation.z, pose_msg.pose.orientation.w)
         travel_angle = euler_from_quaternion(quaternion)[2]
 
-        trans_pt = {
-            'x': max_pt['x'] - pose_msg.pose.position.x,
-            'y': max_pt['y'] - pose_msg.pose.position.y
-        }
-
-        sin, cos = np.sin(travel_angle), np.cos(travel_angle)
-
-        trans_pt = {
-            'x': trans_pt['x'] * cos - trans_pt['y'] * sin + pose_msg.pose.position.x,
-            'y': trans_pt['x'] * sin + trans_pt['y'] * cos + pose_msg.pose.position.y
-        }
-
-        # get steering angle to transformed point
-        heading_error = np.arctan2(trans_pt['x'] - pose_msg.pose.position.x, trans_pt['y'] - pose_msg.pose.position.y) - travel_angle
-        heading_error = np.arctan2(np.sin(heading_error), np.cos(heading_error))
-        angle = -np.arctan((0.648 * np.sin(heading_error)) / self.sample_radius)
+        angle = 0.0
 
         # clamp steering angle to valid range
         if angle < math.radians(-20.0):
