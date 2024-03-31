@@ -1,0 +1,55 @@
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+-- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+-- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)
+-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+-- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+-- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/vy/GalacticRacing/sim_ws/lab5_pkg/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/vy/GalacticRacing/sim_ws/build/lab5_pkg
+[100%] Built target scanmatch_node
+-- Install configuration: ""
+-- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/lib/lab5_pkg/scanmatch_node
+-- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/pythonpath.sh
+-- Installing: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/pythonpath.dsv
+-- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg
+-- Installing: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg/__init__.py
+Listing '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg'...
+Compiling '/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg/__init__.py'...
+-- Installing: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/ament_index/resource_index/package_run_dependencies/lab5_pkg
+-- Installing: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/ament_index/resource_index/parent_prefix_path/lab5_pkg
+-- Installing: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/ament_prefix_path.sh
+-- Installing: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/ament_prefix_path.dsv
+-- Installing: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/path.sh
+-- Installing: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/path.dsv
+-- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/local_setup.bash
+-- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/local_setup.sh
+-- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/local_setup.zsh
+-- Installing: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/local_setup.dsv
+-- Installing: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/package.dsv
+-- Installing: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/ament_index/resource_index/packages/lab5_pkg
+-- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/cmake/lab5_pkgConfig.cmake
+-- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/cmake/lab5_pkgConfig-version.cmake
+-- Installing: /home/vy/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/package.xml

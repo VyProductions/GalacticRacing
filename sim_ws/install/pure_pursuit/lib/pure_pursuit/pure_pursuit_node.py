@@ -52,9 +52,14 @@ class PurePursuit(Node):
             LaserScan, "/sample_range", 10
         )
 
+        self.track_pub = self.create_publisher(
+            LaserScan, "/track_scan", 10
+        )
+
         self.sample_radius = 1.0
         self.markers = []
         self.path = []
+        self.track_pt = (0.0, 0.0)
 
     def scan_callback(self, scan_msg):
         # render 360 degree circle around car to visualize sample radius
@@ -65,6 +70,11 @@ class PurePursuit(Node):
         new_scan.ranges = [self.sample_radius] * 360
 
         self.range_pub.publish(new_scan)
+
+        new_scan.ranges = [0.0] * 360
+        new_scan.ranges[int(math.degrees(self.track_pt[1])) + 180] = self.track_pt[0]
+
+        self.track_pub.publish(new_scan)
 
     def pose_callback(self, pose_msg):
         # find closest point to car
@@ -89,7 +99,7 @@ class PurePursuit(Node):
         max_pt = min_pt
         max_dist = min_dist
 
-        idx = min_idx + 1
+        idx = (min_idx + 1) % len(self.path)
 
         while idx != min_idx:
             point = self.path[idx]
@@ -101,8 +111,8 @@ class PurePursuit(Node):
                 max_dist = dist
             elif dist > self.sample_radius:
                 break
-                
-            idx += 1
+
+            idx = (idx + 1) % len(self.path)
         
         # mark the target point
         target_marker = Marker()
@@ -123,9 +133,9 @@ class PurePursuit(Node):
         target_marker.pose.orientation.z = 0.0
         target_marker.pose.orientation.w = 1.0
 
-        target_marker.scale.x = 0.25
-        target_marker.scale.y = 0.25
-        target_marker.scale.z = 0.25
+        target_marker.scale.x = 0.1
+        target_marker.scale.y = 0.1
+        target_marker.scale.z = 0.1
 
         target_marker.color.r = 0.0
         target_marker.color.g = 0.0
@@ -138,28 +148,28 @@ class PurePursuit(Node):
         quaternion = (pose_msg.pose.orientation.x, pose_msg.pose.orientation.y, pose_msg.pose.orientation.z, pose_msg.pose.orientation.w)
         travel_angle = euler_from_quaternion(quaternion)[2]
 
-        trans_pt = {
-            'x': max_pt['x'] - pose_msg.pose.position.x,
-            'y': max_pt['y'] - pose_msg.pose.position.y
-        }
+        vc = (np.cos(travel_angle), np.sin(travel_angle))
+        v3 = (max_pt['x'] - pose_msg.pose.position.x, max_pt['y'] - pose_msg.pose.position.y)
 
-        sin, cos = np.sin(travel_angle), np.cos(travel_angle)
+        mag_v3 = (v3[0]*v3[0] + v3[1]*v3[1])**0.5
+        vc_cross_v3 = vc[0] * v3[1] - vc[1] * v3[0]
+        vc_dot_v3 = vc[0] * v3[0] + vc[1] * v3[1]
 
-        trans_pt = {
-            'x': trans_pt['x'] * cos - trans_pt['y'] * sin + pose_msg.pose.position.x,
-            'y': trans_pt['x'] * sin + trans_pt['y'] * cos + pose_msg.pose.position.y
-        }
+        abs_angle = np.arccos(vc_dot_v3 / mag_v3)
+        angle = (-1 if vc_cross_v3 < 0 else 1) * abs_angle
 
-        # get steering angle to transformed point
-        heading_error = np.arctan2(trans_pt['x'] - pose_msg.pose.position.x, trans_pt['y'] - pose_msg.pose.position.y) - travel_angle
-        heading_error = np.arctan2(np.sin(heading_error), np.cos(heading_error))
-        angle = -np.arctan((0.648 * np.sin(heading_error)) / self.sample_radius)
+        if angle > math.radians(180.0):
+            angle -= math.radians(360.0)
+        elif angle < math.radians(-180.0):
+            angle += math.radians(360.0)
+
+        self.track_pt = (max_dist, angle)
 
         # clamp steering angle to valid range
         if angle < math.radians(-20.0):
             angle = math.radians(-20.0)
         elif angle > math.radians(20.0):
-            angle = math.radians(20.)
+            angle = math.radians(20.0)
 
         # jesus take the wheel
         drive_msg = AckermannDriveStamped()
