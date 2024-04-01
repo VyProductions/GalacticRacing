@@ -18,6 +18,24 @@ from tf_transformations import quaternion_from_euler, euler_from_quaternion
 
 root_dir = "/home/vy/GalacticRacing/sim_ws/src"
 
+def point_curavture(x, y, window_size):
+    curvatures = np.array([0] * len(x))
+    
+    for i in range(len(x)):
+        start_idx = max(0, i - window_size // 2)
+        end_idx = min(len(x), i + window_size // 2 + 1)
+        
+        x_d1 = np.gradient(x[start_idx:end_idx])
+        y_d1 = np.gradient(y[start_idx:end_idx])
+        x_d2 = np.gradient(x_d1)
+        y_d2 = np.gradient(y_d1)
+        
+        point_curavture = np.abs(x_d1 * y_d2 - y_d1 * x_d2) / ((x_d1**2 + y_d1**2)**1.5)
+        
+        curvatures[i] = np.mean(point_curavture)
+    
+    return curvatures
+
 class PurePursuit(Node):
     """ 
     Implement Pure Pursuit on the car
@@ -121,7 +139,7 @@ class PurePursuit(Node):
         target_marker.ns = "ns_tracker"
 
         target_marker.id = idx
-        target_marker.type = 0
+        target_marker.type = 1
         target_marker.action = 0
 
         target_marker.pose.position.x = max_pt['x']
@@ -133,9 +151,9 @@ class PurePursuit(Node):
         target_marker.pose.orientation.z = 0.0
         target_marker.pose.orientation.w = 1.0
 
-        target_marker.scale.x = 0.1
-        target_marker.scale.y = 0.1
-        target_marker.scale.z = 0.1
+        target_marker.scale.x = 0.15
+        target_marker.scale.y = 0.15
+        target_marker.scale.z = 0.15
 
         target_marker.color.r = 0.0
         target_marker.color.g = 0.0
@@ -174,92 +192,17 @@ class PurePursuit(Node):
         # jesus take the wheel
         drive_msg = AckermannDriveStamped()
         # drive_msg.drive.speed = 0.0
-        drive_msg.drive.speed = max_pt['speed']
+        drive_msg.drive.speed = min_pt['speed']
         drive_msg.drive.steering_angle = angle
 
         self.drive_pub.publish(drive_msg)
-    
-    def get_path(self, filename):
-        # open waypoint file
-        waypoint_csv = open(root_dir + '/pure_pursuit/paths/' + filename + '.csv', 'r')
-
-        reader = csv.reader(waypoint_csv, delimiter=',')
-        markers = MarkerArray()
-
-        for idx, row in enumerate(reader):
-            marker = Marker()
-
-            marker.header.frame_id = "map"
-            marker.header.stamp = self.get_clock().now().to_msg()
-            marker.ns = "ns_markers"
-
-            marker.id = idx
-            marker.type = 0
-            marker.action = 0
-
-            marker.pose.position.x = float(row[0])
-            marker.pose.position.y = float(row[1])
-            marker.pose.position.z = 0.3
-
-            quaternion = quaternion_from_euler(0.0, 0.0, float(row[2]))
-
-            marker.pose.orientation.x = quaternion[0]
-            marker.pose.orientation.y = quaternion[1]
-            marker.pose.orientation.z = quaternion[2]
-            marker.pose.orientation.w = quaternion[3]
-
-            marker.scale.x = 0.25
-            marker.scale.y = 0.1
-            marker.scale.z = 0.1
-
-            marker.color.r = 0.0
-            marker.color.g = 1.0
-            marker.color.b = 0.0
-            marker.color.a = 1.0
-
-            self.markers.append(marker)
-
-            self.path.append({
-                'x': float(row[0]),
-                'y': float(row[1]),
-                'theta': float(row[2]),
-                'speed': 0.5,
-                'lookahead': 1.0
-            })
-
-        markers.markers = self.markers
-
-        self.markers_pub.publish(markers)
-    
-    def interp_path(self):
-
-        x = np.array([value['x'] for value in self.path])
-        y = np.array([value['y'] for value in self.path])
-
-        num_pts = len(self.path) - 1
-
-        cumulative_sum = 0.0
-        cumulative_dists = [0.0] * num_pts
-
-        for i in range(num_pts):
-            cumulative_sum += ((x[(i+1) % num_pts] - x[i])**2 + (y[(i+1) % num_pts] - y[i])**2)**0.5
-            cumulative_dists[i] = cumulative_sum
-
-        cumulative_dists = [0.0] + cumulative_dists
-
-        norm_dists = [value / cumulative_dists[-1] for value in cumulative_dists]
-
-        x_interp = CubicSpline(norm_dists, x, bc_type="natural")
-        y_interp = CubicSpline(norm_dists, y, bc_type="natural")
-
-        t = np.linspace(0, 1, 300)
-
-        self.path = []
+        
+    def renderPath(self):
         markers = MarkerArray()
 
         j = 0
 
-        for _, i in enumerate(t):
+        for waypoint in self.path:
             marker = Marker()
 
             marker.header.frame_id = "map"
@@ -270,8 +213,8 @@ class PurePursuit(Node):
             marker.type = 1
             marker.action = 0
 
-            marker.pose.position.x = float(x_interp(i))
-            marker.pose.position.y = float(y_interp(i))
+            marker.pose.position.x = waypoint["x"]
+            marker.pose.position.y = waypoint["y"]
             marker.pose.position.z = 0.2
 
             marker.pose.orientation.x = 0.0
@@ -288,19 +231,43 @@ class PurePursuit(Node):
             marker.color.b = 0.0
             marker.color.a = 1.0
 
-            self.path.append({
-                'x': float(x_interp(i)),
-                'y': float(y_interp(i)),
-                'theta': 0.0, # placeholder; compute angle to next path point
-                'speed': 0.5, # placeholder; compute best speed at each point
-                'lookahead': 1.0 # placeholder; dynamic lookahead for each node in the path to account for turns/straight track sections
-            })
-
             markers.markers.append(marker)
 
             j += 1
 
         self.markers_pub.publish(markers)
+
+    def deletePath(self):
+        self.path = []
+        markers = MarkerArray()
+
+        marker = Marker()
+        marker.action = Marker.DELETEALL
+        markers.markers.append(marker)
+
+        self.markers_pub.publish(markers)
+    
+    def loadPath(self):
+        self.deletePath()
+
+        filename = input("Path input filename? ")
+
+        pathCSV = open(root_dir + "/pure_pursuit/paths/" + filename, "r")
+
+        reader = csv.reader(pathCSV, delimiter=',')
+
+        self.path = []
+
+        for row in reader:
+            self.path.append({
+                "x": float(row[0]),
+                "y": float(row[1]),
+                "rot": float(row[2]),
+                "speed": float(row[3]),
+                "lookahead": float(row[4])
+            })
+            
+        pathCSV.close()
     
     def halt(self):
         drive_msg = AckermannDriveStamped()
@@ -317,8 +284,8 @@ def main(args=None):
     pure_pursuit_node = PurePursuit()
     atexit.register(pure_pursuit_node.halt)
 
-    pure_pursuit_node.get_path('levine_blocked')
-    pure_pursuit_node.interp_path()
+    pure_pursuit_node.loadPath()
+    pure_pursuit_node.renderPath()
 
     rclpy.spin(pure_pursuit_node)
 
