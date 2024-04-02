@@ -1,8 +1,8 @@
-# Install script for directory: /home/vy/GalacticRacing/sim_ws/lab5_pkg
+# Install script for directory: /home/zuki/GalacticRacing/sim_ws/lab5_pkg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vy/GalacticRacing/sim_ws/install/lab5_pkg")
+  set(CMAKE_INSTALL_PREFIX "/home/zuki/GalacticRacing/sim_ws/install/lab5_pkg")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,7 +44,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/lab5_pkg/scanmatch_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/lab5_pkg" TYPE EXECUTABLE FILES "/home/vy/GalacticRacing/sim_ws/build/lab5_pkg/scanmatch_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/lab5_pkg" TYPE EXECUTABLE FILES "/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/scanmatch_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/lab5_pkg/scanmatch_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/lab5_pkg/scanmatch_node")
     file(RPATH_CHANGE
@@ -58,31 +58,31 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg/environment" TYPE FILE FILES "/home/vy/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/pythonpath.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg/environment" TYPE FILE FILES "/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/pythonpath.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg/environment" TYPE FILE FILES "/home/vy/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/pythonpath.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg/environment" TYPE FILE FILES "/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/pythonpath.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/lab5_pkg" TYPE DIRECTORY FILES "/home/vy/GalacticRacing/sim_ws/lab5_pkg/lab5_pkg/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/lab5_pkg" TYPE DIRECTORY FILES "/home/zuki/GalacticRacing/sim_ws/lab5_pkg/lab5_pkg/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
         "/usr/bin/python3" "-m" "compileall"
-        "/home/vy/GalacticRacing/sim_ws/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg"
+        "/home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg"
       )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/vy/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/lab5_pkg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/lab5_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/vy/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/lab5_pkg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/lab5_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -90,7 +90,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg/environment" TYPE FILE FILES "/home/vy/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg/environment" TYPE FILE FILES "/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -98,42 +98,42 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg/environment" TYPE FILE FILES "/home/vy/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg/environment" TYPE FILE FILES "/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg" TYPE FILE FILES "/home/vy/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg" TYPE FILE FILES "/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg" TYPE FILE FILES "/home/vy/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg" TYPE FILE FILES "/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg" TYPE FILE FILES "/home/vy/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg" TYPE FILE FILES "/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg" TYPE FILE FILES "/home/vy/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg" TYPE FILE FILES "/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg" TYPE FILE FILES "/home/vy/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg" TYPE FILE FILES "/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/vy/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_index/share/ament_index/resource_index/packages/lab5_pkg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_index/share/ament_index/resource_index/packages/lab5_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg/cmake" TYPE FILE FILES
-    "/home/vy/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_core/lab5_pkgConfig.cmake"
-    "/home/vy/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_core/lab5_pkgConfig-version.cmake"
+    "/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_core/lab5_pkgConfig.cmake"
+    "/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_core/lab5_pkgConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg" TYPE FILE FILES "/home/vy/GalacticRacing/sim_ws/lab5_pkg/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lab5_pkg" TYPE FILE FILES "/home/zuki/GalacticRacing/sim_ws/lab5_pkg/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -144,5 +144,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/vy/GalacticRacing/sim_ws/build/lab5_pkg/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

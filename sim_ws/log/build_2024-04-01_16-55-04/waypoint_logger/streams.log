@@ -1,0 +1,79 @@
+[0.399s] Invoking command in '/home/zuki/GalacticRacing/sim_ws/build/waypoint_logger': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake /home/zuki/GalacticRacing/sim_ws/src/waypoint_logger -DCMAKE_INSTALL_PREFIX=/home/zuki/GalacticRacing/sim_ws/install/waypoint_logger
+[0.839s] -- The C compiler identification is GNU 9.4.0
+[0.839s] -- The CXX compiler identification is GNU 9.4.0
+[0.839s] -- Check for working C compiler: /usr/bin/cc
+[0.839s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.839s] -- Detecting C compiler ABI info
+[0.839s] -- Detecting C compiler ABI info - done
+[0.839s] -- Detecting C compile features
+[0.839s] -- Detecting C compile features - done
+[0.839s] -- Check for working CXX compiler: /usr/bin/c++
+[0.840s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.840s] -- Detecting CXX compiler ABI info
+[0.898s] -- Detecting CXX compiler ABI info - done
+[0.904s] -- Detecting CXX compile features
+[0.904s] -- Detecting CXX compile features - done
+[0.906s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.920s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.921s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.090s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.134s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.138s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.273s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.344s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.399s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.431s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.432s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.433s] -- Looking for pthread.h
+[1.492s] -- Looking for pthread.h - found
+[1.492s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.577s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.577s] -- Looking for pthread_create in pthreads
+[1.645s] -- Looking for pthread_create in pthreads - not found
+[1.645s] -- Looking for pthread_create in pthread
+[1.760s] -- Looking for pthread_create in pthread - found
+[1.761s] -- Found Threads: TRUE  
+[1.903s] -- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+[1.905s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.927s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[1.986s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)
+[2.007s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[2.055s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[2.103s] -- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+[2.351s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.397s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.399s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.400s] -- Added test 'lint_cmake' to check CMake code style
+[2.400s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[2.401s] -- Added test 'xmllint' to check XML markup files
+[2.405s] -- Configuring done
+[2.407s] -- Generating done
+[2.409s] -- Build files have been written to: /home/zuki/GalacticRacing/sim_ws/build/waypoint_logger
+[2.418s] Invoked command in '/home/zuki/GalacticRacing/sim_ws/build/waypoint_logger' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake /home/zuki/GalacticRacing/sim_ws/src/waypoint_logger -DCMAKE_INSTALL_PREFIX=/home/zuki/GalacticRacing/sim_ws/install/waypoint_logger
+[2.418s] Invoking command in '/home/zuki/GalacticRacing/sim_ws/build/waypoint_logger': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/zuki/GalacticRacing/sim_ws/build/waypoint_logger -- -j8 -l8
+[2.521s] Invoked command in '/home/zuki/GalacticRacing/sim_ws/build/waypoint_logger' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/zuki/GalacticRacing/sim_ws/build/waypoint_logger -- -j8 -l8
+[2.551s] Invoking command in '/home/zuki/GalacticRacing/sim_ws/build/waypoint_logger': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/zuki/GalacticRacing/sim_ws/build/waypoint_logger
+[2.560s] -- Install configuration: ""
+[2.560s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/pythonpath.sh
+[2.561s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/pythonpath.dsv
+[2.561s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger
+[2.561s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger/__init__.py
+[2.582s] Listing '/home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger'...
+[2.582s] Compiling '/home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger/__init__.py'...
+[2.587s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/lib/waypoint_logger/waypoint_logger.py
+[2.588s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/ament_index/resource_index/package_run_dependencies/waypoint_logger
+[2.588s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/ament_index/resource_index/parent_prefix_path/waypoint_logger
+[2.588s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/ament_prefix_path.sh
+[2.589s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/ament_prefix_path.dsv
+[2.590s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/path.sh
+[2.590s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/path.dsv
+[2.590s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/local_setup.bash
+[2.590s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/local_setup.sh
+[2.590s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/local_setup.zsh
+[2.591s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/local_setup.dsv
+[2.591s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/package.dsv
+[2.592s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/ament_index/resource_index/packages/waypoint_logger
+[2.594s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/cmake/waypoint_loggerConfig.cmake
+[2.595s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/cmake/waypoint_loggerConfig-version.cmake
+[2.595s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/package.xml
+[2.596s] Invoked command in '/home/zuki/GalacticRacing/sim_ws/build/waypoint_logger' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/zuki/GalacticRacing/sim_ws/build/waypoint_logger

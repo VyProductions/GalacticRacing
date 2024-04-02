@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vy/GalacticRacing/sim_ws/src/pure_pursuit
+CMAKE_SOURCE_DIR = /home/zuki/GalacticRacing/sim_ws/src/pure_pursuit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vy/GalacticRacing/sim_ws/build/pure_pursuit
+CMAKE_BINARY_DIR = /home/zuki/GalacticRacing/sim_ws/build/pure_pursuit
 
 # Utility rule file for uninstall.
 
@@ -67,6 +67,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/vy/GalacticRacing/sim_ws/build/pure_pursuit && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vy/GalacticRacing/sim_ws/src/pure_pursuit /home/vy/GalacticRacing/sim_ws/src/pure_pursuit /home/vy/GalacticRacing/sim_ws/build/pure_pursuit /home/vy/GalacticRacing/sim_ws/build/pure_pursuit /home/vy/GalacticRacing/sim_ws/build/pure_pursuit/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zuki/GalacticRacing/sim_ws/build/pure_pursuit && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zuki/GalacticRacing/sim_ws/src/pure_pursuit /home/zuki/GalacticRacing/sim_ws/src/pure_pursuit /home/zuki/GalacticRacing/sim_ws/build/pure_pursuit /home/zuki/GalacticRacing/sim_ws/build/pure_pursuit /home/zuki/GalacticRacing/sim_ws/build/pure_pursuit/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

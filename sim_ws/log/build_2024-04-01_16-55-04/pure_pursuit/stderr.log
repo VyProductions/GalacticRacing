@@ -1,0 +1,12 @@
+[01m[K/home/zuki/GalacticRacing/sim_ws/src/pure_pursuit/src/pure_pursuit_node.cpp:32:81:[m[K [01;35m[Kwarning: [m[K‘[01m[Kgeometry_msgs::msg::PoseStamped_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   32 |     void pose_callback(const geometry_msgs::msg::PoseStamped::ConstPtr &pose_msg[01;35m[K)[m[K
+      |                                                                                 [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/foxy/include/geometry_msgs/msg/pose_stamped.hpp:7[m[K,
+                 from [01m[K/home/zuki/GalacticRacing/sim_ws/src/pure_pursuit/src/pure_pursuit_node.cpp:10[m[K:
+[01m[K/opt/ros/foxy/include/geometry_msgs/msg/detail/pose_stamped__struct.hpp:114:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  114 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zuki/GalacticRacing/sim_ws/src/pure_pursuit/src/pure_pursuit_node.cpp:[m[K In member function ‘[01m[Kvoid PurePursuit::pose_callback(const ConstPtr&)[m[K’:
+[01m[K/home/zuki/GalacticRacing/sim_ws/src/pure_pursuit/src/pure_pursuit_node.cpp:32:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpose_msg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   32 |     void pose_callback([01;35m[Kconst geometry_msgs::msg::PoseStamped::ConstPtr &pose_msg[m[K)
+      |                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K

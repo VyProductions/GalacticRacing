@@ -1,0 +1,27 @@
+[1.649s] Invoking command in '/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/zuki/GalacticRacing/sim_ws/build/lab5_pkg -- -j8 -l8
+[2.029s] [100%] Built target scanmatch_node
+[2.106s] Invoked command in '/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/zuki/GalacticRacing/sim_ws/build/lab5_pkg -- -j8 -l8
+[2.449s] Invoking command in '/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/zuki/GalacticRacing/sim_ws/build/lab5_pkg
+[2.475s] -- Install configuration: ""
+[2.475s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/lib/lab5_pkg/scanmatch_node
+[2.475s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/pythonpath.sh
+[2.475s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/pythonpath.dsv
+[2.475s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg
+[2.475s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg/__init__.py
+[2.481s] Listing '/home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/lib/python3.8/site-packages/lab5_pkg'...
+[2.544s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/ament_index/resource_index/package_run_dependencies/lab5_pkg
+[2.544s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/ament_index/resource_index/parent_prefix_path/lab5_pkg
+[2.544s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/ament_prefix_path.sh
+[2.544s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/ament_prefix_path.dsv
+[2.544s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/path.sh
+[2.544s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/environment/path.dsv
+[2.544s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/local_setup.bash
+[2.545s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/local_setup.sh
+[2.546s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/local_setup.zsh
+[2.546s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/local_setup.dsv
+[2.546s] -- Installing: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/package.dsv
+[2.546s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/ament_index/resource_index/packages/lab5_pkg
+[2.546s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/cmake/lab5_pkgConfig.cmake
+[2.547s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/cmake/lab5_pkgConfig-version.cmake
+[2.547s] -- Up-to-date: /home/zuki/GalacticRacing/sim_ws/install/lab5_pkg/share/lab5_pkg/package.xml
+[2.563s] Invoked command in '/home/zuki/GalacticRacing/sim_ws/build/lab5_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/zuki/GalacticRacing/sim_ws/build/lab5_pkg

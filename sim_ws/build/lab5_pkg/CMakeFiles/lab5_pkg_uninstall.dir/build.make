@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vy/GalacticRacing/sim_ws/lab5_pkg
+CMAKE_SOURCE_DIR = /home/zuki/GalacticRacing/sim_ws/lab5_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vy/GalacticRacing/sim_ws/build/lab5_pkg
+CMAKE_BINARY_DIR = /home/zuki/GalacticRacing/sim_ws/build/lab5_pkg
 
 # Utility rule file for lab5_pkg_uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/vy/GalacticRacing/sim_ws/build/lab5_pkg
 include CMakeFiles/lab5_pkg_uninstall.dir/progress.make
 
 CMakeFiles/lab5_pkg_uninstall:
-	/usr/bin/cmake -P /home/vy/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 lab5_pkg_uninstall: CMakeFiles/lab5_pkg_uninstall
 lab5_pkg_uninstall: CMakeFiles/lab5_pkg_uninstall.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/lab5_pkg_uninstall.dir/clean:
 .PHONY : CMakeFiles/lab5_pkg_uninstall.dir/clean
 
 CMakeFiles/lab5_pkg_uninstall.dir/depend:
-	cd /home/vy/GalacticRacing/sim_ws/build/lab5_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vy/GalacticRacing/sim_ws/lab5_pkg /home/vy/GalacticRacing/sim_ws/lab5_pkg /home/vy/GalacticRacing/sim_ws/build/lab5_pkg /home/vy/GalacticRacing/sim_ws/build/lab5_pkg /home/vy/GalacticRacing/sim_ws/build/lab5_pkg/CMakeFiles/lab5_pkg_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zuki/GalacticRacing/sim_ws/build/lab5_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zuki/GalacticRacing/sim_ws/lab5_pkg /home/zuki/GalacticRacing/sim_ws/lab5_pkg /home/zuki/GalacticRacing/sim_ws/build/lab5_pkg /home/zuki/GalacticRacing/sim_ws/build/lab5_pkg /home/zuki/GalacticRacing/sim_ws/build/lab5_pkg/CMakeFiles/lab5_pkg_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lab5_pkg_uninstall.dir/depend
 

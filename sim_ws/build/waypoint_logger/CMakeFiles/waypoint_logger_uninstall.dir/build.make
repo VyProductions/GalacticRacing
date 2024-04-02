@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vy/GalacticRacing/sim_ws/src/waypoint_logger
+CMAKE_SOURCE_DIR = /home/zuki/GalacticRacing/sim_ws/src/waypoint_logger
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vy/GalacticRacing/sim_ws/build/waypoint_logger
+CMAKE_BINARY_DIR = /home/zuki/GalacticRacing/sim_ws/build/waypoint_logger
 
 # Utility rule file for waypoint_logger_uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/vy/GalacticRacing/sim_ws/build/waypoint_logger
 include CMakeFiles/waypoint_logger_uninstall.dir/progress.make
 
 CMakeFiles/waypoint_logger_uninstall:
-	/usr/bin/cmake -P /home/vy/GalacticRacing/sim_ws/build/waypoint_logger/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/zuki/GalacticRacing/sim_ws/build/waypoint_logger/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 waypoint_logger_uninstall: CMakeFiles/waypoint_logger_uninstall
 waypoint_logger_uninstall: CMakeFiles/waypoint_logger_uninstall.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/waypoint_logger_uninstall.dir/clean:
 .PHONY : CMakeFiles/waypoint_logger_uninstall.dir/clean
 
 CMakeFiles/waypoint_logger_uninstall.dir/depend:
-	cd /home/vy/GalacticRacing/sim_ws/build/waypoint_logger && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vy/GalacticRacing/sim_ws/src/waypoint_logger /home/vy/GalacticRacing/sim_ws/src/waypoint_logger /home/vy/GalacticRacing/sim_ws/build/waypoint_logger /home/vy/GalacticRacing/sim_ws/build/waypoint_logger /home/vy/GalacticRacing/sim_ws/build/waypoint_logger/CMakeFiles/waypoint_logger_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zuki/GalacticRacing/sim_ws/build/waypoint_logger && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zuki/GalacticRacing/sim_ws/src/waypoint_logger /home/zuki/GalacticRacing/sim_ws/src/waypoint_logger /home/zuki/GalacticRacing/sim_ws/build/waypoint_logger /home/zuki/GalacticRacing/sim_ws/build/waypoint_logger /home/zuki/GalacticRacing/sim_ws/build/waypoint_logger/CMakeFiles/waypoint_logger_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/waypoint_logger_uninstall.dir/depend
 

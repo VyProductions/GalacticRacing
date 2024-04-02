@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/vy/GalacticRacing/sim_ws/src/pure_pursuit/src/pure_pursuit_node.cpp" "/home/vy/GalacticRacing/sim_ws/build/pure_pursuit/CMakeFiles/pure_pursuit_node.dir/src/pure_pursuit_node.cpp.o"
+  "/home/zuki/GalacticRacing/sim_ws/src/pure_pursuit/src/pure_pursuit_node.cpp" "/home/zuki/GalacticRacing/sim_ws/build/pure_pursuit/CMakeFiles/pure_pursuit_node.dir/src/pure_pursuit_node.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,7 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/vy/GalacticRacing/sim_ws/src/pure_pursuit/include"
+  "/home/zuki/GalacticRacing/sim_ws/src/pure_pursuit/include"
   "/usr/include/eigen3"
   "/opt/ros/foxy/include"
   )

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vy/GalacticRacing/sim_ws/src/safety_node
+CMAKE_SOURCE_DIR = /home/zuki/GalacticRacing/sim_ws/src/safety_node
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vy/GalacticRacing/sim_ws/build/safety_node
+CMAKE_BINARY_DIR = /home/zuki/GalacticRacing/sim_ws/build/safety_node
 
 # Utility rule file for uninstall.
 
@@ -67,6 +67,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/vy/GalacticRacing/sim_ws/build/safety_node && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vy/GalacticRacing/sim_ws/src/safety_node /home/vy/GalacticRacing/sim_ws/src/safety_node /home/vy/GalacticRacing/sim_ws/build/safety_node /home/vy/GalacticRacing/sim_ws/build/safety_node /home/vy/GalacticRacing/sim_ws/build/safety_node/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zuki/GalacticRacing/sim_ws/build/safety_node && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zuki/GalacticRacing/sim_ws/src/safety_node /home/zuki/GalacticRacing/sim_ws/src/safety_node /home/zuki/GalacticRacing/sim_ws/build/safety_node /home/zuki/GalacticRacing/sim_ws/build/safety_node /home/zuki/GalacticRacing/sim_ws/build/safety_node/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

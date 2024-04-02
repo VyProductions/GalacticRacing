@@ -46,7 +46,7 @@ add_library(gflags_static STATIC IMPORTED)
 
 set_target_properties(gflags_static PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "GFLAGS_IS_A_DLL=0"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/vy/GalacticRacing/sim_ws/range_libc/vendor/gflags/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/zuki/GalacticRacing/sim_ws/range_libc/vendor/gflags/include"
   INTERFACE_LINK_LIBRARIES "-lpthread"
 )
 
@@ -55,21 +55,21 @@ add_library(gflags_nothreads_static STATIC IMPORTED)
 
 set_target_properties(gflags_nothreads_static PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "GFLAGS_IS_A_DLL=0"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/vy/GalacticRacing/sim_ws/range_libc/vendor/gflags/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/zuki/GalacticRacing/sim_ws/range_libc/vendor/gflags/include"
 )
 
 # Import target "gflags_static" for configuration ""
 set_property(TARGET gflags_static APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(gflags_static PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "/home/vy/GalacticRacing/sim_ws/range_libc/lib/libgflags.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/zuki/GalacticRacing/sim_ws/range_libc/lib/libgflags.a"
   )
 
 # Import target "gflags_nothreads_static" for configuration ""
 set_property(TARGET gflags_nothreads_static APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(gflags_nothreads_static PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "/home/vy/GalacticRacing/sim_ws/range_libc/lib/libgflags_nothreads.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/zuki/GalacticRacing/sim_ws/range_libc/lib/libgflags_nothreads.a"
   )
 
 # This file does not depend on other imported targets which have

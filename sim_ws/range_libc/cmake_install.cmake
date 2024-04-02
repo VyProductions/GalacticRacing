@@ -1,8 +1,8 @@
-# Install script for directory: /home/vy/GalacticRacing/sim_ws/range_libc
+# Install script for directory: /home/zuki/GalacticRacing/sim_ws/range_libc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vy/GalacticRacing/sim_ws/install/range_lib")
+  set(CMAKE_INSTALL_PREFIX "/home/zuki/GalacticRacing/sim_ws/install/range_lib")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/vy/GalacticRacing/sim_ws/range_libc/vendor/gflags/cmake_install.cmake")
+  include("/home/zuki/GalacticRacing/sim_ws/range_libc/vendor/gflags/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/vy/GalacticRacing/sim_ws/range_libc/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/zuki/GalacticRacing/sim_ws/range_libc/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

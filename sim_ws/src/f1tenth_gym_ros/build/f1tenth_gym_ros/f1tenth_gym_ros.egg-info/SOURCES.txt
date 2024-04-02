@@ -11,7 +11,9 @@ build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/zip-safe
 config/sim.yaml
 f1tenth_gym_ros/__init__.py
 f1tenth_gym_ros/gym_bridge.py
+launch/ego_racecar ORIGINAL.xacro
 launch/ego_racecar.xacro
+launch/ego_tracker.rviz
 launch/gym_bridge.rviz
 launch/gym_bridge_launch.py
 launch/opp_racecar.xacro

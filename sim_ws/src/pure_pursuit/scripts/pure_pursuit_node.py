@@ -16,7 +16,7 @@ from ackermann_msgs.msg import AckermannDriveStamped, AckermannDrive
 from visualization_msgs.msg import Marker, MarkerArray
 from tf_transformations import quaternion_from_euler, euler_from_quaternion
 
-root_dir = "/home/vy/GalacticRacing/sim_ws/src"
+root_dir = "/home/zuki/GalacticRacing/sim_ws/src"
 
 def point_curavture(x, y, window_size):
     curvatures = np.array([0] * len(x))

@@ -1,0 +1,37 @@
+[01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/src/correspond.cpp:[m[K In function ‘[01m[Kvoid getNaiveCorrespondence(std::vector<Point>&, std::vector<Point>&, std::vector<Point>&, std::vector<std::vector<int> >&, std::vector<Correspondence>&, float)[m[K’:
+[01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/src/correspond.cpp:16:7:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Klast_best[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   16 |   int [01;35m[Klast_best[m[K = -1;
+      |       [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/src/correspond.cpp:12:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kjump_table[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   12 |                             [01;35m[Kvector<vector<int>> &jump_table[m[K, vector<Correspondence> &c, float prob)
+      |                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/src/correspond.cpp:12:95:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprob[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   12 |                             vector<vector<int>> &jump_table, vector<Correspondence> &c, [01;35m[Kfloat prob[m[K)
+      |                                                                                         [01;35m[K~~~~~~^~~~[m[K
+[01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/src/correspond.cpp:[m[K In function ‘[01m[Kvoid getCorrespondence(std::vector<Point>&, std::vector<Point>&, std::vector<Point>&, std::vector<std::vector<int> >&, std::vector<Correspondence>&, float)[m[K’:
+[01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/src/correspond.cpp:61:7:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Klast_best[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   61 |   int [01;35m[Klast_best[m[K = -1;
+      |       [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/src/correspond.cpp:48:45:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kjump_table[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   48 |                        [01;35m[Kvector<vector<int>> &jump_table[m[K, vector<Correspondence> &c, float prob)
+      |                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/src/correspond.cpp:48:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprob[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   48 |                        vector<vector<int>> &jump_table, vector<Correspondence> &c, [01;35m[Kfloat prob[m[K)
+      |                                                                                    [01;35m[K~~~~~~^~~~[m[K
+[01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/src/transform.cpp:[m[K In function ‘[01m[Kvoid transformPoints(const std::vector<Point>&, Transform&, std::vector<Point>&)[m[K’:
+[01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/src/transform.cpp:12:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<Point>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   12 |   for (int i = 0; [01;35m[Ki < points.size()[m[K; i++)
+      |                   [01;35m[K~~^~~~~~~~~~~~~~~[m[K
+[01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/src/scanmatch_node.cpp:[m[K In member function ‘[01m[Kvoid ScanMatch::readScan(sensor_msgs::msg::LaserScan_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/src/scanmatch_node.cpp:140:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<float>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  140 |         for (int i = 0; [01;35m[Ki < ranges.size()[m[K; ++i)
+      |                         [01;35m[K~~^~~~~~~~~~~~~~~[m[K
+[01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/src/transform.cpp:[m[K In function ‘[01m[Kfloat greatest_real_root(float, float, float, float, float)[m[K’:
+[01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/src/transform.cpp:274:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K-Wreturn-type[m[K]
+  274 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+In file included from [01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/src/scanmatch_node.cpp:20[m[K:
+[01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/include/scan_matching_skeleton/visualization.h:[m[K At global scope:
+[01m[K/home/zuki/GalacticRacing/sim_ws/lab5_pkg/include/scan_matching_skeleton/visualization.h:9:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Knum_visuals[m[K’ defined but not used [[01;35m[K-Wunused-variable[m[K]
+    9 | static int [01;35m[Knum_visuals[m[K = 0;
+      |            [01;35m[K^~~~~~~~~~~[m[K

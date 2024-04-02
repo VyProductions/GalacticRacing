@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/vy/GalacticRacing/sim_ws/src/safety_node/src/safety_node.cpp
+/home/zuki/GalacticRacing/sim_ws/src/safety_node/src/safety_node.cpp
 rclcpp/rclcpp.hpp
-/home/vy/GalacticRacing/sim_ws/src/safety_node/src/rclcpp/rclcpp.hpp
+/home/zuki/GalacticRacing/sim_ws/src/safety_node/src/rclcpp/rclcpp.hpp
 sensor_msgs/msg/laser_scan.hpp
-/home/vy/GalacticRacing/sim_ws/src/safety_node/src/sensor_msgs/msg/laser_scan.hpp
+/home/zuki/GalacticRacing/sim_ws/src/safety_node/src/sensor_msgs/msg/laser_scan.hpp
 nav_msgs/msg/odometry.hpp
-/home/vy/GalacticRacing/sim_ws/src/safety_node/src/nav_msgs/msg/odometry.hpp
+/home/zuki/GalacticRacing/sim_ws/src/safety_node/src/nav_msgs/msg/odometry.hpp
 ackermann_msgs/msg/ackermann_drive_stamped.hpp
-/home/vy/GalacticRacing/sim_ws/src/safety_node/src/ackermann_msgs/msg/ackermann_drive_stamped.hpp
+/home/zuki/GalacticRacing/sim_ws/src/safety_node/src/ackermann_msgs/msg/ackermann_drive_stamped.hpp
 
 /opt/ros/foxy/include/ackermann_msgs/msg/ackermann_drive_stamped.hpp
 ackermann_msgs/msg/detail/ackermann_drive_stamped__struct.hpp

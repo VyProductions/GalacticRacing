@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vy/GalacticRacing/sim_ws/src/safety_node
+CMAKE_SOURCE_DIR = /home/zuki/GalacticRacing/sim_ws/src/safety_node
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vy/GalacticRacing/sim_ws/build/safety_node
+CMAKE_BINARY_DIR = /home/zuki/GalacticRacing/sim_ws/build/safety_node
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vy/GalacticRacing/sim_ws/build/safety_node/CMakeFiles /home/vy/GalacticRacing/sim_ws/build/safety_node/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zuki/GalacticRacing/sim_ws/build/safety_node/CMakeFiles /home/zuki/GalacticRacing/sim_ws/build/safety_node/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vy/GalacticRacing/sim_ws/build/safety_node/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zuki/GalacticRacing/sim_ws/build/safety_node/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
