@@ -142,6 +142,12 @@ class PurePursuit(Node):
         abs_angle = np.arccos(vc_dot_v3 / mag_v3)
         angle = (-1 if vc_cross_v3 < 0 else 1) * abs_angle
 
+        y_val = mag_v3 * np.cos(abs_angle)
+        gamma = (1.0 * y_val) / (min_pt["lookahead"]**2)
+
+        angle *= gamma
+
+        # bound angle between -180 and 180 degrees
         if angle > math.radians(180.0):
             angle -= math.radians(360.0)
         elif angle < math.radians(-180.0):

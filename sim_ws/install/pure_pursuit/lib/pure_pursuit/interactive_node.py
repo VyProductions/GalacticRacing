@@ -25,31 +25,16 @@ filename = "levine_blocked"
 def makeBox():
     marker = Marker()
 
-    marker.type = Marker.CUBE
-    marker.scale.x = 0.25
-    marker.scale.y = 0.25
-    marker.scale.z = 0.25
-    marker.color.r = 0.5
-    marker.color.g = 0.5
-    marker.color.b = 0.5
-    marker.color.a = 1.0
+    marker.type = Marker.SPHERE
+    marker.scale.x = 0.5
+    marker.scale.y = 0.5
+    marker.scale.z = 0.5
+    marker.color.r = 0.0
+    marker.color.g = 0.4
+    marker.color.b = 0.8
+    marker.color.a = 0.2
 
     return marker
-
-def makeBoxControl(msg):
-    control = InteractiveMarkerControl()
-    control.always_visible = True
-    control.markers.append(makeBox())
-    msg.controls.append(control)
-    return control
-
-def normalizeQuaternion(quaternion_msg):
-    norm = quaternion_msg.x**2 + quaternion_msg.y**2 + quaternion_msg.z**2 + quaternion_msg.w**2
-    s = norm**(-0.5)
-    quaternion_msg.x *= s
-    quaternion_msg.y *= s
-    quaternion_msg.z *= s
-    quaternion_msg.w *= s
 
 def createMarker(position, orientation, id):
     int_marker = InteractiveMarker()
@@ -69,9 +54,6 @@ def createMarker(position, orientation, id):
     control.interaction_mode = InteractiveMarkerControl.MENU
     control.name = "Marker Options"
     control.description = int_marker.name
-    int_marker.controls.append(copy.deepcopy(control))
-
-    control.interaction_mode = InteractiveMarkerControl.ROTATE_AXIS
     int_marker.controls.append(copy.deepcopy(control))
 
     control.interaction_mode = InteractiveMarkerControl.MOVE_PLANE

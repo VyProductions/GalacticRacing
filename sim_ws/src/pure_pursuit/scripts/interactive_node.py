@@ -25,31 +25,16 @@ filename = "levine_blocked"
 def makeBox():
     marker = Marker()
 
-    marker.type = Marker.CUBE
-    marker.scale.x = 0.25
-    marker.scale.y = 0.25
-    marker.scale.z = 0.25
-    marker.color.r = 0.5
-    marker.color.g = 0.5
-    marker.color.b = 0.5
-    marker.color.a = 1.0
+    marker.type = Marker.SPHERE
+    marker.scale.x = 0.5
+    marker.scale.y = 0.5
+    marker.scale.z = 0.5
+    marker.color.r = 0.0
+    marker.color.g = 0.4
+    marker.color.b = 0.8
+    marker.color.a = 0.2
 
     return marker
-
-def makeBoxControl(msg):
-    control = InteractiveMarkerControl()
-    control.always_visible = True
-    control.markers.append(makeBox())
-    msg.controls.append(control)
-    return control
-
-def normalizeQuaternion(quaternion_msg):
-    norm = quaternion_msg.x**2 + quaternion_msg.y**2 + quaternion_msg.z**2 + quaternion_msg.w**2
-    s = norm**(-0.5)
-    quaternion_msg.x *= s
-    quaternion_msg.y *= s
-    quaternion_msg.z *= s
-    quaternion_msg.w *= s
 
 def createMarker(position, orientation, id):
     int_marker = InteractiveMarker()
@@ -69,9 +54,6 @@ def createMarker(position, orientation, id):
     control.interaction_mode = InteractiveMarkerControl.MENU
     control.name = "Marker Options"
     control.description = int_marker.name
-    int_marker.controls.append(copy.deepcopy(control))
-
-    control.interaction_mode = InteractiveMarkerControl.ROTATE_AXIS
     int_marker.controls.append(copy.deepcopy(control))
 
     control.interaction_mode = InteractiveMarkerControl.MOVE_PLANE
@@ -126,18 +108,18 @@ class InteractiveMarkerNode(Node):
     # marker options
 
     def newMarker(self, marker=None):
-        rot = 0.0 if marker==None else self.markers[marker.marker_name]["rot"]
+        # rot = 0.0 if marker==None else self.markers[marker.marker_name]["rot"]
 
         int_marker = createMarker(
             self.position if marker == None else self.markers[marker.marker_name]["position"],
-            self.orientation if marker == None else self.markers[marker.marker_name]["orientation"],
+            # self.orientation if marker == None else self.markers[marker.marker_name]["orientation"],
             self.marker_count
         )
 
         self.markers[int_marker.name] = {
             "position": int_marker.pose.position,
-            "orientation": int_marker.pose.orientation,
-            "rot": rot,
+            # "orientation": int_marker.pose.orientation,
+            # "rot": rot,
             "speed": 1.0 if marker == None else self.markers[marker.marker_name]["speed"],
             "lookahead": 1.0 if marker == None else self.markers[marker.marker_name]["lookahead"]
         }
@@ -157,7 +139,7 @@ class InteractiveMarkerNode(Node):
 
         print(f"Details: {marker.marker_name}")
         print("  Position:  (%.2f, %.2f)" % (pos.x, pos.y))
-        print(f"  Rotation:  {math.degrees(self.markers[marker.marker_name]['rot'])}")
+        # print(f"  Rotation:  {math.degrees(self.markers[marker.marker_name]['rot'])}")
         print(f"  Speed:     {self.markers[marker.marker_name]['speed']} m/s")
         print(f"  Lookahead: {self.markers[marker.marker_name]['lookahead']} m")
 
@@ -187,10 +169,10 @@ class InteractiveMarkerNode(Node):
         for row in reader:
             self.markers["Waypoint_" + str(self.marker_count)] = {
                 "position": Point(x=float(row[0]), y=float(row[1]), z=0.3),
-                "orientation": Quaternion(x=float(row[2]), y=float(row[3]), z=float(row[4]), w=float(row[5])),
-                "rot": float(row[6]),
-                "speed": float(row[7]),
-                "lookahead": float(row[8])
+                # "orientation": Quaternion(x=float(row[2]), y=float(row[3]), z=float(row[4]), w=float(row[5])),
+                # "rot": float(row[6]),
+                "speed": float(row[2]),
+                "lookahead": float(row[3])
             }
 
             int_marker = createMarker(
@@ -224,8 +206,9 @@ class InteractiveMarkerNode(Node):
 
             writer.writerow([
                 pos.x, pos.y,
-                orient.x, orient.y, orient.z, orient.w,
-                marker["rot"], marker["speed"], marker["lookahead"]
+                # orient.x, orient.y, orient.z, orient.w,
+                # marker["rot"],
+                marker["speed"], marker["lookahead"]
             ])
 
         markerCSV.close()
@@ -395,7 +378,7 @@ class InteractiveMarkerNode(Node):
                 self.path.append({
                     'x': float(x_interp(i)),
                     'y': float(y_interp(i)),
-                    'rot': 0.0,
+                    # 'rot': 0.0,
                     'speed': float(speed_interp(i)),
                     'lookahead': float(lookahead_interp(i))
                 })
@@ -429,9 +412,9 @@ class InteractiveMarkerNode(Node):
             self.path.append({
                 "x": float(row[0]),
                 "y": float(row[1]),
-                "rot": float(row[2]),
-                "speed": float(row[3]),
-                "lookahead": float(row[4])
+                # "rot": float(row[2]),
+                "speed": float(row[2]),
+                "lookahead": float(row[3])
             })
             
         pathCSV.close()
@@ -444,7 +427,10 @@ class InteractiveMarkerNode(Node):
         writer = csv.writer(pathCSV, delimiter=',')
 
         for waypoint in self.path:
-            writer.writerow([waypoint["x"], waypoint["y"], waypoint["rot"], waypoint["speed"], waypoint['lookahead']])
+            writer.writerow([
+                waypoint["x"], waypoint["y"],
+                # waypoint["rot"],
+                waypoint["speed"], waypoint['lookahead']])
 
         pathCSV.close()
 
@@ -464,7 +450,7 @@ if __name__ == '__main__':
     alignment_menu_handle = menu_handler.insert("Alignment")
     menu_handler.insert("Align X", parent=alignment_menu_handle, callback=interactive_marker_node.alignX)
     menu_handler.insert("Align Y", parent=alignment_menu_handle, callback=interactive_marker_node.alignY)
-    menu_handler.insert("Rotation Alignment", parent=alignment_menu_handle, callback=interactive_marker_node.rotationAlignment)
+    # menu_handler.insert("Rotation Alignment", parent=alignment_menu_handle, callback=interactive_marker_node.rotationAlignment)
 
     waypoint_menu_handle = menu_handler.insert("Waypoints")
     menu_handler.insert("Set Speed", parent=waypoint_menu_handle, callback=interactive_marker_node.setSpeed)

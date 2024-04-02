@@ -1,0 +1,41 @@
+[0.000000] (-) TimerEvent: {}
+[0.000617] (f1tenth_gym_ros) JobQueued: {'identifier': 'f1tenth_gym_ros', 'dependencies': OrderedDict()}
+[0.000837] (gap_follow) JobQueued: {'identifier': 'gap_follow', 'dependencies': OrderedDict()}
+[0.001008] (lab5_pkg) JobQueued: {'identifier': 'lab5_pkg', 'dependencies': OrderedDict()}
+[0.001078] (particle_filter) JobQueued: {'identifier': 'particle_filter', 'dependencies': OrderedDict()}
+[0.001178] (pure_pursuit) JobQueued: {'identifier': 'pure_pursuit', 'dependencies': OrderedDict()}
+[0.001255] (range_lib) JobQueued: {'identifier': 'range_lib', 'dependencies': OrderedDict()}
+[0.001273] (safety_node) JobQueued: {'identifier': 'safety_node', 'dependencies': OrderedDict()}
+[0.001287] (wall_follow) JobQueued: {'identifier': 'wall_follow', 'dependencies': OrderedDict()}
+[0.001352] (waypoint_logger) JobQueued: {'identifier': 'waypoint_logger', 'dependencies': OrderedDict()}
+[0.002076] (f1tenth_gym_ros) JobStarted: {'identifier': 'f1tenth_gym_ros'}
+[0.106532] (-) TimerEvent: {}
+[0.210764] (-) TimerEvent: {}
+[0.314441] (-) TimerEvent: {}
+[0.373055] (gap_follow) JobStarted: {'identifier': 'gap_follow'}
+[0.415810] (-) TimerEvent: {}
+[0.523572] (-) TimerEvent: {}
+[0.628754] (-) TimerEvent: {}
+[0.680338] (lab5_pkg) JobStarted: {'identifier': 'lab5_pkg'}
+[0.729337] (-) TimerEvent: {}
+[0.837637] (-) TimerEvent: {}
+[0.955288] (-) TimerEvent: {}
+[0.980503] (particle_filter) JobStarted: {'identifier': 'particle_filter'}
+[1.060242] (particle_filter) JobEnded: {'identifier': 'particle_filter', 'rc': 0}
+[1.062688] (-) TimerEvent: {}
+[1.062892] (pure_pursuit) JobStarted: {'identifier': 'pure_pursuit'}
+[1.165711] (-) TimerEvent: {}
+[1.273754] (-) TimerEvent: {}
+[1.357965] (range_lib) JobStarted: {'identifier': 'range_lib'}
+[1.375719] (-) TimerEvent: {}
+[1.482595] (-) TimerEvent: {}
+[1.586832] (-) TimerEvent: {}
+[1.668161] (f1tenth_gym_ros) JobEnded: {'identifier': 'f1tenth_gym_ros', 'rc': 'SIGINT'}
+[1.673467] (gap_follow) JobEnded: {'identifier': 'gap_follow', 'rc': 'SIGINT'}
+[1.674154] (lab5_pkg) JobEnded: {'identifier': 'lab5_pkg', 'rc': 'SIGINT'}
+[1.674564] (pure_pursuit) JobEnded: {'identifier': 'pure_pursuit', 'rc': 'SIGINT'}
+[1.675066] (range_lib) JobEnded: {'identifier': 'range_lib', 'rc': 'SIGINT'}
+[1.683836] (safety_node) JobSkipped: {'identifier': 'safety_node'}
+[1.683889] (wall_follow) JobSkipped: {'identifier': 'wall_follow'}
+[1.683909] (waypoint_logger) JobSkipped: {'identifier': 'waypoint_logger'}
+[1.683925] (-) EventReactorShutdown: {}
