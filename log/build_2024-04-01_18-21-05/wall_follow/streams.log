@@ -1,0 +1,28 @@
+[1.217s] Invoking command in '/home/zuki/GalacticRacing/build/wall_follow': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/zuki/GalacticRacing/build/wall_follow -- -j8 -l8
+[1.602s] [100%] Built target wall_follow_node
+[2.303s] Invoked command in '/home/zuki/GalacticRacing/build/wall_follow' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/zuki/GalacticRacing/build/wall_follow -- -j8 -l8
+[3.899s] Invoking command in '/home/zuki/GalacticRacing/build/wall_follow': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/zuki/GalacticRacing/build/wall_follow
+[4.261s] -- Install configuration: ""
+[4.262s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/lib/wall_follow/wall_follow_node
+[4.262s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/share/wall_follow/environment/pythonpath.sh
+[4.262s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/share/wall_follow/environment/pythonpath.dsv
+[4.262s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/lib/python3.8/site-packages/wall_follow
+[4.262s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/lib/python3.8/site-packages/wall_follow/__init__.py
+[4.262s] Listing '/home/zuki/GalacticRacing/install/wall_follow/lib/python3.8/site-packages/wall_follow'...
+[4.262s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/lib/wall_follow/wall_follow_node.py
+[4.262s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/share/ament_index/resource_index/package_run_dependencies/wall_follow
+[4.263s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/share/ament_index/resource_index/parent_prefix_path/wall_follow
+[4.263s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/share/wall_follow/environment/ament_prefix_path.sh
+[4.263s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/share/wall_follow/environment/ament_prefix_path.dsv
+[4.263s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/share/wall_follow/environment/path.sh
+[4.263s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/share/wall_follow/environment/path.dsv
+[4.263s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/share/wall_follow/local_setup.bash
+[4.263s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/share/wall_follow/local_setup.sh
+[4.263s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/share/wall_follow/local_setup.zsh
+[4.263s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/share/wall_follow/local_setup.dsv
+[4.263s] -- Installing: /home/zuki/GalacticRacing/install/wall_follow/share/wall_follow/package.dsv
+[4.263s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/share/ament_index/resource_index/packages/wall_follow
+[4.266s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/share/wall_follow/cmake/wall_followConfig.cmake
+[4.266s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/share/wall_follow/cmake/wall_followConfig-version.cmake
+[4.266s] -- Up-to-date: /home/zuki/GalacticRacing/install/wall_follow/share/wall_follow/package.xml
+[4.658s] Invoked command in '/home/zuki/GalacticRacing/build/wall_follow' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/zuki/GalacticRacing/build/wall_follow

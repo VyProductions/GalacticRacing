@@ -1,0 +1,5 @@
+[1.183s] Invoking command in '/home/zuki/GalacticRacing/sim_ws/build/wall_follow': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/zuki/GalacticRacing/sim_ws/build/wall_follow -- -j8 -l8
+[1.250s] CMake Error: The current CMakeCache.txt directory /home/zuki/GalacticRacing/sim_ws/build/wall_follow/CMakeCache.txt is different than the directory /home/vy/GalacticRacing/sim_ws/build/wall_follow where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+[1.250s] CMake Error: The source directory "/home/vy/GalacticRacing/sim_ws/src/wall_follow" does not exist.
+[1.252s] Specify --help for usage, or press the help button on the CMake GUI.
+[1.252s] make: *** [Makefile:266: cmake_check_build_system] Error 1

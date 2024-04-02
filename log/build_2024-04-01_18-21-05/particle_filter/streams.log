@@ -1,0 +1,21 @@
+[3.834s] Invoking command in '/home/zuki/GalacticRacing/sim_ws/src/particle_filter': PYTHONPATH=/home/zuki/GalacticRacing/build/particle_filter/prefix_override:/home/zuki/GalacticRacing/install/particle_filter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/particle_filter build --build-base /home/zuki/GalacticRacing/build/particle_filter/build install --record /home/zuki/GalacticRacing/build/particle_filter/install.log --install-scripts $base/lib/particle_filter --single-version-externally-managed
+[4.217s] running egg_info
+[4.217s] writing ../../../build/particle_filter/particle_filter.egg-info/PKG-INFO
+[4.217s] writing dependency_links to ../../../build/particle_filter/particle_filter.egg-info/dependency_links.txt
+[4.217s] writing entry points to ../../../build/particle_filter/particle_filter.egg-info/entry_points.txt
+[4.218s] writing requirements to ../../../build/particle_filter/particle_filter.egg-info/requires.txt
+[4.218s] writing top-level names to ../../../build/particle_filter/particle_filter.egg-info/top_level.txt
+[4.218s] reading manifest file '../../../build/particle_filter/particle_filter.egg-info/SOURCES.txt'
+[4.218s] writing manifest file '../../../build/particle_filter/particle_filter.egg-info/SOURCES.txt'
+[4.218s] running build
+[4.218s] running build_py
+[4.218s] running install
+[4.218s] running install_lib
+[4.218s] running install_data
+[4.218s] running install_egg_info
+[4.218s] removing '/home/zuki/GalacticRacing/install/particle_filter/lib/python3.8/site-packages/particle_filter-0.2.0-py3.8.egg-info' (and everything under it)
+[4.218s] Copying ../../../build/particle_filter/particle_filter.egg-info to /home/zuki/GalacticRacing/install/particle_filter/lib/python3.8/site-packages/particle_filter-0.2.0-py3.8.egg-info
+[4.218s] running install_scripts
+[4.218s] Installing particle_filter script to /home/zuki/GalacticRacing/install/particle_filter/lib/particle_filter
+[4.218s] writing list of installed files to '/home/zuki/GalacticRacing/build/particle_filter/install.log'
+[4.798s] Invoked command in '/home/zuki/GalacticRacing/sim_ws/src/particle_filter' returned '0': PYTHONPATH=/home/zuki/GalacticRacing/build/particle_filter/prefix_override:/home/zuki/GalacticRacing/install/particle_filter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/particle_filter build --build-base /home/zuki/GalacticRacing/build/particle_filter/build install --record /home/zuki/GalacticRacing/build/particle_filter/install.log --install-scripts $base/lib/particle_filter --single-version-externally-managed

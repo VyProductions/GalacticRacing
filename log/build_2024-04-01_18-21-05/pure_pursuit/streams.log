@@ -1,0 +1,29 @@
+[2.324s] Invoking command in '/home/zuki/GalacticRacing/build/pure_pursuit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/zuki/GalacticRacing/build/pure_pursuit -- -j8 -l8
+[2.532s] [100%] Built target pure_pursuit_node
+[3.100s] Invoked command in '/home/zuki/GalacticRacing/build/pure_pursuit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/zuki/GalacticRacing/build/pure_pursuit -- -j8 -l8
+[4.872s] Invoking command in '/home/zuki/GalacticRacing/build/pure_pursuit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/zuki/GalacticRacing/build/pure_pursuit
+[4.947s] -- Install configuration: ""
+[4.950s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/lib/pure_pursuit/pure_pursuit_node
+[4.950s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/environment/pythonpath.sh
+[4.950s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/environment/pythonpath.dsv
+[4.951s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit
+[4.951s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit/__init__.py
+[5.014s] Listing '/home/zuki/GalacticRacing/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit'...
+[5.014s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/lib/pure_pursuit/pure_pursuit_node.py
+[5.014s] -- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/lib/pure_pursuit/interactive_node.py
+[5.014s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/share/ament_index/resource_index/package_run_dependencies/pure_pursuit
+[5.014s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/share/ament_index/resource_index/parent_prefix_path/pure_pursuit
+[5.014s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/environment/ament_prefix_path.sh
+[5.014s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/environment/ament_prefix_path.dsv
+[5.014s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/environment/path.sh
+[5.014s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/environment/path.dsv
+[5.014s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/local_setup.bash
+[5.014s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/local_setup.sh
+[5.014s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/local_setup.zsh
+[5.014s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/local_setup.dsv
+[5.014s] -- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/package.dsv
+[5.014s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/share/ament_index/resource_index/packages/pure_pursuit
+[5.014s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/cmake/pure_pursuitConfig.cmake
+[5.014s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/cmake/pure_pursuitConfig-version.cmake
+[5.014s] -- Up-to-date: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/package.xml
+[5.789s] Invoked command in '/home/zuki/GalacticRacing/build/pure_pursuit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/zuki/GalacticRacing/build/pure_pursuit

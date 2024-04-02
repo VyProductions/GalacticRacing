@@ -1,0 +1,10 @@
+/home/zuki/GalacticRacing/build/lab5_pkg/CMakeFiles/install/strip.dir
+/home/zuki/GalacticRacing/build/lab5_pkg/CMakeFiles/install/local.dir
+/home/zuki/GalacticRacing/build/lab5_pkg/CMakeFiles/install.dir
+/home/zuki/GalacticRacing/build/lab5_pkg/CMakeFiles/list_install_components.dir
+/home/zuki/GalacticRacing/build/lab5_pkg/CMakeFiles/rebuild_cache.dir
+/home/zuki/GalacticRacing/build/lab5_pkg/CMakeFiles/edit_cache.dir
+/home/zuki/GalacticRacing/build/lab5_pkg/CMakeFiles/test.dir
+/home/zuki/GalacticRacing/build/lab5_pkg/CMakeFiles/lab5_pkg_uninstall.dir
+/home/zuki/GalacticRacing/build/lab5_pkg/CMakeFiles/scanmatch_node.dir
+/home/zuki/GalacticRacing/build/lab5_pkg/CMakeFiles/uninstall.dir

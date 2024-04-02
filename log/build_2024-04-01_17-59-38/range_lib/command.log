@@ -1,0 +1,2 @@
+Invoking command in '/home/zuki/GalacticRacing/build/range_lib': /usr/bin/cmake /home/zuki/GalacticRacing/sim_ws/range_libc -DCMAKE_INSTALL_PREFIX=/home/zuki/GalacticRacing/install/range_lib
+Invoked command in '/home/zuki/GalacticRacing/build/range_lib' returned '0': /usr/bin/cmake /home/zuki/GalacticRacing/sim_ws/range_libc -DCMAKE_INSTALL_PREFIX=/home/zuki/GalacticRacing/install/range_lib

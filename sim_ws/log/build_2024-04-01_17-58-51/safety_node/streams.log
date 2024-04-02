@@ -1,0 +1,5 @@
+[1.416s] Invoking command in '/home/zuki/GalacticRacing/sim_ws/build/safety_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zuki/GalacticRacing/sim_ws/install/particle_filter:/home/zuki/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/home/zuki/GalacticRacing/install/particle_filter:/home/zuki/GalacticRacing/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/zuki/GalacticRacing/sim_ws/build/safety_node -- -j8 -l8
+[1.439s] CMake Error: The current CMakeCache.txt directory /home/zuki/GalacticRacing/sim_ws/build/safety_node/CMakeCache.txt is different than the directory /home/vy/GalacticRacing/sim_ws/build/safety_node where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+[1.451s] CMake Error: The source directory "/home/vy/GalacticRacing/sim_ws/src/safety_node" does not exist.
+[1.451s] Specify --help for usage, or press the help button on the CMake GUI.
+[1.455s] make: *** [Makefile:266: cmake_check_build_system] Error 1

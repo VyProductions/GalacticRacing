@@ -1,0 +1,55 @@
+[3.187s] Invoking command in '/home/zuki/GalacticRacing/sim_ws/src/particle_filter': PYTHONPATH=/home/zuki/GalacticRacing/build/particle_filter/prefix_override:/home/zuki/GalacticRacing/install/particle_filter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/particle_filter build --build-base /home/zuki/GalacticRacing/build/particle_filter/build install --record /home/zuki/GalacticRacing/build/particle_filter/install.log --install-scripts $base/lib/particle_filter --single-version-externally-managed
+[3.607s] running egg_info
+[3.607s] creating ../../../build/particle_filter/particle_filter.egg-info
+[3.608s] writing ../../../build/particle_filter/particle_filter.egg-info/PKG-INFO
+[3.608s] writing dependency_links to ../../../build/particle_filter/particle_filter.egg-info/dependency_links.txt
+[3.608s] writing entry points to ../../../build/particle_filter/particle_filter.egg-info/entry_points.txt
+[3.608s] writing requirements to ../../../build/particle_filter/particle_filter.egg-info/requires.txt
+[3.608s] writing top-level names to ../../../build/particle_filter/particle_filter.egg-info/top_level.txt
+[3.608s] writing manifest file '../../../build/particle_filter/particle_filter.egg-info/SOURCES.txt'
+[3.608s] reading manifest file '../../../build/particle_filter/particle_filter.egg-info/SOURCES.txt'
+[3.612s] writing manifest file '../../../build/particle_filter/particle_filter.egg-info/SOURCES.txt'
+[3.614s] running build
+[3.620s] running build_py
+[3.620s] creating /home/zuki/GalacticRacing/build/particle_filter/build
+[3.620s] creating /home/zuki/GalacticRacing/build/particle_filter/build/lib
+[3.620s] creating /home/zuki/GalacticRacing/build/particle_filter/build/lib/particle_filter
+[3.620s] copying particle_filter/utils.py -> /home/zuki/GalacticRacing/build/particle_filter/build/lib/particle_filter
+[3.620s] copying particle_filter/__init__.py -> /home/zuki/GalacticRacing/build/particle_filter/build/lib/particle_filter
+[3.621s] copying particle_filter/particle_filter.py -> /home/zuki/GalacticRacing/build/particle_filter/build/lib/particle_filter
+[3.621s] running install
+[3.621s] running install_lib
+[3.621s] creating /home/zuki/GalacticRacing/install/particle_filter/lib/python3.8/site-packages/particle_filter
+[3.621s] copying /home/zuki/GalacticRacing/build/particle_filter/build/lib/particle_filter/utils.py -> /home/zuki/GalacticRacing/install/particle_filter/lib/python3.8/site-packages/particle_filter
+[3.621s] copying /home/zuki/GalacticRacing/build/particle_filter/build/lib/particle_filter/__init__.py -> /home/zuki/GalacticRacing/install/particle_filter/lib/python3.8/site-packages/particle_filter
+[3.621s] copying /home/zuki/GalacticRacing/build/particle_filter/build/lib/particle_filter/particle_filter.py -> /home/zuki/GalacticRacing/install/particle_filter/lib/python3.8/site-packages/particle_filter
+[3.621s] byte-compiling /home/zuki/GalacticRacing/install/particle_filter/lib/python3.8/site-packages/particle_filter/utils.py to utils.cpython-38.pyc
+[3.621s] byte-compiling /home/zuki/GalacticRacing/install/particle_filter/lib/python3.8/site-packages/particle_filter/__init__.py to __init__.cpython-38.pyc
+[3.621s] byte-compiling /home/zuki/GalacticRacing/install/particle_filter/lib/python3.8/site-packages/particle_filter/particle_filter.py to particle_filter.cpython-38.pyc
+[3.621s] running install_data
+[3.621s] creating /home/zuki/GalacticRacing/install/particle_filter/share/ament_index
+[3.621s] creating /home/zuki/GalacticRacing/install/particle_filter/share/ament_index/resource_index
+[3.621s] creating /home/zuki/GalacticRacing/install/particle_filter/share/ament_index/resource_index/packages
+[3.621s] copying resource/particle_filter -> /home/zuki/GalacticRacing/install/particle_filter/share/ament_index/resource_index/packages
+[3.621s] copying package.xml -> /home/zuki/GalacticRacing/install/particle_filter/share/particle_filter
+[3.621s] creating /home/zuki/GalacticRacing/install/particle_filter/share/particle_filter/maps
+[3.621s] copying maps/levine.yaml -> /home/zuki/GalacticRacing/install/particle_filter/share/particle_filter/maps
+[3.621s] copying maps/waffle_map.yaml -> /home/zuki/GalacticRacing/install/particle_filter/share/particle_filter/maps
+[3.621s] copying maps/basement_fixed.map.yaml -> /home/zuki/GalacticRacing/install/particle_filter/share/particle_filter/maps
+[3.621s] copying maps/levine_blocked.png -> /home/zuki/GalacticRacing/install/particle_filter/share/particle_filter/maps
+[3.621s] copying maps/basement_fixed.png -> /home/zuki/GalacticRacing/install/particle_filter/share/particle_filter/maps
+[3.621s] copying maps/levine_blocked.yaml -> /home/zuki/GalacticRacing/install/particle_filter/share/particle_filter/maps
+[3.621s] copying maps/waffle_map.pgm -> /home/zuki/GalacticRacing/install/particle_filter/share/particle_filter/maps
+[3.621s] copying maps/this_is_the_map.yaml -> /home/zuki/GalacticRacing/install/particle_filter/share/particle_filter/maps
+[3.621s] copying maps/levine.pgm -> /home/zuki/GalacticRacing/install/particle_filter/share/particle_filter/maps
+[3.621s] copying maps/this_is_the_map.pgm -> /home/zuki/GalacticRacing/install/particle_filter/share/particle_filter/maps
+[3.621s] creating /home/zuki/GalacticRacing/install/particle_filter/share/particle_filter/launch
+[3.621s] copying launch/localize_launch.py -> /home/zuki/GalacticRacing/install/particle_filter/share/particle_filter/launch
+[3.621s] creating /home/zuki/GalacticRacing/install/particle_filter/share/particle_filter/config
+[3.622s] copying config/localize.yaml -> /home/zuki/GalacticRacing/install/particle_filter/share/particle_filter/config
+[3.622s] running install_egg_info
+[3.622s] Copying ../../../build/particle_filter/particle_filter.egg-info to /home/zuki/GalacticRacing/install/particle_filter/lib/python3.8/site-packages/particle_filter-0.2.0-py3.8.egg-info
+[3.622s] running install_scripts
+[3.622s] Installing particle_filter script to /home/zuki/GalacticRacing/install/particle_filter/lib/particle_filter
+[3.622s] writing list of installed files to '/home/zuki/GalacticRacing/build/particle_filter/install.log'
+[4.311s] Invoked command in '/home/zuki/GalacticRacing/sim_ws/src/particle_filter' returned '0': PYTHONPATH=/home/zuki/GalacticRacing/build/particle_filter/prefix_override:/home/zuki/GalacticRacing/install/particle_filter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/particle_filter build --build-base /home/zuki/GalacticRacing/build/particle_filter/build install --record /home/zuki/GalacticRacing/build/particle_filter/install.log --install-scripts $base/lib/particle_filter --single-version-externally-managed

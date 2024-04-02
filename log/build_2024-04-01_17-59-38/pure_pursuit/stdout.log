@@ -1,0 +1,87 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/foxy/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+-- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+-- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)
+-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+-- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+-- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/zuki/GalacticRacing/sim_ws/src/pure_pursuit/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/zuki/GalacticRacing/build/pure_pursuit
+[35m[1mScanning dependencies of target pure_pursuit_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/pure_pursuit_node.dir/src/pure_pursuit_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable pure_pursuit_node[0m
+[100%] Built target pure_pursuit_node
+-- Install configuration: ""
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/lib/pure_pursuit/pure_pursuit_node
+-- Set runtime path of "/home/zuki/GalacticRacing/install/pure_pursuit/lib/pure_pursuit/pure_pursuit_node" to ""
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/environment/pythonpath.sh
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/environment/pythonpath.dsv
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit/__init__.py
+Listing '/home/zuki/GalacticRacing/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit'...
+Compiling '/home/zuki/GalacticRacing/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit/__init__.py'...
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/lib/pure_pursuit/pure_pursuit_node.py
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/lib/pure_pursuit/interactive_node.py
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/ament_index/resource_index/package_run_dependencies/pure_pursuit
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/ament_index/resource_index/parent_prefix_path/pure_pursuit
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/environment/ament_prefix_path.sh
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/environment/ament_prefix_path.dsv
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/environment/path.sh
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/environment/path.dsv
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/local_setup.bash
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/local_setup.sh
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/local_setup.zsh
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/local_setup.dsv
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/package.dsv
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/ament_index/resource_index/packages/pure_pursuit
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/cmake/pure_pursuitConfig.cmake
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/cmake/pure_pursuitConfig-version.cmake
+-- Installing: /home/zuki/GalacticRacing/install/pure_pursuit/share/pure_pursuit/package.xml

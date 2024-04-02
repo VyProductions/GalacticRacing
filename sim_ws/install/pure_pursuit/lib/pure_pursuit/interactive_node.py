@@ -19,7 +19,7 @@ from tf_transformations import *
 server = None
 menu_handler = MenuHandler()
 
-root_dir = "/home/vy/GalacticRacing/sim_ws/src"
+root_dir = "/home/zuki/GalacticRacing/sim_ws/src"
 filename = "levine_blocked"
 
 def makeBox():
