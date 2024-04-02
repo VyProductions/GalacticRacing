@@ -118,7 +118,10 @@ class InteractiveMarkerNode(Node):
         self.markers[feedback.marker_name]["orientation"] = o
         self.markers[feedback.marker_name]["rot"] = euler_from_quaternion([o.x, o.y, o.z, o.w])[2]
         
-        print(f"{feedback.marker_name} is now at: ({p.x}, {p.y}, {p.z}) with orientation: ({o.x}, {o.y}, {o.z}, {o.w})")
+        # print(f"{feedback.marker_name} is now at: ({p.x}, {p.y}, {p.z}) with orientation: ({o.x}, {o.y}, {o.z}, {o.w})")
+
+        if feedback.control_name == "Marker Options_u2":
+            self.renderPath()
 
     # marker options
 
@@ -147,6 +150,8 @@ class InteractiveMarkerNode(Node):
 
         server.applyChanges()
 
+        self.renderPath()
+
     def details(self, marker):
         pos = self.markers[marker.marker_name]["position"]
 
@@ -161,6 +166,8 @@ class InteractiveMarkerNode(Node):
             del self.markers[marker.marker_name]
             server.erase(marker.marker_name)
             server.applyChanges()
+
+            self.renderPath()
     
     def loadMarkers(self, marker):
         filename = input("Markers input filename? ")
@@ -201,6 +208,8 @@ class InteractiveMarkerNode(Node):
         server.applyChanges()
 
         markerCSV.close()
+
+        self.renderPath()
     
     def saveMarkers(self, marker):
         filename = input("Markers output filename? ")
@@ -239,6 +248,8 @@ class InteractiveMarkerNode(Node):
             server.applyChanges()
 
             print(f"Aligned {marker.marker_name} to the x-position of {marker_name}.")
+
+            self.renderPath()
             
     def alignY(self, marker):
         marker_name = input("Other marker's name: ")
@@ -256,6 +267,8 @@ class InteractiveMarkerNode(Node):
             server.applyChanges()
 
             print(f"Aligned {marker.marker_name} to the y-position of {marker_name}.")
+
+            self.renderPath()
 
     def rotationAlignment(self, marker):
         rot = self.markers[marker.marker_name]["rot"]
@@ -291,6 +304,8 @@ class InteractiveMarkerNode(Node):
             if f_speed >= 0.5 and f_speed <= 20.0:
                 self.markers[marker.marker_name]["speed"] = f_speed
                 print(f"  Speed set to {self.markers[marker.marker_name]['speed']} m/s.")
+
+                self.renderPath()
         except ValueError:
             print("Invalid input. Try again.")
     
@@ -303,6 +318,8 @@ class InteractiveMarkerNode(Node):
             if f_lookahead >= 0.2 and f_lookahead <= 10.0:
                 self.markers[marker.marker_name]["lookahead"] = f_lookahead
                 print(f"  Lookahead set to {self.markers[marker.marker_name]['lookahead']} m.")
+
+                self.renderPath()
         except ValueError:
             print("Invalid input. Try again.")
 
@@ -331,62 +348,63 @@ class InteractiveMarkerNode(Node):
         for i in range(1, num_pts):
             cumulative_dists[i] = cumulative_dists[i-1] + ((x[i] - x[i-1])**2 + (y[i] - y[i-1])**2)**0.5
         
-        norm_dists = [dist / cumulative_dists[-1] for dist in cumulative_dists]
+        if cumulative_dists[-1] > 0.0:
+            norm_dists = [dist / cumulative_dists[-1] for dist in cumulative_dists]
 
-        x_interp = CubicSpline(norm_dists, x, bc_type="natural")
-        y_interp = CubicSpline(norm_dists, y, bc_type="natural")
-        speed_interp = interp1d(norm_dists, speed)
-        lookahead_interp = interp1d(norm_dists, lookahead)
+            x_interp = CubicSpline(norm_dists, x, bc_type="natural")
+            y_interp = CubicSpline(norm_dists, y, bc_type="natural")
+            speed_interp = interp1d(norm_dists, speed)
+            lookahead_interp = interp1d(norm_dists, lookahead)
 
-        t = np.linspace(cumulative_dists[1] / cumulative_dists[-1], cumulative_dists[-1] / cumulative_dists[-1], 600)
+            t = np.linspace(cumulative_dists[1] / cumulative_dists[-1], cumulative_dists[-1] / cumulative_dists[-1], int(cumulative_dists[-1] * 10))
 
-        self.path = []
-        markers = MarkerArray()
+            self.path = []
+            markers = MarkerArray()
 
-        j = 0
+            j = 0
 
-        for _, i in enumerate(t):
-            marker = Marker()
+            for _, i in enumerate(t):
+                marker = Marker()
 
-            marker.header.frame_id = "map"
-            marker.header.stamp = self.get_clock().now().to_msg()
-            marker.ns = "ns_interpmarkers"
+                marker.header.frame_id = "map"
+                marker.header.stamp = self.get_clock().now().to_msg()
+                marker.ns = "ns_interpmarkers"
 
-            marker.id = j
-            marker.type = 1
-            marker.action = 0
+                marker.id = j
+                marker.type = 1
+                marker.action = 0
 
-            marker.pose.position.x = float(x_interp(i))
-            marker.pose.position.y = float(y_interp(i))
-            marker.pose.position.z = 0.2
+                marker.pose.position.x = float(x_interp(i))
+                marker.pose.position.y = float(y_interp(i))
+                marker.pose.position.z = 0.2
 
-            marker.pose.orientation.x = 0.0
-            marker.pose.orientation.y = 0.0
-            marker.pose.orientation.z = 0.0
-            marker.pose.orientation.w = 1.0
+                marker.pose.orientation.x = 0.0
+                marker.pose.orientation.y = 0.0
+                marker.pose.orientation.z = 0.0
+                marker.pose.orientation.w = 1.0
 
-            marker.scale.x = 0.1
-            marker.scale.y = 0.1
-            marker.scale.z = 0.1
+                marker.scale.x = 0.1
+                marker.scale.y = 0.1
+                marker.scale.z = 0.1
 
-            marker.color.r = 1.0
-            marker.color.g = 0.0
-            marker.color.b = 0.0
-            marker.color.a = 1.0
+                marker.color.r = 1.0
+                marker.color.g = 0.0
+                marker.color.b = 0.0
+                marker.color.a = 1.0
 
-            self.path.append({
-                'x': float(x_interp(i)),
-                'y': float(y_interp(i)),
-                'rot': 0.0,
-                'speed': float(speed_interp(i)),
-                'lookahead': float(lookahead_interp(i))
-            })
+                self.path.append({
+                    'x': float(x_interp(i)),
+                    'y': float(y_interp(i)),
+                    'rot': 0.0,
+                    'speed': float(speed_interp(i)),
+                    'lookahead': float(lookahead_interp(i))
+                })
 
-            markers.markers.append(marker)
+                markers.markers.append(marker)
 
-            j += 1
+                j += 1
 
-        self.markers_pub.publish(markers)
+            self.markers_pub.publish(markers)
 
     def deletePath(self, marker):
         self.path = []
@@ -453,9 +471,9 @@ if __name__ == '__main__':
     menu_handler.insert("Set Lookahead", parent=waypoint_menu_handle, callback=interactive_marker_node.setLookahead)
 
     path_menu_handle = menu_handler.insert("Path")
-    menu_handler.insert("Render Path", parent=path_menu_handle, callback=interactive_marker_node.renderPath)
-    menu_handler.insert("Delete Path", parent=path_menu_handle, callback=interactive_marker_node.deletePath)
-    menu_handler.insert("Load Path", parent=path_menu_handle, callback=interactive_marker_node.loadPath)
+    # menu_handler.insert("Render Path", parent=path_menu_handle, callback=interactive_marker_node.renderPath) # rendering path on each change now
+    # menu_handler.insert("Delete Path", parent=path_menu_handle, callback=interactive_marker_node.deletePath)
+    # menu_handler.insert("Load Path", parent=path_menu_handle, callback=interactive_marker_node.loadPath)
     menu_handler.insert("Save Path", parent=path_menu_handle, callback=interactive_marker_node.savePath)
 
     interactive_marker_node.newMarker()

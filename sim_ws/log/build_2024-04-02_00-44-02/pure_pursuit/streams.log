@@ -1,0 +1,30 @@
+[0.397s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/pure_pursuit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/pure_pursuit -- -j4 -l4
+[0.941s] [100%] Built target pure_pursuit_node
+[0.971s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/pure_pursuit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/pure_pursuit -- -j4 -l4
+[1.238s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/pure_pursuit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/pure_pursuit
+[1.264s] -- Install configuration: ""
+[1.266s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/lib/pure_pursuit/pure_pursuit_node
+[1.266s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/environment/pythonpath.sh
+[1.266s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/environment/pythonpath.dsv
+[1.266s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit
+[1.267s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit/__init__.py
+[1.344s] Listing '/home/vy/GalacticRacing/sim_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit'...
+[1.344s] Compiling '/home/vy/GalacticRacing/sim_ws/install/pure_pursuit/lib/python3.8/site-packages/pure_pursuit/__init__.py'...
+[1.348s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/lib/pure_pursuit/pure_pursuit_node.py
+[1.348s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/lib/pure_pursuit/interactive_node.py
+[1.350s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/ament_index/resource_index/package_run_dependencies/pure_pursuit
+[1.350s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/ament_index/resource_index/parent_prefix_path/pure_pursuit
+[1.350s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/environment/ament_prefix_path.sh
+[1.350s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/environment/ament_prefix_path.dsv
+[1.350s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/environment/path.sh
+[1.350s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/environment/path.dsv
+[1.350s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/local_setup.bash
+[1.350s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/local_setup.sh
+[1.350s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/local_setup.zsh
+[1.350s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/local_setup.dsv
+[1.350s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/package.dsv
+[1.356s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/ament_index/resource_index/packages/pure_pursuit
+[1.356s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/cmake/pure_pursuitConfig.cmake
+[1.356s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/cmake/pure_pursuitConfig-version.cmake
+[1.356s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/pure_pursuit/share/pure_pursuit/package.xml
+[1.360s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/pure_pursuit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/pure_pursuit
