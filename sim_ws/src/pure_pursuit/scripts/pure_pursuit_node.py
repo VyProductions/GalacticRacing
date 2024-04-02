@@ -280,7 +280,7 @@ class PurePursuit(Node):
 
     # check if we are too close to a wall
     def collision_imminent(self, scan_msg):
-        DANGER_THRESH : float = 0.3
+        DANGER_THRESH : float = 0.25
         safety_scan : LaserScan = scan_msg
 
         # check if any potential steering ponts are in danger
