@@ -13,6 +13,8 @@
 /home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/maps/basement_fixed.map.yaml
 /home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/maps/levine_blocked.png
 /home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/maps/this_is_the_map.pgm
+/home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/maps/AEB_flex.yaml
+/home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/maps/AEB_flex.pgm
 /home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/maps/basement_fixed.png
 /home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/maps/waffle_map.pgm
 /home/vy/GalacticRacing/sim_ws/install/particle_filter/share/particle_filter/maps/this_is_the_map.yaml
