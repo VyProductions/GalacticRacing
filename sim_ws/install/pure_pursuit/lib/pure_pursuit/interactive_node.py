@@ -36,11 +36,15 @@ def makeBox():
 
     return marker
 
-def createMarker(position, orientation, id):
+def createMarker(position, id):
     int_marker = InteractiveMarker()
     int_marker.header.frame_id = "map"
     int_marker.pose.position = position
-    int_marker.pose.orientation = orientation
+    int_marker.pose.orientation.x = 0.0
+    int_marker.pose.orientation.y = 1.0
+    int_marker.pose.orientation.z = 0.0
+    int_marker.pose.orientation.w = 1.0
+    # int_marker.pose.orientation = orientation
     int_marker.scale = 0.45
 
     int_marker.name = "Waypoint_" + str(id)
@@ -108,18 +112,18 @@ class InteractiveMarkerNode(Node):
     # marker options
 
     def newMarker(self, marker=None):
-        rot = 0.0 if marker==None else self.markers[marker.marker_name]["rot"]
+        # rot = 0.0 if marker==None else self.markers[marker.marker_name]["rot"]
 
         int_marker = createMarker(
             self.position if marker == None else self.markers[marker.marker_name]["position"],
-            self.orientation if marker == None else self.markers[marker.marker_name]["orientation"],
+            # self.orientation if marker == None else self.markers[marker.marker_name]["orientation"],
             self.marker_count
         )
 
         self.markers[int_marker.name] = {
             "position": int_marker.pose.position,
-            "orientation": int_marker.pose.orientation,
-            "rot": rot,
+            # "orientation": int_marker.pose.orientation,
+            # "rot": rot,
             "speed": 1.0 if marker == None else self.markers[marker.marker_name]["speed"],
             "lookahead": 1.0 if marker == None else self.markers[marker.marker_name]["lookahead"]
         }
@@ -139,7 +143,7 @@ class InteractiveMarkerNode(Node):
 
         print(f"Details: {marker.marker_name}")
         print("  Position:  (%.2f, %.2f)" % (pos.x, pos.y))
-        print(f"  Rotation:  {math.degrees(self.markers[marker.marker_name]['rot'])}")
+        # print(f"  Rotation:  {math.degrees(self.markers[marker.marker_name]['rot'])}")
         print(f"  Speed:     {self.markers[marker.marker_name]['speed']} m/s")
         print(f"  Lookahead: {self.markers[marker.marker_name]['lookahead']} m")
 
@@ -169,15 +173,15 @@ class InteractiveMarkerNode(Node):
         for row in reader:
             self.markers["Waypoint_" + str(self.marker_count)] = {
                 "position": Point(x=float(row[0]), y=float(row[1]), z=0.3),
-                "orientation": Quaternion(x=float(row[2]), y=float(row[3]), z=float(row[4]), w=float(row[5])),
-                "rot": float(row[6]),
-                "speed": float(row[7]),
-                "lookahead": float(row[8])
+                # "orientation": Quaternion(x=float(row[2]), y=float(row[3]), z=float(row[4]), w=float(row[5])),
+                # "rot": float(row[6]),
+                "speed": float(row[2]),
+                "lookahead": float(row[3])
             }
 
             int_marker = createMarker(
                 self.markers["Waypoint_" + str(self.marker_count)]["position"],
-                self.markers["Waypoint_" + str(self.marker_count)]["orientation"],
+                # self.markers["Waypoint_" + str(self.marker_count)]["orientation"],
                 self.marker_count
             )
 
@@ -202,12 +206,13 @@ class InteractiveMarkerNode(Node):
 
         for name, marker in self.markers.items():
             pos = marker["position"]
-            orient = marker["orientation"]
+            # orient = marker["orientation"]
 
             writer.writerow([
                 pos.x, pos.y,
-                orient.x, orient.y, orient.z, orient.w,
-                marker["rot"], marker["speed"], marker["lookahead"]
+                # orient.x, orient.y, orient.z, orient.w,
+                # marker["rot"],
+                marker["speed"], marker["lookahead"]
             ])
 
         markerCSV.close()
@@ -224,7 +229,7 @@ class InteractiveMarkerNode(Node):
             pose.position.x = self.markers[marker.marker_name]["position"].x
             pose.position.y = self.markers[marker.marker_name]["position"].y
             pose.position.z = self.markers[marker.marker_name]["position"].z
-            pose.orientation = self.markers[marker.marker_name]["orientation"]
+            # pose.orientation = self.markers[marker.marker_name]["orientation"]
 
             server.setPose(marker.marker_name, pose=pose)
             server.applyChanges()
@@ -243,7 +248,7 @@ class InteractiveMarkerNode(Node):
             pose.position.x = self.markers[marker.marker_name]["position"].x
             pose.position.y = self.markers[marker.marker_name]["position"].y
             pose.position.z = self.markers[marker.marker_name]["position"].z
-            pose.orientation = self.markers[marker.marker_name]["orientation"]
+            # pose.orientation = self.markers[marker.marker_name]["orientation"]
 
             server.setPose(marker.marker_name, pose=pose)
             server.applyChanges()
@@ -377,7 +382,7 @@ class InteractiveMarkerNode(Node):
                 self.path.append({
                     'x': float(x_interp(i)),
                     'y': float(y_interp(i)),
-                    'rot': 0.0,
+                    # 'rot': 0.0,
                     'speed': float(speed_interp(i)),
                     'lookahead': float(lookahead_interp(i))
                 })
@@ -411,9 +416,9 @@ class InteractiveMarkerNode(Node):
             self.path.append({
                 "x": float(row[0]),
                 "y": float(row[1]),
-                "rot": float(row[2]),
-                "speed": float(row[3]),
-                "lookahead": float(row[4])
+                # "rot": float(row[2]),
+                "speed": float(row[2]),
+                "lookahead": float(row[3])
             })
             
         pathCSV.close()
@@ -426,7 +431,10 @@ class InteractiveMarkerNode(Node):
         writer = csv.writer(pathCSV, delimiter=',')
 
         for waypoint in self.path:
-            writer.writerow([waypoint["x"], waypoint["y"], waypoint["rot"], waypoint["speed"], waypoint['lookahead']])
+            writer.writerow([
+                waypoint["x"], waypoint["y"],
+                # waypoint["rot"],
+                waypoint["speed"], waypoint['lookahead']])
 
         pathCSV.close()
 
@@ -446,7 +454,7 @@ if __name__ == '__main__':
     alignment_menu_handle = menu_handler.insert("Alignment")
     menu_handler.insert("Align X", parent=alignment_menu_handle, callback=interactive_marker_node.alignX)
     menu_handler.insert("Align Y", parent=alignment_menu_handle, callback=interactive_marker_node.alignY)
-    menu_handler.insert("Rotation Alignment", parent=alignment_menu_handle, callback=interactive_marker_node.rotationAlignment)
+    # menu_handler.insert("Rotation Alignment", parent=alignment_menu_handle, callback=interactive_marker_node.rotationAlignment)
 
     waypoint_menu_handle = menu_handler.insert("Waypoints")
     menu_handler.insert("Set Speed", parent=waypoint_menu_handle, callback=interactive_marker_node.setSpeed)

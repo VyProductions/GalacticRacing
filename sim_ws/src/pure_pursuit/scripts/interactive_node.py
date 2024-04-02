@@ -36,11 +36,15 @@ def makeBox():
 
     return marker
 
-def createMarker(position, orientation, id):
+def createMarker(position, id):
     int_marker = InteractiveMarker()
     int_marker.header.frame_id = "map"
     int_marker.pose.position = position
-    int_marker.pose.orientation = orientation
+    int_marker.pose.orientation.x = 0.0
+    int_marker.pose.orientation.y = 1.0
+    int_marker.pose.orientation.z = 0.0
+    int_marker.pose.orientation.w = 1.0
+    # int_marker.pose.orientation = orientation
     int_marker.scale = 0.45
 
     int_marker.name = "Waypoint_" + str(id)
@@ -177,7 +181,7 @@ class InteractiveMarkerNode(Node):
 
             int_marker = createMarker(
                 self.markers["Waypoint_" + str(self.marker_count)]["position"],
-                self.markers["Waypoint_" + str(self.marker_count)]["orientation"],
+                # self.markers["Waypoint_" + str(self.marker_count)]["orientation"],
                 self.marker_count
             )
 
@@ -202,7 +206,7 @@ class InteractiveMarkerNode(Node):
 
         for name, marker in self.markers.items():
             pos = marker["position"]
-            orient = marker["orientation"]
+            # orient = marker["orientation"]
 
             writer.writerow([
                 pos.x, pos.y,
@@ -225,7 +229,7 @@ class InteractiveMarkerNode(Node):
             pose.position.x = self.markers[marker.marker_name]["position"].x
             pose.position.y = self.markers[marker.marker_name]["position"].y
             pose.position.z = self.markers[marker.marker_name]["position"].z
-            pose.orientation = self.markers[marker.marker_name]["orientation"]
+            # pose.orientation = self.markers[marker.marker_name]["orientation"]
 
             server.setPose(marker.marker_name, pose=pose)
             server.applyChanges()
@@ -244,7 +248,7 @@ class InteractiveMarkerNode(Node):
             pose.position.x = self.markers[marker.marker_name]["position"].x
             pose.position.y = self.markers[marker.marker_name]["position"].y
             pose.position.z = self.markers[marker.marker_name]["position"].z
-            pose.orientation = self.markers[marker.marker_name]["orientation"]
+            # pose.orientation = self.markers[marker.marker_name]["orientation"]
 
             server.setPose(marker.marker_name, pose=pose)
             server.applyChanges()
