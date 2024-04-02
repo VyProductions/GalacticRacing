@@ -197,9 +197,6 @@ class InteractiveMarkerNode(Node):
             server.insert(int_marker, feedback_callback=self.processFeedback)
 
             menu_handler.apply(server, int_marker.name)
-        
-        del self.markers["Waypoint_" + str(self.marker_count - 1)]
-        server.erase("Waypoint_" + str(self.marker_count - 1))
 
         server.applyChanges()
 
@@ -221,16 +218,6 @@ class InteractiveMarkerNode(Node):
                 orient.x, orient.y, orient.z, orient.w,
                 marker["rot"], marker["speed"], marker["lookahead"]
             ])
-
-        _marker = self.markers["Waypoint_0"]
-        pos = _marker["position"]
-        orient = _marker["orientation"]
-
-        writer.writerow([
-            pos.x, pos.y,
-            orient.x, orient.y, orient.z, orient.w,
-            _marker["rot"], _marker["speed"], _marker["lookahead"]
-        ])
 
         markerCSV.close()
 
@@ -324,30 +311,34 @@ class InteractiveMarkerNode(Node):
     def renderPath(self, marker=None):
         self.deletePath(marker)
 
-        x = np.array([marker["position"].x for name, marker in self.markers.items()] + [self.markers["Waypoint_0"]["position"].x])
-        y = np.array([marker["position"].y for name, marker in self.markers.items()] + [self.markers["Waypoint_0"]["position"].y])
-        speed = np.array([marker['speed'] for name, marker in self.markers.items()] + [self.markers["Waypoint_0"]["speed"]])
-        lookahead = np.array([marker['lookahead'] for name, marker in self.markers.items()] + [self.markers["Waypoint_0"]["lookahead"]])
+        x = np.array([marker["position"].x for name, marker in self.markers.items()])
+        y = np.array([marker["position"].y for name, marker in self.markers.items()])
+        speed = np.array([marker['speed'] for name, marker in self.markers.items()])
+        lookahead = np.array([marker['lookahead'] for name, marker in self.markers.items()])
 
-        num_pts = len(self.markers)
+        x = np.concatenate(([x[-1]], x, [x[0]]))
+        y = np.concatenate(([y[-1]], y, [y[0]]))
+        speed = np.concatenate(([speed[-1]], speed, [speed[0]]))
+        lookahead = np.concatenate(([lookahead[-1]], lookahead, [lookahead[0]]))
 
-        cumulative_sum = 0.0
+        # find total linear arc length along path at each point
+        # distance at current point is distance of previous point plus euclidean distance between previous point and current point
+
+        num_pts = len(x)
+
         cumulative_dists = [0.0] * num_pts
 
-        for i in range(num_pts):
-            cumulative_sum += ((x[(i+1) % num_pts] - x[i])**2 + (y[(i+1) % num_pts] - y[i])**2)**0.5
-            cumulative_dists[i] = cumulative_sum
-
-        cumulative_dists = [0.0] + cumulative_dists
-
-        norm_dists = [value / cumulative_dists[-1] for value in cumulative_dists]
+        for i in range(1, num_pts):
+            cumulative_dists[i] = cumulative_dists[i-1] + ((x[i] - x[i-1])**2 + (y[i] - y[i-1])**2)**0.5
+        
+        norm_dists = [dist / cumulative_dists[-1] for dist in cumulative_dists]
 
         x_interp = CubicSpline(norm_dists, x, bc_type="natural")
         y_interp = CubicSpline(norm_dists, y, bc_type="natural")
         speed_interp = interp1d(norm_dists, speed)
         lookahead_interp = interp1d(norm_dists, lookahead)
 
-        t = np.linspace(0, 1, 300)
+        t = np.linspace(cumulative_dists[1] / cumulative_dists[-1], cumulative_dists[-1] / cumulative_dists[-1], 600)
 
         self.path = []
         markers = MarkerArray()

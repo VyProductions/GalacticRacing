@@ -1,4 +1,15 @@
 #!/bin/bash
 
-user=$(echo $USER)
-cd /home/$user/GalacticRacing/sim_ws/src/f1tenth_gym_ros && colcon build && docker compose up
+gnome-terminal --tab -- bash -c 'rviz2 -d /home/vy/.rviz2/this_is_the_way.rviz'
+
+sleep 3
+
+gnome-terminal --tab -- bash -c 'ros2 launch f1tenth_gym_ros gym_bridge_launch.py'
+
+sleep 3
+
+gnome-terminal --tab -- bash -c 'ros2 launch particle_filter localize_launch.py'
+
+gnome-terminal --tab -- bash -c 'ros2 run pure_pursuit interactive_node.py'
+
+gnome-terminal --tab -- bash -c 'ros2 run pure_pursuit pure_pursuit_node.py'

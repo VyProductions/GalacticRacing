@@ -58,10 +58,6 @@ class PurePursuit(Node):
             MarkerArray, "/visualization_marker_array", 10
         )
 
-        self.tracker_pub = self.create_publisher(
-            Marker, "/path_tracker", 10
-        )
-
         self.drive_pub = self.create_publisher(
             AckermannDriveStamped, "/drive", 10
         )
@@ -131,38 +127,8 @@ class PurePursuit(Node):
                 break
 
             idx = (idx + 1) % len(self.path)
-        
-        # mark the target point
-        target_marker = Marker()
-        target_marker.header.frame_id = "map"
-        target_marker.header.stamp = self.get_clock().now().to_msg()
-        target_marker.ns = "ns_tracker"
 
-        target_marker.id = idx
-        target_marker.type = 1
-        target_marker.action = 0
-
-        target_marker.pose.position.x = max_pt['x']
-        target_marker.pose.position.y = max_pt['y']
-        target_marker.pose.position.z = 0.3
-
-        target_marker.pose.orientation.x = 0.0
-        target_marker.pose.orientation.y = 0.0
-        target_marker.pose.orientation.z = 0.0
-        target_marker.pose.orientation.w = 1.0
-
-        target_marker.scale.x = 0.15
-        target_marker.scale.y = 0.15
-        target_marker.scale.z = 0.15
-
-        target_marker.color.r = 0.0
-        target_marker.color.g = 0.0
-        target_marker.color.b = 1.0
-        target_marker.color.a = 1.0
-
-        self.tracker_pub.publish(target_marker)
-
-        # transform target point into car's frame of reference
+        # acquire angular difference between car's orientation and orientation to point from car
         quaternion = (pose_msg.pose.orientation.x, pose_msg.pose.orientation.y, pose_msg.pose.orientation.z, pose_msg.pose.orientation.w)
         travel_angle = euler_from_quaternion(quaternion)[2]
 
@@ -211,7 +177,7 @@ class PurePursuit(Node):
 
             marker.id = j
             marker.type = 1
-            marker.action = 0
+            marker.action = Marker.ADD
 
             marker.pose.position.x = waypoint["x"]
             marker.pose.position.y = waypoint["y"]
