@@ -11,7 +11,7 @@ sleep 5
 gnome-terminal --tab -- bash -c 'ros2 launch particle_filter localize_launch.py'
 
 gnome-terminal --tab -- bash -c 'ros2 run pure_pursuit interactive_node.py
-                                exec bash'
+                                exec zsh'
 
 gnome-terminal --tab -- bash -c 'ros2 run pure_pursuit pure_pursuit_node.py
-                                exec bash'
+                                exec zsh'

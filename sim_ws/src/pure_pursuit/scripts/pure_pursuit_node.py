@@ -16,6 +16,7 @@ from ackermann_msgs.msg import AckermannDriveStamped, AckermannDrive
 from visualization_msgs.msg import Marker, MarkerArray
 from tf_transformations import quaternion_from_euler, euler_from_quaternion
 
+# root_dir = "/home/f1/team_galactic/nodes_ws"
 root_dir = "/home/vy/GalacticRacing/sim_ws/src"
 
 def point_curavture(x, y, window_size):
@@ -234,9 +235,9 @@ class PurePursuit(Node):
             self.path.append({
                 "x": float(row[0]),
                 "y": float(row[1]),
-                "rot": float(row[2]),
-                "speed": float(row[3]),
-                "lookahead": float(row[4])
+                # "rot": float(row[2]),
+                "speed": float(row[2]),
+                "lookahead": float(row[3])
             })
             
         pathCSV.close()

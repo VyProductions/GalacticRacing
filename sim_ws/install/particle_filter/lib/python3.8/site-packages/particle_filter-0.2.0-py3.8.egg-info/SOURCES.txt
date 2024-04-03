@@ -10,8 +10,14 @@ setup.py
 ../../build/particle_filter/particle_filter.egg-info/zip-safe
 config/localize.yaml
 launch/localize_launch.py
+maps/AEB_4_2.pgm
+maps/AEB_4_2.yaml
 maps/AEB_flex.pgm
 maps/AEB_flex.yaml
+maps/AEB_flexito.pgm
+maps/AEB_flexito.yaml
+maps/aeb_lab_oh.pgm
+maps/aeb_lab_oh.yaml
 maps/basement_fixed.map.yaml
 maps/basement_fixed.png
 maps/levine.pgm
