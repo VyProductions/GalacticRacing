@@ -1,4 +1,4 @@
-#!/usr/bin/evns python3
+#!/usr/bin/env python3
 
 """
 This file contains the class definition for tree nodes and RRT
@@ -18,28 +18,31 @@ from geometry_msgs.msg import Point
 from nav_msgs.msg import Odometry
 from ackermann_msgs.msg import AckermannDriveStamped, AckermannDrive
 from nav_msgs.msg import OccupancyGrid
+from visualization_msgs.msg import *
 
 # TODO: import as you need
 
 # class def for tree nodes
 # It's up to you if you want to use this
-class Node(object):
-    def __init__(self):
-        self.x = None
-        self.y = None
-        self.parent = None
-        self.cost = None # only used in RRT*
-        self.is_root = False
+# class Node(object):
+#     def __init__(self):
+#         self.x = None
+#         self.y = None
+#         self.parent = None
+#         self.cost = None # only used in RRT*
+#         self.is_root = False
 
 # class def for RRT
 class RRT(Node):
     def __init__(self):
+        super().__init__('rrt_node')
+        
         # topics, not saved as attributes
         # TODO: grab topics from param file, you'll need to change the yaml file
-        pose_topic = "ego_racecar/odom"
+        pose_topic = "/ego_racecar/odom"
         scan_topic = "/scan"
         drive_topic = "/drive"
-        occ_topic = "/local_occ"
+        occ_topic = "/grid_view"
 
         # you could add your own parameters to the rrt_params.yaml file,
         # and get them here as class attributes as shown above.
@@ -61,9 +64,28 @@ class RRT(Node):
 
         # class attributes
         # TODO: maybe create your occupancy grid here
-        self.occ_pub = self.create_publisher(
-            OccupancyGrid, occ_topic, 1
+        self.markers_pub = self.create_publisher(
+            MarkerArray, occ_topic, 10
         )
+        
+        self.width = 10
+        self.height = 10
+        self.occ_grid = [[0.0] * self.width] * self.height
+        self.position = {'x': 0.0, 'y': 0.0}
+
+    def clearMarkers(self):
+        markers = MarkerArray()
+        marker = Marker()
+        
+        marker.header.frame_id = "map"
+        marker.header.stamp = self.get_clock().now().to_msg()
+        marker.ns = "ns_occmarkers"
+
+        marker.action = Marker.DELETEALL
+        
+        markers.markers.append(marker)
+        
+        self.markers_pub.publish(markers)
 
     def scan_callback(self, scan_msg):
         """
@@ -75,24 +97,50 @@ class RRT(Node):
 
         """
         
-        occMsg = OccupancyGrid()
+        # render stuff around the car
+        # self.clearMarkers()
+
+        markers = MarkerArray()
         
-        occMsg.header.frame_id = "map"
-        occMsg.header.stamp = self.get_clock().now().to_msg()
+        rad = 1.5
+        j = 0
         
-        occMsg.info.resolution = 0.05
-        occMsg.info.width = 10
-        occMsg.info.height = 10
-        
-        occMsg.info.origin.position.x = -51.224998
-        occMsg.info.origin.position.y = -51.224998
-        occMsg.info.origin.position.z = 0.0
-        occMsg.info.origin.orientation.x = 0.0
-        occMsg.info.origin.orientation.y = 0.0
-        occMsg.info.origin.orientation.z = 0.0
-        occMsg.info.origin.orientation.w = 1.0
-        
-        self.occ_pub.publish(occMsg)
+        for i in np.linspace(0.0, 2 * np.pi, 10):
+            x_offs, y_offs = rad * np.cos(i), rad * np.sin(i)
+            
+            marker = Marker()
+            
+            marker.header.frame_id = "map"
+            marker.header.stamp = self.get_clock().now().to_msg()
+            marker.ns = "ns_occmarkers"
+
+            marker.id = j
+            marker.type = Marker.CUBE
+            marker.action = Marker.ADD
+
+            marker.pose.position.x = round((self.position['x'] + x_offs) / 0.05) * 0.05
+            marker.pose.position.y = round((self.position['y'] + y_offs) / 0.05) * 0.05
+            marker.pose.position.z = 0.0
+
+            marker.pose.orientation.x = 0.0
+            marker.pose.orientation.y = 0.0
+            marker.pose.orientation.z = 0.0
+            marker.pose.orientation.w = 1.0
+
+            marker.scale.x = 0.05
+            marker.scale.y = 0.05
+            marker.scale.z = 0.05
+
+            marker.color.r = 1.0
+            marker.color.g = 0.0
+            marker.color.b = 0.0
+            marker.color.a = 1.0
+            
+            markers.markers.append(marker)
+
+            j += 1
+
+        self.markers_pub.publish(markers)
 
     def pose_callback(self, pose_msg):
         """
@@ -104,8 +152,10 @@ class RRT(Node):
         Returns:
 
         """
-
-        return None
+        
+        print("new pose")
+        
+        self.position = {'x': pose_msg.pose.position.x, 'y': pose_msg.pose.position.y}
 
     def sample(self):
         """
