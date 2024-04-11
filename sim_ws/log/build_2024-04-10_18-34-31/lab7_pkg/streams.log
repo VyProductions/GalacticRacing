@@ -1,0 +1,160 @@
+[0.221s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/lab7_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/lab7_pkg -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/lab7_pkg
+[0.504s] -- The C compiler identification is GNU 9.4.0
+[0.504s] -- The CXX compiler identification is GNU 9.4.0
+[0.504s] -- Check for working C compiler: /usr/bin/cc
+[0.521s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.522s] -- Detecting C compiler ABI info
+[0.592s] -- Detecting C compiler ABI info - done
+[0.615s] -- Detecting C compile features
+[0.615s] -- Detecting C compile features - done
+[0.616s] -- Check for working CXX compiler: /usr/bin/c++
+[0.687s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.689s] -- Detecting CXX compiler ABI info
+[0.763s] -- Detecting CXX compiler ABI info - done
+[0.772s] -- Detecting CXX compile features
+[0.772s] -- Detecting CXX compile features - done
+[0.775s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.799s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.799s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.981s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.042s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.046s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.131s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.154s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.245s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.301s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.303s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.303s] -- Looking for pthread.h
+[1.373s] -- Looking for pthread.h - found
+[1.373s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.433s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.433s] -- Looking for pthread_create in pthreads
+[1.477s] -- Looking for pthread_create in pthreads - not found
+[1.477s] -- Looking for pthread_create in pthread
+[1.530s] -- Looking for pthread_create in pthread - found
+[1.531s] -- Found Threads: TRUE  
+[1.695s] -- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+[1.697s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.723s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[1.783s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)
+[1.812s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.873s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[1.935s] -- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+[2.248s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.310s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.311s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.311s] -- Configured cppcheck include dirs: /home/vy/GalacticRacing/sim_ws/src/lab7_pkg/include
+[2.311s] -- Configured cppcheck exclude dirs and/or files: 
+[2.312s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.312s] -- Configured cpplint exclude dirs and/or files: 
+[2.312s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.313s] -- Added test 'lint_cmake' to check CMake code style
+[2.313s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[2.314s] -- Added test 'uncrustify' to check C / C++ code style
+[2.314s] -- Configured uncrustify additional arguments: 
+[2.315s] -- Added test 'xmllint' to check XML markup files
+[2.318s] -- Configuring done
+[2.328s] -- Generating done
+[2.329s] -- Build files have been written to: /home/vy/GalacticRacing/sim_ws/build/lab7_pkg
+[2.337s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/lab7_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake /home/vy/GalacticRacing/sim_ws/src/lab7_pkg -DCMAKE_INSTALL_PREFIX=/home/vy/GalacticRacing/sim_ws/install/lab7_pkg
+[2.339s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/lab7_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/lab7_pkg -- -j16 -l16
+[2.371s] [35m[1mScanning dependencies of target rrt_node[0m
+[2.446s] [ 66%] [32mBuilding CXX object CMakeFiles/rrt_node.dir/src/rrt_node.cpp.o[0m
+[2.446s] [ 66%] [32mBuilding CXX object CMakeFiles/rrt_node.dir/src/rrt.cpp.o[0m
+[3.466s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:[m[K In member function ‘[01m[Kvoid RRT::scan_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[3.466s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:33:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscan_msg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.467s]    33 | void RRT::scan_callback([01;35m[Kconst sensor_msgs::msg::LaserScan::ConstSharedPtr scan_msg[m[K) {
+[3.467s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[3.470s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:[m[K In member function ‘[01m[Kvoid RRT::pose_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[3.470s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:43:71:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpose_msg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.470s]    43 | void RRT::pose_callback([01;35m[Kconst nav_msgs::msg::Odometry::ConstSharedPtr pose_msg[m[K) {
+[3.470s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[3.471s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:[m[K In member function ‘[01m[Kint RRT::nearest(std::vector<RRT_Node>&, std::vector<double>&)[m[K’:
+[3.471s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:79:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktree[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.471s]    79 | int RRT::nearest([01;35m[Kstd::vector<RRT_Node> &tree[m[K, std::vector<double> &sampled_point) {
+[3.471s]       |                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[3.471s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:79:68:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksampled_point[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.471s]    79 | int RRT::nearest(std::vector<RRT_Node> &tree, [01;35m[Kstd::vector<double> &sampled_point[m[K) {
+[3.471s]       |                                               [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[3.471s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:[m[K In member function ‘[01m[KRRT_Node RRT::steer(RRT_Node&, std::vector<double>&)[m[K’:
+[3.471s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:93:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knearest_node[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.471s]    93 | RRT_Node RRT::steer([01;35m[KRRT_Node &nearest_node[m[K, std::vector<double> &sampled_point) {
+[3.471s]       |                     [01;35m[K~~~~~~~~~~^~~~~~~~~~~~[m[K
+[3.472s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:93:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksampled_point[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.472s]    93 | RRT_Node RRT::steer(RRT_Node &nearest_node, [01;35m[Kstd::vector<double> &sampled_point[m[K) {
+[3.472s]       |                                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[3.472s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:[m[K In member function ‘[01m[Kbool RRT::check_collision(RRT_Node&, RRT_Node&)[m[K’:
+[3.472s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:113:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knearest_node[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.472s]   113 | bool RRT::check_collision([01;35m[KRRT_Node &nearest_node[m[K, RRT_Node &new_node) {
+[3.472s]       |                           [01;35m[K~~~~~~~~~~^~~~~~~~~~~~[m[K
+[3.472s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:113:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knew_node[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.472s]   113 | bool RRT::check_collision(RRT_Node &nearest_node, [01;35m[KRRT_Node &new_node[m[K) {
+[3.472s]       |                                                   [01;35m[K~~~~~~~~~~^~~~~~~~[m[K
+[3.472s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:[m[K In member function ‘[01m[Kbool RRT::is_goal(RRT_Node&, double, double)[m[K’:
+[3.472s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:128:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klatest_added_node[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.472s]   128 | bool RRT::is_goal([01;35m[KRRT_Node &latest_added_node[m[K, double goal_x, double goal_y) {
+[3.472s]       |                   [01;35m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[3.472s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:128:55:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgoal_x[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.472s]   128 | bool RRT::is_goal(RRT_Node &latest_added_node, [01;35m[Kdouble goal_x[m[K, double goal_y) {
+[3.472s]       |                                                [01;35m[K~~~~~~~^~~~~~[m[K
+[3.472s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:128:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgoal_y[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.472s]   128 | bool RRT::is_goal(RRT_Node &latest_added_node, double goal_x, [01;35m[Kdouble goal_y[m[K) {
+[3.473s]       |                                                               [01;35m[K~~~~~~~^~~~~~[m[K
+[3.473s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:[m[K In member function ‘[01m[Kstd::vector<RRT_Node> RRT::find_path(std::vector<RRT_Node>&, RRT_Node&)[m[K’:
+[3.473s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:145:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktree[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.473s]   145 | std::vector<RRT_Node> RRT::find_path([01;35m[Kstd::vector<RRT_Node> &tree[m[K, RRT_Node &latest_added_node) {
+[3.473s]       |                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[3.473s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:145:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klatest_added_node[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.473s]   145 | std::vector<RRT_Node> RRT::find_path(std::vector<RRT_Node> &tree, [01;35m[KRRT_Node &latest_added_node[m[K) {
+[3.473s]       |                                                                   [01;35m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[3.473s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:[m[K In member function ‘[01m[Kdouble RRT::cost(std::vector<RRT_Node>&, RRT_Node&)[m[K’:
+[3.473s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:162:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktree[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.473s]   162 | double RRT::cost([01;35m[Kstd::vector<RRT_Node> &tree[m[K, RRT_Node &node) {
+[3.473s]       |                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[3.473s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:162:57:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knode[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.473s]   162 | double RRT::cost(std::vector<RRT_Node> &tree, [01;35m[KRRT_Node &node[m[K) {
+[3.473s]       |                                               [01;35m[K~~~~~~~~~~^~~~[m[K
+[3.473s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:[m[K In member function ‘[01m[Kdouble RRT::line_cost(RRT_Node&, RRT_Node&)[m[K’:
+[3.473s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:176:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kn1[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.473s]   176 | double RRT::line_cost([01;35m[KRRT_Node &n1[m[K, RRT_Node &n2) {
+[3.474s]       |                       [01;35m[K~~~~~~~~~~^~[m[K
+[3.474s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:176:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kn2[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.474s]   176 | double RRT::line_cost(RRT_Node &n1, [01;35m[KRRT_Node &n2[m[K) {
+[3.474s]       |                                     [01;35m[K~~~~~~~~~~^~[m[K
+[3.474s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:[m[K In member function ‘[01m[Kstd::vector<int> RRT::near(std::vector<RRT_Node>&, RRT_Node&)[m[K’:
+[3.474s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:190:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktree[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.474s]   190 | std::vector<int> RRT::near([01;35m[Kstd::vector<RRT_Node> &tree[m[K, RRT_Node &node) {
+[3.474s]       |                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[3.474s] [01m[K/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/src/rrt.cpp:190:67:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knode[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.474s]   190 | std::vector<int> RRT::near(std::vector<RRT_Node> &tree, [01;35m[KRRT_Node &node[m[K) {
+[3.474s]       |                                                         [01;35m[K~~~~~~~~~~^~~~[m[K
+[6.940s] [100%] [32m[1mLinking CXX executable rrt_node[0m
+[7.165s] [100%] Built target rrt_node
+[7.177s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/lab7_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/lab7_pkg -- -j16 -l16
+[7.222s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/lab7_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/lab7_pkg
+[7.233s] -- Install configuration: ""
+[7.234s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/lib/lab7_pkg/rrt_node
+[7.235s] -- Set runtime path of "/home/vy/GalacticRacing/sim_ws/install/lab7_pkg/lib/lab7_pkg/rrt_node" to ""
+[7.235s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/lab7_pkg/environment/pythonpath.sh
+[7.235s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/lab7_pkg/environment/pythonpath.dsv
+[7.235s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/lib/python3.8/site-packages/lab7_pkg
+[7.235s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/lib/python3.8/site-packages/lab7_pkg/__init__.py
+[7.267s] Listing '/home/vy/GalacticRacing/sim_ws/install/lab7_pkg/lib/python3.8/site-packages/lab7_pkg'...
+[7.267s] Compiling '/home/vy/GalacticRacing/sim_ws/install/lab7_pkg/lib/python3.8/site-packages/lab7_pkg/__init__.py'...
+[7.269s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/lib/lab7_pkg/rrt_node.py
+[7.269s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/ament_index/resource_index/package_run_dependencies/lab7_pkg
+[7.269s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/ament_index/resource_index/parent_prefix_path/lab7_pkg
+[7.270s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/lab7_pkg/environment/ament_prefix_path.sh
+[7.270s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/lab7_pkg/environment/ament_prefix_path.dsv
+[7.270s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/lab7_pkg/environment/path.sh
+[7.270s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/lab7_pkg/environment/path.dsv
+[7.270s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/lab7_pkg/local_setup.bash
+[7.270s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/lab7_pkg/local_setup.sh
+[7.270s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/lab7_pkg/local_setup.zsh
+[7.271s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/lab7_pkg/local_setup.dsv
+[7.271s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/lab7_pkg/package.dsv
+[7.271s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/ament_index/resource_index/packages/lab7_pkg
+[7.272s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/lab7_pkg/cmake/lab7_pkgConfig.cmake
+[7.272s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/lab7_pkg/cmake/lab7_pkgConfig-version.cmake
+[7.272s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/lab7_pkg/share/lab7_pkg/package.xml
+[7.277s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/lab7_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/lab7_pkg
