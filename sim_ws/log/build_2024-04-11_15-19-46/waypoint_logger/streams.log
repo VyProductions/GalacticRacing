@@ -1,0 +1,26 @@
+[0.832s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/waypoint_logger': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/waypoint_logger -- -j16 -l16
+[0.940s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/waypoint_logger' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/waypoint_logger -- -j16 -l16
+[1.013s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/waypoint_logger': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/waypoint_logger
+[1.031s] -- Install configuration: ""
+[1.032s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/pythonpath.sh
+[1.032s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/pythonpath.dsv
+[1.032s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger
+[1.032s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger/__init__.py
+[1.085s] Listing '/home/vy/GalacticRacing/sim_ws/install/waypoint_logger/lib/python3.8/site-packages/waypoint_logger'...
+[1.089s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/lib/waypoint_logger/waypoint_logger.py
+[1.089s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/ament_index/resource_index/package_run_dependencies/waypoint_logger
+[1.089s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/ament_index/resource_index/parent_prefix_path/waypoint_logger
+[1.089s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/ament_prefix_path.sh
+[1.089s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/ament_prefix_path.dsv
+[1.090s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/path.sh
+[1.090s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/environment/path.dsv
+[1.090s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/local_setup.bash
+[1.090s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/local_setup.sh
+[1.090s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/local_setup.zsh
+[1.090s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/local_setup.dsv
+[1.090s] -- Installing: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/package.dsv
+[1.090s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/ament_index/resource_index/packages/waypoint_logger
+[1.091s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/cmake/waypoint_loggerConfig.cmake
+[1.091s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/cmake/waypoint_loggerConfig-version.cmake
+[1.091s] -- Up-to-date: /home/vy/GalacticRacing/sim_ws/install/waypoint_logger/share/waypoint_logger/package.xml
+[1.114s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/waypoint_logger' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vy/GalacticRacing/sim_ws/install/particle_filter:/home/vy/GalacticRacing/sim_ws/install/f1tenth_gym_ros:/opt/ros/foxy /usr/bin/cmake --install /home/vy/GalacticRacing/sim_ws/build/waypoint_logger

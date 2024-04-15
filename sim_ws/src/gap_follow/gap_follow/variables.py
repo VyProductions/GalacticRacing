@@ -16,7 +16,7 @@ DIST_THRESH  : float32 = 6.00  # meter cutoff for scan processing
 DISP_EPSILON : float32 = 0.12  # minimum meter difference to identify disparities
 
 # car dimensions
-CAR_WIDTH : float32 = 0.40 # car width in meters
+CAR_WIDTH : float32 = 0.5 # car width in meters
 
 # lidar properties
 RANGE_SIZE : int = 1080  # 1080 samples populating the scan array
