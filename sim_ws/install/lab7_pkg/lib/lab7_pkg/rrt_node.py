@@ -57,6 +57,9 @@ class RRT(Node):
         scan_topic = "/scan"
         drive_topic = "/drive"
         occ_topic = "/grid_view"
+        tree_topic = "/tree_view"
+        path_topic = "/path_view"
+        goal_topic = "/goal_tracker"
 
         # you could add your own parameters to the rrt_params.yaml file,
         # and get them here as class attributes as shown above.
@@ -82,16 +85,30 @@ class RRT(Node):
 
         # class attributes
         # TODO: maybe create your occupancy grid here
-        self.markers_pub = self.create_publisher(
-            MarkerArray, occ_topic, 20
+        self.occ_publisher = self.create_publisher(
+            MarkerArray, occ_topic, 2
         )
         
-        self.div_width = 50
-        self.div_height = 50
-        self.position = {'x': 0.0, 'y': 0.0}
+        self.tree_publisher = self.create_publisher(
+            MarkerArray, tree_topic, 2
+        )
+        
+        self.path_publisher = self.create_publisher(
+            MarkerArray, path_topic, 2
+        )
+        
+        self.goal_pub = self.create_publisher(
+            Marker, goal_topic, 2
+        )
+        
+        self.div_width = 75
+        self.div_height = 75
+        self.sample_width = 50
+        self.position = {'x': 0, 'y': 0}
         self.rotation = 0.0   # radians
         self.lookahead = 0.25 # meters
         self.direction = 0    # orientation relative to map; 0 = +x, 90 = +y, 180 = -x, 270 = -y
+        self.steering_radius = 0.5 # meters, not cells
         
         # dictionaries : maps (x_divs, y_divs) pair to an occupied probability (0.0 < p <= 1.0),
         #   and the (x, y) coordinate of the grid square in the map's coordinate frame
@@ -103,8 +120,8 @@ class RRT(Node):
         self.local_occ_grid = {}
         self.tree = []
         self.curr_goal = {
-            'x': -1.0,
-            'y': 0.7
+            'x': round(-1.0 / 0.05),
+            'y': round(0.7 / 0.05)
         }
     
     def has_neighbor(self, key):
@@ -129,6 +146,19 @@ class RRT(Node):
         
         j = 0
         
+        marker = Marker()
+        
+        marker.header.frame_id = "map"
+        marker.header.stamp = self.get_clock().now().to_msg()
+        marker.ns = "ns_occmarkers"
+        
+        marker.id = j
+        marker.action = Marker.DELETEALL
+        
+        markers.markers.append(marker)
+        
+        j += 1
+        
         del_keys = []
         
         for key, val in self.global_occ_grid.items():
@@ -142,7 +172,7 @@ class RRT(Node):
 
                 marker.id = j
                 marker.type = Marker.CUBE
-                marker.action = Marker.MODIFY
+                marker.action = Marker.ADD
 
                 marker.pose.position.x = val["x"]
                 marker.pose.position.y = val["y"]
@@ -173,13 +203,26 @@ class RRT(Node):
         for key in del_keys:
             del self.global_occ_grid[key]
 
-        self.markers_pub.publish(markers)
+        self.occ_publisher.publish(markers)
     
     def render_local_occ(self):
         # render locally occupied grid spaces on map
         markers = MarkerArray()
         
         j = 0
+        
+        marker = Marker()
+        
+        marker.header.frame_id = "map"
+        marker.header.stamp = self.get_clock().now().to_msg()
+        marker.ns = "ns_localoccmarkers"
+        
+        marker.id = j
+        marker.action = Marker.DELETEALL
+        
+        markers.markers.append(marker)
+        
+        j += 1
         
         for _, val in self.local_occ_grid.items():
             if val["p"] >= 3:
@@ -191,7 +234,7 @@ class RRT(Node):
 
                 marker.id = j
                 marker.type = Marker.CUBE
-                marker.action = Marker.MODIFY
+                marker.action = Marker.ADD
 
                 marker.pose.position.x = val["x"]
                 marker.pose.position.y = val["y"]
@@ -215,7 +258,7 @@ class RRT(Node):
 
                 j += 1
 
-        self.markers_pub.publish(markers)
+        self.occ_publisher.publish(markers)
         
     def scan_callback(self, scan_msg):
         """
@@ -243,9 +286,7 @@ class RRT(Node):
             
             x_las, y_las = 0.261 * np.cos(car_dir), 0.261 * np.sin(car_dir)
             x_offs, y_offs = x_las + r * np.cos(theta), y_las + r * np.sin(theta)
-            x_divs, y_divs = round((self.position['x'] + x_offs) / 0.05), round((self.position['y'] + y_offs) / 0.05)
-            
-            x_divs_car, y_divs_car = round(self.position['x'] / 0.05), round(self.position['y'] / 0.05)
+            x_divs, y_divs = round((self.position['x'] * 0.05 + x_offs) / 0.05), round((self.position['y'] * 0.05 + y_offs) / 0.05)
             
             x_pos = x_divs * 0.05
             y_pos = y_divs * 0.05
@@ -266,8 +307,8 @@ class RRT(Node):
             #             if ((x_div - x_divs)**2 + (y_div - y_divs)**2)**0.5 <= 5:
             #                 if (
             #                     f"({x_div},{y_div})" not in self.global_occ_grid and
-            #                     abs(x_div - x_divs_car) <= self.div_width and
-            #                     abs(y_div - y_divs_car) <= self.div_height
+            #                     abs(x_div - self.position['x']) <= self.div_width and
+            #                     abs(y_div - self.position['y']) <= self.div_height
             #                 ):
             #                     self.global_occ_grid[f"({x_div},{y_div})"] = {
             #                         "p": 1,
@@ -276,8 +317,8 @@ class RRT(Node):
             #                     }
             #                 elif (
             #                     f"({x_div},{y_div})" in self.global_occ_grid and
-            #                     abs(x_div - x_divs_car) <= self.div_width and
-            #                     abs(y_div - y_divs_car) <= self.div_height
+            #                     abs(x_div - self.position['x']) <= self.div_width and
+            #                     abs(y_div - self.position['y']) <= self.div_height
             #                 ):
             #                     val = self.global_occ_grid[f"({x_div},{y_div})"]
                                 
@@ -303,8 +344,8 @@ class RRT(Node):
             #             if ((x_div - x_divs)**2 + (y_div - y_divs)**2)**0.5 <= 5:
             #                 if (
             #                     f"({x_div},{y_div})" not in self.global_occ_grid and
-            #                     abs(x_div - x_divs_car) <= self.div_width and
-            #                     abs(y_div - y_divs_car) <= self.div_height
+            #                     abs(x_div - self.position['x']) <= self.div_width and
+            #                     abs(y_div - self.position['y']) <= self.div_height
             #                 ):
             #                     self.global_occ_grid[f"({x_div},{y_div})"] = {
             #                         "p": 1,
@@ -313,8 +354,8 @@ class RRT(Node):
             #                     }
             #                 elif (
             #                     f"({x_div},{y_div})" in self.global_occ_grid and
-            #                     abs(x_div - x_divs_car) <= self.div_width and
-            #                     abs(y_div - y_divs_car) <= self.div_height
+            #                     abs(x_div - self.position['x']) <= self.div_width and
+            #                     abs(y_div - self.position['y']) <= self.div_height
             #                 ):
             #                     val = self.global_occ_grid[f"({x_div},{y_div})"]
                                 
@@ -328,8 +369,8 @@ class RRT(Node):
             # and if it is within a bounding box around the car
             if (
                 f"({x_divs},{y_divs})" not in self.local_occ_grid and
-                abs(x_divs - x_divs_car) <= self.div_width and
-                abs(y_divs - y_divs_car) <= self.div_height
+                abs(x_divs - self.position['x']) <= self.div_width and
+                abs(y_divs - self.position['y']) <= self.div_height
             ):
                 self.local_occ_grid[f"({x_divs},{y_divs})"] = {
                     "p": 1,
@@ -345,8 +386,8 @@ class RRT(Node):
                         if ((x_div - x_divs)**2 + (y_div - y_divs)**2)**0.5 <= 5:
                             if (
                                 f"({x_div},{y_div})" not in self.local_occ_grid and
-                                abs(x_div - x_divs_car) <= self.div_width and
-                                abs(y_div - y_divs_car) <= self.div_height
+                                abs(x_div - self.position['x']) <= self.div_width and
+                                abs(y_div - self.position['y']) <= self.div_height
                             ):
                                 self.local_occ_grid[f"({x_div},{y_div})"] = {
                                     "p": 1,
@@ -355,8 +396,8 @@ class RRT(Node):
                                 }
                             elif (
                                 f"({x_div},{y_div})" in self.local_occ_grid and
-                                abs(x_div - x_divs_car) <= self.div_width and
-                                abs(y_div - y_divs_car) <= self.div_height
+                                abs(x_div - self.position['x']) <= self.div_width and
+                                abs(y_div - self.position['y']) <= self.div_height
                             ):
                                 val = self.local_occ_grid[f"({x_div},{y_div})"]
                                 
@@ -368,8 +409,8 @@ class RRT(Node):
                         
             elif (
                 f"({x_divs},{y_divs})" in self.local_occ_grid and
-                abs(x_divs - x_divs_car) <= self.div_width and
-                abs(y_divs - y_divs_car) <= self.div_height
+                abs(x_divs - self.position['x']) <= self.div_width and
+                abs(y_divs - self.position['y']) <= self.div_height
             ):
                 val = self.local_occ_grid[f"({x_divs},{y_divs})"]
                 
@@ -387,8 +428,8 @@ class RRT(Node):
                         if ((x_div - x_divs)**2 + (y_div - y_divs)**2)**0.5 <= 5:
                             if (
                                 f"({x_div},{y_div})" not in self.local_occ_grid and
-                                abs(x_div - x_divs_car) <= self.div_width and
-                                abs(y_div - y_divs_car) <= self.div_height
+                                abs(x_div - self.position['x']) <= self.div_width and
+                                abs(y_div - self.position['y']) <= self.div_height
                             ):
                                 self.local_occ_grid[f"({x_div},{y_div})"] = {
                                     "p": 1,
@@ -397,8 +438,8 @@ class RRT(Node):
                                 }
                             elif (
                                 f"({x_div},{y_div})" in self.local_occ_grid and
-                                abs(x_div - x_divs_car) <= self.div_width and
-                                abs(y_div - y_divs_car) <= self.div_height
+                                abs(x_div - self.position['x']) <= self.div_width and
+                                abs(y_div - self.position['y']) <= self.div_height
                             ):
                                 val = self.local_occ_grid[f"({x_div},{y_div})"]
                                 
@@ -426,9 +467,12 @@ class RRT(Node):
         p = odom_msg.pose.pose.position
         o = odom_msg.pose.pose.orientation
         
-        self.position = {'x': p.x, 'y': p.y}
+        self.position = {'x': round(p.x / 0.05), 'y': round(p.y / 0.05)}
         self.rotation = euler_from_quaternion([o.x, o.y, o.z, o.w])[2]
         self.direction = int(hp.rad_to_deg(round(self.rotation / hp.deg_to_rad(90.0)) * hp.deg_to_rad(90.0)))
+        
+        # self.render_global_occ()
+        self.render_local_occ()
         
         self.rrt()
 
@@ -446,27 +490,14 @@ class RRT(Node):
         p = pose_msg.pose.position
         o = pose_msg.pose.orientation
         
-        self.position = {'x': p.x, 'y': p.y}
+        self.position = {'x': round(p.x / 0.05), 'y': round(p.y / 0.05)}
         self.rotation = euler_from_quaternion([o.x, o.y, o.z, o.w])[2]
         self.direction = int(hp.rad_to_deg(round(self.rotation / hp.deg_to_rad(90.0)) * hp.deg_to_rad(90.0)))
-    
-    def rrt(self):
-        self.tree = [Vertex(position={'x': self.position['x'], 'y': self.position['y']})]
         
-        while True:
-            rand_pt = self.sample()
-            nearest_idx = self.nearest(rand_pt)
-            nearest_node = self.tree[nearest_idx]
-            new_node = self.steer(self.tree[nearest_idx], rand_pt)
-            
-            if not self.check_collision(nearest_node, new_node):
-                self.tree.append(new_node)
-                
-                if self.is_goal(new_node, self.curr_goal['x'], self.curr_goal['y']):
-                    self.key_points = self.find_path(new_node)
-                    break
+        # self.render_global_occ()
+        self.render_local_occ()
         
-        self.render_path()
+        self.rrt()
 
     def sample(self):
         """
@@ -477,23 +508,31 @@ class RRT(Node):
             (x, y) (float float): a tuple representing the sampled point
 
         """
+        x1, y1 = self.position['x'], self.position['y']
+        x2, y2 = self.curr_goal['x'], self.curr_goal['y']
         
-        switch = {
-            0: {'x': (0, self.div_width), 'y': (-self.div_height, self.div_height)},
-            90: {'x': (-self.div_width, self.div_width), 'y': (0, self.div_height)},
-            180: {'x': (-self.div_width, 0), 'y': (-self.div_height, self.div_height)},
-            270: {'x': (-self.div_width, self.div_width), 'y': (-self.div_height, 0)}
-        }
+        d = ((x2 - x1)**2 + (y2 - y1)**2)**0.5
+        theta = np.arctan2(y2 - y1, x2 - x1)
         
-        dir = self.direction + 360 if self.direction < 0 else self.direction
+        xsamp = random.randint(0, round(d))
+        ysamp = random.randint(-self.sample_width, self.sample_width)
         
-        x = random.randint(switch[dir]['x'][0], switch[dir]['x'][1])
-        y = random.randint(switch[dir]['y'][0], switch[dir]['y'][1])
+        xtrans = round(xsamp * np.cos(theta) - ysamp * np.sin(theta) + x1)
+        ytrans = round(xsamp * np.sin(theta) + ysamp * np.cos(theta) + y1)
         
-        x_div_car = round(self.position['x'] / 0.05)
-        y_div_car = round(self.position['y'] / 0.05)
+        # print(f"Random sample: ({xtrans},{ytrans})")
         
-        return (x_div_car + x, y_div_car + y)
+        return (xtrans, ytrans)
+
+    def uniform_space(self):
+        """
+        This method defines a uniform grid over a sample space in the direction of the
+        goal point from the current state
+        
+        Args:
+        Returns:
+            [X : X = (x, y); x,y are within the sample space, and all X are grid-aligned]
+        """
 
     def nearest(self, sampled_point):
         """
@@ -502,9 +541,9 @@ class RRT(Node):
         Args:
             sampled_point (tuple of (float, float)): point sampled in free space
         Returns:
-            nearest_node (int): index of neareset node on the tree
+            nearest_index (int): index of neareset node on the tree
         """
-        nearest_node = 0
+        nearest_index = 0
         
         sample_pt = {
             'x': sampled_point[0],
@@ -527,10 +566,10 @@ class RRT(Node):
             approx_dist = (sample_pt['x'] - tree_pt['x'])**2 + (sample_pt['y'] - tree_pt['y'])**2
             
             if approx_dist < min_dist:
-                nearest_node = i
+                nearest_index = i
                 min_dist = approx_dist
         
-        return nearest_node
+        return nearest_index
 
     def steer(self, nearest_node, sampled_point):
         """
@@ -560,11 +599,11 @@ class RRT(Node):
         y = nearest_pos['y'] * 0.05
         
         new_pos = {
-            'x': round((x + 0.5 * np.cos(angle)) / 0.05),
-            'y': round((y + 0.5 * np.sin(angle)) / 0.05)
+            'x': round((x + self.steering_radius * np.cos(angle)) / 0.05),
+            'y': round((y + self.steering_radius * np.sin(angle)) / 0.05)
         }
         
-        new_node = Vertex(position=new_pos, parent=nearest_node, input_dir=angle, cost=nearest_node.cost + abs(angle))
+        new_node = Vertex(position=new_pos, parent=nearest_node, input_dir=angle, cost=nearest_node.cost + abs(angle - nearest_node.input_dir))
         
         return new_node
 
@@ -641,6 +680,19 @@ class RRT(Node):
         
         j = 0
         
+        marker = Marker()
+        
+        marker.header.frame_id = "map"
+        marker.header.stamp = self.get_clock().now().to_msg()
+        marker.ns = "ns_linemarkers"
+        
+        marker.id = j
+        marker.action = Marker.DELETEALL
+        
+        markers.markers.append(marker)
+        
+        j += 1
+        
         for pt in line:
             marker = Marker()
                     
@@ -674,7 +726,7 @@ class RRT(Node):
             
             j += 1
         
-        self.markers_pub.publish(markers)
+        self.occ_publisher.publish(markers)
 
     def check_collision(self, nearest_node, new_node):
         """
@@ -715,7 +767,7 @@ class RRT(Node):
         Returns:
             close_enough (bool): true if node is close enoughg to the goal
         """
-        return ((latest_added_node.position['x'] * 0.05 - goal_x)**2 + (latest_added_node.position['y'] * 0.05 - goal_y)**2)**0.5 <= 0.5
+        return ((latest_added_node.position['x'] - goal_x)**2 + (latest_added_node.position['y'] - goal_y)**2)**0.5 <= 10
 
     def find_path(self, latest_added_node):
         """
@@ -742,22 +794,86 @@ class RRT(Node):
         
         j = 0
         
-        for node in self.key_points:
-            parent = node.parent
-            
+        marker = Marker()
+        
+        marker.header.frame_id = "map"
+        marker.header.stamp = self.get_clock().now().to_msg()
+        marker.ns = "ns_pathmarkers"
+        
+        marker.id = j
+        marker.action = Marker.DELETEALL
+        
+        markers.markers.append(marker)
+        
+        j += 1
+        
+        for node in self.key_points:            
             marker = Marker() # actual marker for node
             
             marker.header.frame_id = "map"
             marker.header.stamp = self.get_clock().now().to_msg()
-            marker.ns = "ns_path"
+            marker.ns = "ns_pathmarkers"
             
             marker.id = j
-            marker.type = Marker.SPHERE
+            marker.type = Marker.CUBE
             marker.action = Marker.ADD
             
             marker.pose.position.x = node.position['x'] * 0.05
             marker.pose.position.y = node.position['y'] * 0.05
             marker.pose.position.z = 1.5
+            
+            marker.pose.orientation.x = 0.0
+            marker.pose.orientation.y = 0.0
+            marker.pose.orientation.z = 0.0
+            marker.pose.orientation.w = 1.0
+            
+            marker.scale.x = 0.05
+            marker.scale.y = 0.05
+            marker.scale.z = 0.05
+            
+            marker.color.r = 1.0
+            marker.color.g = 0.0
+            marker.color.b = 1.0
+            marker.color.a = 0.8
+            
+            markers.markers.append(marker)
+            
+            j += 1
+        
+        self.path_publisher.publish(markers)
+    
+    def render_tree(self):
+        markers = MarkerArray()
+        
+        j = 0
+        
+        marker = Marker()
+        
+        marker.header.frame_id = "map"
+        marker.header.stamp = self.get_clock().now().to_msg()
+        marker.ns = "ns_treemarkers"
+        
+        marker.id = j
+        marker.action = Marker.DELETEALL
+        
+        markers.markers.append(marker)
+        
+        j += 1
+        
+        for node in self.tree:
+            marker = Marker()
+            
+            marker.header.frame_id = "map"
+            marker.header.stamp = self.get_clock().now().to_msg()
+            marker.ns = "ns_treemarkers"
+            
+            marker.id = j
+            marker.type = Marker.CUBE
+            marker.action = Marker.ADD
+            
+            marker.pose.position.x = node.position['x'] * 0.05
+            marker.pose.position.y = node.position['y'] * 0.05
+            marker.pose.position.z = 2.0
             
             marker.pose.orientation.x = 0.0
             marker.pose.orientation.y = 0.0
@@ -770,37 +886,70 @@ class RRT(Node):
             
             marker.color.r = 1.0
             marker.color.g = 0.0
-            marker.color.b = 1.0
+            marker.color.b = 0.0
             marker.color.a = 0.8
             
-            j += 1
-            
-            # create a line strip if the parent node exists
-            if parent != None:
-                line_strip = Marker()
-                
-                line_strip.header.frame_id = "map"
-                line_strip.header.stamp = self.get_clock().now().to_msg()
-                line_strip.ns = "ns_path"
-                
-                line_strip.id = j
-                line_strip.type = Marker.LINE_STRIP
-                line_strip.action = Marker.ADD
-                
-                line_strip.scale.x = 0.1
-                
-                line_strip.color.r = 1.0
-                line_strip.color.g = 1.0
-                line_strip.color.a = 0.8
-                
-                pt = Point(x=node.position['x'] * 0.05, y=node.position['y'] * 0.05, z=1.5)
-                marker.points.append(pt)
-                pt = Point(x=parent.position['x'] * 0.05, y=parent.position['y'] * 0.05, z=1.5)
-                marker.points.append(pt)
-            
             markers.markers.append(marker)
+            
+            j += 1
         
-        self.markers_pub.publish(markers)
+        self.tree_publisher.publish(markers)
+    
+    def track_goal(self):
+        marker = Marker()
+        
+        marker.header.frame_id = "map"
+        marker.header.stamp = self.get_clock().now().to_msg()
+        marker.ns = "ns_goalmarker"
+        
+        marker.id = 0
+        marker.type = Marker.CUBE
+        marker.action = Marker.ADD
+        
+        marker.pose.position.x = self.curr_goal['x'] * 0.05
+        marker.pose.position.y = self.curr_goal['y'] * 0.05
+        marker.pose.position.z = 2.0
+        
+        marker.pose.orientation.x = 0.0
+        marker.pose.orientation.y = 0.0
+        marker.pose.orientation.z = 0.0
+        marker.pose.orientation.w = 1.0
+        
+        marker.scale.x = 0.05
+        marker.scale.y = 0.05
+        marker.scale.z = 0.05
+        
+        marker.color.r = 1.0
+        marker.color.g = 0.0
+        marker.color.b = 1.0
+        marker.color.a = 0.8
+        
+        self.goal_pub.publish(marker)
+    
+    def rrt(self):
+        print("RRT Invoked.")
+        
+        self.track_goal()
+        
+        self.tree = [Vertex(position={'x': self.position['x'], 'y': self.position['y']})]
+        
+        for i in range(1000):
+            rand_pt = self.sample()
+            nearest_idx = self.nearest(rand_pt)
+            nearest_node = self.tree[nearest_idx]
+            new_node = self.steer(nearest_node, rand_pt)
+            
+            if not self.check_collision(nearest_node, new_node):
+                self.tree.append(new_node)
+                
+                if self.is_goal(new_node, self.curr_goal['x'], self.curr_goal['y']):
+                    print("Path found.")
+                    self.key_points = self.find_path(new_node)
+                    
+                    self.render_path()
+                    self.render_tree()
+                    
+                    break
 
     # The following methods are needed for RRT* and not RRT
     def cost(self, tree, node):
@@ -826,16 +975,16 @@ class RRT(Node):
         """
         return 0
 
-    def near(self, tree, node):
+    def near(self, node, radius):
         """
         This method should return the neighborhood of nodes around the given node
 
         Args:
-            tree ([]): current tree as a list of Nodes
             node (Node): current node we're finding neighbors for
         Returns:
             neighborhood ([]): neighborhood of nodes as a list of Nodes
         """
+        
         neighborhood = []
         return neighborhood
 

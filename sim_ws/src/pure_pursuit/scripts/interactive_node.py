@@ -540,9 +540,9 @@ class InteractiveMarkerNode(Node):
         self.markers_pub.publish(markers)
 
     def loadPath(self, marker):
-        filename = input("Path input filename? ")
-
         while True:
+            filename = input("Path input filename? ")
+            
             try:
                 pathCSV = open(root_dir + "/pure_pursuit/paths/" + filename, "r")
 
@@ -566,9 +566,9 @@ class InteractiveMarkerNode(Node):
                 print("Invalid filename. Try again.")
 
     def savePath(self, marker):
-        filename = input("Path output filename? ")
-
         while True:
+            filename = input("Path output filename? ")
+            
             try:
                 pathCSV = open(root_dir + "/pure_pursuit/paths/" + filename, "w")
 
