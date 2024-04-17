@@ -9,6 +9,7 @@ import numpy as np
 import math
 import atexit
 import os
+from scanf import scanf
 
 # ==================================================================================================
 # ROS Imports
@@ -122,9 +123,9 @@ class Dynamic(Node):
         self.drive_pub = self.create_publisher(AckermannDriveStamped, drive_topic, 10)
         
         # Map
-        self.global_occ_pub = self.create_publisher(MarkerArray, global_occ_topic, 10)
-        self.local_occ_pub  = self.create_publisher(MarkerArray, local_occ_topic, 10)
-        
+        self.global_occ_pub = self.create_publisher(OccupancyGrid, global_occ_topic, 10)
+        self.local_occ_pub  = self.create_publisher(OccupancyGrid, local_occ_topic, 10)
+
         # Pathing
         self.sample_grid_pub = self.create_publisher(MarkerArray, sample_grid_topic, 10)
         self.path_pub        = self.create_publisher(MarkerArray, path_topic, 10)
@@ -141,10 +142,13 @@ class Dynamic(Node):
         
         # Map
         self.global_occ_grid : Dict[Vec2, float] = {}  # Static global occupancy grid
+        self.free_space_grid : Dict[Vec2, float] = {}  # Static free space grid for track
         self.local_occ_grid  : Dict[Vec2, float] = {}  # Dynamic local occupancy grid
+        self.map_config      : Dict[str, Any]    = {}  # Map configuration details
         
         # Pathing
-        self.curr_goal : Vec2 = Vec2()  # Cell position for current goal
+        self.curr_goal : Vec2  = Vec2()        # Cell position for current goal
+        self.known_free : Vec2 = Vec2(0, 100)  # Cell known to be in free space
         
         # ==========================================================================================
         # Runtime Constants
@@ -152,7 +156,7 @@ class Dynamic(Node):
         
         # Occupancy Grid
         self.cell_size   : float = 0.05
-        self.local_width : int   = 20
+        self.local_width : int   = 40
         self.local_depth : int   = 40
         self.bubble_offs : List[Vec2] = [
             Vec2( 0,  0), Vec2( 0, -1), Vec2( 1,  0), Vec2(-1,  0), Vec2( 0,  1), Vec2( 1,  1),
@@ -172,6 +176,7 @@ class Dynamic(Node):
         # File Information
         self.global_occ_filename : str = self.get_global_occ_filename()  # Global occupancy filename
         self.goals_filename      : str = self.get_goals_filename()       # Local occupancy filename
+        self.map_filename        : str = self.get_map_filename()         # Map information filename
         
         # Status
         self.mapping : bool = self.get_state()  # Whether the program is in mapping or driving mode
@@ -209,8 +214,8 @@ class Dynamic(Node):
         """
         
         while True:
-            # filename : str = input("Enter global occupancy filename: ")
-            filename : str = 'AEB_flexito.csv'
+            filename : str = input("Enter global occupancy filename: ")
+            # filename : str = 'AEB_flexito.csv'
             
             if os.path.exists(self.root_dir + '/lab7_pkg/occ_grids/' + filename):
                 return self.root_dir + '/lab7_pkg/occ_grids/' + filename
@@ -226,13 +231,76 @@ class Dynamic(Node):
         """
         
         while True:
-            # filename : str = input("Enter goal marker filename: ")
-            filename : str = 'AEB_flexito.csv'
+            filename : str = input("Enter goal marker filename: ")
+            # filename : str = 'AEB_flexito.csv'
             
             if os.path.exists(self.root_dir + '/lab7_pkg/goals/' + filename):
                 return self.root_dir + '/lab7_pkg/goals/' + filename
             else:
                 print("File does not exist. Try again.")
+    
+    def get_map_filename(self) -> str:
+        """
+        Query user for map information filename
+        
+        Returns:
+            Full path to map file (no extension)
+        """
+        
+        while True:
+            filename : str = input("Enter map filename (no extension): ")
+            # filename : str = 'AEB_flexito'
+            
+            if (
+                os.path.exists(self.root_dir + '/particle_filter/maps/' + filename + '.yaml') and
+                (
+                    os.path.exists(self.root_dir + '/particle_filter/maps/' + filename + '.png') or
+                    os.path.exists(self.root_dir + '/particle_filter/maps/' + filename + '.pgm')
+                )
+            ):
+                return self.root_dir + '/particle_filter/maps/' + filename
+            else:
+                print("Map image and config file do not exist. Try again.")
+    
+    def get_map_config(self) -> None:
+        """
+        Read configuration file to acquire dimensions and origin of map
+        
+        Returns:
+            None
+        """
+
+        try:
+            lines : List[str] = []
+            
+            for i in open(self.map_filename + '.yaml', "r"):
+                lines.append(i)
+            
+            self.map_config["image"] = scanf("image: %s\n", lines[0])[0]
+            self.map_config["mode"] = scanf("mode: %s\n", lines[1])[0]
+            self.map_config["resolution"] = scanf("resolution: %f\n", lines[2])[0]
+            originPos = scanf("origin: [%f, %f, %f]\n", lines[3])
+            self.map_config["origin"] = Vec2f(x=originPos[0], y=originPos[1])
+            self.map_config["negate"] = scanf("negate: %d\n", lines[4])[0]
+            self.map_config["occupied_thresh"] = scanf("occupied_thresh: %f\n", lines[5])[0]
+            self.map_config["free_thresh"] = scanf("free_thresh: %f", lines[6])[0]
+            
+            image_dims : str = ""
+            
+            with open(self.root_dir + '/particle_filter/maps/' + self.map_config["image"], "rb") as f:
+                first_line = f.readline().decode()
+                
+                if first_line != "P5\n":
+                    print("Not a P5 image file.")
+                else:
+                    # acquire image dimensions
+                    image_dims = f.readline().decode()
+            
+            self.map_config["width"], self.map_config["height"] = scanf("%d %d\n", image_dims)
+        except FileNotFoundError:
+            print("Could not open map config file. Try again.")
+        except Exception as e:
+            print(f"Exception occurred: [{type(e)}] {e}")
     
     def get_state(self) -> bool:
         """
@@ -247,10 +315,19 @@ class Dynamic(Node):
                 response = input('Which Mode ([M]apping, [D]riving): ')
 
                 if response.find('M') == 0:
+                    # Acquire map config information
+                    self.get_map_config()
+                    
                     return True
                 elif response.find('D') == 0:
                     # Acquire saved global occupancy grid
                     self.global_occ_grid = self.read_global_occ()
+                    
+                    # Acquire map config information
+                    self.get_map_config()
+                    
+                    # Flood-fill from where car is (assumed to be on track) to acquire free space
+                    self.flood_fill()
                     
                     # Render global occupancy grid
                     self.render_global_occ()
@@ -369,6 +446,10 @@ class Dynamic(Node):
             None
         """
         
+        # reset local occupcancy grid in driving mode
+        if not self.mapping:
+            self.local_occ_grid.clear()
+        
         ranges = scan_msg.ranges
         
         if self.position != None:
@@ -384,15 +465,14 @@ class Dynamic(Node):
                     x = round((self.position.x + x_offs) / 0.05),
                     y = round((self.position.y + y_offs) / 0.05)
                 )
-
+                
                 if self.mapping:
                     self.bubble(occluded_cell, self.global_occ_grid)
                 else:
-                    # reset local occupcancy grid
-                    self.local_occ_grid.clear()
-                    
                     if self.local_cell(occluded_cell):
                         self.bubble(occluded_cell, self.local_occ_grid)
+        
+        self.render_local_occ()
     
     def pose_callback(self, pose_msg : PoseStamped) -> None:
         """
@@ -432,6 +512,19 @@ class Dynamic(Node):
     # Visualization Functions
     # ==============================================================================================
     
+    def float_to_cell_coordinate(self, x, y):
+        # Calculate scaled coordinates in terms of cell units
+        x_scaled = x / self.cell_size
+        y_scaled = y / self.cell_size
+
+        # Calculate row index
+        row = self.map_config["height"] - 1 - int(y_scaled * (self.map_config["height"] - 1))
+
+        # Calculate column index
+        col = int(x_scaled * (self.map_config["width"] - 1))
+
+        return row, col
+    
     def render_global_occ(self) -> None:
         """
         Create and publish an OccupancyGrid message containing the global occupancy grid to the
@@ -441,46 +534,47 @@ class Dynamic(Node):
             None
         """
         
-        markers : MarkerArray = MarkerArray()
+        global_occ : OccupancyGrid = OccupancyGrid()
         
-        j = 0
+        global_occ.header.frame_id = "map"
+        global_occ.header.stamp = self.get_clock().now().to_msg()
         
-        for position, occ_status in self.global_occ_grid.items():
-            # print(f"({position.x},{position.y}) @ ({position.x * self.cell_size},{position.y * self.cell_size}) -> {occ_status}")
-            if occ_status == 1.0:
-                marker : Marker = Marker()
-                
-                marker.header.frame_id = "map"
-                marker.header.stamp = self.get_clock().now().to_msg()
-                marker.ns = "ns_globalocc"
-                
-                marker.id = j
-                marker.type = Marker.CUBE
-                marker.action = Marker.ADD
-                
-                marker.pose.position.x = position.x * self.cell_size
-                marker.pose.position.y = position.y * self.cell_size
-                marker.pose.position.z = 1.0
-                
-                marker.pose.orientation.x = 0.0
-                marker.pose.orientation.y = 0.0
-                marker.pose.orientation.z = 0.0
-                marker.pose.orientation.w = 1.0
-                
-                marker.scale.x = 0.04
-                marker.scale.y = 0.04
-                marker.scale.z = 0.04
-                
-                marker.color.r = 1.0
-                marker.color.g = 0.0
-                marker.color.b = 0.0
-                marker.color.a = 0.8
-                
-                markers.markers.append(marker)
-                
-                j += 1
+        global_occ.info.map_load_time = self.get_clock().now().to_msg()
+        global_occ.info.resolution = self.map_config["resolution"]
+        global_occ.info.width = self.map_config["width"]
+        global_occ.info.height = self.map_config["height"]
+        global_occ.info.origin = Pose(
+            position=Point(
+                x=self.map_config["origin"].x,
+                y=self.map_config["origin"].y,
+                z=0.0
+            ),
+            orientation=Quaternion(x=0.0, y=0.0, z=0.0, w=1.0)
+        )
         
-        self.global_occ_pub.publish(markers)
+        num_cells = self.map_config["height"] * self.map_config["width"]
+        
+        global_occ.data = [0] * num_cells
+        
+        origin_pt : Vec2f = self.map_config["origin"]
+        
+        C, R = self.map_config["width"], self.map_config["height"]
+        
+        for r in range(R):
+            for c in range(C):
+                pos : Vec2 = Vec2(
+                    x=c + round((origin_pt.x + self.cell_size / 2) / self.cell_size),
+                    y=round((origin_pt.y + self.cell_size / 2) / self.cell_size) + r
+                )
+                
+                if pos in self.global_occ_grid:
+                    global_occ.data[r * C + c] = 100
+                elif pos in self.free_space_grid:
+                    global_occ.data[r * C + c] = 0
+                else:
+                    global_occ.data[r * C + c] = -1
+        
+        self.global_occ_pub.publish(global_occ)
     
     def render_local_occ(self) -> None:
         """
@@ -490,6 +584,48 @@ class Dynamic(Node):
         Returns:
             None
         """
+        
+        local_occ : OccupancyGrid = OccupancyGrid()
+        
+        local_occ.header.frame_id = "map"
+        local_occ.header.stamp = self.get_clock().now().to_msg()
+        
+        local_occ.info.map_load_time = self.get_clock().now().to_msg()
+        local_occ.info.resolution = self.map_config["resolution"]
+        local_occ.info.width = self.map_config["width"]
+        local_occ.info.height = self.map_config["height"]
+        local_occ.info.origin = Pose(
+            position=Point(
+                x=self.map_config["origin"].x,
+                y=self.map_config["origin"].y,
+                z=0.0
+            ),
+            orientation=Quaternion(x=0.0, y=0.0, z=0.0, w=1.0)
+        )
+        
+        num_cells = self.map_config["height"] * self.map_config["width"]
+        
+        local_occ.data = [0] * num_cells
+        
+        origin_pt : Vec2f = self.map_config["origin"]
+        
+        C, R = self.map_config["width"], self.map_config["height"]
+        
+        for r in range(R):
+            for c in range(C):
+                pos : Vec2 = Vec2(
+                    x=c + round((origin_pt.x + self.cell_size / 2) / self.cell_size),
+                    y=round((origin_pt.y + self.cell_size / 2) / self.cell_size) + r
+                )
+                
+                if pos in self.local_occ_grid:
+                    local_occ.data[r * C + c] = 100
+                elif pos in self.free_space_grid:
+                    local_occ.data[r * C + c] = 0
+                else:
+                    local_occ.data[r * C + c] = -1
+        
+        self.local_occ_pub.publish(local_occ)
     
     def render_sample_grid(self) -> None:
         """
@@ -547,12 +683,9 @@ class Dynamic(Node):
         """
         
         p1 : Vec2  = Vec2(self.cell_pos.x, self.cell_pos.y)
-        p2 : Vec2  = Vec2(self.curr_goal.x, self.curr_goal.y)
         
-        theta : float = np.arctan2(p2.y - p1.y, p2.x - p1.x)
-        
-        cos = np.cos(theta)
-        sin = np.sin(theta)
+        cos = np.cos(self.rotation)
+        sin = np.sin(self.rotation)
         x_diff = position.x - p1.x
         y_diff = position.y - p1.y
         
@@ -565,6 +698,32 @@ class Dynamic(Node):
             transPoint.x >= 0 and transPoint.x <= self.local_depth and
             abs(transPoint.y) <= self.local_width
         )
+    
+    def flood_fill(self):
+        free_cells : Dict[Vec2, bool] = {
+            self.known_free: True
+        }
+        
+        proc_cells : Dict[Vec2, bool] = {}
+        
+        offs : List[Vec2] = [
+            Vec2(-1, -1), Vec2( 0, -1), Vec2( 1, -1),
+            Vec2(-1,  0),               Vec2( 1,  0),
+            Vec2(-1,  1), Vec2( 0,  1), Vec2( 1,  1)
+        ]
+        
+        while len(free_cells) > 0:
+            curr_cell, _ = free_cells.popitem()
+            
+            proc_cells[curr_cell] = True
+            
+            self.free_space_grid[curr_cell] = 0.0
+            
+            for v in offs:
+                new_pos : Vec2 = Vec2(x=curr_cell.x + v.x, y=curr_cell.y + v.y)
+                
+                if new_pos not in self.global_occ_grid and new_pos not in proc_cells:
+                    free_cells[new_pos] = True
 
 def main(args=None):
     rclpy.init(args=args)
