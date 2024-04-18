@@ -10,6 +10,7 @@ import math
 import atexit
 import os
 from scanf import scanf
+from PIL import Image # for png map processing
 
 # ==================================================================================================
 # ROS Imports
@@ -59,6 +60,9 @@ class Vec2:
     def __hash__(self):
         return hash((self.x, self.y))
 
+    def __repr__(self):
+        return f"({self.x},{self.y})"
+
 class Vec2f:
     def __init__(
         self,
@@ -84,6 +88,9 @@ class Vertex:
         self.parent = parent
         self.input_dir = input_dir
         self.cost = cost
+    
+    def __repr__(self):
+        return f"{self.position} : {self.cost} <- ({'No Parent' if self.parent == None else 'Recursive Parent' if self.parent == self else self.parent})"
 
 # ==================================================================================================
 # Dynamic Node Class
@@ -147,8 +154,9 @@ class Dynamic(Node):
         self.map_config      : Dict[str, Any]    = {}  # Map configuration details
         
         # Pathing
-        self.curr_goal : Vec2  = Vec2()        # Cell position for current goal
-        self.known_free : Vec2 = Vec2(0, 100)  # Cell known to be in free space
+        self.curr_goal  : Vertex       = Vertex()      # Current goal as a node
+        self.known_free : Vec2         = Vec2(0, 100)  # Cell known to be in free space
+        self.nodes      : List[Vertex] = []            # List of nodes for I-RRT*
         
         # ==========================================================================================
         # Runtime Constants
@@ -285,18 +293,25 @@ class Dynamic(Node):
             self.map_config["occupied_thresh"] = scanf("occupied_thresh: %f\n", lines[5])[0]
             self.map_config["free_thresh"] = scanf("free_thresh: %f", lines[6])[0]
             
-            image_dims : str = ""
-            
-            with open(self.root_dir + '/particle_filter/maps/' + self.map_config["image"], "rb") as f:
-                first_line = f.readline().decode()
+            if self.map_config["image"].split('.')[-1] == "pgm":
+                image_dims : str = ""
                 
-                if first_line != "P5\n":
-                    print("Not a P5 image file.")
-                else:
-                    # acquire image dimensions
-                    image_dims = f.readline().decode()
-            
-            self.map_config["width"], self.map_config["height"] = scanf("%d %d\n", image_dims)
+                with open(self.root_dir + '/particle_filter/maps/' + self.map_config["image"], "rb") as f:
+                    first_line = f.readline().decode()
+                    
+                    if first_line != "P5\n":
+                        print("Not a P5 image file.")
+                    else:
+                        # acquire image dimensions
+                        image_dims = f.readline().decode()
+                
+                self.map_config["width"], self.map_config["height"] = scanf("%d %d\n", image_dims)
+            elif self.map_config["image"].split('.')[-1] == "png":
+                img = Image.open(self.root_dir + '/particle_filter/maps/' + self.map_config["image"], "r")
+                
+                self.map_config["width"], self.map_config["height"] = img.width, img.height
+            else:
+                print("Invalid image extension (.png, .pgm accepted).")
         except FileNotFoundError:
             print("Could not open map config file. Try again.")
         except Exception as e:
@@ -471,8 +486,31 @@ class Dynamic(Node):
                 else:
                     if self.local_cell(occluded_cell):
                         self.bubble(occluded_cell, self.local_occ_grid)
-        
-        self.render_local_occ()
+
+            self.curr_goal = Vertex(
+                position=Vec2(
+                    x=round(-1.8/0.05),
+                    y=round(3.1/0.05)
+                )
+            )
+            
+            print("I-RRT* Starting")
+
+            self.irrt_star(
+                start=Vertex(position=self.cell_pos),
+                goal=self.curr_goal,
+                max_iter=1000,
+                max_distance=10.0,
+                goal_sample_rate=0.1
+            )
+            
+            print("Rendering Path")
+            
+            self.render_path()
+            
+            print("Rendering Local Occupancy Grid")
+            
+            self.render_local_occ()
     
     def pose_callback(self, pose_msg : PoseStamped) -> None:
         """
@@ -563,8 +601,8 @@ class Dynamic(Node):
         for r in range(R):
             for c in range(C):
                 pos : Vec2 = Vec2(
-                    x=c + round((origin_pt.x + self.cell_size / 2) / self.cell_size),
-                    y=round((origin_pt.y + self.cell_size / 2) / self.cell_size) + r
+                    x=c + int(origin_pt.x / self.cell_size),
+                    y=r + int(origin_pt.y / self.cell_size)
                 )
                 
                 if pos in self.global_occ_grid:
@@ -608,22 +646,42 @@ class Dynamic(Node):
         local_occ.data = [0] * num_cells
         
         origin_pt : Vec2f = self.map_config["origin"]
+        car_pt    : Vec2f = self.position
         
         C, R = self.map_config["width"], self.map_config["height"]
         
-        for r in range(R):
-            for c in range(C):
-                pos : Vec2 = Vec2(
-                    x=c + round((origin_pt.x + self.cell_size / 2) / self.cell_size),
-                    y=round((origin_pt.y + self.cell_size / 2) / self.cell_size) + r
+        origin_cell_in_image : Vec2 = Vec2(
+            x=-int(origin_pt.x / self.cell_size),
+            y=-int(origin_pt.y / self.cell_size)
+        )
+        
+        car_cell_in_image : Vec2 = Vec2(
+            x=self.cell_pos.x + origin_cell_in_image.x,
+            y=self.cell_pos.y + origin_cell_in_image.y
+        )
+        
+        for r in range(-self.local_width, self.local_width + 1):
+            for c in range(-self.local_depth, self.local_depth + 1):
+                img_pos : Vec2 = Vec2(
+                    x=c + car_cell_in_image.x + round(self.local_depth * np.cos(self.rotation)),
+                    y=r + car_cell_in_image.y + round(self.local_width * np.sin(self.rotation))
                 )
                 
-                if pos in self.local_occ_grid:
-                    local_occ.data[r * C + c] = 100
-                elif pos in self.free_space_grid:
-                    local_occ.data[r * C + c] = 0
-                else:
-                    local_occ.data[r * C + c] = -1
+                pos : Vec2 = Vec2(
+                    x=img_pos.x + int(origin_pt.x / 0.05),
+                    y=img_pos.y + int(origin_pt.y / 0.05)
+                )
+                
+                if (
+                    img_pos.x >= 0 and img_pos.x < C and
+                    img_pos.y >= 0 and img_pos.y < R
+                ):
+                    if pos in self.local_occ_grid:
+                        local_occ.data[img_pos.y * C + img_pos.x] = 100
+                    elif pos in self.free_space_grid:
+                        local_occ.data[img_pos.y * C + img_pos.x] = 0
+                    else:
+                        local_occ.data[img_pos.y * C + img_pos.x] = -1
         
         self.local_occ_pub.publish(local_occ)
     
@@ -644,6 +702,69 @@ class Dynamic(Node):
         Returns:
             None
         """
+        
+        print("  Clearing Render.")
+        
+        markers : MarkerArray = MarkerArray()
+        
+        marker : Marker = Marker()
+        
+        marker.header.frame_id = "map"
+        marker.header.stamp = self.get_clock().now().to_msg()
+        marker.ns = "ns_rrt_path"
+        
+        marker.id = 0
+        marker.action = Marker.DELETEALL
+        
+        markers.markers.append(marker)
+        
+        self.path_pub.publish(markers)
+        
+        markers.markers.clear()
+        
+        j = 1
+        
+        print("  Iterating Over Nodes.")
+        
+        for node in self.reconstruct_path(self.curr_goal):
+            print("  Node:", node.position)
+            
+            marker : Marker = Marker()
+            
+            marker.header.frame_id = "map"
+            marker.header.stamp = self.get_clock().now().to_msg()
+            marker.ns = "ns_rrt_path"
+            
+            marker.id = j
+            marker.type = Marker.CUBE
+            marker.action = Marker.ADD
+            
+            marker.pose.position.x = node.position.x * 0.05
+            marker.pose.position.y = node.position.y * 0.05
+            marker.pose.position.z = 1.0
+            
+            marker.scale.x = 0.04
+            marker.scale.y = 0.04
+            marker.scale.z = 0.04
+            
+            marker.pose.orientation.x = 0.0
+            marker.pose.orientation.y = 0.0
+            marker.pose.orientation.z = 0.0
+            marker.pose.orientation.w = 1.0
+            
+            marker.color.r = 0.0
+            marker.color.g = 1.0
+            marker.color.b = 1.0
+            marker.color.a = 0.8
+            
+            markers.markers.append(marker)
+            
+            j += 1
+        
+        if len(markers.markers) > 0:
+            self.path_pub.publish(markers)
+        
+        print("  Done.")
     
     def render_goals(self) -> None:
         """
@@ -682,7 +803,10 @@ class Dynamic(Node):
             True if the cell position is part of the local occupancy grid, False otherwise
         """
         
-        p1 : Vec2  = Vec2(self.cell_pos.x, self.cell_pos.y)
+        p1 : Vec2  = Vec2(
+            x=self.cell_pos.x + round(self.local_depth * np.cos(self.rotation)),
+            y=self.cell_pos.y + round(self.local_width * np.sin(self.rotation))
+        )
         
         cos = np.cos(self.rotation)
         sin = np.sin(self.rotation)
@@ -695,7 +819,7 @@ class Dynamic(Node):
         )
         
         return (
-            transPoint.x >= 0 and transPoint.x <= self.local_depth and
+            abs(transPoint.x) <= self.local_depth and
             abs(transPoint.y) <= self.local_width
         )
     
@@ -724,6 +848,177 @@ class Dynamic(Node):
                 
                 if new_pos not in self.global_occ_grid and new_pos not in proc_cells:
                     free_cells[new_pos] = True
+    
+    # ==============================================================================================
+    # Path Finding Functions
+    # ==============================================================================================
+    
+    def distance(self, v1 : Vec2, v2 : Vec2) -> float:
+        return np.sqrt((v1.position.x - v2.position.x)**2 + (v1.position.y - v2.position.y)**2)
+    
+    def generate_random_node(self, goal : Vertex, ellipse_center : Vec2, ellipse_axes : List[int], goal_sample_rate : float) -> Vertex:
+        if np.random.rand() < goal_sample_rate:
+            return goal
+        else:
+            while True:
+                x = np.random.randint(0, self.map_config["width"])
+                y = np.random.randint(0, self.map_config["height"])
+                
+                if ((x - ellipse_center.x) / ellipse_axes[0])**2 + ((y - ellipse_center.y) / ellipse_axes[1])**2 <= 1:
+                    return Vertex(
+                        position=Vec2(x, y)
+                    )
+    def nearest_node(self, random_node : Vertex):
+        nearest = self.nodes[0]
+        min_dist = self.distance(self.nodes[0], random_node)
+        
+        for node in self.nodes[1:]:
+            dist = self.distance(node, random_node)
+            
+            if dist < min_dist:
+                nearest = node
+                min_dist = dist
+        
+        return nearest
+    
+    def steer(self, from_node, to_node, max_distance):
+        if self.distance(from_node, to_node) < max_distance:
+            return to_node
+        else:
+            theta = np.arctan2(to_node.position.y - from_node.position.y, to_node.position.x - from_node.position.x)
+            return Vertex(
+                position=Vec2(round(from_node.position.x + max_distance * np.cos(theta)), round(from_node.position.y + max_distance * np.sin(theta)))
+            )
+    
+    def get_line(self, x0, y0, x1, y1):
+        line = []
+        cx0, cy0 = int(round(x0 / 0.05)), int(round(y0 / 0.05))
+        cx1, cy1 = int(round(x1 / 0.05)), int(round(y1 / 0.05))
+        m = float("inf") if cx0 == cx1 else (cy1 - cy0) / (cx1 - cx0)
+        
+        xdir = 1 if cx0 < cx1 else -1
+        ydir = 1 if cy0 < cy1 else -1
+        
+        move_x = abs(cx1 - cx0) >= abs(cy1 - cy0)
+        move_y = abs(cy1 - cy0) >= abs(cx1 - cx0)
+        
+        if move_x:
+            line_eq = lambda x: m * (x - cx0) + cy0
+            
+            for x in range(cx0, cx1 + xdir, xdir):
+                y         = line_eq(x)        # y value at x position on line
+                y_cell    = round(y)          # y value of cell
+                y_left    = line_eq(x - 0.5)  # y value at left edge of cell
+                y_right   = line_eq(x + 0.5)  # y value at right edge of cell
+                cell_down = y_cell - 1        # y value of cell below
+                cell_up   = y_cell + 1        # y value of cell above
+                
+                line.append((x, y_cell))
+                
+                if abs(y_left - cell_down) <= 0.5 or abs(y_right - cell_down) <= 0.5:
+                    line.append((x, cell_down))
+                if abs(y_left - cell_up) <= 0.5 or abs(y_right - cell_up) <= 0.5:
+                    line.append((x, cell_up))
+
+        elif move_y:
+            line_eq = lambda y: (y - cy0) / m + cx0
+            
+            for y in range(cy0, cy1 + ydir, ydir):
+                x          = line_eq(y)        # x value at y position on line
+                x_cell     = round(x)          # x value of cell
+                x_down     = line_eq(y - 0.5)  # x value at bottom edge of cell
+                x_up       = line_eq(y + 0.5)  # x value at top edge of cell
+                cell_left  = x_cell - 1        # x value of left cell
+                cell_right = x_cell + 1        # x value of right cell
+                
+                line.append((x_cell, y))
+                
+                if abs(x_down - cell_left) <= 0.5 or abs(x_up - cell_left) <= 0.5:
+                    line.append((cell_left, y))
+                if abs(x_down - cell_right) <= 0.5 or abs(x_up - cell_right) <= 0.5:
+                    line.append((cell_right, y))
+        
+        return line
+    
+    def is_collision_free(self, from_node : Vertex, to_node : Vertex):
+        x0, y0 = from_node.position.x * 0.05, from_node.position.y * 0.05
+        x1, y1 = to_node.position.x * 0.05, to_node.position.y * 0.05
+        
+        line = [(from_node.position.x, from_node.position.y)] \
+            if x0 == x1 and y0 == y1 \
+            else self.get_line(x0, y0, x1, y1)
+        
+        for pt in line:
+            pos : Vec2 = Vec2(
+                x=pt[0],
+                y=pt[1]
+            )
+            
+            if pos in self.global_occ_grid or pos in self.local_occ_grid:
+                return False
+        
+        return True
+
+    def rewire(self, new_node, max_distance):
+        for node in self.nodes:
+            if node == new_node.parent:
+                continue
+            if self.distance(node, new_node) > max_distance:
+                continue
+            if node.cost > new_node.cost + self.distance(node, new_node) and self.is_collision_free(node, new_node):
+                node.parent = new_node
+                node.cost = new_node.cost + self.distance(node, new_node)
+    
+    def irrt_star(self, start : Vertex, goal : Vertex, max_iter : int, max_distance : float, goal_sample_rate : float) -> None:
+        self.nodes = [start]
+        
+        ellipse_axes = [
+            max(self.map_config["width"], self.map_config["height"]),
+            max(self.map_config["width"], self.map_config["height"])
+        ]
+        
+        for _ in range(max_iter):
+            ellipse_center : Vec2 = Vec2(goal.position.x, goal.position.y)
+            random_node    : Vertex = self.generate_random_node(goal, ellipse_center, ellipse_axes, goal_sample_rate)
+            nearest        : Vertex = self.nearest_node(random_node)
+            new_node       : Vertex = self.steer(nearest, random_node, max_distance)
+            
+            if self.is_collision_free(nearest, new_node):
+                new_node.parent = nearest
+                new_node.cost = nearest.cost + self.distance(nearest, new_node)
+                self.nodes.append(new_node)
+                
+                self.rewire(new_node, max_distance)
+                
+                if self.distance(new_node, goal) < max_distance:
+                    goal.parent = new_node
+                    goal.cost = new_node.cost + self.distance(new_node, goal)
+                    
+                    self.rewire(goal, max_distance)
+                    
+                    # Update ellipse size
+                    # progress = len(self.nodes) / max_iter
+                    # ellipse_axes = [
+                    #     max(self.map_config["width"], self.map_config["height"]) * np.sqrt(1 - progress),
+                    #     max(self.map_config["width"], self.map_config["height"]) * np.sqrt(1 - progress)
+                    # ]
+                    
+                    return
+    
+    def reconstruct_path(self, goal_node : Vertex):
+        path = []
+        current = goal_node
+        
+        print("  Reconstructing Path.")
+        print("   ", "No Goal" if current == None else current.parent)
+        
+        while current != None and current.parent != current:
+            path.insert(0, current)
+            current = current.parent
+        
+        print("  Done Reconstructing.")
+        
+        return path
 
 def main(args=None):
     rclpy.init(args=args)
