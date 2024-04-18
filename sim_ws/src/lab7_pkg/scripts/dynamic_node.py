@@ -205,8 +205,8 @@ class Dynamic(Node):
         """
         
         while True:
-            # path : str = input("Enter package root directory: ")
-            path : str = '/home/vy/GalacticRacing/sim_ws/src'
+            path : str = input("Enter full path to 'src' (or equivalent) directory: ")
+            # path : str = '/home/vy/GalacticRacing/sim_ws/src'
             
             if os.path.exists(path):
                 return path
