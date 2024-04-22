@@ -81,6 +81,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/lab7_pkg" TYPE PROGRAM FILES
     "/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/scripts/rrt_node.py"
     "/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/scripts/dynamic_node.py"
+    "/home/vy/GalacticRacing/sim_ws/src/lab7_pkg/scripts/interactive_node.py"
     )
 endif()
 

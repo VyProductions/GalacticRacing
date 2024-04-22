@@ -54,6 +54,7 @@ ament_python_install_package(${PROJECT_NAME})
 install(PROGRAMS
   scripts/rrt_node.py
   scripts/dynamic_node.py
+  scripts/interactive_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

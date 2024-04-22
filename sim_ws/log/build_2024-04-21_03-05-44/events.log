@@ -1,0 +1,32 @@
+[0.000000] (-) TimerEvent: {}
+[0.000187] (f1tenth_gym_ros) JobQueued: {'identifier': 'f1tenth_gym_ros', 'dependencies': OrderedDict()}
+[0.000223] (gap_follow) JobQueued: {'identifier': 'gap_follow', 'dependencies': OrderedDict()}
+[0.000311] (lab5_pkg) JobQueued: {'identifier': 'lab5_pkg', 'dependencies': OrderedDict()}
+[0.000428] (lab7_pkg) JobQueued: {'identifier': 'lab7_pkg', 'dependencies': OrderedDict()}
+[0.000721] (particle_filter) JobQueued: {'identifier': 'particle_filter', 'dependencies': OrderedDict()}
+[0.000836] (pure_pursuit) JobQueued: {'identifier': 'pure_pursuit', 'dependencies': OrderedDict()}
+[0.000939] (range_lib) JobQueued: {'identifier': 'range_lib', 'dependencies': OrderedDict()}
+[0.000985] (safety_node) JobQueued: {'identifier': 'safety_node', 'dependencies': OrderedDict()}
+[0.001093] (wall_follow) JobQueued: {'identifier': 'wall_follow', 'dependencies': OrderedDict()}
+[0.001110] (waypoint_logger) JobQueued: {'identifier': 'waypoint_logger', 'dependencies': OrderedDict()}
+[0.001132] (f1tenth_gym_ros) JobStarted: {'identifier': 'f1tenth_gym_ros'}
+[0.008584] (gap_follow) JobStarted: {'identifier': 'gap_follow'}
+[0.012502] (lab5_pkg) JobStarted: {'identifier': 'lab5_pkg'}
+[0.017303] (lab7_pkg) JobStarted: {'identifier': 'lab7_pkg'}
+[0.021804] (particle_filter) JobStarted: {'identifier': 'particle_filter'}
+[0.027069] (pure_pursuit) JobStarted: {'identifier': 'pure_pursuit'}
+[0.032401] (pure_pursuit) JobEnded: {'identifier': 'pure_pursuit', 'rc': 0}
+[0.034505] (range_lib) JobStarted: {'identifier': 'range_lib'}
+[0.038720] (safety_node) JobStarted: {'identifier': 'safety_node'}
+[0.042760] (wall_follow) JobStarted: {'identifier': 'wall_follow'}
+[0.046148] (waypoint_logger) JobStarted: {'identifier': 'waypoint_logger'}
+[0.050287] (f1tenth_gym_ros) JobEnded: {'identifier': 'f1tenth_gym_ros', 'rc': 'SIGINT'}
+[0.050942] (gap_follow) JobEnded: {'identifier': 'gap_follow', 'rc': 'SIGINT'}
+[0.051416] (lab5_pkg) JobEnded: {'identifier': 'lab5_pkg', 'rc': 'SIGINT'}
+[0.051868] (lab7_pkg) JobEnded: {'identifier': 'lab7_pkg', 'rc': 'SIGINT'}
+[0.052324] (particle_filter) JobEnded: {'identifier': 'particle_filter', 'rc': 'SIGINT'}
+[0.052506] (range_lib) JobEnded: {'identifier': 'range_lib', 'rc': 'SIGINT'}
+[0.052697] (safety_node) JobEnded: {'identifier': 'safety_node', 'rc': 'SIGINT'}
+[0.052871] (wall_follow) JobEnded: {'identifier': 'wall_follow', 'rc': 'SIGINT'}
+[0.053043] (waypoint_logger) JobEnded: {'identifier': 'waypoint_logger', 'rc': 'SIGINT'}
+[0.063066] (-) EventReactorShutdown: {}
