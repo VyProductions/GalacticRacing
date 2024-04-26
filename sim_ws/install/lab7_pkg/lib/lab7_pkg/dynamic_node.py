@@ -246,8 +246,8 @@ class Dynamic(Node):
         """
         
         while True:
-            path : str = input("Enter full path to 'src' (or equivalent) directory: ")
-            # path : str = '/home/vy/GalacticRacing/sim_ws/src'
+            # path : str = input("Enter full path to 'src' (or equivalent) directory: ")
+            path : str = '/home/vy/GalacticRacing/sim_ws/src'
             
             if os.path.exists(path):
                 return path
@@ -263,8 +263,8 @@ class Dynamic(Node):
         """
         
         while True:
-            filename : str = input("Enter global occupancy filename: ")
-            # filename : str = 'AEB_flexito.csv'
+            # filename : str = input("Enter global occupancy filename: ")
+            filename : str = 'TBE4_25.csv'
             
             if os.path.exists(self.root_dir + '/lab7_pkg/occ_grids/' + filename):
                 return self.root_dir + '/lab7_pkg/occ_grids/' + filename
@@ -280,8 +280,8 @@ class Dynamic(Node):
         """
         
         while True:
-            filename : str = input("Enter goal marker filename: ")
-            # filename : str = 'AEB_flexito.csv'
+            # filename : str = input("Enter goal marker filename: ")
+            filename : str = 'TBE4_25.csv'
             
             if os.path.exists(self.root_dir + '/lab7_pkg/goals/' + filename):
                 return self.root_dir + '/lab7_pkg/goals/' + filename
@@ -297,8 +297,8 @@ class Dynamic(Node):
         """
         
         while True:
-            filename : str = input("Enter map filename (no extension): ")
-            # filename : str = 'AEB_flexito'
+            # filename : str = input("Enter map filename (no extension): ")
+            filename : str = 'TBE4_25'
             
             if (
                 os.path.exists(self.root_dir + '/particle_filter/maps/' + filename + '.yaml') and
@@ -549,10 +549,6 @@ class Dynamic(Node):
                 ),
                 goal=self.curr_goal
             )
-            
-            # self.render_tree()
-            
-            self.render_path()
 
             # Drive towards second node of path
             if self.path != None and len(self.path) > 2:
@@ -979,8 +975,8 @@ class Dynamic(Node):
         """
         
         p1 : Vec2  = Vec2(
-            x=self.cell_pos.x + round(self.local_depth * np.cos(self.rotation)),
-            y=self.cell_pos.y + round(self.local_width * np.sin(self.rotation))
+            x=self.cell_pos.x + round((self.local_depth - 15) * np.cos(self.rotation)),
+            y=self.cell_pos.y + round((self.local_width - 15) * np.sin(self.rotation))
         )
         
         cos = np.cos(0.0)
@@ -1373,19 +1369,19 @@ class Dynamic(Node):
     def a_star(self, start : Vertex, goal : Vertex) -> None:
         local_center_cell : Vertex = Vertex(
             position=Vec2(
-                x=self.cell_pos.x + round(self.local_depth * np.cos(self.rotation)),
-                y=self.cell_pos.y + round(self.local_width * np.sin(self.rotation))
+                x=self.cell_pos.x + round((self.local_depth - 15) * np.cos(self.rotation)),
+                y=self.cell_pos.y + round((self.local_width - 15) * np.sin(self.rotation))
             )
         )
 
-        self.nodes = [start, goal]
+        self.nodes = [goal]
         self.edges = {}
         self.path = []
 
-        for i in range(-(self.local_depth // 2), self.local_depth // 2 + 1):
-            for j in range(-(self.local_width // 2), self.local_width // 2 + 1):
-                c_x = local_center_cell.position.x + i * 2
-                c_y = local_center_cell.position.y + j * 2
+        for i in range(-(self.local_depth // 3), self.local_depth // 3 + 1):
+            for j in range(-(self.local_width // 3), self.local_width // 3 + 1):
+                c_x = local_center_cell.position.x + i * 3
+                c_y = local_center_cell.position.y + j * 3
 
                 if (
                     Vec2(x=c_x, y=c_y) in self.free_space_grid and
@@ -1406,8 +1402,11 @@ class Dynamic(Node):
                     ))
 
         heur : Callable[[Vertex], float] = lambda x: self.cost(x, goal)
+
+        nearest_idx : int = self.nearest(self.nodes, start)
+        nearest_node : Vertex = self.nodes[nearest_idx]
         
-        pq : Heap[Vertex] = Heap([start], lambda x,y: x.g_cost + heur(x) < y.g_cost + heur(y) or (x.g_cost + heur(x) == y.g_cost + heur(y) and heur(x) < heur(y)))
+        pq : Heap[Vertex] = Heap([nearest_node], lambda x,y: x.g_cost + heur(x) < y.g_cost + heur(y) or (x.g_cost + heur(x) == y.g_cost + heur(y) and heur(x) < heur(y)))
 
         closed_set : Dict[Vertex, bool] = {}
 
@@ -1417,9 +1416,13 @@ class Dynamic(Node):
             curr_node = pq.pop()
             closed_set[curr_node] = True
 
-            if curr_node == goal:
+            if curr_node == goal: 
+                self.render_tree()
+                
                 self.path = self.reconstruct_path(goal)
-                self.rewire(self.path, start, goal, rewire_distance)
+                self.rewire(self.path, nearest_node, goal, rewire_distance)
+                
+                self.render_path()
                 break
             
             for neigh in self.near(self.nodes, curr_node, rewire_distance):
@@ -1528,7 +1531,7 @@ class Dynamic(Node):
         
         # find first point ahead of min_pt that is beyond some minimum distance
         # that is not in a collision
-        min_dist_thresh = 1.5
+        min_dist_thresh = 1.0
 
         targ_pt = None
         max_dist = min_dist
