@@ -16,6 +16,8 @@ maps/AEB_flex.pgm
 maps/AEB_flex.yaml
 maps/AEB_flexito.pgm
 maps/AEB_flexito.yaml
+maps/TBE4_25.pgm
+maps/TBE4_25.yaml
 maps/aeb_lab_oh.pgm
 maps/aeb_lab_oh.yaml
 maps/basement_fixed.map.yaml

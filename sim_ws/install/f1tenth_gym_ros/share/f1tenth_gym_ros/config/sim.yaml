@@ -42,7 +42,7 @@ bridge:
     scan_beams: 1080
 
     # map parameters
-    map_path: '/home/vy/GalacticRacing/sim_ws/src/f1tenth_gym_ros/maps/AEB_flexito'
+    map_path: '/home/vy/GalacticRacing/sim_ws/src/f1tenth_gym_ros/maps/TBE4_25'
     map_img_ext: '.pgm'
 
     # opponent parameters
@@ -50,7 +50,7 @@ bridge:
 
     # ego starting pose on map
     sx: 0.0
-    sy: 5.0
+    sy: 2.0
     stheta: 3.14
 
     # opp starting pose on map

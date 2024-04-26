@@ -1,0 +1,24 @@
+[0.160s] Invoking command in '/home/vy/GalacticRacing/sim_ws/build/lab7_pkg': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/lab7_pkg -- -j16 -l16
+[0.323s] Traceback (most recent call last):
+[0.324s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 21, in <module>
+[0.324s]     from ament_package.templates import get_environment_hook_template_path
+[0.324s] ModuleNotFoundError: No module named 'ament_package'
+[0.324s] CMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):
+[0.324s]   execute_process(/usr/bin/python3
+[0.324s]   /opt/ros/foxy/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py
+[0.324s]   /home/vy/GalacticRacing/sim_ws/build/lab7_pkg/ament_cmake_package_templates/templates.cmake)
+[0.324s]   returned error code 1
+[0.324s] Call Stack (most recent call first):
+[0.324s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.324s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.324s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.324s]   CMakeLists.txt:28 (find_package)
+[0.325s] 
+[0.325s] 
+[0.325s] make: *** [Makefile:296: cmake_check_build_system] Error 1
+[0.325s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.325s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.325s] -- Configuring incomplete, errors occurred!
+[0.325s] See also "/home/vy/GalacticRacing/sim_ws/build/lab7_pkg/CMakeFiles/CMakeOutput.log".
+[0.325s] See also "/home/vy/GalacticRacing/sim_ws/build/lab7_pkg/CMakeFiles/CMakeError.log".
+[0.333s] Invoked command in '/home/vy/GalacticRacing/sim_ws/build/lab7_pkg' returned '2': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/lab7_pkg -- -j16 -l16

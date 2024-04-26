@@ -1,0 +1,2 @@
+Invoking command in '/home/vy/GalacticRacing/sim_ws/build/lab7_pkg': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/lab7_pkg -- -j16 -l16
+Invoked command in '/home/vy/GalacticRacing/sim_ws/build/lab7_pkg' returned '2': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/lab7_pkg -- -j16 -l16

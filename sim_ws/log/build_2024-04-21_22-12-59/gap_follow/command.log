@@ -1,0 +1,2 @@
+Invoking command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/gap_follow -- -j16 -l16
+Invoked command in '/home/vy/GalacticRacing/sim_ws/build/gap_follow' returned '2': /usr/bin/cmake --build /home/vy/GalacticRacing/sim_ws/build/gap_follow -- -j16 -l16
